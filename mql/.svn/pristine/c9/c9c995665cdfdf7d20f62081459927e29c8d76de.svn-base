@@ -1,0 +1,782 @@
+2017-11-13 11:31:02 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2017-11-13 11:31:02 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2017-11-13 11:31:02 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2017-11-13 11:31:02 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2017-11-13 11:31:02 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3a439b: startup date [Mon Nov 13 11:31:02 WET 2017]; root of context hierarchy
+2017-11-13 11:31:02 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2017-11-13 11:31:02 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2017-11-13 11:31:02 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2017-11-13 11:31:02 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2017-11-13 11:31:02 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [ApplicationConext.xml]
+2017-11-13 11:31:02 DEBUG DefaultDocumentLoader:72 - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2017-11-13 11:31:02 DEBUG PluggableSchemaResolver:140 - Loading schema mappings from [META-INF/spring.schemas]
+2017-11-13 11:31:02 DEBUG PluggableSchemaResolver:146 - Loaded schema mappings: {http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-3.0.xsd=org/springframework/jms/config/spring-jms-3.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jms/spring-jms-3.2.xsd=org/springframework/jms/config/spring-jms-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-2.5.xsd=org/springframework/jms/config/spring-jms-2.5.xsd, http://www.springframework.org/schema/jms/spring-jms.xsd=org/springframework/jms/config/spring-jms-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/jms/spring-jms-3.1.xsd=org/springframework/jms/config/spring-jms-3.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2017-11-13 11:31:02 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+2017-11-13 11:31:02 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/context/spring-context.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+2017-11-13 11:31:02 DEBUG PluggableSchemaResolver:118 - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2017-11-13 11:31:02 DEBUG DefaultBeanDefinitionDocumentReader:106 - Loading bean definitions
+2017-11-13 11:31:03 DEBUG DefaultNamespaceHandlerResolver:156 - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/jms=org.springframework.jms.config.JmsNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2017-11-13 11:31:03 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2017-11-13 11:31:03 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2017-11-13 11:31:03 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2017-11-13 11:31:03 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:550 - Looking for matching resources in directory tree [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\business] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p2] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\web] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\web\actions] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:351 - Resolved location pattern [classpath*:org/java/mql/**/*.class] to resources [file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\business\DefaultModule2Business.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\business\Module2Business.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\business\Test.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration\HibernateConfiguration.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\DaoMediator.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\DaoMediatorService.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\DAOservice.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\AbstractDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\AppMain.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\HDefaultEnseignantDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\HDefaultEtudiantDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\HDefaultTeamDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\DefaultEnsignantDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\DefaultEtudiantDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\DefaultTeamDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\EnsignantDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\EtudiantDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\TeamDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultFileDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultLiverableDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultMatiereDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultProjectDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\FileDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\LiverableDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\MatiereDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\ProjectDao.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01\Ensignant.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01\Etudiant.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01\Team.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\AbstractFile.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Directory.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\File.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Liverable.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Matiere.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Project.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Type.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\web\actions\EquipeAction.class]]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\business\DefaultModule2Business.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration\HibernateConfiguration.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\DaoMediator.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\HDefaultEnseignantDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\HDefaultEtudiantDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\hibernate\p1\HDefaultTeamDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\DefaultEnsignantDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\DefaultEtudiantDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p1\DefaultTeamDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultFileDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultLiverableDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultMatiereDao.class]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\dao\p2\DefaultProjectDao.class]
+2017-11-13 11:31:03 DEBUG XmlBeanDefinitionReader:216 - Loaded 18 bean definitions from location pattern [ApplicationConext.xml]
+2017-11-13 11:31:03 DEBUG ClassPathXmlApplicationContext:540 - Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@3a439b: org.springframework.beans.factory.support.DefaultListableBeanFactory@8806ef: defining beans [defaultModule2Business,hibernateConfiguration,daoMediator,hibernateEn,hibernateEt,hibernateTe,defaultEn,defaultEt,defaultTe,defaultFi,defaultLi,defaultMa,defaultPr,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2017-11-13 11:31:03 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2017-11-13 11:31:03 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2017-11-13 11:31:03 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:550 - Looking for matching resources in directory tree [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/configuration/**/*.class]
+2017-11-13 11:31:03 DEBUG PathMatchingResourcePatternResolver:351 - Resolved location pattern [classpath*:org/java/mql/configuration/**/*.class] to resources [file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration\HibernateConfiguration.class]]
+2017-11-13 11:31:03 DEBUG ClassPathBeanDefinitionScanner:273 - Identified candidate component class: file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\configuration\HibernateConfiguration.class]
+2017-11-13 11:31:03 DEBUG StandardEnvironment:107 - Adding [class path resource [application.properties]] PropertySource with lowest search precedence
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:142 - Registered bean definition for imported @Configuration class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:262 - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.org.springframework.transaction.config.internalTransactionAdvisor()
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:262 - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionAttributeSource()
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:262 - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionInterceptor()
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:262 - Registering bean definition for @Bean method org.java.mql.configuration.HibernateConfiguration.sessionFactory()
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:262 - Registering bean definition for @Bean method org.java.mql.configuration.HibernateConfiguration.dataSource()
+2017-11-13 11:31:03 DEBUG ConfigurationClassBeanDefinitionReader:262 - Registering bean definition for @Bean method org.java.mql.configuration.HibernateConfiguration.transactionManager()
+2017-11-13 11:31:03 DEBUG ConfigurationClassEnhancer:94 - Successfully enhanced org.java.mql.configuration.HibernateConfiguration; enhanced class name is: org.java.mql.configuration.HibernateConfiguration$$EnhancerByCGLIB$$70ca08a7
+2017-11-13 11:31:03 DEBUG ConfigurationClassPostProcessor:359 - Replacing bean definition 'hibernateConfiguration' existing class name 'org.java.mql.configuration.HibernateConfiguration' with enhanced class name 'org.java.mql.configuration.HibernateConfiguration$$EnhancerByCGLIB$$70ca08a7'
+2017-11-13 11:31:03 DEBUG ConfigurationClassEnhancer:94 - Successfully enhanced org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; enhanced class name is: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerByCGLIB$$16ad305e
+2017-11-13 11:31:03 DEBUG ConfigurationClassPostProcessor:359 - Replacing bean definition 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' existing class name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' with enhanced class name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerByCGLIB$$16ad305e'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2017-11-13 11:31:03 DEBUG ClassPathXmlApplicationContext:807 - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@10d210d]
+2017-11-13 11:31:03 DEBUG ClassPathXmlApplicationContext:831 - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@1f82230]
+2017-11-13 11:31:03 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8806ef: defining beans [defaultModule2Business,hibernateConfiguration,daoMediator,hibernateEn,hibernateEt,hibernateTe,defaultEn,defaultEt,defaultTe,defaultFi,defaultLi,defaultMa,defaultPr,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,sessionFactory,dataSource,transactionManager]; root of factory hierarchy
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultModule2Business'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultModule2Business'
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.business.DefaultModule2Business]: AutowiredFieldElement for private org.java.mql.dao.DaoMediator org.java.mql.business.DefaultModule2Business.daoMediator
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultModule2Business' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultModule2Business': AutowiredFieldElement for private org.java.mql.dao.DaoMediator org.java.mql.business.DefaultModule2Business.daoMediator
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'daoMediator'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'daoMediator'
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setTeamDao(org.java.mql.dao.p1.TeamDao)
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setLiverableDao(org.java.mql.dao.p2.LiverableDao)
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setEtudiantDao(org.java.mql.dao.p1.EtudiantDao)
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setFileDao(org.java.mql.dao.p2.FileDao)
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setEnsignantDao(org.java.mql.dao.p1.EnsignantDao)
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setMatiereDao(org.java.mql.dao.p2.MatiereDao)
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.DaoMediator]: AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setProjectDao(org.java.mql.dao.p2.ProjectDao)
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'daoMediator' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setTeamDao(org.java.mql.dao.p1.TeamDao)
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'hibernateTe'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'hibernateTe'
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.hibernate.p1.HDefaultTeamDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'hibernateTe' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG InjectionMetadata:85 - Processing injected method of bean 'hibernateTe': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'sessionFactory'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'hibernateConfiguration'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'hibernateConfiguration'
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.configuration.HibernateConfiguration$$EnhancerByCGLIB$$70ca08a7]: AutowiredFieldElement for private org.springframework.core.env.Environment org.java.mql.configuration.HibernateConfiguration.environment
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'hibernateConfiguration' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG InjectionMetadata:85 - Processing injected method of bean 'hibernateConfiguration': AutowiredFieldElement for private org.springframework.core.env.Environment org.java.mql.configuration.HibernateConfiguration.environment
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'environment'
+2017-11-13 11:31:03 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'hibernateConfiguration' to bean named 'environment'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2017-11-13 11:31:03 DEBUG InjectionMetadata:71 - Registered injected element on class [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerByCGLIB$$16ad305e]: AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG InjectionMetadata:85 - Processing injected method of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'transactionAttributeSource'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'transactionAttributeSource'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'transactionAttributeSource' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'transactionAttributeSource'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'transactionInterceptor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'transactionInterceptor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'transactionAttributeSource'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'transactionInterceptor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:1525 - Invoking afterPropertiesSet() on bean with name 'transactionInterceptor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'transactionInterceptor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'hibernateConfiguration'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'dataSource'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'dataSource'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'hibernateConfiguration'
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.driverClassName' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.driverClassName' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.driverClassName' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'jdbc.driverClassName' in [class path resource [application.properties]] with type [String] and value 'com.mysql.jdbc.Driver'
+2017-11-13 11:31:03 INFO  DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.url' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.url' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.url' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'jdbc.url' in [class path resource [application.properties]] with type [String] and value 'jdbc:mysql://localhost:3306/plateformemql'
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.username' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.username' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.username' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'jdbc.username' in [class path resource [application.properties]] with type [String] and value 'root'
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.password' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.password' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'jdbc.password' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'jdbc.password' in [class path resource [application.properties]] with type [String] and value ''
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'dataSource'
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.dialect' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.dialect' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.dialect' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'hibernate.dialect' in [class path resource [application.properties]] with type [String] and value 'org.hibernate.dialect.MySQLDialect'
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.show_sql' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.show_sql' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.show_sql' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'hibernate.show_sql' in [class path resource [application.properties]] with type [String] and value 'false'
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.format_sql' in [systemProperties]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.format_sql' in [systemEnvironment]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'hibernate.format_sql' in [class path resource [application.properties]]
+2017-11-13 11:31:03 DEBUG PropertySourcesPropertyResolver:81 - Found key 'hibernate.format_sql' in [class path resource [application.properties]] with type [String] and value 'false'
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'sessionFactory' to allow for resolving potential circular references
+2017-11-13 11:31:03 DEBUG DefaultListableBeanFactory:1525 - Invoking afterPropertiesSet() on bean with name 'sessionFactory'
+2017-11-13 11:31:03 DEBUG logging:184 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration boolean -> org.hibernate.type.BooleanType@18d2680
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration boolean -> org.hibernate.type.BooleanType@18d2680
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@18d2680
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@10eb4b4
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@3191a6
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration yes_no -> org.hibernate.type.YesNoType@69db50
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration byte -> org.hibernate.type.ByteType@967906
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration byte -> org.hibernate.type.ByteType@967906
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@967906
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration character -> org.hibernate.type.CharacterType@1bd4fdd
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration char -> org.hibernate.type.CharacterType@1bd4fdd
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1bd4fdd
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration short -> org.hibernate.type.ShortType@13a5bf6
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration short -> org.hibernate.type.ShortType@13a5bf6
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@13a5bf6
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration integer -> org.hibernate.type.IntegerType@19aaa5
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration int -> org.hibernate.type.IntegerType@19aaa5
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@19aaa5
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration long -> org.hibernate.type.LongType@1b699ef
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration long -> org.hibernate.type.LongType@1b699ef
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@1b699ef
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration float -> org.hibernate.type.FloatType@162e04d
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration float -> org.hibernate.type.FloatType@162e04d
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@162e04d
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration double -> org.hibernate.type.DoubleType@6648b0
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration double -> org.hibernate.type.DoubleType@6648b0
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@6648b0
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@12f203f
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@12f203f
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@1eaca72
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@1eaca72
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration string -> org.hibernate.type.StringType@56be13
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.String -> org.hibernate.type.StringType@56be13
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1a1e9a9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@1474f18
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration url -> org.hibernate.type.UrlType@1d477ed
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@1d477ed
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration date -> org.hibernate.type.DateType@235045
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@235045
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration time -> org.hibernate.type.TimeType@12ea799
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@12ea799
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration timestamp -> org.hibernate.type.TimestampType@379589
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@379589
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@379589
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1bf0d49
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration calendar -> org.hibernate.type.CalendarType@1d4a5c2
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1d4a5c2
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1d4a5c2
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6cb480
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration locale -> org.hibernate.type.LocaleType@555ebf
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@555ebf
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration currency -> org.hibernate.type.CurrencyType@d9d12d
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@d9d12d
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@a4337a
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@a4337a
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration class -> org.hibernate.type.ClassType@127514f
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@127514f
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@150c3ec
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@150c3ec
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1d05255
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@1c2959f
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration binary -> org.hibernate.type.BinaryType@82b2fa
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration byte[] -> org.hibernate.type.BinaryType@82b2fa
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration [B -> org.hibernate.type.BinaryType@82b2fa
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2ac478
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2ac478
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2ac478
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration image -> org.hibernate.type.ImageType@15958c9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration characters -> org.hibernate.type.CharArrayType@185a6e9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration char[] -> org.hibernate.type.CharArrayType@185a6e9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration [C -> org.hibernate.type.CharArrayType@185a6e9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@d3e762
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@d3e762
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@d3e762
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration text -> org.hibernate.type.TextType@e52ef6
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration ntext -> org.hibernate.type.NTextType@57f613
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration blob -> org.hibernate.type.BlobType@52dba3
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@52dba3
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@19fedbd
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration clob -> org.hibernate.type.ClobType@1a2befb
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1a2befb
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration nclob -> org.hibernate.type.NClobType@7e5365
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@7e5365
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1475ace
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5b7c14
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration serializable -> org.hibernate.type.SerializableType@1f7cd29
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration object -> org.hibernate.type.ObjectType@161f6af
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@161f6af
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1c911a1
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1db5df9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7194ba
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@190200a
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2f6f80
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1b4c3a9
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@19c4be1
+2017-11-13 11:31:03 DEBUG BasicTypeRegistry:148 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@11caca8
+2017-11-13 11:31:03 INFO  Version:37 - HCANN000001: Hibernate Commons Annotations {4.0.3.Final}
+2017-11-13 11:31:03 INFO  Version:41 - HHH000412: Hibernate Core {4.2.15.Final}
+2017-11-13 11:31:03 INFO  Environment:238 - HHH000206: hibernate.properties not found
+2017-11-13 11:31:03 INFO  Environment:345 - HHH000021: Bytecode provider name : javassist
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2017-11-13 11:31:03 DEBUG DefaultIdentifierGeneratorFactory:93 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2017-11-13 11:31:04 DEBUG PathMatchingResourcePatternResolver:550 - Looking for matching resources in directory tree [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models]
+2017-11-13 11:31:04 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/models/**/*.class]
+2017-11-13 11:31:04 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/models/**/*.class]
+2017-11-13 11:31:04 DEBUG PathMatchingResourcePatternResolver:612 - Searching directory [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02] for files matching pattern [D:/tout/MQL/S3/PlateformeMQL/works/PlateformeMQL/target/classes/org/java/mql/models/**/*.class]
+2017-11-13 11:31:04 DEBUG PathMatchingResourcePatternResolver:351 - Resolved location pattern [classpath*:org/java/mql/models/**/*.class] to resources [file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01\Ensignant.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01\Etudiant.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p01\Team.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\AbstractFile.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Directory.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\File.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Liverable.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Matiere.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Project.class], file [D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes\org\java\mql\models\p02\Type.class]]
+2017-11-13 11:31:04 DEBUG IntegratorServiceImpl:59 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2017-11-13 11:31:04 DEBUG Configuration:1781 - Preparing to build session factory with filters : {}
+2017-11-13 11:31:04 DEBUG DriverManagerDataSource:162 - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/plateformemql]
+2017-11-13 11:31:04 DEBUG JdbcServicesImpl:121 - Database ->
+       name : MySQL
+    version : 5.1.30-community
+      major : 5
+      minor : 1
+2017-11-13 11:31:04 DEBUG JdbcServicesImpl:127 - Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+      major : 5
+      minor : 1
+2017-11-13 11:31:04 DEBUG JdbcServicesImpl:133 - JDBC version : 3.0
+2017-11-13 11:31:04 INFO  Dialect:130 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-11-13 11:31:04 INFO  LobCreatorBuilder:94 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-11-13 11:31:04 DEBUG Configuration:3528 - Processing hbm.xml files
+2017-11-13 11:31:04 DEBUG Configuration:3558 - Process annotated classes
+2017-11-13 11:31:04 DEBUG AnnotationBinder:534 - Binding entity from annotated class: org.java.mql.models.p01.Etudiant
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2017-11-13 11:31:04 DEBUG AnnotationBinder:1118 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2017-11-13 11:31:04 DEBUG EntityBinder:394 - Import with entity name Etudiant
+2017-11-13 11:31:04 DEBUG EntityBinder:564 - Bind entity org.java.mql.models.p01.Etudiant on table ETUDIANT
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ETUDIANT), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for id
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property id
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ETUDIANT), mappingColumn=email, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property email with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for email
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property email
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ETUDIANT), mappingColumn=NOM, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property nom with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for nom
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property nom
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ETUDIANT), mappingColumn=phone, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property phone with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for phone
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property phone
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ETUDIANT), mappingColumn=prenom, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property prenom with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for prenom
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property prenom
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='id_group', referencedColumn='', mappedBy=''}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ETUDIANT), mappingColumn=team, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property team
+2017-11-13 11:31:04 DEBUG AnnotationBinder:534 - Binding entity from annotated class: org.java.mql.models.p01.Team
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2017-11-13 11:31:04 DEBUG AnnotationBinder:1118 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2017-11-13 11:31:04 DEBUG EntityBinder:394 - Import with entity name Team
+2017-11-13 11:31:04 DEBUG EntityBinder:564 - Bind entity org.java.mql.models.p01.Team on table GROUPE
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for id
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property id
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='team'}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=etudiants, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=etudiants_KEY, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='etudiants_KEY', referencedColumn='null', mappedBy='null'}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='team'}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='team'}
+2017-11-13 11:31:04 DEBUG CollectionBinder:401 - Collection role: org.java.mql.models.p01.Team.etudiants
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property etudiants
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=NOM, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property nom with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for nom
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property nom
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='team'}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=projects, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(GROUPE), mappingColumn=projects_KEY, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='projects_KEY', referencedColumn='null', mappedBy='null'}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='team'}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='team'}
+2017-11-13 11:31:04 DEBUG CollectionBinder:401 - Collection role: org.java.mql.models.p01.Team.projects
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property projects
+2017-11-13 11:31:04 DEBUG AnnotationBinder:534 - Binding entity from annotated class: org.java.mql.models.p02.Project
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2017-11-13 11:31:04 DEBUG AnnotationBinder:1118 - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+2017-11-13 11:31:04 DEBUG EntityBinder:394 - Import with entity name Project
+2017-11-13 11:31:04 DEBUG EntityBinder:564 - Bind entity org.java.mql.models.p02.Project on table PROJET
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PROJET), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property id with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for id
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property id
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PROJET), mappingColumn=DatePublication, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property datePublication with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for datePublication
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property datePublication
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PROJET), mappingColumn=Deadline, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property deadLine with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for deadLine
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property deadLine
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PROJET), mappingColumn=description, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property desc with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for desc
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property desc
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PROJET), mappingColumn=nom, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:179 - MetadataSourceProcessor property name with lazy=false
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:330 - building SimpleValue for name
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property name
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3JoinColumn{logicalColumnName='id_group', referencedColumn='', mappedBy=''}
+2017-11-13 11:31:04 DEBUG Ejb3Column:196 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(PROJET), mappingColumn=team, insertable=true, updatable=true, unique=false}
+2017-11-13 11:31:04 DEBUG PropertyBinder:260 - Building property team
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for id
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for email
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for nom
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for phone
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for prenom
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for id
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for nom
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for id
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for datePublication
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for deadLine
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for desc
+2017-11-13 11:31:04 DEBUG SimpleValueBinder:368 - Setting SimpleValue typeName for name
+2017-11-13 11:31:04 DEBUG Configuration:1444 - Processing fk mappings (*ToOne and JoinedSubclass)
+2017-11-13 11:31:04 DEBUG Configuration:1631 - Processing extends queue
+2017-11-13 11:31:04 DEBUG Configuration:1689 - Processing extends queue
+2017-11-13 11:31:04 DEBUG Configuration:1634 - Processing collection mappings
+2017-11-13 11:31:04 DEBUG CollectionSecondPass:66 - Second pass for collection: org.java.mql.models.p01.Team.etudiants
+2017-11-13 11:31:04 DEBUG CollectionBinder:762 - Binding a OneToMany: org.java.mql.models.p01.Team.etudiants through a foreign key
+2017-11-13 11:31:04 DEBUG CollectionBinder:791 - Mapping collection: org.java.mql.models.p01.Team.etudiants -> ETUDIANT
+2017-11-13 11:31:04 DEBUG TableBinder:332 - Retrieving property org.java.mql.models.p01.Etudiant.team
+2017-11-13 11:31:04 DEBUG CollectionSecondPass:83 - Mapped collection key: id_group, one-to-many: org.java.mql.models.p01.Etudiant
+2017-11-13 11:31:04 DEBUG CollectionSecondPass:66 - Second pass for collection: org.java.mql.models.p01.Team.projects
+2017-11-13 11:31:04 DEBUG CollectionBinder:762 - Binding a OneToMany: org.java.mql.models.p01.Team.projects through a foreign key
+2017-11-13 11:31:04 DEBUG CollectionBinder:791 - Mapping collection: org.java.mql.models.p01.Team.projects -> PROJET
+2017-11-13 11:31:04 DEBUG TableBinder:332 - Retrieving property org.java.mql.models.p02.Project.team
+2017-11-13 11:31:04 DEBUG CollectionSecondPass:83 - Mapped collection key: id_group, one-to-many: org.java.mql.models.p02.Project
+2017-11-13 11:31:04 DEBUG Configuration:1644 - Processing native query and ResultSetMapping mappings
+2017-11-13 11:31:04 DEBUG Configuration:1652 - Processing association property references
+2017-11-13 11:31:04 DEBUG Configuration:1674 - Creating tables' unique integer identifiers
+2017-11-13 11:31:04 DEBUG Configuration:1675 - Processing foreign key constraints
+2017-11-13 11:31:04 DEBUG Configuration:1746 - Resolving reference to class: org.java.mql.models.p01.Team
+2017-11-13 11:31:04 DEBUG Configuration:1746 - Resolving reference to class: org.java.mql.models.p01.Team
+2017-11-13 11:31:04 DEBUG SettingsFactory:117 - Automatic flush during beforeCompletion(): disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:123 - Automatic session close at end of transaction: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:134 - JDBC batch size: 15
+2017-11-13 11:31:04 DEBUG SettingsFactory:140 - JDBC batch updates for versioned data: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:150 - Scrollable result sets: enabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:156 - Wrap result sets: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:162 - JDBC3 getGeneratedKeys(): enabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:174 - multi-tenancy strategy : NONE
+2017-11-13 11:31:04 DEBUG SettingsFactory:180 - Connection release mode: auto
+2017-11-13 11:31:04 INFO  TransactionFactoryInitiator:68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-11-13 11:31:04 DEBUG SettingsFactory:202 - Using BatchFetchStyle : LEGACY
+2017-11-13 11:31:04 DEBUG SettingsFactory:221 - Maximum outer join fetch depth: 2
+2017-11-13 11:31:04 DEBUG SettingsFactory:227 - Default batch fetch size: 1
+2017-11-13 11:31:04 DEBUG SettingsFactory:233 - Generate SQL with comments: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:239 - Order SQL updates by primary key: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:245 - Order SQL inserts for batching: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:253 - Default null ordering: none
+2017-11-13 11:31:04 DEBUG SettingsFactory:584 - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory
+2017-11-13 11:31:04 INFO  ASTQueryTranslatorFactory:48 - HHH000397: Using ASTQueryTranslatorFactory
+2017-11-13 11:31:04 DEBUG SettingsFactory:263 - Query language substitutions: {}
+2017-11-13 11:31:04 DEBUG SettingsFactory:269 - JPA-QL strict compliance: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:277 - Second-level cache: enabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:283 - Query cache: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:524 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2017-11-13 11:31:04 DEBUG SettingsFactory:534 - org.hibernate.cache.internal.NoCachingRegionFactory did not provide constructor accepting java.util.Properties; attempting no-arg constructor.
+2017-11-13 11:31:04 DEBUG SettingsFactory:306 - Optimize cache for minimal puts: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:321 - Structured second-level cache entries: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:331 - Second-level cache direct-reference entries: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:339 - Statistics: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:345 - Deleted entity synthetic identifier rollback: disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:372 - Default entity-mode: pojo
+2017-11-13 11:31:04 DEBUG SettingsFactory:378 - Named query checking : enabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:384 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:402 - Allow initialization of lazy state outside session : : disabled
+2017-11-13 11:31:04 DEBUG SettingsFactory:412 - JTA Track by Thread: enabled
+2017-11-13 11:31:04 DEBUG SessionFactoryImpl:228 - Building session factory
+2017-11-13 11:31:04 DEBUG SessionFactoryImpl:280 - Session factory constructed with filter configurations : {}
+2017-11-13 11:31:04 DEBUG SessionFactoryImpl:281 - Instantiating session factory with properties: {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_101\jre\bin, java.vm.version=25.101-b13, user.country.format=FR, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) Client VM, file.encoding.pkg=sun.io, user.script=, user.country=US, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL, java.runtime.version=1.8.0_101-b13, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, hibernate.current_session_context_class=org.springframework.orm.hibernate4.SpringSessionContext, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed, os.arch=x86, java.io.tmpdir=C:\Users\Hasnae\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 8.1, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/bin/client;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/lib/i386;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\VisualSVN Server\bin;D:\tout\MQL\S3\Big Data\Tools\apache-maven-3.5.2\bin;D:\tout\MQL\S3\JEE\Tools\eclipse;;., hibernate.connection.datasource=org.springframework.jdbc.datasource.DriverManagerDataSource@172b013, java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot Client Compiler, os.version=6.3, user.home=C:\Users\Hasnae, user.timezone=Africa/Casablanca, java.awt.printerjob=sun.awt.windows.WPrinterJob, java.specification.version=1.8, file.encoding=UTF-8, hibernate.format_sql=false, user.name=Hasnae, java.class.path=D:\tout\MQL\S3\PlateformeMQL\works\PlateformeMQL\target\classes;D:\outils-dev\.m2\repository\org\springframework\spring-core\3.2.3.RELEASE\spring-core-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\outils-dev\.m2\repository\org\springframework\spring-webmvc\3.2.3.RELEASE\spring-webmvc-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-web\3.2.3.RELEASE\spring-web-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;D:\outils-dev\.m2\repository\org\springframework\spring-oxm\3.2.3.RELEASE\spring-oxm-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-aop\3.2.3.RELEASE\spring-aop-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-aspects\3.2.3.RELEASE\spring-aspects-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\aspectj\aspectjweaver\1.7.2\aspectjweaver-1.7.2.jar;D:\outils-dev\.m2\repository\org\springframework\spring-context-support\3.2.3.RELEASE\spring-context-support-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-beans\3.2.3.RELEASE\spring-beans-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-context\3.2.3.RELEASE\spring-context-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-expression\3.2.3.RELEASE\spring-expression-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-instrument\3.2.3.RELEASE\spring-instrument-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-instrument-tomcat\3.2.3.RELEASE\spring-instrument-tomcat-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-jdbc\3.2.3.RELEASE\spring-jdbc-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-jms\3.2.3.RELEASE\spring-jms-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-orm\3.2.3.RELEASE\spring-orm-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\org\springframework\spring-tx\3.2.3.RELEASE\spring-tx-3.2.3.RELEASE.jar;D:\outils-dev\.m2\repository\com\sun\faces\jsf-api\2.2.8\jsf-api-2.2.8.jar;D:\outils-dev\.m2\repository\org\slf4j\slf4j-api\1.7.5\slf4j-api-1.7.5.jar;D:\outils-dev\.m2\repository\ch\qos\logback\logback-classic\1.0.13\logback-classic-1.0.13.jar;D:\outils-dev\.m2\repository\ch\qos\logback\logback-core\1.0.13\logback-core-1.0.13.jar;D:\outils-dev\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\outils-dev\.m2\repository\org\hibernate\hibernate-entitymanager\4.2.1.Final\hibernate-entitymanager-4.2.1.Final.jar;D:\outils-dev\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.GA\jboss-logging-3.1.0.GA.jar;D:\outils-dev\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;D:\outils-dev\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.1.Final\jboss-transaction-api_1.1_spec-1.0.1.Final.jar;D:\outils-dev\.m2\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;D:\outils-dev\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.3.Final\hibernate-commons-annotations-4.0.3.Final.jar;D:\outils-dev\.m2\repository\org\hibernate\hibernate-validator\4.2.0.Final\hibernate-validator-4.2.0.Final.jar;D:\outils-dev\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;D:\outils-dev\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar;D:\outils-dev\.m2\repository\org\hibernate\hibernate-core\4.2.15.Final\hibernate-core-4.2.15.Final.jar;D:\outils-dev\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;D:\outils-dev\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=false, hibernate.classLoader.application=sun.misc.Launcher$AppClassLoader@1d16e93, java.vm.specification.version=1.8, sun.arch.data.model=32, java.home=C:\Program Files\Java\jdk1.8.0_101\jre, sun.java.command=org.java.mql.dao.hibernate.p1.AppMain, hibernate.dialect=org.hibernate.dialect.MySQLDialect, java.specification.vendor=Oracle Corporation, user.language=en, user.language.format=fr, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_101, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes, java.vendor=Oracle Corporation, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.cpu.endian=little, sun.io.unicode.encoding=UnicodeLittle, sun.desktop=windows, sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86}
+2017-11-13 11:31:04 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2017-11-13 11:31:04 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2017-11-13 11:31:04 DEBUG DefaultIdentifierGeneratorFactory:107 - Setting dialect [org.hibernate.dialect.MySQLDialect]
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3604 - Static SQL for entity: org.java.mql.models.p01.Team
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3609 -  Version select: select id from GROUPE where id =?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3612 -  Snapshot select: select team_.id, team_.NOM as NOM2_1_ from GROUPE team_ where team_.id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3615 -  Insert 0: insert into GROUPE (NOM, id) values (?, ?)
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3616 -  Update 0: update GROUPE set NOM=? where id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3617 -  Delete 0: delete from GROUPE where id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3620 -  Identity insert: insert into GROUPE (NOM) values (?)
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3604 - Static SQL for entity: org.java.mql.models.p01.Etudiant
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3609 -  Version select: select id from ETUDIANT where id =?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3612 -  Snapshot select: select etudiant_.id, etudiant_.email as email2_0_, etudiant_.NOM as NOM3_0_, etudiant_.phone as phone4_0_, etudiant_.prenom as prenom5_0_, etudiant_.id_group as id_group6_0_ from ETUDIANT etudiant_ where etudiant_.id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3615 -  Insert 0: insert into ETUDIANT (email, NOM, phone, prenom, id_group, id) values (?, ?, ?, ?, ?, ?)
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3616 -  Update 0: update ETUDIANT set email=?, NOM=?, phone=?, prenom=?, id_group=? where id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3617 -  Delete 0: delete from ETUDIANT where id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3620 -  Identity insert: insert into ETUDIANT (email, NOM, phone, prenom, id_group) values (?, ?, ?, ?, ?)
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3604 - Static SQL for entity: org.java.mql.models.p02.Project
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3609 -  Version select: select id from PROJET where id =?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3612 -  Snapshot select: select project_.id, project_.DatePublication as DatePubl2_2_, project_.Deadline as Deadline3_2_, project_.description as descript4_2_, project_.nom as nom5_2_, project_.id_group as id_group6_2_ from PROJET project_ where project_.id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3615 -  Insert 0: insert into PROJET (DatePublication, Deadline, description, nom, id_group, id) values (?, ?, ?, ?, ?, ?)
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3616 -  Update 0: update PROJET set DatePublication=?, Deadline=?, description=?, nom=?, id_group=? where id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3617 -  Delete 0: delete from PROJET where id=?
+2017-11-13 11:31:04 DEBUG AbstractEntityPersister:3620 -  Identity insert: insert into PROJET (DatePublication, Deadline, description, nom, id_group) values (?, ?, ?, ?, ?)
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: org.java.mql.models.p01.Team.etudiants
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:666 -  Row insert: update ETUDIANT set id_group=? where id=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:667 -  Row update: update ETUDIANT set  where id=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:668 -  Row delete: update ETUDIANT set id_group=null where id_group=? and id=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update ETUDIANT set id_group=null where id_group=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:665 - Static SQL for collection: org.java.mql.models.p01.Team.projects
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:666 -  Row insert: update PROJET set id_group=? where id=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:667 -  Row update: update PROJET set  where id=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:668 -  Row delete: update PROJET set id_group=null where id_group=? and id=?
+2017-11-13 11:31:04 DEBUG AbstractCollectionPersister:669 -  One-shot delete: update PROJET set id_group=null where id_group=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [NONE]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [READ]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [UPGRADE]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [UPGRADE_NOWAIT]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [FORCE]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [PESSIMISTIC_READ]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=? lock in share mode
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [PESSIMISTIC_WRITE]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [PESSIMISTIC_FORCE_INCREMENT]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [OPTIMISTIC]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Team [OPTIMISTIC_FORCE_INCREMENT]: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity org.java.mql.models.p01.Team: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity org.java.mql.models.p01.Team: select team0_.id as id1_1_0_, team0_.NOM as NOM2_1_0_ from GROUPE team0_ where team0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [NONE]: select etudiant0_.id as id1_0_1_, etudiant0_.email as email2_0_1_, etudiant0_.NOM as NOM3_0_1_, etudiant0_.phone as phone4_0_1_, etudiant0_.prenom as prenom5_0_1_, etudiant0_.id_group as id_group6_0_1_, team1_.id as id1_1_0_, team1_.NOM as NOM2_1_0_ from ETUDIANT etudiant0_ inner join GROUPE team1_ on etudiant0_.id_group=team1_.id where etudiant0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [READ]: select etudiant0_.id as id1_0_1_, etudiant0_.email as email2_0_1_, etudiant0_.NOM as NOM3_0_1_, etudiant0_.phone as phone4_0_1_, etudiant0_.prenom as prenom5_0_1_, etudiant0_.id_group as id_group6_0_1_, team1_.id as id1_1_0_, team1_.NOM as NOM2_1_0_ from ETUDIANT etudiant0_ inner join GROUPE team1_ on etudiant0_.id_group=team1_.id where etudiant0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [UPGRADE]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [UPGRADE_NOWAIT]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [FORCE]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [PESSIMISTIC_READ]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=? lock in share mode
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [PESSIMISTIC_WRITE]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [PESSIMISTIC_FORCE_INCREMENT]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [OPTIMISTIC]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p01.Etudiant [OPTIMISTIC_FORCE_INCREMENT]: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity org.java.mql.models.p01.Etudiant: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity org.java.mql.models.p01.Etudiant: select etudiant0_.id as id1_0_0_, etudiant0_.email as email2_0_0_, etudiant0_.NOM as NOM3_0_0_, etudiant0_.phone as phone4_0_0_, etudiant0_.prenom as prenom5_0_0_, etudiant0_.id_group as id_group6_0_0_ from ETUDIANT etudiant0_ where etudiant0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [NONE]: select project0_.id as id1_2_1_, project0_.DatePublication as DatePubl2_2_1_, project0_.Deadline as Deadline3_2_1_, project0_.description as descript4_2_1_, project0_.nom as nom5_2_1_, project0_.id_group as id_group6_2_1_, team1_.id as id1_1_0_, team1_.NOM as NOM2_1_0_ from PROJET project0_ inner join GROUPE team1_ on project0_.id_group=team1_.id where project0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [READ]: select project0_.id as id1_2_1_, project0_.DatePublication as DatePubl2_2_1_, project0_.Deadline as Deadline3_2_1_, project0_.description as descript4_2_1_, project0_.nom as nom5_2_1_, project0_.id_group as id_group6_2_1_, team1_.id as id1_1_0_, team1_.NOM as NOM2_1_0_ from PROJET project0_ inner join GROUPE team1_ on project0_.id_group=team1_.id where project0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [UPGRADE]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [UPGRADE_NOWAIT]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [FORCE]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [PESSIMISTIC_READ]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=? lock in share mode
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [PESSIMISTIC_WRITE]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [PESSIMISTIC_FORCE_INCREMENT]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=? for update
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [OPTIMISTIC]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:123 - Static select for entity org.java.mql.models.p02.Project [OPTIMISTIC_FORCE_INCREMENT]: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:56 - Static select for action ACTION_MERGE on entity org.java.mql.models.p02.Project: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=?
+2017-11-13 11:31:05 DEBUG Loader:56 - Static select for action ACTION_REFRESH on entity org.java.mql.models.p02.Project: select project0_.id as id1_2_0_, project0_.DatePublication as DatePubl2_2_0_, project0_.Deadline as Deadline3_2_0_, project0_.description as descript4_2_0_, project0_.nom as nom5_2_0_, project0_.id_group as id_group6_2_0_ from PROJET project0_ where project0_.id=?
+2017-11-13 11:31:05 DEBUG OneToManyLoader:82 - Static select for one-to-many org.java.mql.models.p01.Team.etudiants: select etudiants0_.id_group as id_group6_1_1_, etudiants0_.id as id1_0_1_, etudiants0_.id as id1_0_0_, etudiants0_.email as email2_0_0_, etudiants0_.NOM as NOM3_0_0_, etudiants0_.phone as phone4_0_0_, etudiants0_.prenom as prenom5_0_0_, etudiants0_.id_group as id_group6_0_0_ from ETUDIANT etudiants0_ where etudiants0_.id_group=?
+2017-11-13 11:31:05 DEBUG OneToManyLoader:82 - Static select for one-to-many org.java.mql.models.p01.Team.projects: select projects0_.id_group as id_group6_1_1_, projects0_.id as id1_2_1_, projects0_.id as id1_2_0_, projects0_.DatePublication as DatePubl2_2_0_, projects0_.Deadline as Deadline3_2_0_, projects0_.description as descript4_2_0_, projects0_.nom as nom5_2_0_, projects0_.id_group as id_group6_2_0_ from PROJET projects0_ where projects0_.id_group=?
+2017-11-13 11:31:05 DEBUG SessionFactoryRegistry:62 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@1be7cd5
+2017-11-13 11:31:05 DEBUG SessionFactoryRegistry:75 - Registering SessionFactory: 5d338df6-d5bb-473b-a11e-193a85453391 (<unnamed>)
+2017-11-13 11:31:05 DEBUG SessionFactoryRegistry:82 - Not binding SessionFactory to JNDI, no JNDI name configured
+2017-11-13 11:31:05 DEBUG SessionFactoryImpl:492 - Instantiated session factory
+2017-11-13 11:31:05 DEBUG SessionFactoryImpl:1073 - Checking 0 named HQL queries
+2017-11-13 11:31:05 DEBUG SessionFactoryImpl:1096 - Checking 0 named SQL queries
+2017-11-13 11:31:05 DEBUG StatisticsInitiator:110 - Statistics initialized [enabled=false]
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'hibernateTe' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'hibernateTe'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'hibernateTe'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setLiverableDao(org.java.mql.dao.p2.LiverableDao)
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultLi'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultLi'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p2.DefaultLiverableDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultLi' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultLi': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultLi' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultLi'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'defaultLi'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setEtudiantDao(org.java.mql.dao.p1.EtudiantDao)
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'hibernateEt'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'hibernateEt'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.hibernate.p1.HDefaultEtudiantDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'hibernateEt' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'hibernateEt': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'hibernateEt' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'hibernateEt'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'hibernateEt'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setFileDao(org.java.mql.dao.p2.FileDao)
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultFi'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultFi'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p2.DefaultFileDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultFi' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultFi': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultFi' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultFi'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'defaultFi'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setEnsignantDao(org.java.mql.dao.p1.EnsignantDao)
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultEn'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultEn'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p1.DefaultEnsignantDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultEn' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultEn': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultEn' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultEn'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'defaultEn'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setMatiereDao(org.java.mql.dao.p2.MatiereDao)
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultMa'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultMa'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p2.DefaultMatiereDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultMa' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultMa': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultMa' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultMa'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'defaultMa'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'daoMediator': AutowiredMethodElement for public void org.java.mql.dao.DaoMediator.setProjectDao(org.java.mql.dao.p2.ProjectDao)
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultPr'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultPr'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p2.DefaultProjectDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultPr' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultPr': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultPr' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultPr'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'daoMediator' to bean named 'defaultPr'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'daoMediator'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultModule2Business' to bean named 'daoMediator'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG AnnotationTransactionAttributeSource:106 - Adding transactional method 'addEtudiant' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2017-11-13 11:31:05 DEBUG InfrastructureAdvisorAutoProxyCreator:538 - Creating implicit proxy for bean 'defaultModule2Business' with 0 common interceptors and 1 specific interceptors
+2017-11-13 11:31:05 DEBUG JdkDynamicAopProxy:115 - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [org.java.mql.business.DefaultModule2Business@11d3241]
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultModule2Business'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'hibernateConfiguration'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'daoMediator'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'hibernateEn'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'hibernateEn'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'hibernateEn' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'hibernateEn'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'hibernateEt'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'hibernateTe'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'defaultEn'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultEt'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultEt'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p1.DefaultEtudiantDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultEt' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultEt': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultEt' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultEt'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'defaultTe'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'defaultTe'
+2017-11-13 11:31:05 DEBUG InjectionMetadata:71 - Registered injected element on class [org.java.mql.dao.p1.DefaultTeamDao]: AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'defaultTe' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG InjectionMetadata:85 - Processing injected method of bean 'defaultTe': AutowiredFieldElement for private org.hibernate.SessionFactory org.java.mql.dao.DaoMediatorService.sessionFactory
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG AutowiredAnnotationBeanPostProcessor:433 - Autowiring by type from bean name 'defaultTe' to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'defaultTe'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'defaultFi'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'defaultLi'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'defaultMa'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'defaultPr'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'transactionAttributeSource'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'transactionInterceptor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'dataSource'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:215 - Creating shared instance of singleton bean 'transactionManager'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:432 - Creating instance of bean 'transactionManager'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'hibernateConfiguration'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:739 - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'sessionFactory'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:506 - Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:1525 - Invoking afterPropertiesSet() on bean with name 'transactionManager'
+2017-11-13 11:31:05 INFO  HibernateTransactionManager:339 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@172b013] of Hibernate SessionFactory for HibernateTransactionManager
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:460 - Finished creating instance of bean 'transactionManager'
+2017-11-13 11:31:05 DEBUG ClassPathXmlApplicationContext:858 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1e4ccb3]
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2017-11-13 11:31:05 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2017-11-13 11:31:05 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2017-11-13 11:31:05 DEBUG PropertySourcesPropertyResolver:72 - Searching for key 'spring.liveBeansView.mbeanDomain' in [class path resource [application.properties]]
+2017-11-13 11:31:05 DEBUG PropertySourcesPropertyResolver:94 - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'defaultModule2Business'
+2017-11-13 11:31:05 DEBUG AnnotationTransactionAttributeSource:106 - Adding transactional method 'addTeam' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'transactionManager'
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:366 - Creating new transaction with name [org.java.mql.business.DefaultModule2Business.addTeam]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:416 - Opened new Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])] for Hibernate transaction
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:426 - Preparing JDBC Connection of Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])]
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:212 - Obtaining JDBC connection
+2017-11-13 11:31:05 DEBUG DriverManagerDataSource:162 - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/plateformemql]
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:218 - Obtained JDBC connection
+2017-11-13 11:31:05 DEBUG AbstractTransactionImpl:158 - begin
+2017-11-13 11:31:05 DEBUG JdbcTransaction:69 - initial autocommit status: true
+2017-11-13 11:31:05 DEBUG JdbcTransaction:71 - disabling autocommit
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:487 - Exposing Hibernate transaction as JDBC transaction [com.mysql.jdbc.JDBC4Connection@19d6699]
+2017-11-13 11:31:05 DEBUG ActionQueue:228 - Executing identity-insert immediately
+2017-11-13 11:31:05 DEBUG SQL:104 - insert into GROUPE (NOM) values (?)
+2017-11-13 11:31:05 DEBUG IdentifierGeneratorHelper:93 - Natively generated identity: 15
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:753 - Initiating transaction commit
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:550 - Committing Hibernate transaction on Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[org.java.mql.models.p01.Team#15]],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])]
+2017-11-13 11:31:05 DEBUG AbstractTransactionImpl:173 - committing
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:147 - Processing flush-time cascades
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:188 - Dirty checking collections
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:121 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:128 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2017-11-13 11:31:05 DEBUG EntityPrinter:114 - Listing entities:
+2017-11-13 11:31:05 DEBUG EntityPrinter:121 - org.java.mql.models.p01.Team{projects=null, id=15, etudiants=null, nom=C}
+2017-11-13 11:31:05 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-11-13 11:31:05 DEBUG JdbcTransaction:126 - re-enabling autocommit
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:632 - Closing Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[org.java.mql.models.p01.Team#15]],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])] after transaction
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:232 - Releasing JDBC connection
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:250 - Released JDBC connection
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'transactionManager'
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:366 - Creating new transaction with name [org.java.mql.business.DefaultModule2Business.addEtudiant]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:416 - Opened new Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])] for Hibernate transaction
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:426 - Preparing JDBC Connection of Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])]
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:212 - Obtaining JDBC connection
+2017-11-13 11:31:05 DEBUG DriverManagerDataSource:162 - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/plateformemql]
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:218 - Obtained JDBC connection
+2017-11-13 11:31:05 DEBUG AbstractTransactionImpl:158 - begin
+2017-11-13 11:31:05 DEBUG JdbcTransaction:69 - initial autocommit status: true
+2017-11-13 11:31:05 DEBUG JdbcTransaction:71 - disabling autocommit
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:487 - Exposing Hibernate transaction as JDBC transaction [com.mysql.jdbc.JDBC4Connection@c6460c]
+2017-11-13 11:31:05 DEBUG ActionQueue:228 - Executing identity-insert immediately
+2017-11-13 11:31:05 DEBUG SQL:104 - insert into ETUDIANT (email, NOM, phone, prenom, id_group) values (?, ?, ?, ?, ?)
+2017-11-13 11:31:05 DEBUG IdentifierGeneratorHelper:93 - Natively generated identity: 13
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:753 - Initiating transaction commit
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:550 - Committing Hibernate transaction on Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[org.java.mql.models.p01.Etudiant#13]],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])]
+2017-11-13 11:31:05 DEBUG AbstractTransactionImpl:173 - committing
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:147 - Processing flush-time cascades
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:188 - Dirty checking collections
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:121 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2017-11-13 11:31:05 DEBUG AbstractFlushingEventListener:128 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2017-11-13 11:31:05 DEBUG EntityPrinter:114 - Listing entities:
+2017-11-13 11:31:05 DEBUG EntityPrinter:121 - org.java.mql.models.p01.Etudiant{phone=067777, id=13, team=org.java.mql.models.p01.Team#15, nom=fourkane, prenom=hasnae, email=hasnaefourkane@gmail.com}
+2017-11-13 11:31:05 DEBUG JdbcTransaction:113 - committed JDBC Connection
+2017-11-13 11:31:05 DEBUG JdbcTransaction:126 - re-enabling autocommit
+2017-11-13 11:31:05 DEBUG HibernateTransactionManager:632 - Closing Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[org.java.mql.models.p01.Etudiant#13]],collectionKeys=[]];ActionQueue[insertions=[] updates=[] deletions=[] orphanRemovals=[] collectionCreations=[] collectionRemovals=[] collectionUpdates=[] collectionQueuedOps=[] unresolvedInsertDependencies=UnresolvedEntityInsertActions[]])] after transaction
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:232 - Releasing JDBC connection
+2017-11-13 11:31:05 DEBUG LogicalConnectionImpl:250 - Released JDBC connection
+2017-11-13 11:31:05 INFO  ClassPathXmlApplicationContext:1042 - Closing org.springframework.context.support.ClassPathXmlApplicationContext@3a439b: startup date [Mon Nov 13 11:31:02 WET 2017]; root of context hierarchy
+2017-11-13 11:31:05 DEBUG DefaultListableBeanFactory:246 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2017-11-13 11:31:05 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8806ef: defining beans [defaultModule2Business,hibernateConfiguration,daoMediator,hibernateEn,hibernateEt,hibernateTe,defaultEn,defaultEt,defaultTe,defaultFi,defaultLi,defaultMa,defaultPr,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,sessionFactory,dataSource,transactionManager]; root of factory hierarchy
+2017-11-13 11:31:05 DEBUG DisposableBeanAdapter:226 - Invoking destroy() on bean with name 'sessionFactory'
+2017-11-13 11:31:05 DEBUG SessionFactoryImpl:1374 - HHH000031: Closing
+2017-11-13 11:31:05 DEBUG BootstrapServiceRegistryImpl:203 - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2017-11-13 11:31:05 DEBUG AbstractServiceRegistryImpl:356 - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2017-11-13 11:31:05 DEBUG DisposableBeanAdapter:226 - Invoking destroy() on bean with name 'hibernateConfiguration'
+2017-11-13 11:31:05 DEBUG DisposableBeanAdapter:226 - Invoking destroy() on bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
