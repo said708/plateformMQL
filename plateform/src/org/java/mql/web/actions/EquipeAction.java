@@ -1,7 +1,6 @@
 package org.java.mql.web.actions;
 
 import java.util.List;
-import java.util.Vector;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -9,7 +8,6 @@ import javax.faces.bean.SessionScoped;
 import org.java.mql.business.DefaultModule2Business;
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.p01.Etudiant;
-import org.java.mql.models.p01.Team;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @ManagedBean
