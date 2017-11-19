@@ -198,16 +198,15 @@ public class DefaultModule2Business implements Module2Business{
 						Project project = projects.remove(i);
 						team.setProjects(projects);
 						return project;
-					}else {
-						throw new Exception("Project  "+idProject + " not found" );
 					}
 				}
+			}else {
+				throw new Exception("Project  "+idProject + " not found" );
 			}
-			return null;
 		}catch(Exception e) {
 			log.fatal("DefaultModule2Business.removeProjectFromTeam has an error : "+e.getMessage());
-			return null;
 		}
+		return null;
 	}
 
 
@@ -459,29 +458,54 @@ public class DefaultModule2Business implements Module2Business{
 			}
 			return false;
 		}catch(Exception e) {
-			log.fatal("DefaultModule2Business.deleteFileFromLiverable has an error : "+e.getMessage());
+			log.fatal("DefaultModule2Business.isAnFileExisteInLiverable has an error : "+e.getMessage());
 			return false;
 		}
 	}
 
 
 	@Override
-	public int addFileToLiverable(File file, long idLiverable) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int addFileToLiverable(File file, long liverableId) {
+		try {
+			if(isAnLiverableExiste(liverableId) && !isAnFileExisteInLiverable(file.getId(), liverableId) && file != null) {
+				Liverable liverable = daoMediator.selectLiverableById(liverableId);
+				liverable.getFiles().add(file);
+				return daoMediator.updateLiverable(liverableId, liverable);
+			}else {
+				throw new Exception("file "+file.getId()+"  is already existe or null /  liverable "+liverableId+" not existe");
+			}
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.addFileToLiverable has an error :"+e.getMessage());
+			return -1;
+		}
 	}
 
 
 	@Override
 	public int addProject(Project project) {
-		daoMediator.addProjet(project);
-		return 0;
+		try {
+			if(!isAnProjectExiste(project.getId()) && project!=null) {
+				return daoMediator.addProjet(project);
+			}else
+				throw new Exception("project is already exist or null");
+		} catch (Exception e) {
+			log.fatal("DefaultModule2Business.addProject has an error : "+ e.getMessage());
+			return -1;
+		}
 	}
 
 
 	@Override
-	public Project removeProject(long idProjet) {
-		return daoMediator.deleteProjet(idProjet);
+	public Project deleteProject(long idProjet) {
+		try {
+			if(isAnEtudiantExiste(idProjet)) {
+				return daoMediator.deleteProjet(idProjet);
+			}else
+				throw new Exception("project "+idProjet+" not existed");
+		} catch (Exception e) {
+			log.fatal("DefaultModule2Business.deleteProject has an error : "+ e.getMessage());
+			return null;
+		}
 	}
 
 	public DaoMediator getDaoMediator() {

@@ -38,7 +38,7 @@ public interface Module2Business {
 	//manage project
 	int addProject(Project project);
 	Project selectProjectById(long idProject);
-	Project removeProject(long idProject);
+	Project deleteProject(long idProject);
 	int updateProject(long idProject , Project project);
 	List<Project> listProjects();
 	boolean isAnProjectExiste(long idProject);
