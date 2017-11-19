@@ -11,10 +11,10 @@
 	
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="{driver}"></property>
-		<property name="url" value="jdbc:${type}://${host}:${port}/${database}"></property>
-		<property name="username" value="${username}"></property>
-		<property name="password" value="${password}"></property>
+		<property name="driverClassName" value="${org.mql.driver}"></property>
+		<property name="url" value="jdbc:${org.mql.type}://${org.mql.host}:${org.mql.port}/${org.mql.database}"></property>
+		<property name="username" value="${org.mql.username}"></property>
+		<property name="password" value="${org.mql.password}"></property>
 	</bean>
 
 	<bean id="persistenceUnitManager"
