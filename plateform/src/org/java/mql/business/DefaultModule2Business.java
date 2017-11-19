@@ -195,8 +195,9 @@ public class DefaultModule2Business implements Module2Business{
 				List<Project> projects = team.getProjects();
 				for (int i = 0; i < projects.size(); i++) {
 					if(projects.get(i).getId() == idProject) {
+						Project project = projects.remove(i);
 						team.setProjects(projects);
-						return projects.remove(i);
+						return project;
 					}else {
 						throw new Exception("Project  "+idProject + " not found" );
 					}
@@ -204,7 +205,7 @@ public class DefaultModule2Business implements Module2Business{
 			}
 			return null;
 		}catch(Exception e) {
-			log.fatal("DefaultModule2Business.addListEtudiantsToTeam has an error : "+e.getMessage());
+			log.fatal("DefaultModule2Business.removeProjectFromTeam has an error : "+e.getMessage());
 			return null;
 		}
 	}
@@ -244,7 +245,7 @@ public class DefaultModule2Business implements Module2Business{
 	}
 
 
-	
+
 
 
 	@Override
@@ -302,7 +303,7 @@ public class DefaultModule2Business implements Module2Business{
 			}else
 				throw new Exception("etudiant "+id+" not existed");
 		} catch (Exception e) {
-			log.fatal("DefaultModule2Business.listEtudiantsInTeam has an error : "+ e.getMessage());
+			log.fatal("DefaultModule2Business.deleteEtudiant has an error : "+ e.getMessage());
 			return null;
 		}
 	}
@@ -408,12 +409,59 @@ public class DefaultModule2Business implements Module2Business{
 				return true;
 		return false;
 	}
-	
-	
+
+
 	@Override
-	public Team deleteFileFromLiverable(long fileId, long teamId) {
-		// TODO Auto-generated method stub
-		return null;
+	public AbstractFile deleteFileFromLiverable(long fileId, long liverableId) {
+		try {
+			if(isAnFileExisteInLiverable(fileId , liverableId) && isAnLiverableExiste(liverableId)) {
+				Liverable liverable = daoMediator.selectLiverableById(liverableId);
+				List<AbstractFile> files = liverable.getFiles();
+				for (int i = 0; i < files.size(); i++) {
+					if(files.get(i).getId() == fileId) {
+						AbstractFile file = files.remove(i);
+						liverable.setFiles(files);
+						return file;
+					}
+				}
+			}else {
+				throw new Exception("File  "+fileId + " or liverable "+liverableId+" not found" );
+			}
+			return null;
+		}catch(Exception e) {
+			log.fatal("DefaultModule2Business.deleteFileFromLiverable has an error : "+e.getMessage());
+			return null;
+		}
+	}
+
+
+
+	@Override
+	public boolean isAnLiverableExiste(long liverableId) {
+		for (Liverable liverable : listLiverables()) 
+			if(liverableId == liverable.getId())
+				return true;
+		return false;
+	}
+
+
+	@Override
+	public boolean isAnFileExisteInLiverable(long fileId , long liverableId) {
+		try {
+			if(isAnLiverableExiste(liverableId)) {
+				for (AbstractFile file : listFilesInLiverable(liverableId)) {
+					if(fileId == file.getId()) {
+						return true;
+					}
+				}
+			}else {
+				throw new Exception("liverable "+liverableId+" not found" );
+			}
+			return false;
+		}catch(Exception e) {
+			log.fatal("DefaultModule2Business.deleteFileFromLiverable has an error : "+e.getMessage());
+			return false;
+		}
 	}
 
 
@@ -423,7 +471,7 @@ public class DefaultModule2Business implements Module2Business{
 		return 0;
 	}
 
-	
+
 	@Override
 	public int addProject(Project project) {
 		daoMediator.addProjet(project);
@@ -439,8 +487,8 @@ public class DefaultModule2Business implements Module2Business{
 	public DaoMediator getDaoMediator() {
 		return daoMediator;
 	}
-	
-	
+
+
 	public void setDaoMediator(DaoMediator daoMediator) {
 		this.daoMediator = daoMediator;
 	}

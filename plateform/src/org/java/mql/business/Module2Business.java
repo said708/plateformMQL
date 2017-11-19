@@ -44,9 +44,11 @@ public interface Module2Business {
 	boolean isAnProjectExiste(long idProject);
 	
 	//manage liverable
-	Team deleteFileFromLiverable(long fileId , long teamId);
+	AbstractFile deleteFileFromLiverable(long fileId , long liverableId);
 	int addFileToLiverable(File file , long idLiverable);
 	List<Liverable> listLiverables();
 	List<AbstractFile> listFilesInLiverable(long liverableId);
+	boolean isAnFileExisteInLiverable(long fileId , long liverableId);
+	boolean  isAnLiverableExiste(long liverableId);
 	
 }
