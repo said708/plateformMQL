@@ -161,7 +161,7 @@ public class DaoMediator {
 	public List<Liverable> selectAllLiverable() {
 		return liverableDao.selectAllLiverable();
 	}
-	public List<Liverable> selectLiverableById(long id) {
+	public Liverable selectLiverableById(long id) {
 		return liverableDao.selectLiverableById(id);
 	}
 	public int updateLiverable(long idLiverable, Liverable liverable) {

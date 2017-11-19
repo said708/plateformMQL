@@ -4,10 +4,7 @@ import java.util.List;
 
 public class Directory extends AbstractFile{
 	
-	
 	private Type type;
-	
-	
 	private List<AbstractFile> files;
 
 	public Directory() {

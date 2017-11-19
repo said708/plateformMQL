@@ -29,7 +29,7 @@ public class DefaultLiverableDao extends DaoMediatorService implements Liverable
 	}
 
 	@Override
-	public List<Liverable> selectLiverableById(long id) {
+	public Liverable selectLiverableById(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -10,6 +10,6 @@ public interface LiverableDao extends DAOservice{
 	int addLiverable(Liverable liverable);
 	Liverable deleteLiverable(long idLiverable);
 	List<Liverable> selectAllLiverable();
-	List<Liverable> selectLiverableById(long id);
+	Liverable selectLiverableById(long id);
 	int updateLiverable(long idLiverable , Liverable liverable);
 }

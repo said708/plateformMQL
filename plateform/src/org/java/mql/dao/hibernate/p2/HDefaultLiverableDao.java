@@ -11,7 +11,7 @@ public class HDefaultLiverableDao implements LiverableDao {
 	@Override
 	public void setMediator(DaoMediator daoMediator) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class HDefaultLiverableDao implements LiverableDao {
 	}
 
 	@Override
-	public List<Liverable> selectLiverableById(long id) {
+	public Liverable selectLiverableById(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -43,5 +43,7 @@ public class HDefaultLiverableDao implements LiverableDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

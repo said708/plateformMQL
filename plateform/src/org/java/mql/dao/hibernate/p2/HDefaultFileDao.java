@@ -11,7 +11,7 @@ public class HDefaultFileDao implements FileDao {
 	@Override
 	public void setMediator(DaoMediator daoMediator) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -43,5 +43,7 @@ public class HDefaultFileDao implements FileDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

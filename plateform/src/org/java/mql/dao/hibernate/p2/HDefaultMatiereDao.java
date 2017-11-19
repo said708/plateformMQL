@@ -11,7 +11,7 @@ public class HDefaultMatiereDao implements MatiereDao {
 	@Override
 	public void setMediator(DaoMediator daoMediator) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -43,5 +43,7 @@ public class HDefaultMatiereDao implements MatiereDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

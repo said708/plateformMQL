@@ -11,7 +11,7 @@ public class HDefaultTeamDao implements TeamDao {
 	@Override
 	public void setMediator(DaoMediator daoMediator) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -43,5 +43,7 @@ public class HDefaultTeamDao implements TeamDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

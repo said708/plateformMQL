@@ -11,7 +11,7 @@ public class HDefaultProjectDao implements ProjectDao {
 	@Override
 	public void setMediator(DaoMediator daoMediator) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -44,4 +44,5 @@ public class HDefaultProjectDao implements ProjectDao {
 		return 0;
 	}
 
+	
 }
