@@ -18,6 +18,7 @@ public interface Module2Business {
 	int addEtudiant(Etudiant etudiant);//work
 	Etudiant selectEtudiantById(long id);//work
 	int updateEtudiant(long idEtudiant , Etudiant etudiant );//work
+	boolean isAnEtudiantExiste(long idEtudiant);
 	
 	//manage team
 	int addTeam(Team team);//work
@@ -25,18 +26,22 @@ public interface Module2Business {
 	List<Team> listTeams();//work
 	Team selectTeamById(long id);//work
 	int updateTeam(long idTeam , Team team);//work
-	int addEtudiantToTeam(Etudiant etudiant , long teamId);//work
-	void addListEtudiantsToTeam(List<Etudiant> etudiant , long teamId);//work
+	int addEtudiantToTeam(long etudiant , long teamId);//work
+	void addListEtudiantsToTeam(long teamId , long ...etdsId);//work
 	Etudiant removeEtudiantFromTeam(long studentId , long teamId);//work
-	int addProjectToTeam(Project project , long teamId);//work
+	int addProjectToTeam(long projectId , long teamId);//work
 	Project removeProjectFromTeam(long projectId , long teamId);//work
 	List<Etudiant> listEtudiantsInTeam(long idTeam);//work
+	boolean isAnTeamExiste(long idTeam);
 	
 	
 	//manage project
 	int addProject(Project project);
-	Project removeProject(Project projet);
+	Project selectProjectById(long idProject);
+	Project removeProject(long idProject);
+	int updateProject(long idProject , Project project);
 	List<Project> listProjects();
+	boolean isAnProjectExiste(long idProject);
 	
 	//manage liverable
 	Team deleteFileFromLiverable(long fileId , long teamId);

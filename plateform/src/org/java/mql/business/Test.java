@@ -62,8 +62,7 @@ public class Test {
 		
 		System.out.println("+++++++addProjectToTeam++++++++");
 		//addProjectToTeam work as expected
-		Project p = new Project(9077, "Plateform Mql", "platefom   pour le master mql sert a gestionner le proccessur  de l'entrer a sort", "12/01/1990", "12/01/2000");
-		business.addProjectToTeam(p,9);
+		business.addProjectToTeam(1,9);
 		
 		for (Project t : update.getProjects()) {
 			System.out.println(t.getDesc());	
@@ -71,7 +70,7 @@ public class Test {
 		
 		System.out.println("+++++++removeProjectFromTeam++++++++");
 		//removeProjectToTeam work as expected
-		business.removeProjectFromTeam(9077 , 9);
+		business.removeProjectFromTeam(1 , 9);
 		System.out.println("Project removed with success");
 		for (Project t : update.getProjects()) {
 			System.out.println(t.getDesc());	
@@ -96,7 +95,7 @@ public class Test {
 		
 		System.out.println("+++++++addEtudiantToTeam++++++++");
 		//add service work as expected
-		business.addEtudiantToTeam(new Etudiant(87, "tajir", "bouchta", "bouchta.2330@gmail.fr", "0989787634"), 4);
+		business.addEtudiantToTeam(3, 4);
 		System.out.println(business.listEtudiantsInTeam(4));
 		
 		
@@ -107,7 +106,7 @@ public class Test {
 		list.add(etd1);
 		list.add(etd2);
 		//addListEtudiantsToTeam work as expected
-		business.addListEtudiantsToTeam(list, 4);
+		business.addListEtudiantsToTeam(4, 1,2,3);
 		for (Etudiant t : business.listEtudiantsInTeam(4)) {
 			System.out.println(t.getPrenom());	
 		}
