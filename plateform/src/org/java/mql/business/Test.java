@@ -9,7 +9,7 @@ import org.java.mql.models.p02.Project;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
-
+	//service test by hasnae
 	public Test() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business b = context.getBean(DefaultModule2Business.class);
