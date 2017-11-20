@@ -8,7 +8,11 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
 	<import resource="MemoryDao.xml" />
+<<<<<<< HEAD
 	<!-- <import resource="AopConfig.xml" /> -->
+=======
+<!-- 	<import resource="AopConfig.xml" /> -->
+>>>>>>> 7ef5b60bd018390ee20e6038f7e26cd5b7f82f24
 	
 	
 

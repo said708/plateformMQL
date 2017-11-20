@@ -8,6 +8,7 @@ import javax.faces.bean.SessionScoped;
 import org.java.mql.business.DefaultModule2Business;
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.p01.Etudiant;
+import org.java.mql.models.p01.Team;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @ManagedBean
@@ -15,10 +16,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class EquipeAction {
 
 	private Module2Business service ;
+	private List<Etudiant>  etudiants;
 	private List<Etudiant> membres ;
 	private long selected, selected1;
 	private String nom;
-	private int id;
+	
 
 	public EquipeAction() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
@@ -26,9 +28,19 @@ public class EquipeAction {
 	}
 
 	public String ajouterEquipe() {
+<<<<<<< HEAD
 		/*Team t = new Team(id, nom, service.listEtudiants(), service.listProjects());
 		service.addListEtudiantsToTeam(membres, id);
 		service.addTeam(t);*/
+=======
+
+		
+		Team t = new Team();
+		t.setNom(nom);
+		t.setEtudiants(etudiants);
+//		service.addListEtudiantsToTeam(membres, id);
+		service.addTeam(t);
+>>>>>>> 7ef5b60bd018390ee20e6038f7e26cd5b7f82f24
 		return "";
 	}
 
