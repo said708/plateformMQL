@@ -4,10 +4,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.models.p02.Matiere;
-import org.springframework.stereotype.Repository;
 
-
-@Repository("defaultMa")
 public class DefaultMatiereDao extends DaoMediatorService implements MatiereDao {
 
 	@Override

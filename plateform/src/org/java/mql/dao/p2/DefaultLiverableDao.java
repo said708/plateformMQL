@@ -4,10 +4,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.models.p02.Liverable;
-import org.springframework.stereotype.Repository;
 
-
-@Repository("defaultLi")
 public class DefaultLiverableDao extends DaoMediatorService implements LiverableDao {
 
 	@Override

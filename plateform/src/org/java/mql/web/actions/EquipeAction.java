@@ -26,8 +26,6 @@ public class EquipeAction {
 	}
 
 	public String ajouterEquipe() {
-
-
 		/*Team t = new Team(id, nom, service.listEtudiants(), service.listProjects());
 		service.addListEtudiantsToTeam(membres, id);
 		service.addTeam(t);*/

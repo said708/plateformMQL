@@ -4,10 +4,8 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.models.p02.Project;
-import org.springframework.stereotype.Repository;
 
 
-@Repository("defaultPr")
 public class DefaultProjectDao extends DaoMediatorService implements ProjectDao {
 
 	@Override

@@ -9,10 +9,8 @@ import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.models.p01.Etudiant;
 import org.java.mql.models.p01.Team;
 import org.java.mql.models.p02.Project;
-import org.springframework.stereotype.Repository;
 
 
-@Repository("defaultTe")
 public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 	
 	private static final Logger log = Logger.getLogger(DefaultTeamDao.class);

@@ -4,13 +4,14 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.models.p02.File;
-import org.springframework.stereotype.Repository;
 
 
 
-@Repository("defaultFi")
 public class DefaultFileDao extends DaoMediatorService implements FileDao {
 
+	
+	
+	
 	@Override
 	public int addFile(File file) {
 		// TODO Auto-generated method stub

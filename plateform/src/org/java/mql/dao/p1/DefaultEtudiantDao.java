@@ -7,10 +7,8 @@ import java.util.Vector;
 import org.apache.log4j.Logger;
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.models.p01.Etudiant;
-import org.springframework.stereotype.Repository;
 
 
-@Repository("defaultEt")
 public class DefaultEtudiantDao extends DaoMediatorService implements EtudiantDao {
 
 	private static Hashtable<Long, Etudiant> list ;

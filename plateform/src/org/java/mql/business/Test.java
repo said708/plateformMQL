@@ -13,7 +13,7 @@ public class Test {
 	public Test() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business b = context.getBean(DefaultModule2Business.class);
-		etudiantTest(b);
+		teamTest(b);
 		context.close();
 	}
 	
@@ -58,7 +58,7 @@ public class Test {
 		for (Team t : business.listTeams()) {
 			System.out.println(t.getNom());	
 		}
-		
+		System.out.println(business.listProjects());
 		
 		System.out.println("+++++++addProjectToTeam++++++++");
 		//addProjectToTeam work as expected

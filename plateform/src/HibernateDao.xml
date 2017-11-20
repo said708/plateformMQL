@@ -15,11 +15,7 @@
 	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultLiverableDao"></bean>
 	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultMatiereDao"></bean>
 	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultProjectDao"></bean>
-
-
-
-
-
+	
 </beans>
 
 
