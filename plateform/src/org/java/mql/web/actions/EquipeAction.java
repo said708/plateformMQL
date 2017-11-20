@@ -28,11 +28,6 @@ public class EquipeAction {
 	}
 
 	public String ajouterEquipe() {
-<<<<<<< HEAD
-		/*Team t = new Team(id, nom, service.listEtudiants(), service.listProjects());
-		service.addListEtudiantsToTeam(membres, id);
-		service.addTeam(t);*/
-=======
 
 		
 		Team t = new Team();
@@ -40,7 +35,6 @@ public class EquipeAction {
 		t.setEtudiants(etudiants);
 //		service.addListEtudiantsToTeam(membres, id);
 		service.addTeam(t);
->>>>>>> 7ef5b60bd018390ee20e6038f7e26cd5b7f82f24
 		return "";
 	}
 
