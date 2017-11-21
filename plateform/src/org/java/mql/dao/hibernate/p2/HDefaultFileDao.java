@@ -2,16 +2,18 @@ package org.java.mql.dao.hibernate.p2;
 
 import java.util.List;
 
-import org.java.mql.dao.DaoMediator;
+import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p2.FileDao;
 import org.java.mql.models.p02.File;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 
-public class HDefaultFileDao implements FileDao {
+public class HDefaultFileDao  extends DaoMediatorService  implements FileDao {
 
-	@Override
-	public void setMediator(DaoMediator daoMediator) {
-		// TODO Auto-generated method stub
-		
+	private HibernateTemplate template;
+	
+	public HDefaultFileDao(HibernateTemplate template) {
+		super();
+		this.template = template;
 	}
 
 	@Override

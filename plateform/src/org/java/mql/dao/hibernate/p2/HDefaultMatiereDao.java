@@ -2,17 +2,22 @@ package org.java.mql.dao.hibernate.p2;
 
 import java.util.List;
 
-import org.java.mql.dao.DaoMediator;
+import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p2.MatiereDao;
 import org.java.mql.models.p02.Matiere;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 
-public class HDefaultMatiereDao implements MatiereDao {
+public class HDefaultMatiereDao  extends DaoMediatorService  implements MatiereDao {
 
-	@Override
-	public void setMediator(DaoMediator daoMediator) {
-		// TODO Auto-generated method stub
-		
+	private HibernateTemplate template;
+	
+	
+	
+	public HDefaultMatiereDao(HibernateTemplate template) {
+		this.template = template;
 	}
+
+	
 
 	@Override
 	public int addMatiere(Matiere matiere) {

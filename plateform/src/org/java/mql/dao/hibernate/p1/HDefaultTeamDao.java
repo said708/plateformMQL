@@ -2,16 +2,18 @@ package org.java.mql.dao.hibernate.p1;
 
 import java.util.List;
 
-import org.java.mql.dao.DaoMediator;
+import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.TeamDao;
 import org.java.mql.models.p01.Team;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 
-public class HDefaultTeamDao implements TeamDao {
+public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 
-	@Override
-	public void setMediator(DaoMediator daoMediator) {
-		// TODO Auto-generated method stub
-		
+	private HibernateTemplate template;
+	
+	
+	public HDefaultTeamDao(HibernateTemplate template) {
+		this.template = template;
 	}
 
 	@Override

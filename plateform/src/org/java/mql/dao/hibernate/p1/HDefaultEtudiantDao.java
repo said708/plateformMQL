@@ -2,15 +2,17 @@ package org.java.mql.dao.hibernate.p1;
 
 import java.util.List;
 
-import org.java.mql.dao.DaoMediator;
+import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.EtudiantDao;
 import org.java.mql.models.p01.Etudiant;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 
-public class HDefaultEtudiantDao implements EtudiantDao {
+public class HDefaultEtudiantDao   extends DaoMediatorService  implements EtudiantDao {
 
-	@Override
-	public void setMediator(DaoMediator daoMediator) {
-		
+	private HibernateTemplate template;
+
+	public HDefaultEtudiantDao(HibernateTemplate template) {
+		this.template = template;
 	}
 
 	@Override
