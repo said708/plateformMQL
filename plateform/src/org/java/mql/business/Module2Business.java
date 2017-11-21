@@ -18,7 +18,7 @@ public interface Module2Business {
 	int addEtudiant(Etudiant etudiant);//work
 	Etudiant selectEtudiantById(long id);//work
 	int updateEtudiant(long idEtudiant , Etudiant etudiant );//work
-	boolean isAnEtudiantExiste(long idEtudiant);
+	boolean isAnEtudiantExiste(long idEtudiant);//work
 	
 	//manage team
 	int addTeam(Team team);//work
@@ -36,19 +36,19 @@ public interface Module2Business {
 	
 	
 	//manage project
-	int addProject(Project project);
-	Project selectProjectById(long idProject);
-	Project deleteProject(long idProject);
-	int updateProject(long idProject , Project project);
-	List<Project> listProjects();
-	boolean isAnProjectExiste(long idProject);
+	int addProject(Project project);//work
+	Project selectProjectById(long idProject);//work
+	Project deleteProject(long idProject);//work
+	int updateProject(long idProject , Project project);//work
+	List<Project> listProjects();//work
+	boolean isAnProjectExiste(long idProject);//work
 	
 	//manage liverable
-	AbstractFile deleteFileFromLiverable(long fileId , long liverableId);
-	int addFileToLiverable(File file , long idLiverable);
-	List<Liverable> listLiverables();
-	List<AbstractFile> listFilesInLiverable(long liverableId);
-	boolean isAnFileExisteInLiverable(long fileId , long liverableId);
-	boolean  isAnLiverableExiste(long liverableId);
+	AbstractFile deleteFileFromLiverable(long fileId , long liverableId);//work
+	int addFileToLiverable(File file , long idLiverable);//work
+	List<Liverable> listLiverables();//work
+	List<AbstractFile> listFilesInLiverable(long liverableId);//work
+	boolean isAnFileExisteInLiverable(long fileId , long liverableId);//work
+	boolean  isAnLiverableExiste(long liverableId);//work
 	
 }
