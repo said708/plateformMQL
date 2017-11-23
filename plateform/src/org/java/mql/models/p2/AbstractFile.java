@@ -27,6 +27,15 @@ public abstract class AbstractFile {
 		this.path = path;
 	}
 
+	
+	
+	
+	public Liverable getLiverable() {
+		return liverable;
+	}
+	public void setLiverable(Liverable liverable) {
+		this.liverable = liverable;
+	}
 	abstract void add(AbstractFile  file);	
 
 	@Override
@@ -38,12 +47,7 @@ public abstract class AbstractFile {
 		return (other.id == this.id) ;
 	}
 
-	public Liverable getLiverable() {
-		return liverable;
-	}
-	public void setLiverable(Liverable liverable) {
-		this.liverable = liverable;
-	}
+	
 	@Override
 	public int hashCode() {
 		return (int) (id * 31 + 990876);

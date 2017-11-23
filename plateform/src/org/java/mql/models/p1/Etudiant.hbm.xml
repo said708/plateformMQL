@@ -9,7 +9,7 @@
 		<id name="id" type="long" column="ID">
 			<generator class="native" />
 		</id>
-		<many-to-one name="team" class="corg.java.mql.models.p1.Team"
+		<many-to-one name="team" class="org.java.mql.models.p1.Team"
 			fetch="select">
 			<column name="TEAM_ID" not-null="true" />
 		</many-to-one>

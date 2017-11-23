@@ -20,7 +20,7 @@ public class Test {
 	public void teamTest(Module2Business business) {
 		System.out.println("+++++++listTeams++++++++");
 		for (Team t : business.listTeams()) {
-			System.out.println(t.getNom());	
+			System.out.println(t.getName());	
 		}
 		System.out.println("+++++++addTeam++++++++");
 		//listEtudiants work as expected
@@ -34,7 +34,7 @@ public class Test {
 		//addTeam work as expected
 		business.addTeam(team);
 		for (Team t : business.listTeams()) {
-			System.out.println(t.getNom());	
+			System.out.println(t.getName());	
 		}
 		
 		
@@ -42,7 +42,7 @@ public class Test {
 		//addTeam work as expected
 		business.deleteTeam(4);
 		for (Team t : business.listTeams()) {
-			System.out.println(t.getNom());	
+			System.out.println(t.getName());	
 		}
 		
 		
@@ -56,7 +56,7 @@ public class Test {
 		//updateTeam work as expected
 		business.updateTeam(9, update);
 		for (Team t : business.listTeams()) {
-			System.out.println(t.getNom());	
+			System.out.println(t.getName());	
 		}
 		System.out.println(business.listProjects());
 		

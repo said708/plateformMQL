@@ -31,7 +31,7 @@ public class EquipeAction {
 
 		
 		Team t = new Team();
-		t.setNom(nom);
+		t.setName(nom);
 		t.setEtudiants(etudiants);
 //		service.addListEtudiantsToTeam(membres, id);
 		service.addTeam(t);

@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-	<import resource="MemoryDao.xml" />
+	<import resource="HibernateDao.xml" />
 	<!-- <import resource="AopConfig.xml" /> -->
 	
 	<bean id="daoMediator" class="org.java.mql.dao.DaoMediator"

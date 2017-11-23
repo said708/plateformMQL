@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" 
-	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:context="http://www.springframework.org/schema/context" 
-	xmlns:tx="http://www.springframework.org/schema/tx" 
-	xmlns:aop="http://www.springframework.org/schema/aop"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 		http://www.springframework.org/schema/beans
@@ -29,7 +27,7 @@
 	</bean>
 
 	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan" value="org.java.mql.models" />
 		<property name="mappingResources">
@@ -37,7 +35,7 @@
 				<value>org/java/mql/models/p1/Ensignant.hbm.xml</value>
 				<value>org/java/mql/models/p1/Etudiant.hbm.xml</value>
 				<value>org/java/mql/models/p1/Team.hbm.xml</value>
-				<value>org/java/mql/models/p2/File.hbm.xml</value>
+				<value>org/java/mql/models/p2/AbstractFile.hbm.xml</value>
 				<value>org/java/mql/models/p2/Liverable.hbm.xml</value>
 				<value>org/java/mql/models/p2/Matiere.hbm.xml</value>
 				<value>org/java/mql/models/p2/Project.hbm.xml</value>
@@ -54,27 +52,19 @@
 	<bean id="persistenceExceptionTranslationPostProcessor"
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
-	<tx:advice id="txAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<!-- all methods starting with 'list' or 'get' are read-only -->
-			<tx:method name="list*" read-only="true" />
-			<tx:method name="get*" read-only="true" />
-			<!-- for other methods use the default transaction settings -->
-			<tx:method name="*" />
-		</tx:attributes>
-	</tx:advice>
-	<!-- ensure that the above transactional advice runs for any execution of 
-		a method in the service package -->
-	<aop:config>
-		<aop:pointcut id="hibernateMethods"
-			expression="execution(* org.java.mql.dao.hibernate.*.*.*(..))" />
-		<aop:advisor pointcut-ref="hibernateMethods" advice-ref="txAdvice" />
-	</aop:config>
-
-
+	<!-- <tx:advice id="txAdvice" transaction-manager="transactionManager"> 
+		<tx:attributes> all methods starting with 'list' or 'get' are read-only <tx:method 
+		name="list*" read-only="true" /> <tx:method name="get*" read-only="true" 
+		/> for other methods use the default transaction settings <tx:method name="*" 
+		/> </tx:attributes> </tx:advice> <aop:config> <aop:pointcut id="hibernateMethods" 
+		expression="execution(* org.java.mql.dao.hibernate.*.*.*(..))" /> <aop:advisor 
+		pointcut-ref="hibernateMethods" advice-ref="txAdvice" /> </aop:config> -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
 	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 

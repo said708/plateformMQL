@@ -22,7 +22,7 @@
       <property name = "path" column = "PATH" type = "string"/>
       
       <!-- private Liverable liverable; -->
-      <many-to-one name="liverable" class="org.java.mql.models.p2.Liverable" />
+      <many-to-one name="liverable" class="org.java.mql.models.p2.Liverable" column="LIVERABLE"/>
       
    </class>
 </hibernate-mapping>

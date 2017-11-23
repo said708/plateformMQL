@@ -4,7 +4,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "Employee" table = "EMPLOYEE">
+   <class name = "org.java.mql.models.p2.Matiere" table = "MATIERE">
       
       <meta attribute = "class-description">
          This class contains the employee detail. 
@@ -19,7 +19,7 @@
       
       
        <!-- private Ensignant ensignant; -->
-      <many-to-one name="ensignant" class="org.java.mql.models.p1.Ensignant" />
+      <many-to-one name="ensignant" column="ENSEIGNANT" class="org.java.mql.models.p1.Ensignant" />
       
       
       <!-- private List<Project> projects; -->

@@ -25,18 +25,14 @@ public class Ensignant  {
 	}
 
 
-
-	
-
-
-	public List<Matiere> getMatiere() {
+	public List<Matiere> getMatieres() {
 		return matieres;
 	}
 
 
 
-	public void setMatiere(List<Matiere> matiere) {
-		this.matieres = matiere;
+	public void setMatieres(List<Matiere> matieres) {
+		this.matieres = matieres;
 	}
 
 

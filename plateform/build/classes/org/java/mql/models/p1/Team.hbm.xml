@@ -4,7 +4,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "Team" table = "TEAM">
+   <class name = "org.java.mql.models.p1.Team" table = "TEAM">
       
       <meta attribute = "class-description">
          This class contains the team detail. 
@@ -24,7 +24,7 @@
          <key column = "ID_PROJECT"/>
          <one-to-many  class="org.java.mql.models.p2.Project" />
       </set>
-      <many-to-one name="matiere" class="org.java.mql.models.p2.Matiere" />
+      <many-to-one name="matiere" column="MATIERE" class="org.java.mql.models.p2.Matiere" />
       
    </class>
 </hibernate-mapping>

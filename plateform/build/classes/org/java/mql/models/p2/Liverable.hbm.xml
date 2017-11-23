@@ -15,15 +15,15 @@
 		</id>
 		<!-- private String name; -->
 		<property name="name" column="NAME" type="string" />
-
+		
 		<!-- private List<AbstractFile> files; -->
 		<set name="files" cascade="all">
 			<key column="ID_FILE" />
 			<one-to-many class="org.java.mql.models.p2.AbstractFile" />
 		</set>
-
+		
 		<!-- private Project project; -->
-		<many-to-one name="project" class="org.java.mql.models.p2.Project" />
+		<many-to-one name="project" column="PROJECT" class="org.java.mql.models.p2.Project" />
 
 	</class>
 </hibernate-mapping>

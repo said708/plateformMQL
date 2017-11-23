@@ -11,6 +11,7 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 
 	private HibernateTemplate template;
 	
+	
 	public HDefaultEnsignantDao(HibernateTemplate template) {
 		this.template = template;
 	}

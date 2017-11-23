@@ -9,7 +9,7 @@ import org.java.mql.models.p2.Project;
 public class Team {
 	
 	private long id;
-	private String nom;
+	private String name;
 	private List<Etudiant> etudiants;
 	private List<Project> projects;
 	private Matiere matiere;
@@ -22,7 +22,7 @@ public class Team {
 	public Team(long id, String nom, List<Etudiant> etudiants, List<Project> projects) {
 		super();
 		this.id = id;
-		this.nom = nom;
+		this.name = nom;
 		this.etudiants = etudiants;
 		this.projects = projects;
 	}
@@ -48,18 +48,16 @@ public class Team {
 
 
 
-	public String getNom() {
-		return nom;
+	
+
+
+
+	public String getName() {
+		return name;
 	}
-
-
-
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-
-
 	public List<Etudiant> getEtudiants() {
 		return etudiants;
 	}
@@ -98,7 +96,7 @@ public class Team {
 
 	@Override
 	public String toString() {
-		return "Team [id=" + id + ", nom=" + nom + ", etudiants=" + etudiants + "]";
+		return "Team [id=" + id + ", nom=" + name + ", etudiants=" + etudiants + "]";
 	}
 
 }

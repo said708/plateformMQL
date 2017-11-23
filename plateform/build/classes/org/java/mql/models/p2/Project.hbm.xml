@@ -14,21 +14,27 @@
 			<generator class="native" />
 		</id>
 
-		<!-- -->
+		<!--private String name; -->
 		<property name="name" column="NAME" type="string" />
 
-		<!-- -->
+		<!-- private String desc;-->
 		<property name="desc" column="DESC" type="string" />
 
-		<!-- -->
+		<!-- private String datePublication;-->
 		<property name="datePublication" column="DATE_PUBLICATION"
 			type="string" />
 
-		<!-- -->
+		<!-- private String deadLine;-->
 		<property name="deadLine" column="DEAD_LINE" type="string" />
-		<many-to-one name="matiere" class="org.java.mql.models.p2.Matiere" />
-		<many-to-one name="liverable" class="org.java.mql.models.p2.Liverable" />
-		<many-to-one name="team" class="org.java.mql.models.p1.Team" />
+		
+		<!-- private Matiere matiere; -->
+		<many-to-one name="matiere" column="MATIERE" class="org.java.mql.models.p2.Matiere" />
+		
+		<!-- private Liverable liverable; -->
+		<many-to-one name="liverable" column="LIVERABLE" class="org.java.mql.models.p2.Liverable" />
+		
+		<!-- private Team team; -->
+		<many-to-one name="team" column="TEAM" class="org.java.mql.models.p1.Team" />
 
 	</class>
 </hibernate-mapping>
