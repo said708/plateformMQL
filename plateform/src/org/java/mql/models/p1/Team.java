@@ -3,6 +3,7 @@ package org.java.mql.models.p1;
 import java.util.List;
 import java.util.Vector;
 
+import org.java.mql.models.p2.Matiere;
 import org.java.mql.models.p2.Project;
 
 public class Team {
@@ -11,6 +12,7 @@ public class Team {
 	private String nom;
 	private List<Etudiant> etudiants;
 	private List<Project> projects;
+	private Matiere matiere;
 
 	
 	public Team() {
@@ -34,6 +36,12 @@ public class Team {
 
 
 
+	public Matiere getMatiere() {
+		return matiere;
+	}
+	public void setMatiere(Matiere matiere) {
+		this.matiere = matiere;
+	}
 	public void setId(long id) {
 		this.id = id;
 	}

@@ -1,22 +1,22 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC 
 "-//Hibernate/Hibernate Mapping DTD//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-   <class name = "Ensignant" table = "ENSIGNANT">
-      
-      <meta attribute = "class-description">
-         This class contains the Ensignant detail. 
-      </meta>
-      
-      <id name = "id" type = "long" column = "id">
-         <generator class="native"/>
-      </id>
-      
-      <property name = "firstName" column = "first_name" type = "string"/>
-      <property name = "lastName" column = "last_name" type = "string"/>
-      <property name = "salary" column = "salary" type = "int"/>
-      
-   </class>
+	<class name="org.java.mql.models.p1.Ensignant" table="ENSIGNANT">
+		<meta attribute="class-description">
+			This class contains the Ensignant detail.
+		</meta>
+		<id name="id" type="long" column="ID">
+			<generator class="native" />
+		</id>
+		<property name="nom" column="NOM" type="string" />
+		<property name="prenom" column="PRENOM" type="string" />
+		<property name="phone" column="PHONE" type="string" />
+		<set name="matieres" cascade="all">
+			<key column="ID_MATIERE" />
+			<one-to-many class="org.java.mql.models.p2.Matiere" />
+		</set>
+	</class>
 </hibernate-mapping>

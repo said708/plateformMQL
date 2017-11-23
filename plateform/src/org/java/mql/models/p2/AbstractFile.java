@@ -1,10 +1,11 @@
 package org.java.mql.models.p2;
 
 public abstract class AbstractFile {
-	
+
 	private long id;
 	private String name;
 	private String path;
+	private Liverable liverable;
 
 
 	public long getId() {
@@ -30,15 +31,21 @@ public abstract class AbstractFile {
 
 	@Override
 	public boolean equals(Object o) {
-	  if ((o == null) || (o.getClass() != AbstractFile.class)) {
-	    return false;
-	  }
-	  AbstractFile other = (AbstractFile) o;
-	  return (other.id == this.id) ;
+		if ((o == null) || (o.getClass() != AbstractFile.class)) {
+			return false;
+		}
+		AbstractFile other = (AbstractFile) o;
+		return (other.id == this.id) ;
 	}
 
+	public Liverable getLiverable() {
+		return liverable;
+	}
+	public void setLiverable(Liverable liverable) {
+		this.liverable = liverable;
+	}
 	@Override
 	public int hashCode() {
-	  return (int) (id * 31 + 990876);
+		return (int) (id * 31 + 990876);
 	}
 }

@@ -1,10 +1,15 @@
 package org.java.mql.models.p1;
 
+import java.util.List;
+
+import org.java.mql.models.p2.Matiere;
+
 public class Ensignant  {
 	private long id;
 	private String nom;
 	private String prenom;
 	private String phone;
+	private List<Matiere> matieres;
 
 	public Ensignant() {
 
@@ -17,6 +22,21 @@ public class Ensignant  {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.phone = phone;
+	}
+
+
+
+	
+
+
+	public List<Matiere> getMatiere() {
+		return matieres;
+	}
+
+
+
+	public void setMatiere(List<Matiere> matiere) {
+		this.matieres = matiere;
 	}
 
 

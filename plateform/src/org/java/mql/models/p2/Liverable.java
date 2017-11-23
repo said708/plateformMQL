@@ -6,6 +6,7 @@ public class Liverable  {
 	private long id;
 	private String name;
 	private List<AbstractFile> files;
+	private Project project;
 	
 	public Liverable() {
 	}
@@ -13,6 +14,16 @@ public class Liverable  {
 	
 	public List<AbstractFile> getFiles() {
 		return files;
+	}
+
+
+	public Project getProject() {
+		return project;
+	}
+
+
+	public void setProject(Project project) {
+		this.project = project;
 	}
 
 

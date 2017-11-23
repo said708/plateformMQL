@@ -7,16 +7,24 @@
    <class name = "Team" table = "TEAM">
       
       <meta attribute = "class-description">
-         This class contains the employee detail. 
+         This class contains the team detail. 
       </meta>
       
       <id name = "id" type = "int" column = "id">
          <generator class="native"/>
       </id>
       
-      <property name = "firstName" column = "first_name" type = "string"/>
-      <property name = "lastName" column = "last_name" type = "string"/>
-      <property name = "salary" column = "salary" type = "int"/>
+      <property name = "name" column = "NAME" type = "string"/>
+      
+      <set name = "etudiants" cascade="all">
+         <key column = "ID_STUDENT"/>
+         <one-to-many class="org.java.mql.models.p1.Etudiant" />
+      </set>
+      <set name = "projects" cascade="all">
+         <key column = "ID_PROJECT"/>
+         <one-to-many  class="org.java.mql.models.p2.Project" />
+      </set>
+      <many-to-one name="matiere" class="org.java.mql.models.p2.Matiere" />
       
    </class>
 </hibernate-mapping>

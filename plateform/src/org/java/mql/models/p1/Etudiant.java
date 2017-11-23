@@ -8,7 +8,11 @@ public class Etudiant {
 	private String prenom;
 	private String email;
 	private String phone;
+	private Team team;
 	
+	
+
+
 	public Etudiant() {
 		// TODO Auto-generated constructor stub
 	}
@@ -22,8 +26,6 @@ public class Etudiant {
 		this.email = email;
 		this.phone = phone;
 	}
-
-
 
 	public long getId() {
 		return id;
@@ -56,6 +58,15 @@ public class Etudiant {
 		this.phone = phone;
 	}
 	
+	public Team getTeam() {
+		return team;
+	}
+
+
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
 
 	
 	

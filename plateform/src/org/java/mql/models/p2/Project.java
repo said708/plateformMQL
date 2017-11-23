@@ -1,20 +1,24 @@
 package org.java.mql.models.p2;
 
+import org.java.mql.models.p1.Team;
+
 public class Project {
 	private long id;
 	private String name;
 	private String desc;
 	private String datePublication;
 	private String deadLine;
-	//private Liverable liverable;
-	
-	
+	private Matiere matiere;
+	private Liverable liverable;
+	private Team team;
+
+
 	public Project() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
+
+
+
 	public Project(long id, String name, String desc, String datePublication, String deadLine) {
 		super();
 		this.id = id;
@@ -22,17 +26,53 @@ public class Project {
 		this.desc = desc;
 		this.datePublication = datePublication;
 		this.deadLine = deadLine;
-	//	this.liverable = liverable;
+		//	this.liverable = liverable;
 	}
 
 
 
-//	public Liverable getLiverable() {
-//		return liverable;
-//	}
-//	public void setLiverable(Liverable liverable) {
-//		this.liverable = liverable;
-//	}
+	public Team getTeam() {
+		return team;
+	}
+
+
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+
+
+
+	public Liverable getLiverable() {
+		return liverable;
+	}
+
+
+
+	public void setLiverable(Liverable liverable) {
+		this.liverable = liverable;
+	}
+
+
+
+	public Matiere getMatiere() {
+		return matiere;
+	}
+
+
+
+	public void setMatiere(Matiere matiere) {
+		this.matiere = matiere;
+	}
+
+
+
+	//	public Liverable getLiverable() {
+	//		return liverable;
+	//	}
+	//	public void setLiverable(Liverable liverable) {
+	//		this.liverable = liverable;
+	//	}
 	public long getId() {
 		return id;
 	}
@@ -65,15 +105,15 @@ public class Project {
 	}
 	@Override
 	public boolean equals(Object o) {
-	  if ((o == null) || (o.getClass() != Project.class)) {
-	    return false;
-	  }
-	  Project other = (Project) o;
-	  return (other.id == this.id) ;
+		if ((o == null) || (o.getClass() != Project.class)) {
+			return false;
+		}
+		Project other = (Project) o;
+		return (other.id == this.id) ;
 	}
 
 	@Override
 	public int hashCode() {
-	  return (int) (id * 31 + 990876);
+		return (int) (id * 31 + 990876);
 	}
 }
