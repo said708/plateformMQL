@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.EtudiantDao;
-import org.java.mql.models.p01.Etudiant;
+import org.java.mql.models.p1.Etudiant;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultEtudiantDao   extends DaoMediatorService  implements EtudiantDao {

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p2.LiverableDao;
-import org.java.mql.models.p02.Liverable;
+import org.java.mql.models.p2.Liverable;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultLiverableDao  extends DaoMediatorService  implements LiverableDao {

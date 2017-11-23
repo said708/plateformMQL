@@ -1,4 +1,4 @@
-package org.java.mql.models.p02;
+package org.java.mql.models.p2;
 
 import java.util.List;
 

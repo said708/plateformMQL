@@ -32,17 +32,24 @@ public class App1 {
 	}
 	private void exp02() {
 		try {
-			Author said = new Author(1, "said", 1990);
+			Author said = new Author(2, "said", 1990);
             // Create the SessionFactory from hibernate.cfg.xml
-        	Configuration configuration = new Configuration();
-        	configuration.configure("hibernate.cfg.xml");
+        
+        	
+        	
+        	
+        	SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+        	
         	System.out.println("Hibernate Configuration loaded");
         	
-        	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         	System.out.println("Hibernate serviceRegistry created");
         	
-        	SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+        	
+        	
+        	
+        	
         	Session session = sessionFactory.getCurrentSession();
+        	
         	
         	//start transaction
     		session.beginTransaction();

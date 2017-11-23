@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p2.ProjectDao;
-import org.java.mql.models.p02.Project;
+import org.java.mql.models.p2.Project;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultProjectDao extends DaoMediatorService implements ProjectDao {

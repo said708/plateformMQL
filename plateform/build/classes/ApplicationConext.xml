@@ -10,19 +10,12 @@
 	<import resource="MemoryDao.xml" />
 	<!-- <import resource="AopConfig.xml" /> -->
 	
-	
-
-
 	<bean id="daoMediator" class="org.java.mql.dao.DaoMediator"
 		autowire="byType" />
-		
 		
 	<bean id="defaultModule2Business" class="org.java.mql.business.DefaultModule2Business"
 		autowire="byType" />
 		
-
-
-
 </beans>
 
 

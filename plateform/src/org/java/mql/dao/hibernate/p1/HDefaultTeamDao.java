@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.TeamDao;
-import org.java.mql.models.p01.Team;
+import org.java.mql.models.p1.Team;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {

@@ -6,9 +6,9 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 import org.java.mql.dao.DaoMediatorService;
-import org.java.mql.models.p01.Etudiant;
-import org.java.mql.models.p01.Team;
-import org.java.mql.models.p02.Project;
+import org.java.mql.models.p1.Etudiant;
+import org.java.mql.models.p1.Team;
+import org.java.mql.models.p2.Project;
 
 
 public class DefaultTeamDao extends DaoMediatorService implements TeamDao{

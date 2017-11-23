@@ -12,7 +12,7 @@
 		<!-- Connection Pool Size -->
 		<property name="hibernate.connection.pool_size">1</property>
 		
-		<!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
+		
 		<property name="hibernate.current_session_context_class">thread</property>
 		
 		<!-- Outputs the SQL queries, should be disabled in Production -->
@@ -23,6 +23,6 @@
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
 
 		<!-- mapping file, we can use Bean annotations too --> 
-		<mapping resource="Author.hbm.xml" />
+		<mapping resource="org/mql/test/hibernate/Author.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

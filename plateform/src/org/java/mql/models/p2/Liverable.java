@@ -1,11 +1,24 @@
-package org.java.mql.models.p02;
+package org.java.mql.models.p2;
 
-public abstract class AbstractFile {
-	
+import java.util.List;
+
+public class Liverable  {
 	private long id;
 	private String name;
-	private String path;
+	private List<AbstractFile> files;
+	
+	public Liverable() {
+	}
+	
+	
+	public List<AbstractFile> getFiles() {
+		return files;
+	}
 
+
+	public void setFiles(List<AbstractFile> files) {
+		this.files = files;
+	}
 
 	public long getId() {
 		return id;
@@ -19,21 +32,12 @@ public abstract class AbstractFile {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPath() {
-		return path;
-	}
-	public void setPath(String path) {
-		this.path = path;
-	}
-
-	abstract void add(AbstractFile  file);	
-
 	@Override
 	public boolean equals(Object o) {
-	  if ((o == null) || (o.getClass() != AbstractFile.class)) {
+	  if ((o == null) || (o.getClass() != Liverable.class)) {
 	    return false;
 	  }
-	  AbstractFile other = (AbstractFile) o;
+	  Liverable other = (Liverable) o;
 	  return (other.id == this.id) ;
 	}
 
@@ -41,4 +45,5 @@ public abstract class AbstractFile {
 	public int hashCode() {
 	  return (int) (id * 31 + 990876);
 	}
+	
 }

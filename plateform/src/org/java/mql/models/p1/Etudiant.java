@@ -1,4 +1,4 @@
-package org.java.mql.models.p01;
+package org.java.mql.models.p1;
 
 public class Etudiant {
 	

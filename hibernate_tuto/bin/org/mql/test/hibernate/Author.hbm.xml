@@ -3,17 +3,16 @@
 "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="or.mql.test.hibernate.Author" table="Author">
+	<class name="org.mql.test.hibernate.Author" table="Author">
 		<id name="id" type="int">
 			<column name="ID" />
 			<generator class="increment" />
 		</id>
-		<property name="name" type="string">
+		<property name="name" type="java.lang.String">
 			<column name="name" />
 		</property>
 		<property name="yearBorn" type="int">
 			<column name="yearBorn" />
 		</property>
-
 	</class>
 </hibernate-mapping>

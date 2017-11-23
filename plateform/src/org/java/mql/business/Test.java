@@ -3,9 +3,9 @@ package org.java.mql.business;
 import java.util.List;
 import java.util.Vector;
 
-import org.java.mql.models.p01.Etudiant;
-import org.java.mql.models.p01.Team;
-import org.java.mql.models.p02.Project;
+import org.java.mql.models.p1.Etudiant;
+import org.java.mql.models.p1.Team;
+import org.java.mql.models.p2.Project;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {

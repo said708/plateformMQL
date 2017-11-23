@@ -1,9 +1,9 @@
-package org.java.mql.models.p01;
+package org.java.mql.models.p1;
 
 import java.util.List;
 import java.util.Vector;
 
-import org.java.mql.models.p02.Project;
+import org.java.mql.models.p2.Project;
 
 public class Team {
 	

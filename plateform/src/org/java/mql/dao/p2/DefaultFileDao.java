@@ -3,7 +3,7 @@ package org.java.mql.dao.p2;
 import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
-import org.java.mql.models.p02.File;
+import org.java.mql.models.p2.File;
 
 
 

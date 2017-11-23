@@ -3,7 +3,7 @@ package org.java.mql.dao.p2;
 import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
-import org.java.mql.models.p02.Project;
+import org.java.mql.models.p2.Project;
 
 
 public class DefaultProjectDao extends DaoMediatorService implements ProjectDao {

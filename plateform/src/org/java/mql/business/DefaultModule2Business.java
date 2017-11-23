@@ -5,12 +5,12 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 import org.java.mql.dao.DaoMediator;
-import org.java.mql.models.p01.Etudiant;
-import org.java.mql.models.p01.Team;
-import org.java.mql.models.p02.AbstractFile;
-import org.java.mql.models.p02.File;
-import org.java.mql.models.p02.Liverable;
-import org.java.mql.models.p02.Project;
+import org.java.mql.models.p1.Etudiant;
+import org.java.mql.models.p1.Team;
+import org.java.mql.models.p2.AbstractFile;
+import org.java.mql.models.p2.File;
+import org.java.mql.models.p2.Liverable;
+import org.java.mql.models.p2.Project;
 
 
 

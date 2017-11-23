@@ -1,9 +1,9 @@
-package org.java.mql.models.p02;
+package org.java.mql.models.p2;
 
 import java.util.List;
 
-import org.java.mql.models.p01.Ensignant;
-import org.java.mql.models.p01.Team;
+import org.java.mql.models.p1.Ensignant;
+import org.java.mql.models.p1.Team;
 
 public class Matiere  {
 	private long id;

@@ -6,7 +6,7 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 import org.java.mql.dao.DaoMediatorService;
-import org.java.mql.models.p01.Etudiant;
+import org.java.mql.models.p1.Etudiant;
 
 
 public class DefaultEtudiantDao extends DaoMediatorService implements EtudiantDao {

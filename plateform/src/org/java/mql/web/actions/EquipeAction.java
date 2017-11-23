@@ -7,8 +7,8 @@ import javax.faces.bean.SessionScoped;
 
 import org.java.mql.business.DefaultModule2Business;
 import org.java.mql.business.Module2Business;
-import org.java.mql.models.p01.Etudiant;
-import org.java.mql.models.p01.Team;
+import org.java.mql.models.p1.Etudiant;
+import org.java.mql.models.p1.Team;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @ManagedBean

@@ -3,7 +3,7 @@ package org.java.mql.dao.p1;
 import java.util.List;
 
 import org.java.mql.dao.DAOservice;
-import org.java.mql.models.p01.Team;
+import org.java.mql.models.p1.Team;
 
 public interface TeamDao extends DAOservice{
 	int addTeam(Team team);
