@@ -22,6 +22,14 @@ public class Directory extends AbstractFile{
 	public void add(AbstractFile file) {
 		files.add(file);
 	}
+
+	public Type getType() {
+		return type;
+	}
+
+	public void setType(Type type) {
+		this.type = type;
+	}
 	
 	
 	

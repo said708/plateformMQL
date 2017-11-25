@@ -1,28 +1,43 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC 
 "-//Hibernate/Hibernate Mapping DTD//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-   <class name = "org.java.mql.models.p2.AbstractFile" table = "ABSTRACT_FILE">
-      
-      <meta attribute = "class-description">
-         This class contains the file detail. 
-      </meta>
-      
-      <!-- private long id; -->
-      <id name = "id" type = "long" column = "ID">
-         <generator class="native"/>
-      </id>
-      
-      <!-- private String name;  -->
-      <property name = "name" column = "NAME" type = "string"/>
-      
-      <!-- private String path; -->
-      <property name = "path" column = "PATH" type = "string"/>
-      
-      <!-- private Liverable liverable; -->
-      <many-to-one name="liverable" class="org.java.mql.models.p2.Liverable" column="LIVERABLE"/>
-      
-   </class>
+	<class name="org.java.mql.models.p2.AbstractFile" table="ABSTRACT_FILE"
+		abstract="true">
+
+		<meta attribute="class-description">
+			This class contains the file detail.
+		</meta>
+
+		<!-- private long id; -->
+		<id name="id" type="long" column="ID">
+			<generator class="native" />
+		</id>
+
+		<!-- private String name; -->
+		<property name="name" column="NAME" type="string" />
+
+		<!-- private String path; -->
+		<property name="path" column="PATH" type="string" />
+
+		<discriminator column="type" type="string"></discriminator>
+
+		<subclass name="org.java.mql.models.p2.Directory"
+			discriminator-value=directory>
+			<property name="type" column="TYPE" class="org.java.mql.models.p2.Type" />
+			<set name="files" cascade="all">
+				<key column="ID_FILE" />
+				<one-to-many class="org.java.mql.models.p2.AbstractFile" />
+			</set>
+		</subclass>
+		<subclass name="org.java.mql.models.p2.File"
+			discriminator-value=file />
+
+		<!-- private Liverable liverable; -->
+		<many-to-one name="liverable" class="org.java.mql.models.p2.Liverable"
+			column="LIVERABLE" />
+
+	</class>
 </hibernate-mapping>
