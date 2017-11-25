@@ -8,6 +8,17 @@ public abstract class AbstractFile {
 	private Liverable liverable;
 
 
+	public AbstractFile() {
+		liverable = new Liverable();
+	}
+
+	public AbstractFile(long id, String name, String path) {
+		this();
+		this.id = id;
+		this.name = name;
+		this.path = path;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -27,9 +38,7 @@ public abstract class AbstractFile {
 		this.path = path;
 	}
 
-	
-	
-	
+
 	public Liverable getLiverable() {
 		return liverable;
 	}
@@ -47,7 +56,7 @@ public abstract class AbstractFile {
 		return (other.id == this.id) ;
 	}
 
-	
+
 	@Override
 	public int hashCode() {
 		return (int) (id * 31 + 990876);

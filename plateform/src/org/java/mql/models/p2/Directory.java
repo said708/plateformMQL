@@ -1,6 +1,7 @@
 package org.java.mql.models.p2;
 
 import java.util.List;
+import java.util.Vector;
 
 public class Directory extends AbstractFile{
 	
@@ -8,9 +9,15 @@ public class Directory extends AbstractFile{
 	private List<AbstractFile> files;
 
 	public Directory() {
-		// TODO Auto-generated constructor stub
+		files = new Vector<AbstractFile>();
 	}
 	
+	public Directory(long id, String name, String path , Type type) {
+		super(id, name, path);
+		this.files = new Vector<AbstractFile>();
+		this.type = type;
+	}
+
 	public List<AbstractFile> getFiles() {
 		return files;
 	}
@@ -30,8 +37,4 @@ public class Directory extends AbstractFile{
 	public void setType(Type type) {
 		this.type = type;
 	}
-	
-	
-	
-	
 }

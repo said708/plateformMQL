@@ -1,6 +1,7 @@
 package org.java.mql.models.p1;
 
 import java.util.List;
+import java.util.Vector;
 
 import org.java.mql.models.p2.Matiere;
 
@@ -12,18 +13,16 @@ public class Ensignant  {
 	private List<Matiere> matieres;
 
 	public Ensignant() {
-
+		matieres = new Vector<Matiere>();
 	}
 	
-	
-
 	public Ensignant(long id, String nom, String prenom, String phone) {
+		this();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.phone = phone;
 	}
-
 
 	public List<Matiere> getMatieres() {
 		return matieres;

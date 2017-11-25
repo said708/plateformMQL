@@ -1,6 +1,7 @@
 package org.java.mql.models.p2;
 
 import java.util.List;
+import java.util.Vector;
 
 import org.java.mql.models.p1.Ensignant;
 import org.java.mql.models.p1.Team;
@@ -12,21 +13,29 @@ public class Matiere  {
 	private List<Project> projects;
 	private List<Team> teams;
 	public Matiere() {
-		
+		ensignant = new Ensignant();
+		projects = new Vector<Project>();
+		teams = new Vector<Team>();
+	}
+
+	public Matiere(long id, String name) {
+		this();
+		this.id = id;
+		this.name = name;
 	}
 
 	public List<Team> getTeams() {
 		return teams;
 	}
-	
+
 	public void setTeams(List<Team> teams) {
 		this.teams = teams;
 	}
-	
+
 	public List<Project> getProjects() {
 		return projects;
 	}
-	
+
 	public void setProjects(List<Project> projects) {
 		this.projects = projects;
 	}
@@ -58,21 +67,21 @@ public class Matiere  {
 	public void setEnsignant(Ensignant ensignant) {
 		this.ensignant = ensignant;
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
-	  if ((o == null) || (o.getClass() != Matiere.class)) {
-	    return false;
-	  }
-	  Matiere other = (Matiere) o;
-	  return (other.id == this.id) ;
+		if ((o == null) || (o.getClass() != Matiere.class)) {
+			return false;
+		}
+		Matiere other = (Matiere) o;
+		return (other.id == this.id) ;
 	}
 
 	@Override
 	public int hashCode() {
-	  return (int) (id * 31 + 990876);
+		return (int) (id * 31 + 990876);
 	}
-	
-	
-	
+
+
+
 }

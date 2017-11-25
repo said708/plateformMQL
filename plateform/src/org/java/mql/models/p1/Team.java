@@ -18,21 +18,22 @@ public class Team {
 	public Team() {
 		projects = new Vector<Project>();
 		etudiants = new Vector<Etudiant>();
+		matiere = new Matiere();
 	}
-	public Team(long id, String nom, List<Etudiant> etudiants, List<Project> projects) {
-		super();
+	
+	
+	
+	public Team(long id, String name) {
+		this();
 		this.id = id;
-		this.name = nom;
-		this.etudiants = etudiants;
-		this.projects = projects;
+		this.name = name;
 	}
+
+
+
 	public long getId() {
 		return id;
 	}
-
-
-
-	
 
 
 

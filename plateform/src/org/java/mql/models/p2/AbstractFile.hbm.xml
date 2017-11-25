@@ -25,6 +25,8 @@
 		<!-- private String path; -->
 		<property name="path" column="PATH" type="string" />
 
+
+		<!-- private Liverable liverable; -->
 		<many-to-one name="liverable" class="org.java.mql.models.p2.Liverable"
 			column="LIVERABLE" />
 
@@ -38,9 +40,5 @@
 		</subclass>
 		<subclass name="org.java.mql.models.p2.File"
 			discriminator-value="F" />
-
-		<!-- private Liverable liverable; -->
-
-
 	</class>
 </hibernate-mapping>

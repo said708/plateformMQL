@@ -18,7 +18,7 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 
 	@Override
 	public int addEnsignant(Ensignant ensignant) {
-		// TODO Auto-generated method stub
+		template.save(ensignant);
 		return 0;
 	}
 

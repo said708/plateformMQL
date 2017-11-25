@@ -3,6 +3,7 @@ package org.java.mql.business;
 import java.util.List;
 import java.util.Vector;
 
+import org.java.mql.models.p1.Ensignant;
 import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.Project;
@@ -13,8 +14,12 @@ public class Test {
 	public Test() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business b = context.getBean(DefaultModule2Business.class);
-		teamTest(b);
+		hibernateEnsignantTest(b);
 		context.close();
+	}
+	public void hibernateEnsignantTest(Module2Business business) {
+		Etudiant e = new Etudiant(1, "Thitah", "Said", "said.thitah@gmail.com", "0613206869");
+		business.addEtudiant(e);
 	}
 	
 	public void teamTest(Module2Business business) {
@@ -29,7 +34,9 @@ public class Test {
 		
 		//listProjects work as expected
 		List<Project> listProjects = business.listProjects();
-		Team team = new Team(9, "GroupeT", listEtudiants, listProjects);
+		Team team = new Team(9, "GroupeT");
+		team.setProjects(listProjects);
+		team.setEtudiants(listEtudiants);
 		
 		//addTeam work as expected
 		business.addTeam(team);
@@ -52,7 +59,9 @@ public class Test {
 		
 		
 		System.out.println("+++++++updateTeam++++++++");
-		Team update = new Team(67, "GroupeTModified", listEtudiants, new Vector<Project>());
+		Team update = new Team(67, "GroupeTModified");
+		update.setEtudiants(listEtudiants);
+		update.setProjects(new Vector<Project>());
 		//updateTeam work as expected
 		business.updateTeam(9, update);
 		for (Team t : business.listTeams()) {

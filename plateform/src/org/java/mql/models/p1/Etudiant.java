@@ -14,18 +14,25 @@ public class Etudiant {
 
 
 	public Etudiant() {
-		// TODO Auto-generated constructor stub
+		team = new Team();
 	}
 	
 	
 	
+	
+
 	public Etudiant(long id, String nom, String prenom, String email, String phone) {
+		this();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
 		this.phone = phone;
 	}
+
+
+
+
 
 	public long getId() {
 		return id;

@@ -12,9 +12,13 @@ public class Project {
 	private Liverable liverable;
 	private Team team;
 
+	
+	
 
 	public Project() {
-		// TODO Auto-generated constructor stub
+		matiere = new Matiere();
+		liverable = new Liverable();
+		team = new Team();
 	}
 
 
@@ -26,7 +30,6 @@ public class Project {
 		this.desc = desc;
 		this.datePublication = datePublication;
 		this.deadLine = deadLine;
-		//	this.liverable = liverable;
 	}
 
 

@@ -1,17 +1,27 @@
 package org.java.mql.models.p2;
 
 import java.util.List;
+import java.util.Vector;
 
 public class Liverable  {
 	private long id;
 	private String name;
 	private List<AbstractFile> files;
 	private Project project;
-	
+
 	public Liverable() {
+		files = new Vector<AbstractFile>();
+		project = new Project();
 	}
-	
-	
+
+
+	public Liverable(long id, String name) {
+		this();
+		this.id = id;
+		this.name = name;
+	}
+
+
 	public List<AbstractFile> getFiles() {
 		return files;
 	}
@@ -45,16 +55,16 @@ public class Liverable  {
 	}
 	@Override
 	public boolean equals(Object o) {
-	  if ((o == null) || (o.getClass() != Liverable.class)) {
-	    return false;
-	  }
-	  Liverable other = (Liverable) o;
-	  return (other.id == this.id) ;
+		if ((o == null) || (o.getClass() != Liverable.class)) {
+			return false;
+		}
+		Liverable other = (Liverable) o;
+		return (other.id == this.id) ;
 	}
 
 	@Override
 	public int hashCode() {
-	  return (int) (id * 31 + 990876);
+		return (int) (id * 31 + 990876);
 	}
-	
+
 }
