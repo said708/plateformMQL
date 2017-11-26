@@ -11,7 +11,7 @@
 		</id>
 		<many-to-one name="team" class="org.java.mql.models.p1.Team"
 			fetch="select">
-			<column name="TEAM_ID" not-null="true" />
+			<column name="ID" not-null="true" />
 		</many-to-one>
 		<property name="nom" column="NOM" type="string" />
 		<property name="prenom" column="PRENOM" type="string" />

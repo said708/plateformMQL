@@ -45,6 +45,8 @@ public abstract class AbstractFile {
 	public void setLiverable(Liverable liverable) {
 		this.liverable = liverable;
 	}
+	
+	
 	abstract void add(AbstractFile  file);	
 
 	@Override

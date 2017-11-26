@@ -34,11 +34,11 @@
 			discriminator-value="D">
 			<property name="type" column="TYPE" type="org.java.mql.models.p2.Type" />
 			<set name="files" cascade="all">
-				<key column="ID_FILE" />
+				<key column="ID" />
 				<one-to-many class="org.java.mql.models.p2.AbstractFile" />
 			</set>
 		</subclass>
-		<subclass name="org.java.mql.models.p2.File"
-			discriminator-value="F" />
+		<!-- <subclass name="org.java.mql.models.p2.File"
+			discriminator-value="F" /> -->
 	</class>
 </hibernate-mapping>

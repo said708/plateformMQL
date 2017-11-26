@@ -11,7 +11,6 @@ public class Liverable  {
 
 	public Liverable() {
 		files = new Vector<AbstractFile>();
-		project = new Project();
 	}
 
 

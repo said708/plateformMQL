@@ -18,7 +18,7 @@
 		
 		<!-- private List<AbstractFile> files; -->
 		<set name="files" cascade="all">
-			<key column="ID_FILE" />
+			<key column="ID" />
 			<one-to-many class="org.java.mql.models.p2.AbstractFile" />
 		</set>
 		

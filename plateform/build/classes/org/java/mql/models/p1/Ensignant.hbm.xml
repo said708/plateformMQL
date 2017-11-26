@@ -15,7 +15,7 @@
 		<property name="prenom" column="PRENOM" type="string" />
 		<property name="phone" column="PHONE" type="string" />
 		<set name="matieres" cascade="all">
-			<key column="ID_MATIERE" />
+			<key column="ID" />
 			<one-to-many class="org.java.mql.models.p2.Matiere" />
 		</set>
 	</class>

@@ -24,14 +24,14 @@
       
       <!-- private List<Project> projects; -->
       <set name = "projects" cascade="all">
-         <key column = "ID_PROJECT"/>
+         <key column = "ID"/>
          <one-to-many  class="org.java.mql.models.p2.Project" />
       </set>
       
       
       <!-- private List<Team> teams; -->
       <set name = "teams" cascade="all">
-         <key column = "ID_TEAM"/>
+         <key column = "ID"/>
          <one-to-many  class="org.java.mql.models.p1.Team" />
       </set>
       

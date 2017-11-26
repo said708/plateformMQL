@@ -17,11 +17,11 @@
       <property name = "name" column = "NAME" type = "string"/>
       
       <set name = "etudiants" cascade="all">
-         <key column = "ID_STUDENT"/>
+         <key column = "ID"/>
          <one-to-many class="org.java.mql.models.p1.Etudiant" />
       </set>
       <set name = "projects" cascade="all">
-         <key column = "ID_PROJECT"/>
+         <key column = "ID"/>
          <one-to-many  class="org.java.mql.models.p2.Project" />
       </set>
       <many-to-one name="matiere" column="MATIERE" class="org.java.mql.models.p2.Matiere" />

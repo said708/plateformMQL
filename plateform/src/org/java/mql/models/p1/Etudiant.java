@@ -16,10 +16,6 @@ public class Etudiant {
 	public Etudiant() {
 		team = new Team();
 	}
-	
-	
-	
-	
 
 	public Etudiant(long id, String nom, String prenom, String email, String phone) {
 		this();
