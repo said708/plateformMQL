@@ -19,10 +19,9 @@ public class Test {
 	public void hibernateEnsignantTest(Module2Business business) {
 		Etudiant e = new Etudiant(1, "Thitah", "Said", "said.thitah@gmail.com", "0613206869");
 		Team team = new Team(12, "GroupD");
-//		business.addEtudiantToTeam(1, 12);
+		business.addEtudiantToTeam(1, 12);
 		business.addEtudiant(e);
 	}
-	
 	public void teamTest(Module2Business business) {
 		System.out.println("+++++++listTeams++++++++");
 		for (Team t : business.listTeams()) {

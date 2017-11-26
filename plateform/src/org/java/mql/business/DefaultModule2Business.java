@@ -23,7 +23,10 @@ public class DefaultModule2Business implements Module2Business{
 
 	private static final Logger log = Logger.getLogger(DefaultModule2Business.class);
 
-
+	public DefaultModule2Business() {
+	}
+	
+	
 	@Override
 	public int addTeam(Team team) {
 		try {
@@ -322,6 +325,14 @@ public class DefaultModule2Business implements Module2Business{
 		}
 	}
 
+
+
+	@Override
+	public void addListEtudiants(List<Etudiant> etudiants) {
+		for (Etudiant etudiant : etudiants) {
+			this.addEtudiant(etudiant);
+		}
+	}
 
 
 	@Override

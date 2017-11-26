@@ -16,6 +16,7 @@ public interface Module2Business {
 	Etudiant deleteEtudiant(long id);//work
 	List<Etudiant> listEtudiants();//work
 	int addEtudiant(Etudiant etudiant);//work
+	void addListEtudiants(List<Etudiant> etudiants);//work
 	Etudiant selectEtudiantById(long id);//work
 	int updateEtudiant(long idEtudiant , Etudiant etudiant );//work
 	boolean isAnEtudiantExiste(long idEtudiant);//work
