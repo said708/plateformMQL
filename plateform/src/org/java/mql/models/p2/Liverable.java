@@ -10,12 +10,11 @@ public class Liverable  {
 	private Project project;
 
 	public Liverable() {
-		files = new Vector<AbstractFile>();
 	}
 
 
 	public Liverable(long id, String name) {
-		this();
+		files = new Vector<AbstractFile>();
 		this.id = id;
 		this.name = name;
 	}

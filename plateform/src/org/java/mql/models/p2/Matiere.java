@@ -13,13 +13,12 @@ public class Matiere  {
 	private List<Project> projects;
 	private List<Team> teams;
 	public Matiere() {
-		ensignant = new Ensignant();
-		projects = new Vector<Project>();
-		teams = new Vector<Team>();
 	}
 
 	public Matiere(long id, String name) {
-		this();
+		ensignant = new Ensignant();
+		projects = new Vector<Project>();
+		teams = new Vector<Team>();
 		this.id = id;
 		this.name = name;
 	}

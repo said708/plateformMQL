@@ -5,7 +5,7 @@ import org.java.mql.models.p1.Team;
 public class Project {
 	private long id;
 	private String name;
-	private String desc;
+	private String description;
 	private String datePublication;
 	private String deadLine;
 	private Matiere matiere;
@@ -16,18 +16,17 @@ public class Project {
 	
 
 	public Project() {
-		matiere = new Matiere();
-		liverable = new Liverable();
-		team = new Team();
 	}
 
 
 
 	public Project(long id, String name, String desc, String datePublication, String deadLine) {
-		super();
+		matiere = new Matiere();
+		liverable = new Liverable();
+		team = new Team();
 		this.id = id;
 		this.name = name;
-		this.desc = desc;
+		this.description = desc;
 		this.datePublication = datePublication;
 		this.deadLine = deadLine;
 	}
@@ -68,14 +67,6 @@ public class Project {
 		this.matiere = matiere;
 	}
 
-
-
-	//	public Liverable getLiverable() {
-	//		return liverable;
-	//	}
-	//	public void setLiverable(Liverable liverable) {
-	//		this.liverable = liverable;
-	//	}
 	public long getId() {
 		return id;
 	}
@@ -88,12 +79,19 @@ public class Project {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesc() {
-		return desc;
+	
+	public String getDescription() {
+		return description;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+
+
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
+
+
+
 	public String getDatePublication() {
 		return datePublication;
 	}

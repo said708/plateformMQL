@@ -9,7 +9,6 @@ public class Directory extends AbstractFile{
 	private List<AbstractFile> files;
 
 	public Directory() {
-		files = new Vector<AbstractFile>();
 	}
 	
 	public Directory(long id, String name, String path , Type type) {

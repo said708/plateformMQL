@@ -16,15 +16,14 @@ public class Team {
 
 	
 	public Team() {
-		projects = new Vector<Project>();
-		etudiants = new Vector<Etudiant>();
-		matiere = new Matiere();
 	}
 	
 	
 	
 	public Team(long id, String name) {
-		this();
+		projects = new Vector<Project>();
+		etudiants = new Vector<Etudiant>();
+		matiere = new Matiere();
 		this.id = id;
 		this.name = name;
 	}

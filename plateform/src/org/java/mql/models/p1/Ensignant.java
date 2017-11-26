@@ -13,11 +13,10 @@ public class Ensignant  {
 	private List<Matiere> matieres;
 
 	public Ensignant() {
-		matieres = new Vector<Matiere>();
 	}
 	
 	public Ensignant(long id, String nom, String prenom, String phone) {
-		this();
+		matieres = new Vector<Matiere>();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;

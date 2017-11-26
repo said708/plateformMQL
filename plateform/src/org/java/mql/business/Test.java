@@ -3,7 +3,6 @@ package org.java.mql.business;
 import java.util.List;
 import java.util.Vector;
 
-import org.java.mql.models.p1.Ensignant;
 import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.Project;
@@ -76,7 +75,7 @@ public class Test {
 		business.addProjectToTeam(1,9);
 		
 		for (Project t : update.getProjects()) {
-			System.out.println(t.getDesc());	
+			System.out.println(t.getDescription());	
 		}
 		
 		System.out.println("+++++++removeProjectFromTeam++++++++");
@@ -84,7 +83,7 @@ public class Test {
 		business.removeProjectFromTeam(1 , 9);
 		System.out.println("Project removed with success");
 		for (Project t : update.getProjects()) {
-			System.out.println(t.getDesc());	
+			System.out.println(t.getDescription());	
 		}
 		
 	}

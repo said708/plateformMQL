@@ -18,7 +18,7 @@
 		<property name="name" column="NAME" type="string" />
 
 		<!-- private String desc;-->
-		<property name="desc" column="DESC" type="string" />
+		<property name="description" column="DESCRIPTION" type="string" />
 
 		<!-- private String datePublication;-->
 		<property name="datePublication" column="DATE_PUBLICATION"
