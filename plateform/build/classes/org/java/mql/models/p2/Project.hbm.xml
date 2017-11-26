@@ -28,13 +28,13 @@
 		<property name="deadLine" column="DEAD_LINE" type="string" />
 		
 		<!-- private Matiere matiere; -->
-		<many-to-one not-found="ignore"  name="matiere" column="MATIERE" class="org.java.mql.models.p2.Matiere" />
+		<many-to-one   name="matiere" column="MATIERE" class="org.java.mql.models.p2.Matiere" />
 		
 		<!-- private Liverable liverable; -->
-		<many-to-one not-found="ignore" name="liverable" column="LIVERABLE" class="org.java.mql.models.p2.Liverable" />
+		<many-to-one  name="liverable" column="LIVERABLE" class="org.java.mql.models.p2.Liverable" />
 		
 		<!-- private Team team; -->
-		<many-to-one  not-found="ignore"  name="team" column="TEAM" class="org.java.mql.models.p1.Team" />
+		<many-to-one   name="team" column="TEAM" class="org.java.mql.models.p1.Team" />
 
 	</class>
 </hibernate-mapping>

@@ -9,10 +9,9 @@
 		<id name="id" type="long" column="ID">
 			<generator class="native" />
 		</id>
-		<many-to-one name="team" class="org.java.mql.models.p1.Team"
-			fetch="select">
-			<column name="ID" not-null="true" />
-		</many-to-one>
+		
+		<many-to-one name="team" column="TEAM" class="org.java.mql.models.p1.Team" fetch="select"/>
+		
 		<property name="nom" column="NOM" type="string" />
 		<property name="prenom" column="PRENOM" type="string" />
 		<property name="email" column="EMAIL" type="string" />

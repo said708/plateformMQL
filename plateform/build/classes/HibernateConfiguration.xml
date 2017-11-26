@@ -34,11 +34,11 @@
 			<list>
 				<value>org/java/mql/models/p1/Ensignant.hbm.xml</value>
 				<value>org/java/mql/models/p1/Etudiant.hbm.xml</value>
+				<value>org/java/mql/models/p2/Project.hbm.xml</value>
 				<value>org/java/mql/models/p1/Team.hbm.xml</value>
 				<value>org/java/mql/models/p2/AbstractFile.hbm.xml</value>
 				<value>org/java/mql/models/p2/Liverable.hbm.xml</value>
 				<value>org/java/mql/models/p2/Matiere.hbm.xml</value>
-				<value>org/java/mql/models/p2/Project.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
