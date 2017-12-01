@@ -33,7 +33,7 @@ public interface Module2Business {
 	int addProjectToTeam(long projectId , long teamId);//work
 	Project removeProjectFromTeam(long projectId , long teamId);//work
 	List<Etudiant> listEtudiantsInTeam(long idTeam);//work
-	boolean isAnTeamExiste(long idTeam);
+	boolean isAnTeamExiste(long idTeam);//work
 	
 	
 	//manage project
