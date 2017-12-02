@@ -3,18 +3,17 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="org.java.mql.models.p1.Etudiant" table="ETUDIANT">
-		<meta attribute="class-description">
-			This class contains the etudiant detail.
-		</meta>
+
 		<id name="id" type="long" column="ID">
 			<generator class="native" />
 		</id>
 		
-		<many-to-one name="team" column="TEAM" class="org.java.mql.models.p1.Team" fetch="select"/>
+		
 		
 		<property name="nom" column="NOM" type="string" />
 		<property name="prenom" column="PRENOM" type="string" />
 		<property name="email" column="EMAIL" type="string" />
 		<property name="phone" column="PHONE" type="string" />
+		<many-to-one name="team" column="team_id" class="org.java.mql.models.p1.Team" />
 	</class>
 </hibernate-mapping>

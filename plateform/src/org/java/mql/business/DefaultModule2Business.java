@@ -64,7 +64,7 @@ public class DefaultModule2Business implements Module2Business{
 		try {
 			if(isAnEtudiantExiste(etudiantId) && isAnTeamExiste(teamId)) {
 				Team team = daoMediator.selectTeamById(teamId);
-				team.getEtudiants().add(selectEtudiantById(etudiantId));
+				//team.getEtudiants().add(selectEtudiantById(etudiantId));
 				return daoMediator.updateTeam(teamId , team);
 			}else {
 				throw new Exception("team "+teamId+"  or  etudiant "+etudiantId+" not existe");
@@ -79,16 +79,10 @@ public class DefaultModule2Business implements Module2Business{
 
 	@Override
 	public Team selectTeamById(long id) {
-		try {
-			if(isAnTeamExiste(id)) {
+		
 				Team team = daoMediator.selectTeamById(id);
 				return team;
-			}else 
-				throw new Exception("team "+id+" not existe");
-		}catch(Exception e) {
-			log.error("DefaultModule2Business.selectTeamById has an error :"+e.getMessage());
-			return null;
-		}
+				
 	}
 
 
@@ -156,7 +150,7 @@ public class DefaultModule2Business implements Module2Business{
 			if(isAnProjectExiste(idProject) && isAnTeamExiste(teamId)) {
 				Project project = selectProjectById(idProject);
 				Team team = daoMediator.selectTeamById(teamId);
-				team.getProjects().add(project);
+				//team.getProjects().add(project);
 				return 1;
 			}else {
 				throw new Exception("team "+teamId+" or  project "+idProject+" not existe");
@@ -280,22 +274,23 @@ public class DefaultModule2Business implements Module2Business{
 		}
 	}
 
-	@Override
-	public List<Etudiant> listEtudiantsInTeam(long idTeam) {
-		List<Etudiant> etudiants = daoMediator.selectTeamById(idTeam).getEtudiants();
-		try {
-			if(isAnTeamExiste(idTeam)) {
-				if(etudiants != null)
-					return etudiants;
-				else
-					throw new Exception("team "+idTeam+" has no etudiant");
-			}else
-				throw new Exception("team "+idTeam+" not existed");
-		} catch (Exception e) {
-			log.fatal("DefaultModule2Business.listEtudiantsInTeam has an error : "+ e.getMessage());
-			return new Vector<Etudiant>();
-		}
-	}
+//	@Override
+//	public List<Etudiant> listEtudiantsInTeam(long idTeam) {
+//		return null;
+//		List<Etudiant> etudiants = daoMediator.selectTeamById(idTeam).getEtudiants();
+//		try {
+//			if(isAnTeamExiste(idTeam)) {
+//				if(etudiants != null)
+//					return etudiants;
+//				else
+//					throw new Exception("team "+idTeam+" has no etudiant");
+//			}else
+//				throw new Exception("team "+idTeam+" not existed");
+//		} catch (Exception e) {
+//			log.fatal("DefaultModule2Business.listEtudiantsInTeam has an error : "+ e.getMessage());
+//			return new Vector<Etudiant>();
+//		}
+//	}
 
 	@Override
 	public Etudiant deleteEtudiant(long id) {
@@ -526,6 +521,13 @@ public class DefaultModule2Business implements Module2Business{
 
 	public void setDaoMediator(DaoMediator daoMediator) {
 		this.daoMediator = daoMediator;
+	}
+
+
+	@Override
+	public List<Etudiant> listEtudiantsInTeam(long idTeam) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

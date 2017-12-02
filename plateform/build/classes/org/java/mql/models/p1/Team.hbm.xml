@@ -6,24 +6,22 @@
 <hibernate-mapping>
 	<class name="org.java.mql.models.p1.Team" table="TEAM">
 
-		<meta attribute="class-description">
-			This class contains the team detail.
-		</meta>
+		
 
-		<id name="id" type="int" column="id">
+		<id name="id" type="long" column="id">
 			<generator class="native" />
 		</id>
 
 		<property name="name" column="NAME" type="string" />
 
-		<set name="etudiants" cascade="all">
-			<key column="ID" />
-			<one-to-many class="org.java.mql.models.p1.Etudiant" />
-		</set>
-		<set name="projects" cascade="all">
-			<key column="ID" />
-			<one-to-many class="org.java.mql.models.p2.Project" />
-		</set>
+<!-- 		<set name="etudiants" cascade="all"> -->
+<!-- 			<key column="ID" /> -->
+<!-- 			<one-to-many class="org.java.mql.models.p1.Etudiant" /> -->
+<!-- 		</set> -->
+<!-- 		<set name="projects" cascade="all"> -->
+<!-- 			<key column="ID" /> -->
+<!-- 			<one-to-many class="org.java.mql.models.p2.Project" /> -->
+<!-- 		</set> -->
 		<many-to-one name="matiere" column="MATIERE"
 			class="org.java.mql.models.p2.Matiere" />
 

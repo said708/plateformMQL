@@ -25,10 +25,10 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 		data.add(new Etudiant(1, "lachgar", "driss","lachgar.990pp@gmail.com", "09887676554"));
 		data.add(new Etudiant(2, "imane", "hajar","hajar.0900@gmail.com", "0967564390"));
 		projects.add(new Project(1, "spring", "spring is a jee freamwork", "01/01/2017", "01/03/2018"));
-		Team team3 = new Team(4, "groupeA");
-		team3.setEtudiants(data);
-		team3.setProjects(projects);
-		list.put((long) 4, team3);
+		//Team team3 = new Team(4, "groupeA");
+		//team3.setEtudiants(data);
+		//team3.setProjects(projects);
+		//list.put((long) 4, team3);
 		data.clear();
 		projects.clear();
 		
@@ -36,10 +36,10 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 		data.add(new Etudiant(1, "ahmed", "tajir","tajir.990pp@gmail.com", "09887676554"));
 		data.add(new Etudiant(2, "kamal", "brahmi","brahmi.0900@gmail.com", "0967564390"));
 		projects.add(new Project(1, "spring", "spring is a jee freamwork", "01/01/2017", "01/03/2018"));
-		Team team = new Team(4, "groupeB");
-		team.setEtudiants(data);
-		team.setProjects(projects);
-		list.put((long) 4, team);
+		//Team team = new Team(4, "groupeB");
+		//team.setEtudiants(data);
+		//team.setProjects(projects);
+		//list.put((long) 4, team);
 		data.clear();
 		projects.clear();
 		
@@ -47,10 +47,10 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 		data.add(new Etudiant(1, "imane", "slawi","slawi.990pp@gmail.com", "09887676554"));
 		data.add(new Etudiant(2, "yassine", "ghalim","ghalim.0900@gmail.com", "0967564390"));
 		projects.add(new Project(1, "spring", "spring is a jee freamwork", "01/01/2017", "01/03/2018"));
-		Team team1 = new Team(4, "groupeC");
-		team1.setEtudiants(data);
-		team1.setProjects(projects);
-		list.put((long) 3, team1);
+		//Team team1 = new Team(4, "groupeC");
+		//team1.setEtudiants(data);
+		//team1.setProjects(projects);
+		//list.put((long) 3, team1);
 		data.clear();
 		projects.clear();
 		
@@ -58,10 +58,10 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 		data.add(new Etudiant(1, "yassine", "alloul","alloul.990pp@gmail.com", "09887676554"));
 		data.add(new Etudiant(2, "ismail", "brahmi","brahmi.0900@gmail.com", "0967564390"));
 		projects.add(new Project(1, "spring", "spring is a jee freamwork", "01/01/2017", "01/03/2018"));
-		Team team2 = new Team(4, "groupeD");
-		team2.setEtudiants(data);
-		team2.setProjects(projects);
-		list.put((long) 4, team2);
+		//Team team2 = new Team(4, "groupeD");
+		//team2.setEtudiants(data);
+		//team2.setProjects(projects);
+	//	list.put((long) 4, team2);
 		data.clear();
 		projects.clear();
 	}
