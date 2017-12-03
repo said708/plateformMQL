@@ -1,5 +1,6 @@
 package org.java.mql.dao.hibernate.p1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
@@ -19,32 +20,34 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	@Override
 	public long addTeam(Team team) {
 		template.save(team);
-		return team.getId();
+		return 0;
 	}
 
 	@Override
-	public Team deleteTeam(long idTeam) {
-		Team team = this.selectTeamById(idTeam);
+	public Team deleteTeam(long id) {
+		Team team =   template.get(Team.class, id); 
 		template.delete(team);
-		 return team;
+		return team;
 	}
 
 	@Override
 	public List<Team> selectAllTeam() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Team> list=new ArrayList<Team>();  
+	    list=template.loadAll(Team.class);  
+	    return list;  
 	}
 
 	@Override
 	public Team selectTeamById(long id) {
-		List<?> teams = template.find("FROM team WHERE id=?" , id);
-		return null;
+		Team t=(Team)template.get(Team.class,id);  
+	    return t; 
+	 
 	}
 
 	@Override
 	public long updateTeam(long teamId, Team team) {
-		// TODO Auto-generated method stub
-		return 0;
+		template.update(team);
+		return teamId;
 	}
 
 	

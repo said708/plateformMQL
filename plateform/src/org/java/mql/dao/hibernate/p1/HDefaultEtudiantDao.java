@@ -1,5 +1,6 @@
 package org.java.mql.dao.hibernate.p1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
@@ -18,27 +19,33 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 	@Override
 	public long addEtudiant(Etudiant etudiant) {
 		template.save(etudiant);
-		return etudiant.getId();
+		return 0;
 	}
 
 	@Override
 	public Etudiant deleteEtudiant(long id) {
-		return null;
+		Etudiant etudiant =   template.get(Etudiant.class, id); 
+		template.delete(etudiant);
+		return etudiant;
 	}
 
 	@Override
 	public List<Etudiant> selectAllEtudiant() {
-		return null;
+		List<Etudiant> list=new ArrayList<Etudiant>();  
+	    list=template.loadAll(Etudiant.class);  
+	    return list;  
 	}
 
 	@Override
 	public Etudiant selectEtudiantById(long id) {
-		return null;
+		Etudiant e=(Etudiant)template.get(Etudiant.class,id);  
+		    return e;   
 	}
 
 	@Override
 	public long updateEtudiant(long idEtudiant, Etudiant etudiant) {
-		return 0;
+		template.update(etudiant);
+		return 1;
 	}
 
 	

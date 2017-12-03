@@ -89,15 +89,13 @@ public class DaoMediator {
 	public long addEtudiant(Etudiant etudiant) {
 		return etudiantDao.addEtudiant(etudiant);
 	}
-	public Etudiant deleteEtudiant(int idEtudiant) {
-		return etudiantDao.deleteEtudiant(idEtudiant);
+	public Etudiant deleteEtudiant(long id) {
+		return etudiantDao.deleteEtudiant(id);
 	}
 	public List<Etudiant> selectAllEtudiant() {
 		return etudiantDao.selectAllEtudiant();
 	}
-	public Etudiant selectEtudiantById(int id) {
-		return etudiantDao.selectEtudiantById(id);
-	}
+	
 	public long updateEtudiant(long idEtudiant, Etudiant etudiant) {
 		return etudiantDao.updateEtudiant(idEtudiant, etudiant);
 	}
@@ -105,9 +103,7 @@ public class DaoMediator {
 		return ensignantDao.updateEnsignant(idEnsignant, ensignant);
 	}
 
-	public Etudiant deleteEtudiant(long id) {
-		return etudiantDao.deleteEtudiant(id);
-	}
+	
 
 	public Etudiant selectEtudiantById(long id) {
 		return etudiantDao.selectEtudiantById(id);
@@ -117,9 +113,6 @@ public class DaoMediator {
 		return teamDao.deleteTeam(idTeam);
 	}
 
-	public Team selectTeamById(long id) {
-		return teamDao.selectTeamById(id);
-	}
 
 	public long addTeam(Team team) {
 		return teamDao.addTeam(team);
@@ -130,7 +123,7 @@ public class DaoMediator {
 	public List<Team> selectAllTeam() {
 		return teamDao.selectAllTeam();
 	}
-	public Team selectTeamById(int id) {
+	public Team selectTeamById(long id) {
 		return teamDao.selectTeamById(id);
 	}
 
