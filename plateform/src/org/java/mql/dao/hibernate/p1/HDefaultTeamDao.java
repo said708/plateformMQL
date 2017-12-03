@@ -17,15 +17,16 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	}
 
 	@Override
-	public int addTeam(Team team) {
-		// TODO Auto-generated method stub
-		return 0;
+	public long addTeam(Team team) {
+		template.save(team);
+		return team.getId();
 	}
 
 	@Override
 	public Team deleteTeam(long idTeam) {
-		// TODO Auto-generated method stub
-		return null;
+		Team team = this.selectTeamById(idTeam);
+		template.delete(team);
+		 return team;
 	}
 
 	@Override
@@ -36,12 +37,12 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 
 	@Override
 	public Team selectTeamById(long id) {
-		// TODO Auto-generated method stub
+		List<?> teams = template.find("FROM team WHERE id=?" , id);
 		return null;
 	}
 
 	@Override
-	public int updateTeam(long teamId, Team team) {
+	public long updateTeam(long teamId, Team team) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

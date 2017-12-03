@@ -13,14 +13,19 @@ public class Test {
 	public Test() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business b = context.getBean(DefaultModule2Business.class);
-		hibernateEnsignantTest(b);
+		hibernateTeamTest(b);
 		context.close();
 	}
-	public void hibernateEnsignantTest(Module2Business business) {
+	public void hibernateEtudiantTest(Module2Business business) {
 		Etudiant e = new Etudiant(1, "Thitah", "Said", "said.thitah@gmail.com", "0613206869");
 		Team team = new Team(12, "GroupD");
 		business.addEtudiantToTeam(1, 12);
 		business.addEtudiant(e);
+	}
+	
+	public void hibernateTeamTest(Module2Business business) {
+		Team team = new Team(12, "GroupD");
+		System.out.println("salam "+business.addTeam(team));
 	}
 	public void teamTest(Module2Business business) {
 		System.out.println("+++++++listTeams++++++++");

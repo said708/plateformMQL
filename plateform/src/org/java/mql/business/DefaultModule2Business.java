@@ -32,7 +32,8 @@ public class DefaultModule2Business implements Module2Business{
 		try {
 			if(team != null && !isAnTeamExiste(team.getId())) {
 				log.info("team with id="+team.getId()+" added  with success");
-				return daoMediator.addTeam(team);
+				daoMediator.addTeam(team);
+				return 1;
 			}
 			else
 				throw new Exception("team is null or duplicated");
@@ -65,7 +66,8 @@ public class DefaultModule2Business implements Module2Business{
 			if(isAnEtudiantExiste(etudiantId) && isAnTeamExiste(teamId)) {
 				Team team = daoMediator.selectTeamById(teamId);
 				team.getEtudiants().add(selectEtudiantById(etudiantId));
-				return daoMediator.updateTeam(teamId , team);
+				daoMediator.updateTeam(teamId , team);
+				return 1;
 			}else {
 				throw new Exception("team "+teamId+"  or  etudiant "+etudiantId+" not existe");
 			}
@@ -316,7 +318,8 @@ public class DefaultModule2Business implements Module2Business{
 	public int addEtudiant(Etudiant etudiant) {
 		try {
 			if(!isAnEtudiantExiste(etudiant.getId()) && etudiant!=null) {
-				return daoMediator.addEtudiant(etudiant);
+				daoMediator.addEtudiant(etudiant);
+				return 1;
 			}else
 				throw new Exception("etudiant is already exist or null");
 		} catch (Exception e) {
@@ -355,7 +358,8 @@ public class DefaultModule2Business implements Module2Business{
 	public int updateEtudiant(long idEtudiant , Etudiant etudiant) {
 		try {
 			if(isAnEtudiantExiste(idEtudiant)) {
-				return daoMediator.updateEtudiant(idEtudiant  , etudiant);
+				daoMediator.updateEtudiant(idEtudiant  , etudiant);
+				return 1;
 			}else 
 				throw new Exception("etudiant "+idEtudiant+" not existe");
 		}catch(Exception e) {

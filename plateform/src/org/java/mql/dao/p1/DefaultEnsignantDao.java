@@ -24,7 +24,7 @@ public class DefaultEnsignantDao extends DaoMediatorService implements Ensignant
 	}
 
 	@Override
-	public int addEnsignant(Ensignant ensignant) {
+	public long addEnsignant(Ensignant ensignant) {
 		try {
 			list.put(ensignant.getId(), ensignant);
 			return 1;
@@ -51,7 +51,7 @@ public class DefaultEnsignantDao extends DaoMediatorService implements Ensignant
 		return list.get(id);
 	}
 
-	public int updateEnsignant(long idEnsignant, Ensignant ensignant) {
+	public long updateEnsignant(long idEnsignant, Ensignant ensignant) {
 		list.remove(idEnsignant);
 		list.put( idEnsignant, ensignant);
 		return (int) idEnsignant;

@@ -24,7 +24,7 @@ public class DefaultEtudiantDao extends DaoMediatorService implements EtudiantDa
 	}
 
 	@Override
-	public int addEtudiant(Etudiant etudiant) {
+	public long addEtudiant(Etudiant etudiant) {
 		try {
 			list.put(etudiant.getId(), etudiant);
 			return 1;
@@ -60,7 +60,7 @@ public class DefaultEtudiantDao extends DaoMediatorService implements EtudiantDa
 	
 	
 	@Override
-	public int updateEtudiant(long idEtudiant, Etudiant etudiant) {
+	public long updateEtudiant(long idEtudiant, Etudiant etudiant) {
 		try {
 			list.remove(idEtudiant);
 			list.put(idEtudiant, etudiant);

@@ -66,7 +66,7 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 		projects.clear();
 	}
 	@Override
-	public int addTeam(Team team) {
+	public long addTeam(Team team) {
 		try {
 			if(!list.containsKey(team.getId())) {
 				list.put(team.getId(), team);
@@ -115,7 +115,7 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 	}
 
 	@Override
-	public int updateTeam(long idTeam, Team team) {
+	public long updateTeam(long idTeam, Team team) {
 		try {
 			list.remove(idTeam);
 			list.put(idTeam, team);

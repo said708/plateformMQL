@@ -6,9 +6,9 @@ import org.java.mql.dao.DAOservice;
 import org.java.mql.models.p1.Ensignant;
 
 public interface EnsignantDao extends DAOservice{
-	int addEnsignant(Ensignant ensignant);
+	long addEnsignant(Ensignant ensignant);
 	Ensignant deleteEnsignant(long idEnsignant);
 	List<Ensignant> selectAllEnsignant();
 	Ensignant selectEnsignantById(long id);
-	int updateEnsignant(long idEnsignant , Ensignant ensignant);
+	long updateEnsignant(long idEnsignant , Ensignant ensignant);
 }

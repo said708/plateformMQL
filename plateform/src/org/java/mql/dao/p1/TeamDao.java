@@ -6,9 +6,9 @@ import org.java.mql.dao.DAOservice;
 import org.java.mql.models.p1.Team;
 
 public interface TeamDao extends DAOservice{
-	int addTeam(Team team);
+	long addTeam(Team team);
 	Team deleteTeam(long idTeam);
 	List<Team> selectAllTeam();
 	Team selectTeamById(long id);
-	int updateTeam(long teamId , Team team);
+	long updateTeam(long teamId , Team team);
 }
