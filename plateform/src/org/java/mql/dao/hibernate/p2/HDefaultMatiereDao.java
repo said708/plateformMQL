@@ -1,9 +1,12 @@
 package org.java.mql.dao.hibernate.p2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p2.MatiereDao;
+import org.java.mql.models.p1.Ensignant;
+import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p2.Matiere;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
@@ -21,32 +24,34 @@ public class HDefaultMatiereDao  extends DaoMediatorService  implements MatiereD
 
 	@Override
 	public int addMatiere(Matiere matiere) {
-		// TODO Auto-generated method stub
+		template.save(matiere);
 		return 0;
 	}
 
 	@Override
 	public Matiere deleteMatiere(long idMatiere) {
-		// TODO Auto-generated method stub
-		return null;
+		Matiere matiere =   template.get(Matiere.class, idMatiere); 
+		template.delete(matiere);
+		return matiere;
 	}
 
 	@Override
 	public List<Matiere> selectAllMatiere() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Matiere> list=new ArrayList<Matiere>();  
+	    list=template.loadAll(Matiere.class);  
+	    return list;  
 	}
 
 	@Override
-	public List<Matiere> selectMatiereById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Matiere selectMatiereById(long id) {
+		Matiere matiere=(Matiere)template.get(Matiere.class,id);
+		return matiere;
 	}
 
 	@Override
 	public int updateMatiere(long idMatiere, Matiere matiere) {
-		// TODO Auto-generated method stub
-		return 0;
+		template.update(matiere);
+		return 1;
 	}
 
 	

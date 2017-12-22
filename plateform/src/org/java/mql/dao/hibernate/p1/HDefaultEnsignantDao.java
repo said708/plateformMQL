@@ -1,10 +1,12 @@
 package org.java.mql.dao.hibernate.p1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.EnsignantDao;
 import org.java.mql.models.p1.Ensignant;
+import org.java.mql.models.p1.Etudiant;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultEnsignantDao   extends DaoMediatorService  implements EnsignantDao {
@@ -23,27 +25,29 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 	}
 
 	@Override
-	public Ensignant deleteEnsignant(long idEnsignant) {
-		// TODO Auto-generated method stub
-		return null;
+	public Ensignant deleteEnsignant(long idEnseigant) {
+		Ensignant enseignant =   template.get(Ensignant.class, idEnseigant); 
+		template.delete(enseignant);
+		return enseignant;
 	}
 
 	@Override
 	public List<Ensignant> selectAllEnsignant() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Ensignant> list=new ArrayList<Ensignant>();  
+	    list=template.loadAll(Ensignant.class);  
+	    return list; 
 	}
 
 	@Override
-	public Ensignant selectEnsignantById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Ensignant selectEnsignantById(long idEnseigant) {
+		Ensignant e=(Ensignant)template.get(Ensignant.class,idEnseigant);
+		return e;
 	}
 
 	@Override
 	public int updateEnsignant(long idEnsignant, Ensignant ensignant) {
-		// TODO Auto-generated method stub
-		return 0;
+		template.update(ensignant);
+		return 1;
 	}
 
 	

@@ -16,11 +16,12 @@ public class Ensignant  {
 	}
 	
 	public Ensignant(long id, String nom, String prenom, String phone) {
-		matieres = new Vector<Matiere>();
+		
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.phone = phone;
+		matieres = new Vector<Matiere>();
 	}
 
 	public List<Matiere> getMatieres() {

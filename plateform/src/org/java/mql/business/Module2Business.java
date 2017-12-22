@@ -1,11 +1,13 @@
 package org.java.mql.business;
 import java.util.List;
 
+import org.java.mql.models.p1.Ensignant;
 import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.AbstractFile;
 import org.java.mql.models.p2.File;
 import org.java.mql.models.p2.Liverable;
+import org.java.mql.models.p2.Matiere;
 import org.java.mql.models.p2.Project;
 
 
@@ -51,5 +53,16 @@ public interface Module2Business {
 	List<AbstractFile> listFilesInLiverable(long liverableId);//work
 	boolean isAnFileExisteInLiverable(long fileId , long liverableId);//work
 	boolean  isAnLiverableExiste(long liverableId);//work
+	int addLivrable(Liverable livrable);
+	Liverable deleteLivrable(long idLivrable);
+	Liverable selectLivrableById(long idLivrable);
+	
+	
+	
+	
+	int addEnseignant(Ensignant enseignant);
+	int addMatiere(Matiere matiere);
+	Ensignant selectEnsignantById(long id);
+	Matiere selectMatiereById(long id);
 	
 }

@@ -169,7 +169,7 @@ public class DaoMediator {
 	public List<Matiere> selectAllMatiere() {
 		return matiereDao.selectAllMatiere();
 	}
-	public List<Matiere> selectMatiereById(long id) {
+	public Matiere selectMatiereById(long id) {
 		return matiereDao.selectMatiereById(id);
 	}
 	public int updateMatiere(long idMatiere, Matiere matiere) {

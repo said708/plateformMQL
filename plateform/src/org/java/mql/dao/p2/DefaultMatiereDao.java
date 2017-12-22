@@ -26,7 +26,7 @@ public class DefaultMatiereDao extends DaoMediatorService implements MatiereDao 
 	}
 
 	@Override
-	public List<Matiere> selectMatiereById(long id) {
+	public Matiere selectMatiereById(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

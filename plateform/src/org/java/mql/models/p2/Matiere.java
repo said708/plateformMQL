@@ -12,16 +12,16 @@ public class Matiere  {
 	private Ensignant ensignant;
 	private List<Project> projects;
 	private List<Team> teams;
+	
 	public Matiere() {
 	}
 
 	public Matiere(long id, String name) {
 		ensignant = new Ensignant();
-		projects = new Vector<Project>();
-		teams = new Vector<Team>();
 		this.id = id;
 		this.name = name;
 	}
+
 
 	public List<Team> getTeams() {
 		return teams;

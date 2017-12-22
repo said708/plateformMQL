@@ -15,6 +15,7 @@ public class Liverable  {
 
 	public Liverable(long id, String name) {
 		files = new Vector<AbstractFile>();
+		project = new Project();
 		this.id = id;
 		this.name = name;
 	}
