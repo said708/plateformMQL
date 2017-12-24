@@ -81,6 +81,11 @@ public class Matiere  {
 		return (int) (id * 31 + 990876);
 	}
 
+	@Override
+	public String toString() {
+		return "Matiere [id=" + id + ", name=" + name +  "]";
+	}
+
 
 
 }

@@ -98,7 +98,7 @@ public class Test {
 		
 		System.out.println("+++++++removeEtudiantFromTeam++++++++");
 		//remove service work as expected
-		business.removeEtudiantFromTeam(23, 4);
+		//business.removeEtudiantFromTeam(23, 4);
 		System.out.println(business.listEtudiantsInTeam(4));
 		
 		

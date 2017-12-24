@@ -126,4 +126,36 @@ public class DefaultTeamDao extends DaoMediatorService implements TeamDao{
 		}
 	}
 
+	@Override
+	public List<Etudiant> selectEtudinatsInTeams(long teamId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int removeEtudiantFromTeam(long studentId, long team_id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int addProjectToTeam(long projectId, long teamId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int removeProjectFromTeam(long projectId, long teamId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int addEtudiantToTeam(long etudiant, long teamId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
 }

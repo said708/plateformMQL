@@ -29,14 +29,18 @@ public interface Module2Business {
 	List<Team> listTeams();//work
 	Team selectTeamById(long id);//work
 	int updateTeam(long idTeam , Team team);//work
-	int addEtudiantToTeam(long etudiant , long teamId);//work
-	void addListEtudiantsToTeam(long teamId , long ...etdsId);//work
-	Etudiant removeEtudiantFromTeam(long studentId , long teamId);//work
-	int addProjectToTeam(long projectId , long teamId);//work
-	Project removeProjectFromTeam(long projectId , long teamId);//work
-	List<Etudiant> listEtudiantsInTeam(long idTeam);//work
-	boolean isAnTeamExiste(long idTeam);//work
 	
+	void addListEtudiantsToTeam(long teamId , long ...etdsId);//work
+	
+	
+	
+	
+	boolean isAnTeamExiste(long idTeam);//work
+	int addEtudiantToTeam(long etudiant , long teamId);//work
+	int removeProjectFromTeam(long projectId , long teamId);//work
+	int addProjectToTeam(long projectId , long teamId);//work
+	int removeEtudiantFromTeam(long studentId, long team_id );//work
+	List<Etudiant> listEtudiantsInTeam(long idTeam);//work
 	
 	//manage project
 	int addProject(Project project);//work
@@ -56,13 +60,19 @@ public interface Module2Business {
 	int addLivrable(Liverable livrable);
 	Liverable deleteLivrable(long idLivrable);
 	Liverable selectLivrableById(long idLivrable);
+	int updateLiverable(long idLiverable, Liverable liverable);
 	
 	
 	
 	
 	int addEnseignant(Ensignant enseignant);
-	int addMatiere(Matiere matiere);
+	List<Ensignant> listEnseigants();//work
 	Ensignant selectEnsignantById(long id);
+	boolean isAnEnsignantExiste(long idEnseignant);
+	
+	int addMatiere(Matiere matiere);
 	Matiere selectMatiereById(long id);
+	boolean isAnMatiereExiste(long idMatiere);
+	List<Matiere> listMatieres();//work
 	
 }

@@ -14,16 +14,14 @@
 
 		<property name="name" column="NAME" type="string" />
 
-		<list name="etudiants" cascade="all">
+		<bag name="etudiants" cascade="all">
 			<key column="ID_E" />
-			<list-index column="idx" />
 			<one-to-many class="org.java.mql.models.p1.Etudiant" />
-		</list>
-		<list name="projects" cascade="all">
+		</bag>
+		<bag name="projects" cascade="all">
 			<key column="ID_P" />
-			<list-index column="idx2" />
 			<one-to-many class="org.java.mql.models.p2.Project" />
-		</list>
+		</bag>
 		<many-to-one name="matiere" column="MATIERE"
 			class="org.java.mql.models.p2.Matiere" />
 

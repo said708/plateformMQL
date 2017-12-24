@@ -22,7 +22,7 @@ public class HDefaultProjectDao extends DaoMediatorService implements ProjectDao
 	@Override
 	public int addProjet(Project projet) {
 		template.save(projet);
-		return 0;
+		return 1;
 	}
 
 	@Override

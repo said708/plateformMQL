@@ -11,4 +11,5 @@ public interface EnsignantDao extends DAOservice{
 	List<Ensignant> selectAllEnsignant();
 	Ensignant selectEnsignantById(long id);
 	int updateEnsignant(long idEnsignant , Ensignant ensignant);
+	
 }

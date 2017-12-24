@@ -57,4 +57,6 @@ public class DefaultEnsignantDao extends DaoMediatorService implements Ensignant
 		return (int) idEnsignant;
 	}
 
+	
+
 }

@@ -7,6 +7,7 @@ import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.EnsignantDao;
 import org.java.mql.models.p1.Ensignant;
 import org.java.mql.models.p1.Etudiant;
+import org.java.mql.models.p1.Team;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultEnsignantDao   extends DaoMediatorService  implements EnsignantDao {
@@ -21,7 +22,7 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 	@Override
 	public int addEnsignant(Ensignant ensignant) {
 		template.save(ensignant);
-		return 0;
+		return 1;
 	}
 
 	@Override
@@ -50,5 +51,5 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 		return 1;
 	}
 
-	
+
 }

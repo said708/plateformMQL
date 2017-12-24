@@ -22,7 +22,7 @@ public class HDefaultLiverableDao  extends DaoMediatorService  implements Livera
 	@Override
 	public int addLiverable(Liverable livrable) {
 		template.save(livrable);
-		return 0;
+		return 1;
 	}
 
 	@Override
