@@ -34,8 +34,8 @@ public class AppMain {
 		 //Ajout d'un groupe
 		public void AddTeam(Module2Business service) {
 		 Team team1=new Team(); 
-		 team1.setName("D");
-//		 team1.setMatiere(service.selectMatierById(1));
+		 team1.setName("F");
+		 team1.setMatiere(service.selectMatiereById(1));
 		  service.addTeam(team1);
 		}
 		
@@ -61,22 +61,22 @@ public class AppMain {
 
 		//Modifier un groupe
 		private void UpdateTeam(Module2Business service) {
-			Team team = service.selectTeamById(2);
-//			team.setMatiere(service.selectMatiereById(3));
-			service.updateTeam(2, team);
+			Team team = service.selectTeamById(3);
+			team.setMatiere(service.selectMatiereById(2));
+			service.updateTeam(3, team);
 
 		}
 
 		
 		
-	//	Ajout d'un ï¿½tudiant 
+	//	Ajout d'un étudiant 
 		private void AddStudent(Module2Business service) {
 			Etudiant etudiant1 = new Etudiant();
 			etudiant1.setNom("fk");
 			etudiant1.setPrenom("hasna");
 			etudiant1.setEmail("hasnaefourkane@gmail.com");
-			etudiant1.setPhone("063333");
-			etudiant1.setTeam(service.selectTeamById(1));
+			etudiant1.setPhone("0600000");
+			etudiant1.setTeam(service.selectTeamById(7));
 			service.addEtudiant(etudiant1);
 
 		}
@@ -85,29 +85,29 @@ public class AppMain {
 		
 		//ajouter etudiant dans un team
 		private void AddStudentInTeam(Module2Business service) {
-			Etudiant e1 = new Etudiant(101, "Fourkane", "Hasnae", "hasnaefourkane@gmail.com", "06545");
-		    Team team1=service.selectTeamById(1);
+			Etudiant e1 = new Etudiant(101, "Fourkan", "Hasna", "hasnaefourkane@gmail.com", "06545");
+		    Team team1=service.selectTeamById(6);
 		    e1.setTeam(team1);
 		    service.addEtudiant(e1);
 
 		}
 	   
 		 
-	  //Supprimer un ï¿½tudiant
+	  //Supprimer un étudiant
 		private void DeleteStudent(Module2Business service) {
-			service.deleteEtudiant(2);
+			service.deleteEtudiant(20);
 		}
 
 	 
-	 //Liste des ï¿½tudiants
+	 //Liste des étudiants
      private void ListStudents(Module2Business service) {
     	 System.out.println(service.listEtudiants());
 	}
 	
 		
-	 //Select d'un ï¿½tudiant by id
+	 //Select d'un étudiant by id
      private void SelectStudentByStudent(Module2Business service) {
-    	 System.out.println(service.selectEtudiantById(1));
+    	 System.out.println(service.selectEtudiantById(19));
 
 	}
 	 
@@ -115,8 +115,8 @@ public class AppMain {
 		
 	//Ajout Enseignant
      private void AddEnseignant(Module2Business service) {
- 		Ensignant enseignant = new Ensignant(1, "Chenffour", "Noureddine", "037777");
-//       service.addEnseignant(enseignant);
+ 		Ensignant enseignant = new Ensignant(2, "Nfaoui", "Abdelhak", "037777");
+       service.addEnsignant(enseignant);
 
 	}
 
@@ -125,9 +125,9 @@ public class AppMain {
 	//Ajout matiere		
      private void AddMatiere(Module2Business service) {
  		Matiere matiere = new Matiere();
- 		matiere.setName("web service");
-// 		matiere.setEnsignant(service.selectEnsignantById(1));
-// 		service.addMatiere(matiere);
+ 		matiere.setName("JEE");
+ 		matiere.setEnsignant(service.selectEnsignantById(1));
+ 		service.addMatiere(matiere);
 
 	}
 
@@ -142,9 +142,9 @@ public class AppMain {
 			projet.setDescription("dossier medical");
 			projet.setDatePublication("12/12/2017");
 			projet.setDeadLine("10/01/2018");
-			projet.setTeam(service.selectTeamById(1));
-//			projet.setMatiere(service.selectMatiereById(1));
-//			projet.setLiverable(service.selectLivrableById(1));
+			projet.setTeam(service.selectTeamById(7));
+			projet.setMatiere(service.selectMatiereById(2));
+			projet.setLiverable(service.selectLivrableById(1));
 			service.addProject(projet);
 
 	}
@@ -153,10 +153,10 @@ public class AppMain {
 		
 		
 		//Update project
-     private void UpdatePr(Module2Business service) {
- 		Project projet = service.selectProjectById(1);
-// 		projet.setLiverable(service.selectLivrableById(7));
- 		service.updateProject(1, projet);
+     private void UpdateProject(Module2Business service) {
+ 		Project projet = service.selectProjectById(2);
+ 		projet.setLiverable(service.selectLivrableById(2));
+ 		service.updateProject(2, projet);
 
 	}
 
@@ -165,46 +165,46 @@ public class AppMain {
      
      private void AddLivrable(Module2Business service) {
  		Liverable livrable = new Liverable();
- 		livrable.setName("L1");
- 		livrable.setProject(service.selectProjectById(1));
-// 		service.addLivrable(livrable);
+ 		livrable.setName("L2");
+ 		livrable.setProject(service.selectProjectById(2));
+ 		service.addLivrable(livrable);
  		
 
 	}
-   //Modif livrable
+     	//Modif livrable
 	private void UpdateLivrable(Module2Business service) {
 		
-//		Liverable livrable = service.selectLivrableById(1);
-//		livrable.setProject(service.selectProjectById(1));
-//		service.updateLiverable(1, livrable);
+		Liverable livrable = service.selectLivrableById(1);
+		livrable.setProject(service.selectProjectById(1));
+		service.updateLivrable(livrable.getId(), livrable);
 	}
 		
-	//Liste des ï¿½tudiants dans un groupe
+	//Liste des étudiants dans un groupe
 	private void ListStudentsInTeam(Module2Business service) {
-		System.out.println(service.listEtudiantsInTeam(2));
+		System.out.println(service.listEtudiantsInTeam(7));
 	}
 		
-	//Supprimer un ï¿½tudiant d'un groupe
+	//Supprimer un étudiant d'un groupe
 	private void removeEtudiantFromTeam(Module2Business service) {
-		System.out.println(service.removeEtudiantFromTeam(18,5));
+		System.out.println(service.removeEtudiantFromTeam(17,1));
 
 	}
 		
 	//Ajouter un projet dans un groupe
 	private void addProjectToTeam(Module2Business service) {
-		System.out.println(service.addProjectToTeam(1, 4));
+		System.out.println(service.addProjectToTeam(2,6));
 
 	}
 		
 	//Supprimer un projet from un groupe
 	private void removeProjectFromTeam(Module2Business service) {
-		System.out.println(service.removeProjectFromTeam(1, 3));
+		System.out.println(service.removeProjectFromTeam(2, 6));
 
 	}
 	
-	//Ajouter un ï¿½tudiant dans un groupe
+	//Ajouter un étudiant dans un groupe
 	private void addEtudiantToTeam(Module2Business service) {
-		System.out.println(service.addEtudiantToTeam(18, 5));
+		System.out.println(service.addEtudiantToTeam(18, 6));
 		
 	}
 		 
