@@ -6,7 +6,6 @@ import java.util.List;
 import org.hibernate.query.Query;
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.TeamDao;
-import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.Project;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -21,7 +20,7 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	}
 
 	@Override
-	public int addTeam(Team team) {
+	public long addTeam(Team team) {
 		template.save(team);
 		return 1;
 	}
@@ -48,9 +47,9 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	}
 
 	@Override
-	public int updateTeam(long teamId, Team team) {
+	public long updateTeam(long teamId, Team team) {
 		template.update(team);
-		return 1;
+		return teamId;
 	}
 
 	@Override

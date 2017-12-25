@@ -17,7 +17,7 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 	}
 
 	@Override
-	public int addEtudiant(Etudiant etudiant) {
+	public long addEtudiant(Etudiant etudiant) {
 		template.save(etudiant);
 		return 1;
 	}
@@ -43,7 +43,7 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 	}
 
 	@Override
-	public int updateEtudiant(long idEtudiant, Etudiant etudiant) {
+	public long updateEtudiant(long idEtudiant, Etudiant etudiant) {
 		template.update(etudiant);
 		return 1;
 	}
