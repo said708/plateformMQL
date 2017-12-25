@@ -44,7 +44,7 @@ public class HDefaultMatiereDao  extends DaoMediatorService  implements MatiereD
 	}
 
 	@Override
-	public Matiere selectMatiereById(long id) {
+	public Matiere selectMatierById(long id) {
 		Matiere matiere=(Matiere)template.get(Matiere.class,id);
 		return matiere;
 	}

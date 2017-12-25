@@ -1,0 +1,15 @@
+package org.java.mql.dao.p2;
+
+import java.util.List;
+
+import org.java.mql.dao.DAOservice;
+import org.java.mql.models.p2.Matiere;
+
+
+public interface MatiereDao extends DAOservice{
+	int addMatiere(Matiere matiere);
+	Matiere deleteMatiere(long idMatiere);
+	List<Matiere> selectAllMatiere();
+	Matiere selectMatiereById(long id);
+	int updateMatiere(long idMatiere , Matiere matiere);
+}

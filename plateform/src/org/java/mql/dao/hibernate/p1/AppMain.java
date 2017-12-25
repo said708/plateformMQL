@@ -35,7 +35,7 @@ public class AppMain {
 		public void AddTeam(Module2Business service) {
 		 Team team1=new Team(); 
 		 team1.setName("D");
-		 team1.setMatiere(service.selectMatiereById(1));
+//		 team1.setMatiere(service.selectMatierById(1));
 		  service.addTeam(team1);
 		}
 		
@@ -62,14 +62,14 @@ public class AppMain {
 		//Modifier un groupe
 		private void UpdateTeam(Module2Business service) {
 			Team team = service.selectTeamById(2);
-			team.setMatiere(service.selectMatiereById(3));
+//			team.setMatiere(service.selectMatiereById(3));
 			service.updateTeam(2, team);
 
 		}
 
 		
 		
-	//	Ajout d'un étudiant 
+	//	Ajout d'un ï¿½tudiant 
 		private void AddStudent(Module2Business service) {
 			Etudiant etudiant1 = new Etudiant();
 			etudiant1.setNom("fk");
@@ -93,19 +93,19 @@ public class AppMain {
 		}
 	   
 		 
-	  //Supprimer un étudiant
+	  //Supprimer un ï¿½tudiant
 		private void DeleteStudent(Module2Business service) {
 			service.deleteEtudiant(2);
 		}
 
 	 
-	 //Liste des étudiants
+	 //Liste des ï¿½tudiants
      private void ListStudents(Module2Business service) {
     	 System.out.println(service.listEtudiants());
 	}
 	
 		
-	 //Select d'un étudiant by id
+	 //Select d'un ï¿½tudiant by id
      private void SelectStudentByStudent(Module2Business service) {
     	 System.out.println(service.selectEtudiantById(1));
 
@@ -116,7 +116,7 @@ public class AppMain {
 	//Ajout Enseignant
      private void AddEnseignant(Module2Business service) {
  		Ensignant enseignant = new Ensignant(1, "Chenffour", "Noureddine", "037777");
-       service.addEnseignant(enseignant);
+//       service.addEnseignant(enseignant);
 
 	}
 
@@ -126,8 +126,8 @@ public class AppMain {
      private void AddMatiere(Module2Business service) {
  		Matiere matiere = new Matiere();
  		matiere.setName("web service");
- 		matiere.setEnsignant(service.selectEnsignantById(1));
- 		service.addMatiere(matiere);
+// 		matiere.setEnsignant(service.selectEnsignantById(1));
+// 		service.addMatiere(matiere);
 
 	}
 
@@ -143,8 +143,8 @@ public class AppMain {
 			projet.setDatePublication("12/12/2017");
 			projet.setDeadLine("10/01/2018");
 			projet.setTeam(service.selectTeamById(1));
-			projet.setMatiere(service.selectMatiereById(1));
-			projet.setLiverable(service.selectLivrableById(1));
+//			projet.setMatiere(service.selectMatiereById(1));
+//			projet.setLiverable(service.selectLivrableById(1));
 			service.addProject(projet);
 
 	}
@@ -155,7 +155,7 @@ public class AppMain {
 		//Update project
      private void UpdatePr(Module2Business service) {
  		Project projet = service.selectProjectById(1);
- 		projet.setLiverable(service.selectLivrableById(7));
+// 		projet.setLiverable(service.selectLivrableById(7));
  		service.updateProject(1, projet);
 
 	}
@@ -167,24 +167,24 @@ public class AppMain {
  		Liverable livrable = new Liverable();
  		livrable.setName("L1");
  		livrable.setProject(service.selectProjectById(1));
- 		service.addLivrable(livrable);
+// 		service.addLivrable(livrable);
  		
 
 	}
    //Modif livrable
 	private void UpdateLivrable(Module2Business service) {
 		
-		Liverable livrable = service.selectLivrableById(1);
-		livrable.setProject(service.selectProjectById(1));
-		service.updateLiverable(1, livrable);
+//		Liverable livrable = service.selectLivrableById(1);
+//		livrable.setProject(service.selectProjectById(1));
+//		service.updateLiverable(1, livrable);
 	}
 		
-	//Liste des étudiants dans un groupe
+	//Liste des ï¿½tudiants dans un groupe
 	private void ListStudentsInTeam(Module2Business service) {
 		System.out.println(service.listEtudiantsInTeam(2));
 	}
 		
-	//Supprimer un étudiant d'un groupe
+	//Supprimer un ï¿½tudiant d'un groupe
 	private void removeEtudiantFromTeam(Module2Business service) {
 		System.out.println(service.removeEtudiantFromTeam(18,5));
 
@@ -202,7 +202,7 @@ public class AppMain {
 
 	}
 	
-	//Ajouter un étudiant dans un groupe
+	//Ajouter un ï¿½tudiant dans un groupe
 	private void addEtudiantToTeam(Module2Business service) {
 		System.out.println(service.addEtudiantToTeam(18, 5));
 		

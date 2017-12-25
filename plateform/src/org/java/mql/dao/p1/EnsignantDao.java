@@ -11,20 +11,4 @@ public interface EnsignantDao extends DAOservice{
 	List<Ensignant> selectAllEnsignant();
 	Ensignant selectEnsignantById(long id);
 	int updateEnsignant(long idEnsignant , Ensignant ensignant);
-	
-}
-=======
-package org.java.mql.dao.p1;
-
-import java.util.List;
-
-import org.java.mql.dao.DAOservice;
-import org.java.mql.models.p1.Ensignant;
-
-public interface EnsignantDao extends DAOservice{
-	long addEnsignant(Ensignant ensignant);
-	Ensignant deleteEnsignant(long idEnsignant);
-	List<Ensignant> selectAllEnsignant();
-	Ensignant selectEnsignantById(long id);
-	long updateEnsignant(long idEnsignant , Ensignant ensignant);
 }

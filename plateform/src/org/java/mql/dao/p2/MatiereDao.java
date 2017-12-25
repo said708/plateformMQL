@@ -10,6 +10,6 @@ public interface MatiereDao extends DAOservice{
 	int addMatiere(Matiere matiere);
 	Matiere deleteMatiere(long idMatiere);
 	List<Matiere> selectAllMatiere();
-	Matiere selectMatiereById(long id);
+	Matiere selectMatierById(long id);
 	int updateMatiere(long idMatiere , Matiere matiere);
 }

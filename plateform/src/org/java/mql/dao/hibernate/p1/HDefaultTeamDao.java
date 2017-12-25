@@ -3,11 +3,9 @@ package org.java.mql.dao.hibernate.p1;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.query.Query;
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.TeamDao;
 import org.java.mql.models.p1.Team;
-import org.java.mql.models.p2.Project;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
@@ -52,20 +50,20 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 		return teamId;
 	}
 
-	@Override
+	/*@Override
 	public List<Etudiant> selectEtudinatsInTeams(long teamId) {
 		String query="from Etudiant where team_id =? ";
 		return (List<Etudiant>) template.find(query, teamId);
 		
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public int removeEtudiantFromTeam(long studentId, long team_id) {
 		String query="UPDATE Etudiant SET team_id = NULL  where ID = ? and team_id = ? " ;
 		return template.bulkUpdate(query, new Object[]{studentId,team_id});
 	}
-
-	@Override
+*/
+	/*@Override
 	public int addProjectToTeam(long projectId, long teamId) {
 		String query="UPDATE Project SET TEAM = ? where ID = ?  " ;
 		return template.bulkUpdate(query, new Object[]{teamId,projectId});
@@ -76,13 +74,13 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	public int removeProjectFromTeam(long projectId, long teamId) {
 		String query="UPDATE Project SET TEAM = NULL  where id = ? and TEAM = ? " ;
 		return template.bulkUpdate(query, new Object[]{projectId,teamId});
-	}
-
+	}*/
+/*
 	@Override
 	public int addEtudiantToTeam(long idEtudiant, long teamId) {
 		String query="UPDATE Etudiant SET team_id = ?  where ID = ?  " ;
 		return template.bulkUpdate(query, new Object[]{teamId,idEtudiant});
-	}
+	}*/
 	
 
 
