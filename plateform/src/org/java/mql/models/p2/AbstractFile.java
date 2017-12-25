@@ -9,10 +9,11 @@ public abstract class AbstractFile {
 
 
 	public AbstractFile() {
+		liverable = new Liverable();
 	}
 
 	public AbstractFile(long id, String name, String path) {
-		liverable = new Liverable();
+		this();
 		this.id = id;
 		this.name = name;
 		this.path = path;

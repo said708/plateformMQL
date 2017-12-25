@@ -78,11 +78,15 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jdbc/mysql.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/jsf-api-2.2.8.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/jsf-impl-2.2.8.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/primefaces-6.0.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jdbc/mysql-connector-java-5.0.8-bin.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/aspectjweaver-1.7.2.jar"/>
+=======
+>>>>>>> parent of 00c02ef... add more code lines by said
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
