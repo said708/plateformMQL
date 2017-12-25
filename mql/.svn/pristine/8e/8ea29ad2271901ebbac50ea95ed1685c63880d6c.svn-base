@@ -1,0 +1,57 @@
+package org.java.mql.business;
+
+import java.util.List;
+
+import org.java.mql.models.p01.Etudiant;
+import org.java.mql.models.p01.Team;
+import org.java.mql.models.p02.Project;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public Test() {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
+		DefaultModule2Business b = context.getBean(DefaultModule2Business.class);
+		teamTest(b);
+		context.close();
+	}
+	
+	public void teamTest(Module2Business business) {
+		System.out.println("+++++++before++++++++");
+		for (Team t : business.listTeams()) {
+			System.out.println(t.getNom());	
+		}
+		List<Etudiant> listEtudiants = business.listEtudiants();
+		List<Project> listProjects = business.listProjects();
+		Team team = new Team(9, "GroupeT", listEtudiants, listProjects);
+		business.addTeam(team);
+		System.out.println("+++++++after++++++++");
+		for (Team t : business.listTeams()) {
+			System.out.println(t.getNom());	
+		}
+		
+		
+	}
+	
+	
+	public void etudiantTest(Module2Business business) {
+		
+		//list all etudiants work as expcted
+		System.out.println(business.listEtudiantsInTeam(4));
+		
+		//remove service work as expcted
+		business.removeEtudiantFromTeam(23, 4);
+		System.out.println(business.listEtudiantsInTeam(4));
+		
+		//add service work as expcted
+		business.addEtudiantToTeam(new Etudiant(87, "tajir", "bouchta", "bouchta.2330@gmail.fr", "0989787634"), 4);
+		System.out.println(business.listEtudiantsInTeam(4));
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		new Test();
+	}
+
+}
