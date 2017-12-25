@@ -1,0 +1,20 @@
+package org.java.mql.business;
+
+import org.java.mql.models.p01.Etudiant;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	
+	
+	private void etudiantTest() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	public static void main(String[] args) {
+		new Test();
+	}
+
+}

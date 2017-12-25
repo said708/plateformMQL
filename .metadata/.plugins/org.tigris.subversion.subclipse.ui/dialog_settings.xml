@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="trunk/svn-mql-module-2" key="DirectorySelectionPage.lastParent_https://svn.riouxsvn.com/mql2018"/>
+	<item value="23" key="UpdateDialogWithConflictHandling.location.y"/>
+	<item value="505" key="TreeConflictsView.col.Description"/>
+	<item value="/Users/said/Dropbox/Workspaces/plateform mql/mql" key="TreeConflictsView.resource"/>
+	<item value="564" key="passwordStores.size.y"/>
+	<item value="901" key="passwordStores.size.x"/>
+	<item value="57" key="HistoryTableProvider.SVNHistoryPage.Revision"/>
+	<item value="525" key="ConfigureTagsDialog.size.x"/>
+	<item value="591" key="ConfigureTagsDialog.size.y"/>
+	<item value="591" key="SwitchDialogWithConflictHandling.size.x"/>
+	<item value="800" key="SwitchDialogWithConflictHandling.size.y"/>
+	<item value="280" key="HistoryTableProvider.SVNHistoryPage.Comment"/>
+	<item value="https://svn.riouxsvn.com/mql2018/trunk/svn-mql-module-2-copy-1" key="UrlCombo.mql.3"/>
+	<item value="https://svn.riouxsvn.com/mql2018/trunk" key="UrlCombo.mql.2"/>
+	<item value="https://svn.riouxsvn.com/mql2018/trunk/svn-mql-module-2-copy2" key="UrlCombo.mql.1"/>
+	<item value="80" key="passwordStores.location.y"/>
+	<item value="23" key="CommitDialog.location.y"/>
+	<item value="https://svn.riouxsvn.com/mql2018/trunk/svn-mql-module-2" key="UrlCombo.mql.0"/>
+	<item value="83" key="passwordStores.location.x"/>
+	<item value="160" key="CommitDialog.location.x"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="784" key="UpdateDialogWithConflictHandling.size.y"/>
+	<item value="85" key="TreeConflictsView.col.Resource"/>
+	<item value="797" key="CommitDialog.size.y"/>
+	<item value="525" key="UpdateDialogWithConflictHandling.size.x"/>
+	<item value="1121" key="CommitDialog.size.x"/>
+	<item value="141" key="HistoryTableProvider.SVNHistoryPage.Date"/>
+	<item value="112" key="HistoryTableProvider.SVNHistoryPage.Author"/>
+	<item value="458" key="UpdateDialogWithConflictHandling.location.x"/>
+	<item value="477" key="ChooseUrlDialog.size.x"/>
+	<item value="402" key="BranchTag.location.x"/>
+	<item value="307" key="BranchTag.location.y"/>
+	<item value="458" key="ConfigureTagsDialog.location.x"/>
+	<item value="true" key="TreeConflictsView.container"/>
+	<item value="27" key="ConfigureTagsDialog.location.y"/>
+	<item value="349" key="ChooseUrlDialog.size.y"/>
+	<item value="https://svn.riouxsvn.com/mql2018" key="RepositorySelectionPage.lastRepository"/>
+	<item value="367" key="BranchTag.size.y"/>
+	<item value="482" key="ChooseUrlDialog.location.x"/>
+	<item value="564" key="BranchTag.size.x"/>
+	<item value="191" key="ChooseUrlDialog.location.y"/>
+	<item value="23" key="SwitchDialogWithConflictHandling.location.y"/>
+	<item value="425" key="SwitchDialogWithConflictHandling.location.x"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="SynchronizeResourceSelectionDialog">
+		<item value="" key="SynchronizeResourceSelectionDialog.STORE_WORKING_SETS"/>
+	</section>
+	<section name="NewLocationWizard">
+	</section>
+</section>

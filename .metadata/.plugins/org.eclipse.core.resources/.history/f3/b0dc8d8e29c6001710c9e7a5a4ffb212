@@ -1,0 +1,33 @@
+package org.java.mql.business;
+
+import org.java.mql.models.p01.Etudiant;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public Test() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	private void etudiantTest() {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
+		DefaultModule2Business b = (DefaultModule2Business) context.getBean("defaultModule2Business");
+		System.out.println(b.listEtudiantsInTeam(4));
+		//remove service work as expcted
+		b.removeEtudiantFromTeam(1, 4);
+		System.out.println(b.listEtudiantsInTeam(4));
+		//add service work as expcted
+		b.addEtudiantToTeam(new Etudiant(87, "tajir", "bouchta", "bouchta.2330@gmail.fr", "0989787634"), 4);
+		
+		//list all etudiants work as expcted
+		System.out.println(b.listEtudiantsInTeam(4));
+		context.close();
+	}
+	
+	
+	public static void main(String[] args) {
+		new Test();
+	}
+
+}

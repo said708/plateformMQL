@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ConfigureProjectWizard">
+		<item value="org.tigris.subversion.subclipse.ui.SharingWizard" key="selectedWizardId"/>
+	</section>
+	<section name="SynchronizeViewSettings">
+		<item value="1511044571767" key="lastactiveparticipant_sec_id"/>
+		<item value="org.eclipse.egit.ui.modelCompareParticipant" key="lastactiveparticipant_id"/>
+		<item value="false" key="linkWithEditor"/>
+		<section name="org.tigris.subversion.subclipse.participant.1510506615535">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510325637199">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510506314437">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510506478841">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1509362860880">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1511044571767">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1509996754798">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+			<item value="false" key="org.eclipse.team.ui.P_COMMIT_SET_ENABLED"/>
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510506346630">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510506687209">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510511846454">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510572842172">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+			<item value="false" key="org.eclipse.team.ui.P_COMMIT_SET_ENABLED"/>
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510497571288">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510506404054">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1510573214577">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+			<item value="false" key="org.eclipse.team.ui.P_COMMIT_SET_ENABLED"/>
+		</section>
+	</section>
+	<section name="SynchronizeWizard">
+		<item value="org.tigris.subversion.subclipse.synchronizeWizard" key="org.eclipse.team.uiGlobalRefreshWizardSelectionPage.default_selection"/>
+	</section>
+</section>

@@ -1,0 +1,15 @@
+1509275254720	Rename package 'org.java.mql.dao'
+1509275375911	Rename type 'Liverable'
+1509275393561	Copy compilation unit
+1509275432335	Copy compilation unit
+1509275460780	Rename package 'org.java.mql.dao.hibernate.implementation'
+1509275466081	Copy package
+1509277300029	Copy compilation unit
+1509277420567	Delete element
+1509277440909	Rename type 'Module2Dao'
+1509301479381	Rename method 'getTeams'
+1509301491542	Rename method 'setTeams'
+1509303898228	Rename method 'selectEtudiantsFromFteam'
+1509303911030	Rename method 'listEtudiantsFromFteam'
+1509303924197	Rename method 'listEtudiantsinteam'
+1509304060824	Rename method 'listEtudiantsinTeam'

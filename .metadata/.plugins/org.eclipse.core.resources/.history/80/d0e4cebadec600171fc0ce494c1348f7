@@ -1,0 +1,81 @@
+package org.java.mql.models.p01;
+
+import java.util.List;
+
+import org.java.mql.models.p02.Projet;
+
+public class Team {
+
+	private long id;
+	private String nom;
+	private List<Etudiant> etudiants;
+	private List<Projet> projects;
+
+	public Team() {
+		projects = new Vector<>()''
+	}
+	public Team(long id, String nom, List<Etudiant> etudiants, List<Projet> projects) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.etudiants = etudiants;
+		this.projects = projects;
+	}
+	public long getId() {
+		return id;
+	}
+
+
+
+	
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+
+
+	public List<Etudiant> getEtudiants() {
+		return etudiants;
+	}
+
+
+
+	public void setEtudiants(List<Etudiant> etudiants) {
+		this.etudiants = etudiants;
+	}
+
+
+
+	public List<Projet> getProjects() {
+		return projects;
+	}
+
+
+
+	public void setProjects(List<Projet> projects) {
+		this.projects = projects;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Team [id=" + id + ", nom=" + nom + ", etudiants=" + etudiants + "]";
+	}
+
+}
