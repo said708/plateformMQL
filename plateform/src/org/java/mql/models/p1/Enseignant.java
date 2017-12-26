@@ -5,17 +5,17 @@ import java.util.Vector;
 
 import org.java.mql.models.p2.Matiere;
 
-public class Ensignant  {
+public class Enseignant  {
 	private long id;
 	private String nom;
 	private String prenom;
 	private String phone;
 	private List<Matiere> matieres;
 
-	public Ensignant() {
+	public Enseignant() {
 	}
 	
-	public Ensignant(long id, String nom, String prenom, String phone) {
+	public Enseignant(long id, String nom, String prenom, String phone) {
 		
 		this.id = id;
 		this.nom = nom;
@@ -64,10 +64,10 @@ public class Ensignant  {
 	
 	@Override
 	public boolean equals(Object o) {
-	  if ((o == null) || (o.getClass() != Ensignant.class)) {
+	  if ((o == null) || (o.getClass() != Enseignant.class)) {
 	    return false;
 	  }
-	  Ensignant other = (Ensignant) o;
+	  Enseignant other = (Enseignant) o;
 	  return (other.id == this.id) ;
 	}
 
