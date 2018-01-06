@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=mql/src\/main\/java&lt;org.java.mql.dao.p2{FileDao.java[FileDao" modifiers="513" timestamp="1509286982000"/>
-<typeInfo handle="=mql/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_111.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.nio.file.attribute(FileAttribute.class[FileAttribute" modifiers="1537" timestamp="1474584629000"/>
-<typeInfo handle="=mql/src\/main\/java&lt;org.java.mql.dao.p2{LiverableDao.java[LiverableDao" modifiers="513" timestamp="1509286970000"/>
-<typeInfo handle="=mql/src\/main\/java&lt;org.java.mql.dao.p2{MatiereDao.java[MatiereDao" modifiers="513" timestamp="1509286975000"/>
-<typeInfo handle="=mql/src\/main\/java&lt;org.java.mql.dao{DaoMediatorService.java[DaoMediatorService" modifiers="1" timestamp="1510572853000"/>
-<typeInfo handle="=mql/src\/main\/java&lt;org.java.mql.dao.p2{ProjectDao.java[ProjectDao" modifiers="513" timestamp="1510505233000"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
