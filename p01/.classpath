@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_111]">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/jsf-api-2.2.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/jsf-impl-2.2.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/JSF/primefaces-6.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-core-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-web-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/aspectjweaver-1.7.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-aop-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-aop-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-aop-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-aspects-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-aspects-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-aspects-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-beans-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-beans-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-beans-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-indexer-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-indexer-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-indexer-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-support-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-support-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-context-support-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-core-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-core-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-expression-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-expression-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-expression-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-instrument-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-instrument-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-instrument-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jcl-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jcl-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jcl-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jdbc-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jdbc-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jdbc-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jms-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jms-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-jms-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-messaging-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-messaging-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-messaging-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-orm-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-orm-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-orm-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-oxm-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-oxm-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-oxm-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-test-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-test-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-test-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-tx-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-tx-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-tx-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-web-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-web-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-webflux-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-webflux-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-webflux-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-webmvc-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-webmvc-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-webmvc-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
