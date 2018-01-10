@@ -1,23 +1,25 @@
 package com.mkyong;
 
-import javax.inject.Inject;
-import javax.inject.Named;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import com.mkyong.user.bo.UserBo;
 
-@Named
+@Component
 @Scope("session")
 public class UserBean {
-
-	@Inject
+	
+	@Autowired
 	UserBo userBo;
-
+	
 	public void setUserBo(UserBo userBo) {
 		this.userBo = userBo;
 	}
 
 	public String printMsgFromSpring() {
 		return userBo.getMessage();
-	}
-
+	}	
+	
+	
 }

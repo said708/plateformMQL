@@ -84,6 +84,10 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/Spring/spring-websocket-5.0.0.RELEASE.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
