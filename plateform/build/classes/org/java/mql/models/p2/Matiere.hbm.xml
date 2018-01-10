@@ -7,7 +7,7 @@
    <class name = "org.java.mql.models.p2.Matiere" table = "MATIERE">
       
       <meta attribute = "class-description">
-         This class contains the employee detail. 
+         This class contains the matiere detail. 
       </meta>
       <!-- private long id; -->
       <id name = "id" type = "long" column = "ID">

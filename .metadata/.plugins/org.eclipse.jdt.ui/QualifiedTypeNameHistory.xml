@@ -53,9 +53,9 @@
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Etudiant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p2.Project"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Ensignant"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p2.Matiere"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p2.Liverable"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Team"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>

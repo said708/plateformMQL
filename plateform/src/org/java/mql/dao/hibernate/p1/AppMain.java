@@ -25,7 +25,7 @@ public class AppMain {
 					
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business service = context.getBean(Module2Business.class);
-		AddTeam(service);
+		AddStudent(service);
 		context.close();
 		
 	}
@@ -69,7 +69,7 @@ public class AppMain {
 
 		
 		
-	//	Ajout d'un étudiant 
+	//	Ajout d'un ï¿½tudiant 
 		private void AddStudent(Module2Business service) {
 			Etudiant etudiant1 = new Etudiant();
 			etudiant1.setNom("fk");
@@ -93,19 +93,19 @@ public class AppMain {
 		}
 	   
 		 
-	  //Supprimer un étudiant
+	  //Supprimer un ï¿½tudiant
 		private void DeleteStudent(Module2Business service) {
 			service.deleteEtudiant(20);
 		}
 
 	 
-	 //Liste des étudiants
+	 //Liste des ï¿½tudiants
      private void ListStudents(Module2Business service) {
     	 System.out.println(service.listEtudiants());
 	}
 	
 		
-	 //Select d'un étudiant by id
+	 //Select d'un ï¿½tudiant by id
      private void SelectStudentByStudent(Module2Business service) {
     	 System.out.println(service.selectEtudiantById(19));
 
@@ -179,12 +179,12 @@ public class AppMain {
 		service.updateLivrable(livrable.getId(), livrable);
 	}
 		
-	//Liste des étudiants dans un groupe
+	//Liste des ï¿½tudiants dans un groupe
 	private void ListStudentsInTeam(Module2Business service) {
 		System.out.println(service.listEtudiantsInTeam(7));
 	}
 		
-	//Supprimer un étudiant d'un groupe
+	//Supprimer un ï¿½tudiant d'un groupe
 	private void removeEtudiantFromTeam(Module2Business service) {
 		System.out.println(service.removeEtudiantFromTeam(17,1));
 
@@ -202,7 +202,7 @@ public class AppMain {
 
 	}
 	
-	//Ajouter un étudiant dans un groupe
+	//Ajouter un ï¿½tudiant dans un groupe
 	private void addEtudiantToTeam(Module2Business service) {
 		System.out.println(service.addEtudiantToTeam(18, 6));
 		

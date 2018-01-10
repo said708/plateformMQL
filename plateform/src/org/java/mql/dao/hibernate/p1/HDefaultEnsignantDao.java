@@ -1,13 +1,11 @@
 package org.java.mql.dao.hibernate.p1;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.EnsignantDao;
 import org.java.mql.models.p1.Ensignant;
-import org.java.mql.models.p1.Etudiant;
-import org.java.mql.models.p1.Team;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 public class HDefaultEnsignantDao   extends DaoMediatorService  implements EnsignantDao {
@@ -21,20 +19,25 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 
 	@Override
 	public int addEnsignant(Ensignant ensignant) {
-		template.save(ensignant);
-		return 1;
+		if(ensignant != null) {
+			template.save(ensignant);	
+			return 1;
+		}
+		return -1;
+		
+		
 	}
 
 	@Override
 	public Ensignant deleteEnsignant(long idEnseigant) {
-		Ensignant enseignant =   template.get(Ensignant.class, idEnseigant); 
+		Ensignant enseignant =   this.selectEnsignantById(idEnseigant);
 		template.delete(enseignant);
 		return enseignant;
 	}
 
 	@Override
 	public List<Ensignant> selectAllEnsignant() {
-		List<Ensignant> list=new ArrayList<Ensignant>();  
+		List<Ensignant> list=new Vector<Ensignant>();  
 	    list=template.loadAll(Ensignant.class);  
 	    return list; 
 	}
@@ -47,7 +50,9 @@ public class HDefaultEnsignantDao   extends DaoMediatorService  implements Ensig
 
 	@Override
 	public int updateEnsignant(long idEnsignant, Ensignant ensignant) {
-		template.update(ensignant);
+		if(idEnsignant > -1 ) {
+			template.update(ensignant);
+		}
 		return 1;
 	}
 

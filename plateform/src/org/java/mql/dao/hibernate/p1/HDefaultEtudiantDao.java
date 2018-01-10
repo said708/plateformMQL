@@ -18,13 +18,16 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 
 	@Override
 	public long addEtudiant(Etudiant etudiant) {
-		template.save(etudiant);
-		return 1;
+		if(etudiant != null) {
+			template.save(etudiant);
+			return 1;
+		}
+		return -1;
 	}
 
 	@Override
 	public Etudiant deleteEtudiant(long id) {
-		Etudiant etudiant =   template.get(Etudiant.class, id); 
+		Etudiant etudiant =   this.selectEtudiantById(id);
 		template.delete(etudiant);
 		return etudiant;
 	}
@@ -32,14 +35,14 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 	@Override
 	public List<Etudiant> selectAllEtudiant() {
 		List<Etudiant> list=new ArrayList<Etudiant>();  
-	    list=template.loadAll(Etudiant.class);  
-	    return list;  
+		list=template.loadAll(Etudiant.class);  
+		return list;  
 	}
 
 	@Override
 	public Etudiant selectEtudiantById(long id) {
-		Etudiant e=(Etudiant)template.get(Etudiant.class,id);  
-		    return e;   
+		Etudiant e = template.get(Etudiant.class,id);  
+		return e;   
 	}
 
 	@Override
@@ -48,6 +51,6 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 		return 1;
 	}
 
-	
+
 
 }

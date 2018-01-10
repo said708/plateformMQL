@@ -14,6 +14,6 @@
 		<property name="prenom" column="PRENOM" type="string" />
 		<property name="email" column="EMAIL" type="string" />
 		<property name="phone" column="PHONE" type="string" />
-		<many-to-one name="team" column="team_id" class="org.java.mql.models.p1.Team" />
+		<many-to-one name="team" column="TEAM" class="org.java.mql.models.p1.Team" />
 	</class>
 </hibernate-mapping>
