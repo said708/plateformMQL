@@ -3,6 +3,10 @@ package org.java.mql.dao.hibernate.p1;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p1.EtudiantDao;
 import org.java.mql.models.p1.Etudiant;
@@ -12,10 +16,11 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 
 	private HibernateTemplate template;
 
+
 	public HDefaultEtudiantDao(HibernateTemplate template) {
 		this.template = template;
 	}
-
+	
 	@Override
 	public long addEtudiant(Etudiant etudiant) {
 		template.save(etudiant);

@@ -45,8 +45,10 @@ public interface Module2Business {
 	boolean isAnProjectExiste(long idProject);//work
 	
 	//manage liverable
+	int addLiverable(Liverable liverable); // Added by YcDev
+	int updateLiverable(long liverableId, Liverable liverable); // Added by YcDev
 	AbstractFile deleteFileFromLiverable(long fileId , long liverableId);//work
-	int addFileToLiverable(File file , long idLiverable);//work
+	int addFileToLiverable(AbstractFile file , long idLiverable);//work     // Modified by YcDev, previous signature : int addFileToLiverable(File file , long idLiverable);
 	List<Liverable> listLiverables();//work
 	List<AbstractFile> listFilesInLiverable(long liverableId);//work
 	boolean isAnFileExisteInLiverable(long fileId , long liverableId);//work

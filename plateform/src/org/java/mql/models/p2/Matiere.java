@@ -1,15 +1,14 @@
 package org.java.mql.models.p2;
 
 import java.util.List;
-import java.util.Vector;
 
-import org.java.mql.models.p1.Ensignant;
+import org.java.mql.models.p1.Enseignant;
 import org.java.mql.models.p1.Team;
 
 public class Matiere  {
 	private long id;
 	private String name;
-	private Ensignant ensignant;
+	private Enseignant ensignant;
 	private List<Project> projects;
 	private List<Team> teams;
 	
@@ -17,7 +16,7 @@ public class Matiere  {
 	}
 
 	public Matiere(long id, String name) {
-		ensignant = new Ensignant();
+		ensignant = new Enseignant();
 		this.id = id;
 		this.name = name;
 	}
@@ -59,11 +58,11 @@ public class Matiere  {
 	}
 
 
-	public Ensignant getEnsignant() {
+	public Enseignant getEnsignant() {
 		return ensignant;
 	}
 
-	public void setEnsignant(Ensignant ensignant) {
+	public void setEnsignant(Enseignant ensignant) {
 		this.ensignant = ensignant;
 	}
 

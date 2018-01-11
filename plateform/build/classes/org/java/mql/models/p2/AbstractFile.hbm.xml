@@ -16,7 +16,6 @@
 			<generator class="native" />
 		</id>
 
-
 		<discriminator column="DISCRIMINATOR" type="string" />
 
 		<!-- private String name; -->
@@ -31,13 +30,18 @@
 			column="LIVERABLE" />
 
 		<subclass name="org.java.mql.models.p2.Directory"
-			discriminator-value="D">
+			discriminator-value="DIRECTORY">
 			<property name="type" column="TYPE" type="org.java.mql.models.p2.Type" />
 			<set name="files" cascade="all">
 				<key column="ID" />
 				<one-to-many class="org.java.mql.models.p2.AbstractFile" />
 			</set>
 		</subclass>
+		
+		<!-- Each subclass that extends AbstractFile class should be declared in this Mapping configuration File : written by YcDev -->
+		<subclass name="org.java.mql.models.p2.File" discriminator-value="FILE">
+		</subclass>
+		
 		<!-- <subclass name="org.java.mql.models.p2.File"
 			discriminator-value="F" /> -->
 	</class>

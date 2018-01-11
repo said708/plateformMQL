@@ -18,8 +18,6 @@ public class Project {
 	public Project() {
 	}
 
-
-
 	public Project(long id, String name, String desc, String datePublication, String deadLine) {
 		matiere = new Matiere();
 		liverable = new Liverable();
@@ -31,37 +29,25 @@ public class Project {
 		this.deadLine = deadLine;
 	}
 
-
-
 	public Team getTeam() {
 		return team;
 	}
-
-
 
 	public void setTeam(Team team) {
 		this.team = team;
 	}
 
-
-
 	public Liverable getLiverable() {
 		return liverable;
 	}
-
-
 
 	public void setLiverable(Liverable liverable) {
 		this.liverable = liverable;
 	}
 
-
-
 	public Matiere getMatiere() {
 		return matiere;
 	}
-
-
 
 	public void setMatiere(Matiere matiere) {
 		this.matiere = matiere;
@@ -84,13 +70,9 @@ public class Project {
 		return description;
 	}
 
-
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-
 
 	public String getDatePublication() {
 		return datePublication;

@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.java.mql.dao.DaoMediatorService;
 import org.java.mql.dao.p2.MatiereDao;
-import org.java.mql.models.p1.Ensignant;
+import org.java.mql.models.p1.Enseignant;
 import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.Matiere;

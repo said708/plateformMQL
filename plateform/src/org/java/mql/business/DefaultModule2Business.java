@@ -209,10 +209,6 @@ public class DefaultModule2Business implements Module2Business{
 	}
 
 
-
-
-
-
 	@Override
 	public List<Etudiant> listEtudiants() {
 		List<Etudiant> allEtds = daoMediator.selectAllEtudiant();
@@ -244,8 +240,6 @@ public class DefaultModule2Business implements Module2Business{
 
 
 
-
-
 	@Override
 	public List<Liverable> listLiverables() {
 		List<Liverable> allLiverable = daoMediator.selectAllLiverable();
@@ -264,10 +258,10 @@ public class DefaultModule2Business implements Module2Business{
 	@Override
 	public List<AbstractFile> listFilesInLiverable(long liverableId) {
 		Liverable liverable = daoMediator.selectLiverableById(liverableId);
-		List<AbstractFile> allFilesInLverable = liverable.getFiles();
+		List<AbstractFile> allFilesInLiverable = liverable.getFiles();
 		try {
-			if(allFilesInLverable != null)
-				return allFilesInLverable;
+			if(allFilesInLiverable != null)
+				return allFilesInLiverable;
 			else
 				throw new Exception("Liverable has no file");
 		} catch (Exception e) {
@@ -319,6 +313,7 @@ public class DefaultModule2Business implements Module2Business{
 				throw new Exception("etudiant is already exist or null");
 		} catch (Exception e) {
 			log.fatal("DefaultModule2Business.addEtudiant has an error : "+ e.getMessage());
+			e.printStackTrace();// added by YC for test
 			return -1;
 		}
 	}
@@ -419,6 +414,23 @@ public class DefaultModule2Business implements Module2Business{
 		return false;
 	}
 
+	// YcDev
+	public int addLiverable(Liverable liverable) {
+		try {
+			if (!isAnLiverableExiste(liverable.getId()) && liverable != null) {
+				daoMediator.addLiverable(liverable);
+				log.info("Liverable was added successfully !");
+				return 1;
+			}
+			else {
+				throw new Exception("Liverable already exist or it's null");
+			}
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.addLiverable() has encountered an error : " + e.getMessage());
+			return 0;
+		}
+		
+	}
 
 	@Override
 	public AbstractFile deleteFileFromLiverable(long fileId, long liverableId) {
@@ -442,7 +454,6 @@ public class DefaultModule2Business implements Module2Business{
 			return null;
 		}
 	}
-
 
 
 	@Override
@@ -475,12 +486,13 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public int addFileToLiverable(File file, long liverableId) {
+	public int addFileToLiverable(AbstractFile file, long liverableId) {
 		try {
 			if(isAnLiverableExiste(liverableId) && !isAnFileExisteInLiverable(file.getId(), liverableId) && file != null) {
 				Liverable liverable = daoMediator.selectLiverableById(liverableId);
 				liverable.getFiles().add(file);
-				return daoMediator.updateLiverable(liverableId, liverable);
+				System.out.println("********* File was added successfully! *********");
+				return updateLiverable(liverableId, liverable);
 			}else {
 				throw new Exception("file "+file.getId()+"  is already existe or null /  liverable "+liverableId+" not existe");
 			}
@@ -532,6 +544,25 @@ public class DefaultModule2Business implements Module2Business{
 	public List<Etudiant> listEtudiantsInTeam(long idTeam) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+	// Added by YcDev
+	public int updateLiverable(long liverableId, Liverable liverable) {
+		try {
+			if (isAnLiverableExiste(liverableId) && liverable != null) {
+				daoMediator.updateLiverable(liverableId, liverable);
+				log.info("Liverable with id \"" + liverableId + "\" was updated successfully !");
+				return 1;
+			}
+			else {
+				throw new Exception("Liverable doesn't exist or it's null !");
+			}
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.updateLiverable() has encountered an error : "+ e.getMessage());
+			return 0;
+		}
+		
 	}
 
 }

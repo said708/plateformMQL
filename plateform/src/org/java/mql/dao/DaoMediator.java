@@ -2,14 +2,14 @@ package org.java.mql.dao;
 
 import java.util.List;
 
-import org.java.mql.dao.p1.EnsignantDao;
+import org.java.mql.dao.p1.EnseignantDao;
 import org.java.mql.dao.p1.EtudiantDao;
 import org.java.mql.dao.p1.TeamDao;
 import org.java.mql.dao.p2.FileDao;
 import org.java.mql.dao.p2.LiverableDao;
 import org.java.mql.dao.p2.MatiereDao;
 import org.java.mql.dao.p2.ProjectDao;
-import org.java.mql.models.p1.Ensignant;
+import org.java.mql.models.p1.Enseignant;
 import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.File;
@@ -17,10 +17,10 @@ import org.java.mql.models.p2.Liverable;
 import org.java.mql.models.p2.Matiere;
 import org.java.mql.models.p2.Project;
 
-
+// This class gathers all DAOs to access them easily
 public class DaoMediator {
 	
-	private EnsignantDao ensignantDao;
+	private EnseignantDao ensignantDao;
 	private EtudiantDao etudiantDao;
 	private TeamDao teamDao;
 	private FileDao fileDao;
@@ -28,7 +28,7 @@ public class DaoMediator {
 	private MatiereDao matiereDao;
 	private ProjectDao projectDao;
 
-	public void setEnsignantDao(EnsignantDao ensignantDao) {
+	public void setEnsignantDao(EnseignantDao ensignantDao) {
 //		System.out.println("setEnsignantDao");
 		this.ensignantDao = ensignantDao;
 		this.ensignantDao.setMediator(this);
@@ -71,19 +71,19 @@ public class DaoMediator {
 	}
 	
 	
-	public long addEnsignant(Ensignant ensignant) {
+	public long addEnsignant(Enseignant ensignant) {
 		return ensignantDao.addEnsignant(ensignant);
 	}
-	public Ensignant deleteEnsignant(long idEnsignant) {
+	public Enseignant deleteEnsignant(long idEnsignant) {
 		return ensignantDao.deleteEnsignant(idEnsignant);
 	}
-	public List<Ensignant> selectAllEnsignant() {
+	public List<Enseignant> selectAllEnsignant() {
 		return ensignantDao.selectAllEnsignant();
 	}
-	public Ensignant selectEnsignantById(long id) {
+	public Enseignant selectEnsignantById(long id) {
 		return ensignantDao.selectEnsignantById(id);
 	}
-	public long updateEnsignant(int idEnsignant, Ensignant ensignant) {
+	public long updateEnsignant(int idEnsignant, Enseignant ensignant) {
 		return ensignantDao.updateEnsignant(idEnsignant, ensignant);
 	}
 	public long addEtudiant(Etudiant etudiant) {
@@ -99,7 +99,7 @@ public class DaoMediator {
 	public long updateEtudiant(long idEtudiant, Etudiant etudiant) {
 		return etudiantDao.updateEtudiant(idEtudiant, etudiant);
 	}
-	public long updateEnsignant(long idEnsignant, Ensignant ensignant) {
+	public long updateEnsignant(long idEnsignant, Enseignant ensignant) {
 		return ensignantDao.updateEnsignant(idEnsignant, ensignant);
 	}
 
@@ -139,7 +139,7 @@ public class DaoMediator {
 	public List<File> selectAllFile() {
 		return fileDao.selectAllFile();
 	}
-	public List<File> selectFileById(long id) {
+	public File selectFileById(long id) {// Modified by YcDev, to see it again !!
 		return fileDao.selectFileById(id);
 	}
 	public int updateFile(long idFile, File file) {

@@ -10,6 +10,6 @@ public interface FileDao extends DAOservice{
 	int addFile(File file);
 	File deleteFile(long idFile);
 	List<File> selectAllFile();
-	List<File> selectFileById(long id);
+	File selectFileById(long id);// Modified by YcDev, previous signature : List<File> selectFileById(long id); 
 	int updateFile(long idFile , File file);
 }

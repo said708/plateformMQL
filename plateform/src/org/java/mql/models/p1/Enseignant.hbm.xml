@@ -4,9 +4,9 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="org.java.mql.models.p1.Ensignant" table="ENSIGNANT">
+	<class name="org.java.mql.models.p1.Enseignant" table="ENSEIGNANT">
 		<meta attribute="class-description">
-			This class contains the Ensignant detail.
+			This class contains the Enseignant detail.
 		</meta>
 		<id name="id" type="long" column="ID">
 			<generator class="native" />

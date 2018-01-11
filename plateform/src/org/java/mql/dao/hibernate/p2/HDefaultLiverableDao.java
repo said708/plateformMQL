@@ -13,7 +13,7 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 public class HDefaultLiverableDao  extends DaoMediatorService  implements LiverableDao {
 
 	private HibernateTemplate template;
-	
+
 
 	public HDefaultLiverableDao(HibernateTemplate template) {
 		this.template = template;
@@ -35,8 +35,8 @@ public class HDefaultLiverableDao  extends DaoMediatorService  implements Livera
 	@Override
 	public List<Liverable> selectAllLiverable() {
 		List<Liverable> list=new ArrayList<Liverable>();  
-	    list=template.loadAll(Liverable.class);  
-	    return list;
+		list=template.loadAll(Liverable.class);  
+		return list;
 	}
 
 	@Override
@@ -47,10 +47,11 @@ public class HDefaultLiverableDao  extends DaoMediatorService  implements Livera
 
 	@Override
 	public int updateLiverable(long idLiverable, Liverable liverable) {
-		template.update(liverable);
+		//template.update(liverable);// Commented by YcDev
+		template.merge(liverable);// Using merge instead of update let us overcome the problem caused by update() method : by YcDev
 		return 1;
 	}
 
-	
+
 
 }
