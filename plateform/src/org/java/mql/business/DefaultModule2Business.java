@@ -5,11 +5,13 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 import org.java.mql.dao.DaoMediator;
+import org.java.mql.models.p1.Ensignant;
 import org.java.mql.models.p1.Etudiant;
 import org.java.mql.models.p1.Team;
 import org.java.mql.models.p2.AbstractFile;
 import org.java.mql.models.p2.File;
 import org.java.mql.models.p2.Liverable;
+import org.java.mql.models.p2.Matiere;
 import org.java.mql.models.p2.Project;
 
 
@@ -24,6 +26,15 @@ public class DefaultModule2Business implements Module2Business{
 	private static final Logger log = Logger.getLogger(DefaultModule2Business.class);
 
 	public DefaultModule2Business() {
+	}
+
+	public DaoMediator getDaoMediator() {
+		return daoMediator;
+	}
+
+
+	public void setDaoMediator(DaoMediator daoMediator) {
+		this.daoMediator = daoMediator;
 	}
 
 
@@ -64,9 +75,8 @@ public class DefaultModule2Business implements Module2Business{
 	public int addEtudiantToTeam(long etudiantId, long teamId) {
 		try {
 			if(isAnEtudiantExiste(etudiantId) && isAnTeamExiste(teamId)) {
-				Team team = daoMediator.selectTeamById(teamId);
-				//team.getEtudiants().add(selectEtudiantById(etudiantId));
-				 daoMediator.updateTeam(teamId , team);
+				
+				 daoMediator.addEtudiantToTeam(etudiantId, teamId);
 				 return 1;
 			}else {
 				throw new Exception("team "+teamId+"  or  etudiant "+etudiantId+" not existe");
@@ -106,27 +116,19 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public Etudiant removeEtudiantFromTeam(long studentId, long teamId) {
-		Etudiant etudiant = null;
+	public int removeEtudiantFromTeam(long studentId, long teamId) {
+		
 		try {
 			if(isAnEtudiantExiste(studentId) && isAnTeamExiste(teamId)) {
-				etudiant = daoMediator.selectEtudiantById(studentId);
-				Team team = daoMediator.selectTeamById(teamId);
-				List<Etudiant> etds = team.getEtudiants();
-
-				for (int i = 0; i < etds.size(); i++) {
-					if(etds.get(i).getId() == studentId) {
-						etds.remove(i);
-					}
-				}
-				team.setEtudiants(etds);
+				 daoMediator.removeEtudiantFromTeam(studentId, teamId);
+				
 			}else {
 				throw new Exception("team "+teamId+" or  etudiant "+studentId+" not existe");
 			}
 		}catch(Exception e) {
 			log.error("DefaultModule2Business.removeEtudiantFromTeam has an error :"+e.getMessage());
 		}
-		return etudiant;
+		return 1;
 	}
 
 
@@ -150,9 +152,8 @@ public class DefaultModule2Business implements Module2Business{
 	public int addProjectToTeam(long idProject, long teamId) {
 		try {
 			if(isAnProjectExiste(idProject) && isAnTeamExiste(teamId)) {
-				Project project = selectProjectById(idProject);
-				Team team = daoMediator.selectTeamById(teamId);
-				//team.getProjects().add(project);
+			 daoMediator.addProjectToTeam(idProject, teamId);
+				
 				return 1;
 			}else {
 				throw new Exception("team "+teamId+" or  project "+idProject+" not existe");
@@ -187,25 +188,19 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public Project removeProjectFromTeam(long idProject, long teamId) {
+	public int removeProjectFromTeam(long idProject, long teamId) {
 		try {
 			if(isAnProjectExiste(idProject) && isAnTeamExiste(teamId)) {
-				Team team = daoMediator.selectTeamById(teamId);
-				List<Project> projects = team.getProjects();
-				for (int i = 0; i < projects.size(); i++) {
-					if(projects.get(i).getId() == idProject) {
-						Project project = projects.remove(i);
-						team.setProjects(projects);
-						return project;
-					}
-				}
+				 daoMediator.removeProjectFromTeam(idProject, teamId);
+						return 1;
+				
 			}else {
 				throw new Exception("Project  "+idProject + " not found" );
 			}
 		}catch(Exception e) {
 			log.fatal("DefaultModule2Business.removeProjectFromTeam has an error : "+e.getMessage());
 		}
-		return null;
+		return 0;
 	}
 
 
@@ -270,23 +265,7 @@ public class DefaultModule2Business implements Module2Business{
 		}
 	}
 
-	//	@Override
-	//	public List<Etudiant> listEtudiantsInTeam(long idTeam) {
-	//		return null;
-	//		List<Etudiant> etudiants = daoMediator.selectTeamById(idTeam).getEtudiants();
-	//		try {
-	//			if(isAnTeamExiste(idTeam)) {
-	//				if(etudiants != null)
-	//					return etudiants;
-	//				else
-	//					throw new Exception("team "+idTeam+" has no etudiant");
-	//			}else
-	//				throw new Exception("team "+idTeam+" not existed");
-	//		} catch (Exception e) {
-	//			log.fatal("DefaultModule2Business.listEtudiantsInTeam has an error : "+ e.getMessage());
-	//			return new Vector<Etudiant>();
-	//		}
-	//	}
+	
 
 	@Override
 	public Etudiant deleteEtudiant(long id) {
@@ -530,20 +509,187 @@ public class DefaultModule2Business implements Module2Business{
 		}
 	}
 
-	public DaoMediator getDaoMediator() {
-		return daoMediator;
-	}
-
-
-	public void setDaoMediator(DaoMediator daoMediator) {
-		this.daoMediator = daoMediator;
-	}
 
 
 	@Override
 	public List<Etudiant> listEtudiantsInTeam(long idTeam) {
-		// TODO Auto-generated method stub
-		return null;
+		
+			List<Etudiant> etudiants = daoMediator.selectEtudinatsInTeams(idTeam);
+			try {
+				if(isAnTeamExiste(idTeam)) {
+					if(etudiants != null)
+						return etudiants;
+					else
+						throw new Exception("team "+idTeam+" has no etudiant");
+				}else
+					throw new Exception("team "+idTeam+" not existed");
+			} catch (Exception e) {
+				log.fatal("DefaultModule2Business.listEtudiantsInTeam has an error : "+ e.getMessage());
+				return new Vector<Etudiant>();
+			}
+		}
+	
+
+
+	@Override
+	public Matiere selectMatiereById(long idMatiere) {
+		try {
+			if(isAnMatiereExiste(idMatiere)) {
+				Matiere matiere = daoMediator.selectMatiereById(idMatiere);
+				return matiere;
+			}else 
+				throw new Exception("Matiere "+idMatiere+" not exist");
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.selectMatiereById has an error :"+e.getMessage());
+			return null;
+		}
+	}
+
+
+
+
+
+	@Override
+	public List<Matiere> listeMatieres() {
+		List<Matiere> allMatiere = daoMediator.selectAllMatiere();
+		try {
+			if(allMatiere != null)
+				return allMatiere;
+			else
+				throw new Exception("Matiere table is empty");
+		} catch (Exception e) {
+			log.fatal("DefaultModule2Business.listMatiere has an error : "+ e.getMessage());
+			return new Vector<Matiere>();
+		}
+	}
+
+
+	@Override
+	public int addMatiere(Matiere matiere) {
+		try {
+			if(matiere != null && !isAnMatiereExiste(matiere.getId())) {
+				log.info("matiere with id="+matiere.getId()+" added  with success");
+				 daoMediator.addMatiere(matiere);
+				 return 1;
+			}
+			else
+				throw new Exception("matiere is null or duplicated");
+		} catch (Exception e) {
+			log.fatal("error must be resolved in addmatiere service : "+ e.getMessage());
+			return -1;
+		}
+	}
+
+
+	@Override
+	public boolean isAnMatiereExiste(long matiereId) {
+		for (Matiere matiere : listeMatieres()) 
+			if(matiereId == matiere.getId())
+				return true;
+		return false;
+	}
+
+
+	@Override
+	public Ensignant selectEnsignantById(long idEnseignant) {
+		try {
+			if(isAnEnseignantExiste(idEnseignant)) {
+				Ensignant enseignant = daoMediator.selectEnsignantById(idEnseignant);
+				return enseignant;
+			}else 
+				throw new Exception("Ensignant "+idEnseignant+" not exist");
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.selectEnsignantById has an error :"+e.getMessage());
+			return null;
+		}
+	}
+
+
+	@Override
+	public boolean isAnEnseignantExiste(long enseignantId) {
+		for (Ensignant enseignant : listeEnseignats()) 
+			if(enseignantId == enseignant.getId())
+				return true;
+		return false;
+	}
+
+
+	@Override
+	public List<Ensignant> listeEnseignats() {
+		List<Ensignant> allEnsignant = daoMediator.selectAllEnsignant();
+		try {
+			if(allEnsignant != null)
+				return allEnsignant;
+			else
+				throw new Exception("Ensignant table is empty");
+		} catch (Exception e) {
+			log.fatal("DefaultModule2Business.listEnsignant has an error : "+ e.getMessage());
+			return new Vector<Ensignant>();
+		}
+	}
+
+
+	@Override
+	public int addEnsignant(Ensignant ensignant) {
+		try {
+			if(ensignant != null && !isAnEnseignantExiste(ensignant.getId())) {
+				log.info("Ensignant with id="+ensignant.getId()+" added  with success");
+				 daoMediator.addEnsignant(ensignant);
+				 return 1;
+			}
+			else
+				throw new Exception("Ensignant is null or duplicated");
+		} catch (Exception e) {
+			log.fatal("error must be resolved in addEnsignant service : "+ e.getMessage());
+			return -1;
+		}
+	}
+
+
+	@Override
+	public Liverable selectLivrableById(long idLivrable) {
+		try {
+			if(isAnLiverableExiste(idLivrable)) {
+				Liverable livrable = daoMediator.selectLiverableById(idLivrable);
+				return livrable;
+			}else 
+				throw new Exception("Livrable "+idLivrable+" not exist");
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.selectLivrableById has an error :"+e.getMessage());
+			return null;
+		}
+	}
+
+
+	@Override
+	public int addLivrable(Liverable livrable) {
+		try {
+			if(livrable != null && !isAnLiverableExiste(livrable.getId())) {
+				log.info("livrable with id="+livrable.getId()+" added  with success");
+				 daoMediator.addLiverable(livrable);
+				 return 1;
+			}
+			else
+				throw new Exception("livrable is null or duplicated");
+		} catch (Exception e) {
+			log.fatal("error must be resolved in addlivrable service : "+ e.getMessage());
+			return -1;
+		}
+
+	}
+
+
+	@Override
+	public int updateLivrable(long idLivrable, Liverable livrable) {
+		try {
+			if(isAnLiverableExiste(idLivrable)) {
+				return daoMediator.updateLiverable(idLivrable, livrable);
+			}else 
+				throw new Exception("Livrable "+idLivrable+" not exist");
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.updateLivrable has an error :"+e.getMessage());
+			return -1;
+		}
 	}
 
 

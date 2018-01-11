@@ -130,6 +130,24 @@ public class DaoMediator {
 	public long updateTeam(long teamId , Team team) {
 		return teamDao.updateTeam(teamId,team);
 	}
+	
+	public List<Etudiant> selectEtudinatsInTeams(long teamId) {
+		return  teamDao.selectEtudinatsInTeams(teamId);
+	}
+
+	public int removeEtudiantFromTeam(long studentId, long team_id) {
+		return teamDao.removeEtudiantFromTeam(studentId, team_id);
+	}
+	
+	public int addProjectToTeam(long projectId, long teamId) {
+		return teamDao.addProjectToTeam(projectId, teamId);
+	}
+	public int removeProjectFromTeam(long projectId, long teamId) {
+		return teamDao.removeProjectFromTeam(projectId, teamId);
+	}
+	public int addEtudiantToTeam(long idEtudiant, long teamId) {
+		return teamDao.addEtudiantToTeam(idEtudiant, teamId);
+	}
 	public int addFile(File file) {
 		return fileDao.addFile(file);
 	}

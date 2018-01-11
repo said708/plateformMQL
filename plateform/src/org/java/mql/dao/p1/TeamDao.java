@@ -12,4 +12,9 @@ public interface TeamDao extends DAOservice{
 	List<Team> selectAllTeam();
 	Team selectTeamById(long id);
 	long updateTeam(long teamId , Team team);
+	public List<Etudiant> selectEtudinatsInTeams(long teamId);
+	int removeEtudiantFromTeam(long studentId, long team_id);
+	public int addProjectToTeam(long projectId, long teamId);
+	public int removeProjectFromTeam(long projectId, long teamId);
+	int addEtudiantToTeam(long idEtudiant, long teamId);
 }

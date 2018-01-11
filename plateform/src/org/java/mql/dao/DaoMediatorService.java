@@ -1,5 +1,9 @@
 package org.java.mql.dao;
 
+import java.util.List;
+
+import org.java.mql.models.p1.Etudiant;
+
 public class DaoMediatorService {
 
 	private DaoMediator mediator;
@@ -20,5 +24,20 @@ public class DaoMediatorService {
 	public void setMediator(DaoMediator mediator) {
 		this.mediator = mediator;
 	}
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+
+
 	
 }
