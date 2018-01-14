@@ -23,6 +23,7 @@
 	</section>
 	<section name="PreferencesImportWizard">
 		<item value="/Users/said/Dropbox/eclipse_keys.epf" key=""/>
+		<item value="/Users/said/Dropbox/eclipse_keys.epf" key=""/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="/Users/said/Dropbox/eclipse_keys.epf"/>
 		</list>
@@ -46,15 +47,9 @@
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
-		<item value="org.eclipse.e4.ui.importer.wizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.Preferences" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
-			<item value="org.eclipse.jst.ejb.ui"/>
-			<item value="org.eclipse.egit.ui.internal.clone.gitclonecategory"/>
-			<item value="org.eclipse.buildship.ui.importwizards"/>
-			<item value="org.eclipse.equinox.p2.category"/>
-			<item value="org.eclipse.jst.j2ee.internal"/>
-			<item value="org.eclipse.m2e"/>
 		</list>
 		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>

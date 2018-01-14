@@ -18,6 +18,15 @@ public class StudentAction {
 	
 	
 	
+	public Student getStudent() {
+		return student;
+	}
+	
+	
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+	
 	
 	public String addStudent() {
 		return "studentAddedOk";
