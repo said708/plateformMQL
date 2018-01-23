@@ -23,19 +23,15 @@
 	</section>
 	<section name="PreferencesImportWizard">
 		<item value="/Users/said/Dropbox/eclipse_keys.epf" key=""/>
-		<item value="/Users/said/Dropbox/eclipse_keys.epf" key=""/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="/Users/said/Dropbox/eclipse_keys.epf"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.springframework.ide.eclipse.beans.ui.wizards.newBeansConfig" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jpt.dbws"/>
-			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
-			<item value="org.eclipse.jst.ws.ui.new"/>
-			<item value="org.eclipse.wst.XMLCategory"/>
-			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>
 	<section name="InstallationDialogSettings">
