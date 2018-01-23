@@ -4,15 +4,14 @@ import java.util.List;
 import java.util.Vector;
 
 import org.apache.log4j.Logger;
-import org.java.mql.dao.DaoMediator;
-import org.java.mql.models.p1.Ensignant;
-import org.java.mql.models.p1.Etudiant;
-import org.java.mql.models.p1.Team;
-import org.java.mql.models.p2.AbstractFile;
-import org.java.mql.models.p2.File;
-import org.java.mql.models.p2.Liverable;
-import org.java.mql.models.p2.Matiere;
-import org.java.mql.models.p2.Project;
+import org.java.mql.dao.mediator.DaoMediator;
+import org.java.mql.models.AbstractFile;
+import org.java.mql.models.Enseignant;
+import org.java.mql.models.Etudiant;
+import org.java.mql.models.Liverable;
+import org.java.mql.models.Matiere;
+import org.java.mql.models.Project;
+import org.java.mql.models.Team;
 
 
 
@@ -591,15 +590,15 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public Ensignant selectEnsignantById(long idEnseignant) {
+	public Enseignant selectEnseignantById(long idEnseignant) {
 		try {
 			if(isAnEnseignantExiste(idEnseignant)) {
-				Ensignant enseignant = daoMediator.selectEnsignantById(idEnseignant);
+				Enseignant enseignant = daoMediator.selectEnseignantById(idEnseignant);
 				return enseignant;
 			}else 
-				throw new Exception("Ensignant "+idEnseignant+" not exist");
+				throw new Exception("Enseignant "+idEnseignant+" not exist");
 		}catch(Exception e) {
-			log.error("DefaultModule2Business.selectEnsignantById has an error :"+e.getMessage());
+			log.error("DefaultModule2Business.selectEnseignantById has an error :"+e.getMessage());
 			return null;
 		}
 	}
@@ -607,7 +606,7 @@ public class DefaultModule2Business implements Module2Business{
 
 	@Override
 	public boolean isAnEnseignantExiste(long enseignantId) {
-		for (Ensignant enseignant : listeEnseignats()) 
+		for (Enseignant enseignant : listeEnseignats()) 
 			if(enseignantId == enseignant.getId())
 				return true;
 		return false;
@@ -615,32 +614,32 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public List<Ensignant> listeEnseignats() {
-		List<Ensignant> allEnsignant = daoMediator.selectAllEnsignant();
+	public List<Enseignant> listeEnseignats() {
+		List<Enseignant> allEnseignant = daoMediator.selectAllEnseignant();
 		try {
-			if(allEnsignant != null)
-				return allEnsignant;
+			if(allEnseignant != null)
+				return allEnseignant;
 			else
-				throw new Exception("Ensignant table is empty");
+				throw new Exception("Enseignant table is empty");
 		} catch (Exception e) {
-			log.fatal("DefaultModule2Business.listEnsignant has an error : "+ e.getMessage());
-			return new Vector<Ensignant>();
+			log.fatal("DefaultModule2Business.listEnseignant has an error : "+ e.getMessage());
+			return new Vector<Enseignant>();
 		}
 	}
 
 
 	@Override
-	public int addEnsignant(Ensignant ensignant) {
+	public int addEnseignant(Enseignant Enseignant) {
 		try {
-			if(ensignant != null && !isAnEnseignantExiste(ensignant.getId())) {
-				log.info("Ensignant with id="+ensignant.getId()+" added  with success");
-				 daoMediator.addEnsignant(ensignant);
+			if(Enseignant != null && !isAnEnseignantExiste(Enseignant.getId())) {
+				log.info("Enseignant with id="+Enseignant.getId()+" added  with success");
+				 daoMediator.addEnseignant(Enseignant);
 				 return 1;
 			}
 			else
-				throw new Exception("Ensignant is null or duplicated");
+				throw new Exception("Enseignant is null or duplicated");
 		} catch (Exception e) {
-			log.fatal("error must be resolved in addEnsignant service : "+ e.getMessage());
+			log.fatal("error must be resolved in addEnseignant service : "+ e.getMessage());
 			return -1;
 		}
 	}

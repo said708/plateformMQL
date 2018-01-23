@@ -9,7 +9,9 @@
     <node name="user.library.provider">
       <node name="last.used.libraries">
         <node name="2.2">
+          <node name="Hibernate"/>
           <node name="JSF"/>
+          <node name="Spring"/>
         </node>
       </node>
     </node>

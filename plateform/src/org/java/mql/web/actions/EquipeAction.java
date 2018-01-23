@@ -2,17 +2,16 @@ package org.java.mql.web.actions;
 
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-
 import org.java.mql.business.DefaultModule2Business;
 import org.java.mql.business.Module2Business;
-import org.java.mql.models.p1.Etudiant;
-import org.java.mql.models.p1.Team;
+import org.java.mql.models.Etudiant;
+import org.java.mql.models.Team;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
 
-@ManagedBean
-@SessionScoped
+@Component
+@SessionScope
 public class EquipeAction {
 
 	private Module2Business service ;
@@ -28,8 +27,6 @@ public class EquipeAction {
 	}
 
 	public String ajouterEquipe() {
-
-		
 		Team t = new Team();
 		t.setName(nom);
 		t.setEtudiants(etudiants);

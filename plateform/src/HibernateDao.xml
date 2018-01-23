@@ -8,13 +8,13 @@
 
 	<import resource="HibernateConfiguration.xml" />
 
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEnseignantDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEtudiantDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultTeamDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultFileDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultLiverableDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultMatiereDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultProjectDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultEnseignantDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultEtudiantDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultTeamDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultFileDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultLiverableDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultMatiereDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultProjectDao" autowire = "constructor" />
 
 	
 </beans>

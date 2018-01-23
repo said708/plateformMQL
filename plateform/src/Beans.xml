@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<bean class="org.java.mql.models.p1.Ensignant" />
-	<bean class="org.java.mql.models.p1.Etudiant" />
-	<bean class="org.java.mql.models.p1.Team" />
-	
-	
-	
-	<bean class="org.java.mql.models.p2.File" />
-	<bean class="org.java.mql.models.p2.Directory" />
-	<bean class="org.java.mql.models.p2.Liverable" />
-	<bean class="org.java.mql.models.p2.Matiere" />
-	<bean class="org.java.mql.models.p2.Project" />
-	
+	<bean class="org.java.mql.models.Enseignant" scope="session" />
+	<bean class="org.java.mql.models.Etudiant" scope="session" />
+	<bean class="org.java.mql.models.Team" scope="session" />
+
+
+
+	<bean class="org.java.mql.models.File" scope="session" />
+	<bean class="org.java.mql.models.Directory" scope="session" />
+	<bean class="org.java.mql.models.Liverable" scope="session" />
+	<bean class="org.java.mql.models.Matiere" scope="session" />
+	<bean class="org.java.mql.models.Project" scope="session" />
+
 </beans>

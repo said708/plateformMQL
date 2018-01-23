@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
@@ -12,22 +8,14 @@
 
 	<import resource="HibernateConfiguration.xml" />
 
-<<<<<<< HEAD
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEnsignantDao" autowire = "constructor" />
-=======
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEnseignantDao" autowire = "constructor" />
->>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEtudiantDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultTeamDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultFileDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultLiverableDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultMatiereDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultProjectDao" autowire = "constructor" />
-<<<<<<< HEAD
-	
-=======
+	<bean  class="org.java.mql.dao.imp.HDefaultEnseignantDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultEtudiantDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultTeamDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultFileDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultLiverableDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultMatiereDao" autowire = "constructor" />
+	<bean  class="org.java.mql.dao.imp.HDefaultProjectDao" autowire = "constructor" />
 
->>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
 	
 </beans>
 
@@ -35,33 +23,3 @@
 
 
 
-<<<<<<< HEAD
-=======
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
-
-	<import resource="HibernateConfiguration.xml" />
-
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEnsignantDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultEtudiantDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p1.HDefaultTeamDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultFileDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultLiverableDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultMatiereDao" autowire = "constructor" />
-	<bean  class="org.java.mql.dao.hibernate.p2.HDefaultProjectDao" autowire = "constructor" />
-	
-	
-</beans>
-
-
-
-
-
->>>>>>> 008e5b537d6c0864a32e50a0dc2b9cbf44f4f81b
->>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363

@@ -3,9 +3,9 @@ package org.java.mql.business;
 import java.util.List;
 import java.util.Vector;
 
-import org.java.mql.models.p1.Etudiant;
-import org.java.mql.models.p1.Team;
-import org.java.mql.models.p2.Project;
+import org.java.mql.models.Etudiant;
+import org.java.mql.models.Project;
+import org.java.mql.models.Team;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
@@ -13,7 +13,7 @@ public class Test {
 	public Test() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business b = context.getBean(DefaultModule2Business.class);
-		hibernateEtudiantTest(b);
+		teamTest(b);
 		context.close();
 	}
 	public void hibernateEtudiantTest(Module2Business business) {

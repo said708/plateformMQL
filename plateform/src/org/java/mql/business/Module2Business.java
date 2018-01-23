@@ -1,14 +1,13 @@
 package org.java.mql.business;
 import java.util.List;
 
-import org.java.mql.models.p1.Ensignant;
-import org.java.mql.models.p1.Etudiant;
-import org.java.mql.models.p1.Team;
-import org.java.mql.models.p2.AbstractFile;
-import org.java.mql.models.p2.File;
-import org.java.mql.models.p2.Liverable;
-import org.java.mql.models.p2.Matiere;
-import org.java.mql.models.p2.Project;
+import org.java.mql.models.AbstractFile;
+import org.java.mql.models.Enseignant;
+import org.java.mql.models.Etudiant;
+import org.java.mql.models.Liverable;
+import org.java.mql.models.Matiere;
+import org.java.mql.models.Project;
+import org.java.mql.models.Team;
 
 
 
@@ -68,8 +67,8 @@ public interface Module2Business {
 	
 	
 	
-	public Ensignant selectEnsignantById(long idEnseigant) ;
+	public Enseignant selectEnseignantById(long idEnseigant) ;
 	boolean  isAnEnseignantExiste(long enseignantId);
-	public List<Ensignant> listeEnseignats();
-	public int addEnsignant(Ensignant ensignant);
+	public List<Enseignant> listeEnseignats();
+	public int addEnseignant(Enseignant Enseignant);
 }

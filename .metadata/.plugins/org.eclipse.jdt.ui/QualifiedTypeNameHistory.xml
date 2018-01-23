@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.java.mql.dao.p2.FileDao"/>
-<fullyQualifiedTypeName name="org.java.mql.dao.p2.LiverableDao"/>
-<fullyQualifiedTypeName name="org.java.mql.dao.p2.MatiereDao"/>
-<fullyQualifiedTypeName name="org.java.mql.dao.p2.ProjectDao"/>
-<fullyQualifiedTypeName name="org.java.mql.dao.DAOservice"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.portable.ApplicationException"/>
 <fullyQualifiedTypeName name="org.springframework.core.io.ClassPathResource"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
@@ -19,7 +14,6 @@
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="org.springframework.util.SystemPropertyUtils"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.File"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
 <fullyQualifiedTypeName name="org.java.mql.dao.p1.EnsignantDao"/>
@@ -56,8 +50,14 @@
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Team"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
 <fullyQualifiedTypeName name="org.mql.jsf.models.Student"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
+<fullyQualifiedTypeName name="org.java.mql.models.p1.Enseignant"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.java.mql.models.File"/>
+<fullyQualifiedTypeName name="org.java.mql.dao.imp.EnseignantDao"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
 </qualifiedTypeNameHistroy>

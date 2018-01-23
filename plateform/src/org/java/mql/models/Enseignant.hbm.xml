@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.java.mql.models.Enseignant" table="ENSEIGNANT">
+		<meta attribute="class-description">
+			This class contains the Enseignant detail.
+		</meta>
+		<id name="id" type="long" column="ID">
+			<generator class="native" />
+		</id>
+		<property name="nom" column="NOM" type="string" />
+		<property name="prenom" column="PRENOM" type="string" />
+		<property name="phone" column="PHONE" type="string" />
+		<list name="matieres" cascade="all">
+			<key column="ID" />
+			<list-index column="idx" />
+			<one-to-many class="org.java.mql.models.Matiere" />
+		</list>
+	</class>
+</hibernate-mapping>

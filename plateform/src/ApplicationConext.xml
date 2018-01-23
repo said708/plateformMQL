@@ -11,7 +11,7 @@
 	<import resource="Beans.xml" />
 	<!-- <import resource="AopConfig.xml" /> -->
 	
-	<bean id="daoMediator" class="org.java.mql.dao.DaoMediator"
+	<bean id="daoMediator" class="org.java.mql.dao.mediator.DaoMediator"
 		autowire="byType" />
 		
 	<bean id="defaultModule2Business" class="org.java.mql.business.DefaultModule2Business"

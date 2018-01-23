@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.java.mql.models.Team" table="TEAM">
+
+		
+
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" column="NAME" type="string" />
+
+		<bag name="etudiants" cascade="all">
+			<key column="ID_E" />
+			<one-to-many class="org.java.mql.models.Etudiant" />
+		</bag>
+		<bag name="projects" cascade="all">
+			<key column="ID_P" />
+			<one-to-many class="org.java.mql.models.Project" />
+		</bag>
+		<many-to-one name="matiere" column="MATIERE"
+			class="org.java.mql.models.Matiere" />
+
+	</class>
+</hibernate-mapping>

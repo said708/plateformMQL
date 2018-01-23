@@ -32,13 +32,13 @@
 		<property name="packagesToScan" value="org.java.mql.models" />
 		<property name="mappingResources">
 			<list>
-				<value>org/java/mql/models/p1/Enseignant.hbm.xml</value>
-				<value>org/java/mql/models/p1/Etudiant.hbm.xml</value>
-				<value>org/java/mql/models/p2/Project.hbm.xml</value>
-				<value>org/java/mql/models/p1/Team.hbm.xml</value>
-				<value>org/java/mql/models/p2/AbstractFile.hbm.xml</value>
-				<value>org/java/mql/models/p2/Liverable.hbm.xml</value>
-				<value>org/java/mql/models/p2/Matiere.hbm.xml</value>
+				<value>org/java/mql/models/Enseignant.hbm.xml</value>
+				<value>org/java/mql/models/Etudiant.hbm.xml</value>
+				<value>org/java/mql/models/Project.hbm.xml</value>
+				<value>org/java/mql/models/Team.hbm.xml</value>
+				<value>org/java/mql/models/AbstractFile.hbm.xml</value>
+				<value>org/java/mql/models/Liverable.hbm.xml</value>
+				<value>org/java/mql/models/Matiere.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -69,12 +69,12 @@
 			<tx:method name="list*" read-only="true" />
 			<tx:method name="select*" read-only="true" />
 			<tx:method name="isAn*" read-only="true" />
-			<tx:method name="*" />
+			<tx:method name="*" /> 
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>
 		<aop:pointcut id="hibernateMethods"
-			expression="execution(* org.java.mql.dao.hibernate.*.*.*(..))" />
+			expression="execution(* org.java.mql.dao.imp.*.*(..))" />
 		<aop:advisor pointcut-ref="hibernateMethods" advice-ref="txAdvice" />
 	</aop:config>
 	
