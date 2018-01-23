@@ -19,7 +19,7 @@
       
       
        <!-- private Ensignant ensignant; -->
-      <many-to-one name="ensignant" column="ENSEIGNANT" class="org.java.mql.models.p1.Ensignant" />
+      <many-to-one name="ensignant" column="ENSEIGNANT" class="org.java.mql.models.p1.Enseignant" />
       
       
       <!-- private List<Project> projects; -->

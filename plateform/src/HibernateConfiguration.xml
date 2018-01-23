@@ -32,7 +32,7 @@
 		<property name="packagesToScan" value="org.java.mql.models" />
 		<property name="mappingResources">
 			<list>
-				<value>org/java/mql/models/p1/Ensignant.hbm.xml</value>
+				<value>org/java/mql/models/p1/Enseignant.hbm.xml</value>
 				<value>org/java/mql/models/p1/Etudiant.hbm.xml</value>
 				<value>org/java/mql/models/p2/Project.hbm.xml</value>
 				<value>org/java/mql/models/p1/Team.hbm.xml</value>
@@ -45,6 +45,8 @@
 			<props>
 				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<!-- Added by YcDev -->
+				<prop key="hibernate.enable_lazy_load_no_trans">${hibernate.enable_lazy_load_no_trans}</prop>
 			</props>
 		</property>
 	</bean>

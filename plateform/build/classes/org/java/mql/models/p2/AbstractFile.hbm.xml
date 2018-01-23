@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.java.mql.models.p2.AbstractFile" table="ABSTRACT_FILE"
+		discriminator-value="A">
+
+		<meta attribute="class-description">
+			This class contains the file detail.
+		</meta>
+
+		<!-- private long id; -->
+		<id name="id" type="long" column="ID">
+			<generator class="native" />
+		</id>
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
+		<discriminator column="DISCRIMINATOR" type="string" />
+
+		<!-- private String name; -->
+		<property name="name" column="NAME" type="string" />
+
+		<!-- private String path; -->
+		<property name="path" column="PATH" type="string" />
+
+
+		<!-- private Liverable liverable; -->
+		<many-to-one name="liverable" class="org.java.mql.models.p2.Liverable"
+			column="LIVERABLE" />
+
+		<subclass name="org.java.mql.models.p2.Directory"
+<<<<<<< HEAD
+			discriminator-value="D">
+=======
+			discriminator-value="DIRECTORY">
+>>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
+			<property name="type" column="TYPE" type="org.java.mql.models.p2.Type" />
+			<set name="files" cascade="all">
+				<key column="ID" />
+				<one-to-many class="org.java.mql.models.p2.AbstractFile" />
+			</set>
+		</subclass>
+<<<<<<< HEAD
+=======
+		
+		<!-- Each subclass that extends AbstractFile class should be declared in this Mapping configuration File : written by YcDev -->
+		<subclass name="org.java.mql.models.p2.File" discriminator-value="FILE">
+		</subclass>
+		
+>>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
+		<!-- <subclass name="org.java.mql.models.p2.File"
+			discriminator-value="F" /> -->
+	</class>
+</hibernate-mapping>
+<<<<<<< HEAD
+=======
+=======
 <?xml version = "1.0" encoding = "utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC 
 "-//Hibernate/Hibernate Mapping DTD//EN"
@@ -42,3 +108,5 @@
 			discriminator-value="F" /> -->
 	</class>
 </hibernate-mapping>
+>>>>>>> 008e5b537d6c0864a32e50a0dc2b9cbf44f4f81b
+>>>>>>> c527fb3c6a4287c7479cbc9b2eb88ea442954363
