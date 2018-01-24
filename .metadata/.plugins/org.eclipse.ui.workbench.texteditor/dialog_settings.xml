@@ -6,44 +6,44 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="imp" key="selection"/>
+		<item value="org.springframework.web.context.request.RequestContextListener" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="org.springframework.web.context.request.RequestContextListener"/>
+			<item value="//work"/>
+			<item value=";"/>
+			<item value="Ensignant"/>
+			<item value="Enseignant"/>
+			<item value=".hibernate"/>
 			<item value="p2"/>
 			<item value="p1"/>
 			<item value="org.java.mql.models"/>
 			<item value="org.java.mql.models.p1"/>
 			<item value="org.java.mql.models.p2"/>
-			<item value="Ensignant"/>
 			<item value="removeProjectFromTeam"/>
 			<item value="salam"/>
 			<item value="@tran"/>
 			<item value="addEtu"/>
-			<item value=";"/>
-			<item value="throw new Exception"/>
-			<item value="  throws PlateformException"/>
-			<item value="pointcut-ref"/>
-			<item value="delete"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="{}"/>
+			<item value="Enseignant"/>
 			<item value="imp"/>
 			<item value="org.java.mql.models"/>
-			<item value="Enseignant"/>
 			<item value=" throws PlateformException;"/>
 			<item value="throw new PlateformException"/>
 			<item value="pointcut-ref"/>
 			<item value="${org.mql."/>
 			<item value="Default"/>
-			<item value=""/>
 			<item value="expected"/>
 			<item value="Team"/>
 			<item value="data"/>
 			<item value="default"/>
 			<item value="@Autowired(required=true)"/>
-			<item value="spring-framework.version"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

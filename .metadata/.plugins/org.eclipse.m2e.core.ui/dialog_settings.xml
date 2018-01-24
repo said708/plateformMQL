@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/said/Dropbox/Workspaces/plateform mql/JavaServerFaces"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,12 +57,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="org.in.mql.pl_maven"/>
+			<item value="org.in.mql.maven_plateform"/>
 			<item value="org.in.mql.p01"/>
 		</list>
 		<list key="groupId">
 			<item value="org.in.mql"/>
 		</list>
 		<list key="artifactId">
+			<item value="pl-maven"/>
+			<item value="maven-plateform"/>
 			<item value="p01"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -74,6 +79,7 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="0.0.1"/>
 		</list>
 	</section>
 </section>

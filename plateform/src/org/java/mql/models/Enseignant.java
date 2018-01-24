@@ -14,7 +14,6 @@ public class Enseignant  {
 	}
 	
 	public Enseignant(long id, String nom, String prenom, String phone) {
-		
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;

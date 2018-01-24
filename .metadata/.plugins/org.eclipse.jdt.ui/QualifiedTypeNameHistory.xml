@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.omg.CORBA.portable.ApplicationException"/>
-<fullyQualifiedTypeName name="org.springframework.core.io.ClassPathResource"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.java.mql.business.DefaultModule2Business"/>
 <fullyQualifiedTypeName name="org.java.mql.dao.p1.TeamDao"/>
@@ -20,7 +17,6 @@
 <fullyQualifiedTypeName name="org.java.mql.models.p01.Ensignant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.Matiere"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.Projet"/>
-<fullyQualifiedTypeName name="org.java.mql.business.Module2Business"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Table"/>
@@ -41,7 +37,6 @@
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="org.java.mql.business.PlateformException"/>
 <fullyQualifiedTypeName name="java.lang.Throwable"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Etudiant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p2.Project"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Ensignant"/>
@@ -53,11 +48,16 @@
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
 <fullyQualifiedTypeName name="org.mql.jsf.models.Student"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
-<fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Enseignant"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.java.mql.models.File"/>
 <fullyQualifiedTypeName name="org.java.mql.dao.imp.EnseignantDao"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.java.mql.business.Module2Business"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.ContextLoaderListener"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
 </qualifiedTypeNameHistroy>
