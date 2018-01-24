@@ -709,5 +709,10 @@ public class DefaultModule2Business implements Module2Business{
 		}
 		
 	}
+	
+	@Override
+	public String toString() {
+		return "bonjour said is work now !";
+	}
 
 }

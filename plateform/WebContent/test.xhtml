@@ -10,6 +10,7 @@
 	<h:form>
 		<p:growl id="msgs" showDetail="true" />
 		<p:panel header="Provide Ensiegnant Details" style="margin-bottom:10px;">
+		
 			<h:panelGrid columns="2" cellpadding="5">
 				<p:outputLabel for="nom" value="Nom : " />
 				<p:inputText id="nom" value="#{enseignant.nom}"></p:inputText>
@@ -18,11 +19,11 @@
 				<p:outputLabel for="phone" value="phone : " />
 				<p:inputText id="phone" value="#{enseignant.phone}"></p:inputText>
 				<p:outputLabel for="matiers" value="phone : " />
-				<p:selectManyMenu id="matiers" value="#{enseignant.matiers}"
+				<p:selectManyMenu id="matiers" value="#{enseignant.matieres}"
 					style="width:150px">
 					<f:selectItem itemLabel="Select Matiers" itemValue=""
 						noSelectionOption="true" />
-					<f:selectItems value="#{enseignantAction.listMatiers}" />
+					<f:selectItems value="#{enseignantAction.listMatiers()}" />
 				</p:selectManyMenu>
 			</h:panelGrid>
 			<p:separator />

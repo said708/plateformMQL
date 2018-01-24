@@ -5,33 +5,54 @@ import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
-import org.java.mql.business.DefaultModule2Business;
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Enseignant;
 import org.java.mql.models.Matiere;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.SessionScope;
 
 
 @Component
-@SessionScope
+@Scope("request")
 public class EnseignantAction {
 
-	private Enseignant enseignant;
+	@Autowired
 	private Module2Business business;
 
+	@Autowired
+	private Enseignant enseignant;
+	
+	
+
 	public EnseignantAction() {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
-		business = context.getBean(DefaultModule2Business.class);
-		context.close();
+	}
+	
+	
+	public void setBusiness(Module2Business business) {
+		this.business = business;
+	}
+	
+	public Module2Business getBusiness() {
+		return business;
+	}
+	
+	
+	
+
+
+
+	public Enseignant getEnseignant() {
+		return enseignant;
 	}
 
-
-
+	public void setEnseignant(Enseignant enseignant) {
+		this.enseignant = enseignant;
+	}
 
 	public void addEnsignant() {
-		FacesMessage msg;  
+		FacesMessage msg; 
+		System.out.println(enseignant);
 		int status = business.addEnseignant(enseignant);
 		if(status == 1)
 			msg = new FacesMessage("Selected", enseignant.getNom() + " added with success");  

@@ -11,6 +11,8 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/Users/said/Downloads/SpringMVCHibernateCRUD.zip"/>
+			<item value="/Users/said/Downloads/JSF-2-Spring-Hibernate-Integration-Example.zip"/>
 			<item value="/Users/said/Downloads/JSF2-Spring-Example.zip"/>
 		</list>
 	</section>
