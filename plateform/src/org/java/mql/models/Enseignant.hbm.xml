@@ -16,7 +16,7 @@
 		<property name="phone" column="PHONE" type="string" />
 		<list name="matieres" cascade="all">
 			<key column="ID" />
-			<list-index column="idx" />
+			<list-index column="MATIER_INDEX" />
 			<one-to-many class="org.java.mql.models.Matiere" />
 		</list>
 	</class>

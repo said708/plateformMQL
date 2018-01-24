@@ -24,16 +24,16 @@
       
       <!-- private List<Project> projects; -->
       <list name = "projects" cascade="all">
-         <key column = "ID_P"/>
-         <list-index column="idx" />
+         <key column = "ID_PROJECT"/>
+         <list-index column="PROJECT_INDEX" />
          <one-to-many  class="org.java.mql.models.Project" />
       </list>
       
       
       <!-- private List<Team> teams; -->
       <list name = "teams" cascade="all">
-         <key column = "ID_T"/>
-         <list-index column="idx2" />
+         <key column = "ID_TEAM"/>
+         <list-index column="TEAM_INDEX" />
          <one-to-many  class="org.java.mql.models.Team" />
       </list>
       

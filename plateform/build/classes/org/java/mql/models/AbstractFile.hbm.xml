@@ -32,17 +32,20 @@
 		<subclass name="org.java.mql.models.Directory"
 			discriminator-value="DIRECTORY">
 			<property name="type" column="TYPE" type="org.java.mql.models.Type" />
-			<set name="files" cascade="all">
+			<list name="files" cascade="all">
 				<key column="ID" />
+				<list-index column="FILE_INDEX" />
 				<one-to-many class="org.java.mql.models.AbstractFile" />
-			</set>
+			</list>
 		</subclass>
-		
-		<!-- Each subclass that extends AbstractFile class should be declared in this Mapping configuration File : written by YcDev -->
-		<subclass name="org.java.mql.models.File" discriminator-value="FILE">
+
+		<!-- Each subclass that extends AbstractFile class should be declared in 
+			this Mapping configuration File : written by YcDev -->
+		<subclass name="org.java.mql.models.File"
+			discriminator-value="FILE">
 		</subclass>
-		
-		<!-- <subclass name="org.java.mql.models.File"
-			discriminator-value="F" /> -->
+
+		<!-- <subclass name="org.java.mql.models.File" discriminator-value="F" 
+			/> -->
 	</class>
 </hibernate-mapping>

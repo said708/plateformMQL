@@ -8,18 +8,18 @@
 
 		
 
-		<id name="id" type="long" column="id">
+		<id name="id" type="long" column="ID">
 			<generator class="native" />
 		</id>
 
 		<property name="name" column="NAME" type="string" />
 
 		<bag name="etudiants" cascade="all">
-			<key column="ID_E" />
+			<key column="ID_ETUDIANT" />
 			<one-to-many class="org.java.mql.models.Etudiant" />
 		</bag>
 		<bag name="projects" cascade="all">
-			<key column="ID_P" />
+			<key column="ID_PROJECT" />
 			<one-to-many class="org.java.mql.models.Project" />
 		</bag>
 		<many-to-one name="matiere" column="MATIERE"

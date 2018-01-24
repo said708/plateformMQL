@@ -19,7 +19,7 @@
 		<!-- private List<AbstractFile> files; -->
 		<list name="files" cascade="all">
 			<key column="ID" />
-			<list-index column="idx" />
+			<list-index column="ABSTRACT_FILE_INDEX" />
 			<one-to-many class="org.java.mql.models.AbstractFile" />
 		</list>
 		
