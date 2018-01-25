@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+</h:head>
+
+<h:body>
+	
+		<h:form>
+			<h:panelGrid columns="2">
+				<p:outputLabel value="Cours" />
+				<p:selectOneMenu value="#{testAction.projet.cours}">
+					<f:selectItem itemLabel="-----Choisir"  itemValue="0" />
+					<f:selectItem itemLabel="JAVA" 			itemValue="1"  />
+					<f:selectItem itemLabel="JEE" 			itemValue="2"  />
+					<f:selectItem itemLabel="Design pattern" itemValue="3"  />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="Projet" />
+				<p:inputText value="#{testAction.projet.nom}" />
+				
+				<p:outputLabel value="Date de retour" />
+				<p:calendar value="#{testAction.projet.dateFin}" pattern="dd-MM-yyyy" mask="true" />
+				
+				<p:outputLabel value="Description" />
+				<p:inputTextarea value="#{testAction.projet.description}" cols="25" rows="5" />
+			</h:panelGrid>
+			
+			<p:commandButton value="Modifier" />
+			<p:commandButton value="Annuler" />
+			
+		</h:form>
+	
+</h:body>
+
+</html>

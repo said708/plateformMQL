@@ -6,6 +6,7 @@ import java.util.List;
 import org.java.mql.dao.TeamDao;
 import org.java.mql.dao.mediator.DaoMediatorService;
 import org.java.mql.models.Etudiant;
+import org.java.mql.models.Project;
 import org.java.mql.models.Team;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
@@ -25,8 +26,7 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	}
 
 	@Override
-	public Team deleteTeam(long id) {
-		Team team =   template.get(Team.class, id); 
+	public Team deleteTeam(Team team) {
 		template.delete(team);
 		return team;
 	}
@@ -46,41 +46,41 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 	}
 
 	@Override
-	public long updateTeam(long teamId, Team team) {
+	public long updateTeam(Team team) {
 		template.update(team);
-		return teamId;
+		return team.getId();
 	}
 
 	@Override
-	public List<Etudiant> selectEtudinatsInTeams(long teamId) {
+	public List<Etudiant> selectEtudiantsInTeam(Team team) {
 		String query="from Etudiant where team_id =? ";
-		return (List<Etudiant>) template.find(query, teamId);
+		return (List<Etudiant>) template.find(query, team.getId());
 		
 	}
 
 	@Override
-	public int removeEtudiantFromTeam(long studentId, long team_id) {
+	public int removeEtudiantFromTeam(Etudiant student, Team team) {
 		String query="UPDATE Etudiant SET team_id = NULL  where ID = ? and team_id = ? " ;
-		return template.bulkUpdate(query, new Object[]{studentId,team_id});
+		return template.bulkUpdate(query, new Object[]{student.getId(),team.getId()});
 	}
 
 	@Override
-	public int addProjectToTeam(long projectId, long teamId) {
+	public int addProjectToTeam(Project project, Team team) {
 		String query="UPDATE Project SET TEAM = ? where ID = ?  " ;
-		return template.bulkUpdate(query, new Object[]{teamId,projectId});
+		return template.bulkUpdate(query, new Object[]{team.getId(),project.getId()});
 		
 	}
 
 	@Override
-	public int removeProjectFromTeam(long projectId, long teamId) {
+	public int removeProjectFromTeam(Project project, Team team) {
 		String query="UPDATE Project SET TEAM = NULL  where id = ? and TEAM = ? " ;
-		return template.bulkUpdate(query, new Object[]{projectId,teamId});
+		return template.bulkUpdate(query, new Object[]{project.getId(),team.getId()});
 	}
 	
 	@Override
-	public int addEtudiantToTeam(long idEtudiant, long teamId) {
+	public int addEtudiantToTeam(Etudiant etudiant, Team team) {
 		String query="UPDATE Etudiant SET team_id = ?  where ID = ?  " ;
-		return template.bulkUpdate(query, new Object[]{teamId,idEtudiant});
+		return template.bulkUpdate(query, new Object[]{team.getId(),etudiant.getId()});
 	}
 	
 

@@ -24,8 +24,7 @@ public class HDefaultLiverableDao  extends DaoMediatorService  implements Livera
 	}
 
 	@Override
-	public Liverable deleteLiverable(long idLivrable) {
-		Liverable livrable =   template.get(Liverable.class, idLivrable); 
+	public Liverable deleteLiverable(Liverable livrable) {
 		template.delete(livrable);
 		return livrable;
 	}
@@ -44,7 +43,7 @@ public class HDefaultLiverableDao  extends DaoMediatorService  implements Livera
 	}
 
 	@Override
-	public int updateLiverable(long idLiverable, Liverable liverable) {
+	public int updateLiverable(Liverable liverable) {
 		//template.update(liverable);// Commented by YcDev
 		template.merge(liverable);// Using merge instead of update let us overcome the problem caused by update() method : by YcDev
 		return 1;

@@ -8,8 +8,8 @@ import org.java.mql.models.Liverable;
 
 public interface LiverableDao extends DAOservice{
 	int addLiverable(Liverable liverable);
-	Liverable deleteLiverable(long idLiverable);
+	Liverable deleteLiverable(Liverable liverable);
 	List<Liverable> selectAllLiverable();
 	Liverable selectLiverableById(long id);
-	int updateLiverable(long idLiverable , Liverable liverable);
+	int updateLiverable(Liverable liverable);
 }

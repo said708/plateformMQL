@@ -48,7 +48,7 @@ public class EtudiantAction {
 	
 	
 	public void delete() {
-		business.deleteEtudiant(etudiant.getId());
+		business.deleteEtudiant(etudiant);
 	};
 	
 	
@@ -62,6 +62,17 @@ public class EtudiantAction {
 	public void addListEtudiants() {
 		
 	}
+	
+	
+	public void  deleteEtudiant() {
+		
+	}
+	/*List<Etudiant> listEtudiants(){}
+	int addEtudiant(Etudiant etudiant){}
+	void addListEtudiants(List<Etudiant> etudiants){}
+	Etudiant selectEtudiantById(long id){}
+	int updateEtudiant(long idEtudiant , Etudiant etudiant ){}
+	boolean isAnEtudiantExiste(long idEtudiant){}*/
 
 	
 

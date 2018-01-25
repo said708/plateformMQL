@@ -7,8 +7,8 @@ import org.java.mql.models.Etudiant;
 
 public interface EtudiantDao extends DAOservice{
 	long addEtudiant(Etudiant etudiant);
-	Etudiant deleteEtudiant(long id);
+	Etudiant deleteEtudiant(Etudiant etudiant);
 	List<Etudiant> selectAllEtudiant();
 	Etudiant selectEtudiantById(long id);
-	long updateEtudiant(long idEtudiant, Etudiant etudiant);
+	long updateEtudiant(Etudiant etudiant);
 }

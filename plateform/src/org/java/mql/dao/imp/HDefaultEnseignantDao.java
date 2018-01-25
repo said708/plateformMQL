@@ -24,8 +24,7 @@ public class HDefaultEnseignantDao   extends DaoMediatorService  implements Ense
 	}
 
 	@Override
-	public Enseignant deleteEnseignant(long idEnseigant) {
-		Enseignant enseignant =   template.get(Enseignant.class, idEnseigant); 
+	public Enseignant deleteEnseignant(Enseignant enseignant) {
 		template.delete(enseignant);
 		return enseignant;
 	}
@@ -44,8 +43,8 @@ public class HDefaultEnseignantDao   extends DaoMediatorService  implements Ense
 	}
 
 	@Override
-	public int updateEnseignant(long idEnseignant, Enseignant Enseignant) {
-		template.update(Enseignant);
+	public int updateEnseignant(Enseignant enseignant) {
+		template.update(enseignant);
 		return 1;
 	}
 

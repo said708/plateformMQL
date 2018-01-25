@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title><ui:insert name="title">Nouveau project</ui:insert></title>
+</h:head>
+
+<h:body>
+	
+	<p:panel header="Nouveau project">
+		<h:form>
+			<h:panelGrid columns="2">
+				<p:outputLabel value="Cours" />
+				<p:selectOneMenu value="#{project.matiere}" converter="#{projectConverter}">
+				<f:selectItems  value="#{projectAction.listMatiers()}" var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}"/>
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="project" />
+				<p:inputText value="#{project.name}" />
+				
+				<p:outputLabel value="Date de retour" />
+				<p:calendar value="#{project.deadLine}" pattern="dd-MM-yyyy" mask="true" />
+				
+				<p:outputLabel value="Description" />
+				<p:inputTextarea value="#{project.description}" cols="25" rows="5" />
+			</h:panelGrid>
+			
+			<p:commandButton action="#{projectAction.newProject}" value="Enregistrer" />
+			<p:commandButton value="Annuler" />
+			
+		</h:form>
+	</p:panel>
+</h:body>
+
+</html>

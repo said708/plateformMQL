@@ -13,7 +13,7 @@ public class HDefaultFileDao  extends DaoMediatorService  implements FileDao {
 
 	private HibernateTemplate template;
 	private static final Logger log = Logger.getLogger(HDefaultFileDao.class);
-	
+
 	public HDefaultFileDao(HibernateTemplate template) {
 		super();
 		this.template = template;
@@ -33,52 +33,28 @@ public class HDefaultFileDao  extends DaoMediatorService  implements FileDao {
 	}
 
 	@Override
-	public File deleteFile(long idFile) {
-		try {
-			File file = template.get(File.class, idFile);
-			log.info("HDefaultFileDao.deleteFile(...) -> File was deleted successfully !");
-			return file;
-		} catch (Exception e) {
-			//e.printStackTrace();
-			log.error("HDefaultFileDao.deleteFile(...) -> Doesn't work as expected ! -> " + e.getMessage());
-			return null;
-		}
+	public File deleteFile(File file) {
+		template.delete(file);
+		log.info("HDefaultFileDao.deleteFile(...) -> File was deleted successfully !");
+		return file;
 	}
 
 	@Override
 	public List<File> selectAllFile() {
-		try {
-			List<File> list = template.loadAll(File.class);
-			log.info("HDefaultFileDao.selectAllFile() -> Files(list) were retrieved successfully !");
-			return list;
-		} catch (Exception e) {
-			log.error("HDefaultFileDao.selectAllFile() -> Doesn't work as expected ! -> " + e.getMessage());
-			return null;	
-		}
+		List<File> list = template.loadAll(File.class);
+		return list;
 	}
 
 	@Override
 	public File selectFileById(long id) {
-		try {
-			File file = template.get(File.class, id);
-			log.info("HDefaultFileDao.selectFileById() -> File was retrieved successfully !");
-			return file;
-		} catch (Exception e) {
-			log.error("HDefaultFileDao.selectFileById() -> Doesn't work as expected ! -> " + e.getMessage());
-			return null;	
-		}
+		File file = template.get(File.class, id);
+		return file;
 	}
 
 	@Override
-	public int updateFile(long idFile, File file) {
-		try {
-			template.update(file);
-			log.info("HDefaultFileDao.updateFile() -> File was updated successfully !");
-			return 1;
-		} catch (Exception e) {
-			log.error("HDefaultFileDao.updateFile() -> Doesn't work as expected ! -> " + e.getMessage());
-			return 0;	
-		}
+	public int updateFile(File file) {
+		template.update(file);
+		return 1;
 	}
 
 }

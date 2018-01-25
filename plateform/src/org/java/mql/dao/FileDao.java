@@ -8,8 +8,8 @@ import org.java.mql.models.File;
 
 public interface FileDao extends DAOservice{
 	int addFile(File file);
-	File deleteFile(long idFile);
+	File deleteFile(File file);
 	List<File> selectAllFile();
 	File selectFileById(long id);// Modified by YcDev, previous signature : List<File> selectFileById(long id); 
-	int updateFile(long idFile , File file);
+	int updateFile(File file);
 }

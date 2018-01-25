@@ -8,8 +8,8 @@ import org.java.mql.models.Project;
 
 public interface ProjectDao extends DAOservice{
 	int addProjet(Project projet);
-	Project deleteProjet(long idProjet);
+	Project deleteProjet(Project project);
 	List<Project> selectAllProjet();
 	Project selectProjetById(long id);
-	int updateProjet(long idProjet , Project projet);
+	int updateProjet(Project projet);
 }

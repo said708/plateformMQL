@@ -14,61 +14,62 @@ import org.java.mql.models.Team;
 public interface Module2Business {
 	
 	//manage etudiant
-	Etudiant deleteEtudiant(long id);//work
+	Etudiant deleteEtudiant(Etudiant etudiant);//work
 	List<Etudiant> listEtudiants();//work
 	int addEtudiant(Etudiant etudiant);//work
 	void addListEtudiants(List<Etudiant> etudiants);//work
 	Etudiant selectEtudiantById(long id);//work
-	int updateEtudiant(long idEtudiant , Etudiant etudiant );//work
-	boolean isAnEtudiantExiste(long idEtudiant);//work
+	Etudiant selectEtudiantByName(String nom);//work
+	int updateEtudiant(Etudiant etudiant );//work
+	boolean isAnEtudiantExiste(Etudiant etudiant);//work
 	
 	//manage team
 	int addTeam(Team team);//work
-	Team deleteTeam(long id);//work
+	Team deleteTeam(Team team);//work
 	List<Team> listTeams();//work
 	Team selectTeamById(long id);//work
-	int updateTeam(long idTeam , Team team);//work
-	int addEtudiantToTeam(long etudiant , long teamId);//work
-	void addListEtudiantsToTeam(long teamId , long ...etdsId);//work
-	int removeEtudiantFromTeam(long studentId , long teamId);//work
-	int addProjectToTeam(long projectId , long teamId);//work
-	int removeProjectFromTeam(long projectId , long teamId);//work
-	List<Etudiant> listEtudiantsInTeam(long idTeam);//work
-	boolean isAnTeamExiste(long idTeam);//work
+	int updateTeam(Team team);//work
+	int addEtudiantToTeam(Etudiant etudiant , Team team);//work
+	void addListEtudiantsToTeam(Team team , Etudiant ...etds);//work
+	int removeEtudiantFromTeam(Etudiant student , Team team);//work
+	int addProjectToTeam(Project project , Team team);//work
+	int removeProjectFromTeam(Project project , Team team);//work
+	List<Etudiant> listEtudiantsInTeam(Team team);//work
+	boolean isAnTeamExiste(Team team);//work
 	
 	
 	//manage project
 	int addProject(Project project);//work
 	Project selectProjectById(long idProject);//work
-	Project deleteProject(long idProject);//work
-	int updateProject(long idProject , Project project);//work
+	Project deleteProject(Project project);//work
+	int updateProject(Project project);//work
 	List<Project> listProjects();//work
-	boolean isAnProjectExiste(long idProject);//work
+	boolean isAnProjectExiste(Project project);//work
 	
 	//manage liverable
 	int addLiverable(Liverable liverable); // Added by YcDev
-	int updateLiverable(long liverableId, Liverable liverable); // Added by YcDev
-	File deleteFileFromLiverable(long fileId , long liverableId);//work
-	int addFileToLiverable(File file , long idLiverable);//work     // Modified by YcDev, previous signature : int addFileToLiverable(File file , long idLiverable);
+	int updateLiverable(Liverable liverable); // Added by YcDev
+	File deleteFileFromLiverable(File file , Liverable liverable);//work
+	int addFileToLiverable(File file , Liverable liverable);//work     // Modified by YcDev, previous signature : int addFileToLiverable(File file , long idLiverable);
 	List<Liverable> listLiverables();//work
-	List<File> listFilesInLiverable(long liverableId);//work
-	boolean isAnFileExisteInLiverable(long fileId , long liverableId);//work
-	boolean  isAnLiverableExiste(long liverableId);//work
+	List<File> listFilesInLiverable(Liverable liverable);//work
+	boolean isAnFileExisteInLiverable(File file , Liverable liverable);//work
+	boolean  isAnLiverableExiste(Liverable liverable);//work
 	public Liverable selectLivrableById(long id) ;
 	public int addLivrable(Liverable livrable);
-	public int updateLivrable(long idLivrable, Liverable livrable);
+	public int updateLivrable(Liverable livrable);
 	
 	
 	
 	public Matiere selectMatiereById(long id);
 	public List<Matiere> listeMatieres();
 	public int addMatiere(Matiere matiere);
-	boolean  isAnMatiereExiste(long matiereId);
+	boolean  isAnMatiereExiste(Matiere matiere);
 	
 	
 	
 	public Enseignant selectEnseignantById(long idEnseigant) ;
-	boolean  isAnEnseignantExiste(long enseignantId);
+	boolean  isAnEnseignantExiste(Enseignant enseignant);
 	public List<Enseignant> listeEnseignats();
 	public int addEnseignant(Enseignant Enseignant);
 }

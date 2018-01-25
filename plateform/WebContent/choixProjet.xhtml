@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+</h:head>
+
+<h:body>
+	
+	<p:panel header="Choix des projets">
+		<h:form>
+			<p:dataTable value="#{testAction.projets}" var="p" rowKey="#{p.nom}"  selectionMode="single">
+			    <p:column headerText="Projet" width="200">
+			        <h:outputText value="#{p.nom}" />
+			    </p:column>
+			    
+			    <p:column headerText="Description">
+			        <h:outputText value="#{p.description}" />
+			    </p:column>
+			 
+			
+			    <p:column headerText="Choix">
+			       <p:selectBooleanCheckbox  />
+			    </p:column>
+	 
+			</p:dataTable>
+			
+			
+			
+		
+		</h:form>
+	</p:panel>
+</h:body>
+
+</html>

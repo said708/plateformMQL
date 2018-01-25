@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+</h:head>
+
+<h:body>
+	
+	<p:panel header="Affectation des projets">
+		<h:form>
+			<p:dataTable value="#{testAction.projets}" var="p">
+			    <p:column headerText="Projet">
+			        <h:outputText value="#{p.nom}" />
+			    </p:column>
+			    
+			    <p:column headerText="Equipe">
+			    	<h:outputText value="{A,B,C,D...}" />			  
+			    </p:column>
+			 
+			    <p:column headerText="Membres">
+			        <h:outputText value="[Memb1,Memb2,Memb3...]" />
+			    </p:column>
+			 
+			    <p:column headerText="Action">
+			       <p:commandButton icon="ui-icon-tag" onclick="PF('dlg1').show();" />
+			    
+			       <p:commandButton  icon="ui-icon-trash">
+			       	 	<p:confirm header="Confirmation" message="Voulez-vous supprimer ce projet ?" icon="ui-icon-alert" />
+			       </p:commandButton>
+			     
+			    </p:column>
+	 
+			</p:dataTable>
+			
+			
+			<p:dialog header="Affecter" widgetVar="dlg1" minHeight="40">
+  				<p:selectOneMenu>
+  					<f:selectItem itemLabel="A" itemValue="1" />
+  					<f:selectItem itemLabel="B" itemValue="2" />
+  					<f:selectItem itemLabel="C" itemValue="3" />
+  					<f:selectItem itemLabel="D" itemValue="4" />
+  				</p:selectOneMenu>
+  				<p:commandButton value="Affecter" />
+			</p:dialog>
+			
+			
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+		        <p:commandButton value="Oui"  icon="ui-icon-check" />
+		        <p:commandButton value="Non"  icon="ui-icon-close" oncomplete="cofirmation.hide()" />
+	   	 	</p:confirmDialog>
+	   	 	
+		</h:form>
+	</p:panel>
+</h:body>
+
+</html>

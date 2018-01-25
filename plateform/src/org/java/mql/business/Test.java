@@ -1,16 +1,8 @@
 package org.java.mql.business;
 
-import java.util.List;
-import java.util.Vector;
-
-import org.java.mql.models.Etudiant;
-import org.java.mql.models.Project;
-import org.java.mql.models.Team;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class Test {
 	//service test by hajar t 2
-	public Test() {
+	/*public Test() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationConext.xml");
 		Module2Business b = context.getBean(DefaultModule2Business.class);
 		teamTest(b);
@@ -129,5 +121,5 @@ public class Test {
 	public static void main(String[] args) {
 		new Test();
 	}
-
+*/
 }

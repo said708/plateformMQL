@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+</h:head>
+
+<h:body>
+	
+	<p:panel header="Liste des projets">
+		<h:form>
+			<p:dataTable value="#{testAction.projets}" var="p">
+			    <p:column headerText="Projet">
+			        <h:outputText value="#{p.nom}" />
+			    </p:column>
+			    
+			    <p:column headerText="Description">
+			        <h:outputText value="#{p.description}" />
+			    </p:column>
+			 
+			    <p:column headerText="Date de retour">
+			        <h:outputText value="#{p.dateFin}" >
+			        	<f:convertDateTime pattern="dd-MM-yyyy" />
+			        </h:outputText>
+			    </p:column>
+			 
+			    <p:column headerText="Action">
+			       <p:commandButton icon="ui-icon-tag" onclick="PF('dlg1').show();" >
+			       		<!-- <f:setPropertyActionListener value="#{p}" target="#{testAction.projet}" /> -->
+			       </p:commandButton>
+			       
+			       <p:commandButton  icon="ui-icon-trash">
+			       	 	<p:confirm header="Confirmation" message="Voulez-vous supprimer ce projet ?" icon="ui-icon-alert" />
+			       </p:commandButton>
+			     
+			    </p:column>
+	 
+			</p:dataTable>
+			
+			
+			<p:dialog header="Modification de projet" widgetVar="dlg1" minHeight="40">
+  				  <ui:include src="/modifierProjet.xhtml" />
+			</p:dialog>
+			
+			
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+		        <p:commandButton value="Oui"  icon="ui-icon-check" />
+		        <p:commandButton value="Non"  icon="ui-icon-close" oncomplete="cofirmation.hide()" />
+	   	 	</p:confirmDialog>
+	   	 	
+		</h:form>
+	</p:panel>
+</h:body>
+
+</html>

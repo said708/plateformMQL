@@ -27,8 +27,7 @@ public class HDefaultMatiereDao  extends DaoMediatorService  implements MatiereD
 	}
 
 	@Override
-	public Matiere deleteMatiere(long idMatiere) {
-		Matiere matiere =   template.get(Matiere.class, idMatiere); 
+	public Matiere deleteMatiere(Matiere matiere) {
 		template.delete(matiere);
 		return matiere;
 	}
@@ -47,7 +46,7 @@ public class HDefaultMatiereDao  extends DaoMediatorService  implements MatiereD
 	}
 
 	@Override
-	public int updateMatiere(long idMatiere, Matiere matiere) {
+	public int updateMatiere(Matiere matiere) {
 		template.update(matiere);
 		return 1;
 	}

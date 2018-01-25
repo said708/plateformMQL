@@ -24,10 +24,9 @@ public class HDefaultProjectDao extends DaoMediatorService implements ProjectDao
 	}
 
 	@Override
-	public Project deleteProjet(long idProjet) {
-		Project project =   template.get(Project.class, idProjet); 
-		template.delete(project);
-		return project;
+	public Project deleteProjet(Project projet) {
+		template.delete(projet);
+		return projet;
 	}
 
 	@Override
@@ -39,12 +38,12 @@ public class HDefaultProjectDao extends DaoMediatorService implements ProjectDao
 
 	@Override
 	public Project selectProjetById(long id) {
-		Project projet=(Project)template.get(Project.class,id);
+		Project projet=template.get(Project.class,id);
 		return projet;
 	}
 
 	@Override
-	public int updateProjet(long idProjet, Project projet) {
+	public int updateProjet(Project projet) {
 		template.update(projet);
 		return 1;
 	}

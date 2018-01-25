@@ -71,142 +71,170 @@ public class DaoMediator {
 	}
 	
 	
-	public long addEnseignant(Enseignant Enseignant) {
+	
+
+	public int addEnseignant(Enseignant Enseignant) {
 		return EnseignantDao.addEnseignant(Enseignant);
 	}
-	public Enseignant deleteEnseignant(long idEnseignant) {
-		return EnseignantDao.deleteEnseignant(idEnseignant);
+
+	public Enseignant deleteEnseignant(Enseignant enseignant) {
+		return EnseignantDao.deleteEnseignant(enseignant);
 	}
+
 	public List<Enseignant> selectAllEnseignant() {
 		return EnseignantDao.selectAllEnseignant();
 	}
-	public Enseignant selectEnseignantById(long id) {
-		return EnseignantDao.selectEnseignantById(id);
+
+	public Enseignant selectEnseignantById(long enseignantId) {
+		return EnseignantDao.selectEnseignantById(enseignantId);
 	}
-	public long updateEnseignant(int idEnseignant, Enseignant Enseignant) {
-		return EnseignantDao.updateEnseignant(idEnseignant, Enseignant);
+
+	public int updateEnseignant(Enseignant enseignant) {
+		return EnseignantDao.updateEnseignant(enseignant);
 	}
+
 	public long addEtudiant(Etudiant etudiant) {
 		return etudiantDao.addEtudiant(etudiant);
 	}
-	public Etudiant deleteEtudiant(long id) {
-		return etudiantDao.deleteEtudiant(id);
+
+	public Etudiant deleteEtudiant(Etudiant etudiant) {
+		return etudiantDao.deleteEtudiant(etudiant);
 	}
+
 	public List<Etudiant> selectAllEtudiant() {
 		return etudiantDao.selectAllEtudiant();
 	}
-	
-	public long updateEtudiant(long idEtudiant, Etudiant etudiant) {
-		return etudiantDao.updateEtudiant(idEtudiant, etudiant);
-	}
-	public long updateEnseignant(long idEnseignant, Enseignant Enseignant) {
-		return EnseignantDao.updateEnseignant(idEnseignant, Enseignant);
-	}
-
-	
 
 	public Etudiant selectEtudiantById(long id) {
 		return etudiantDao.selectEtudiantById(id);
 	}
 
-	public Team deleteTeam(long idTeam) {
-		return teamDao.deleteTeam(idTeam);
+	public long updateEtudiant(Etudiant etudiant) {
+		return etudiantDao.updateEtudiant(etudiant);
 	}
-
 
 	public long addTeam(Team team) {
 		return teamDao.addTeam(team);
 	}
-	public Team deleteTeam(int idTeam) {
-		return teamDao.deleteTeam(idTeam);
+
+	public Team deleteTeam(Team team) {
+		return teamDao.deleteTeam(team);
 	}
+
 	public List<Team> selectAllTeam() {
 		return teamDao.selectAllTeam();
 	}
+
 	public Team selectTeamById(long id) {
 		return teamDao.selectTeamById(id);
 	}
 
-	public long updateTeam(long teamId , Team team) {
-		return teamDao.updateTeam(teamId,team);
-	}
-	
-	public List<Etudiant> selectEtudinatsInTeams(long teamId) {
-		return  teamDao.selectEtudinatsInTeams(teamId);
+	public long updateTeam(Team team) {
+		return teamDao.updateTeam(team);
 	}
 
-	public int removeEtudiantFromTeam(long studentId, long team_id) {
-		return teamDao.removeEtudiantFromTeam(studentId, team_id);
+	public List<Etudiant> selectEtudiantsInTeam(Team team) {
+		return teamDao.selectEtudiantsInTeam(team);
 	}
-	
-	public int addProjectToTeam(long projectId, long teamId) {
-		return teamDao.addProjectToTeam(projectId, teamId);
+
+	public int removeEtudiantFromTeam(Etudiant student, Team team) {
+		return teamDao.removeEtudiantFromTeam(student, team);
 	}
-	public int removeProjectFromTeam(long projectId, long teamId) {
-		return teamDao.removeProjectFromTeam(projectId, teamId);
+
+	public int addProjectToTeam(Project project, Team team) {
+		return teamDao.addProjectToTeam(project, team);
 	}
-	public int addEtudiantToTeam(long idEtudiant, long teamId) {
-		return teamDao.addEtudiantToTeam(idEtudiant, teamId);
+
+	public int removeProjectFromTeam(Project project, Team team) {
+		return teamDao.removeProjectFromTeam(project, team);
 	}
+
+	public int addEtudiantToTeam(Etudiant etudiant, Team team) {
+		return teamDao.addEtudiantToTeam(etudiant, team);
+	}
+
+	public void setMediator(DaoMediator daoMediator) {
+		fileDao.setMediator(daoMediator);
+	}
+
 	public int addFile(File file) {
 		return fileDao.addFile(file);
 	}
-	public File deleteFile(long idFile) {
-		return fileDao.deleteFile(idFile);
+
+	public File deleteFile(File file) {
+		return fileDao.deleteFile(file);
 	}
+
 	public List<File> selectAllFile() {
 		return fileDao.selectAllFile();
 	}
-	public File selectFileById(long id) {// Modified by YcDev, to see it again !!
+
+	public File selectFileById(long id) {
 		return fileDao.selectFileById(id);
 	}
-	public int updateFile(long idFile, File file) {
-		return fileDao.updateFile(idFile, file);
+
+	public int updateFile(File file) {
+		return fileDao.updateFile(file);
 	}
+
 	public int addLiverable(Liverable liverable) {
 		return liverableDao.addLiverable(liverable);
 	}
-	public Liverable deleteLiverable(long idLiverable) {
-		return liverableDao.deleteLiverable(idLiverable);
+
+	public Liverable deleteLiverable(Liverable liverable) {
+		return liverableDao.deleteLiverable(liverable);
 	}
+
 	public List<Liverable> selectAllLiverable() {
 		return liverableDao.selectAllLiverable();
 	}
+
 	public Liverable selectLiverableById(long id) {
 		return liverableDao.selectLiverableById(id);
 	}
-	public int updateLiverable(long idLiverable, Liverable liverable) {
-		return liverableDao.updateLiverable(idLiverable, liverable);
+
+	public int updateLiverable(Liverable liverable) {
+		return liverableDao.updateLiverable(liverable);
 	}
+
 	public int addMatiere(Matiere matiere) {
 		return matiereDao.addMatiere(matiere);
 	}
-	public Matiere deleteMatiere(long idMatiere) {
-		return matiereDao.deleteMatiere(idMatiere);
+
+	public Matiere deleteMatiere(Matiere matiere) {
+		return matiereDao.deleteMatiere(matiere);
 	}
+
 	public List<Matiere> selectAllMatiere() {
 		return matiereDao.selectAllMatiere();
 	}
-	public Matiere selectMatiereById(long id) {
+
+	public Matiere selectMatierById(long id) {
 		return matiereDao.selectMatierById(id);
 	}
-	public int updateMatiere(long idMatiere, Matiere matiere) {
-		return matiereDao.updateMatiere(idMatiere, matiere);
+
+	public int updateMatiere(Matiere matiere) {
+		return matiereDao.updateMatiere(matiere);
 	}
+
 	public int addProjet(Project projet) {
 		return projectDao.addProjet(projet);
 	}
-	public Project deleteProjet(long idProjet) {
-		return projectDao.deleteProjet(idProjet);
+
+	public Project deleteProjet(Project project) {
+		return projectDao.deleteProjet(project);
 	}
+
 	public List<Project> selectAllProjet() {
 		return projectDao.selectAllProjet();
 	}
+
 	public Project selectProjetById(long id) {
 		return projectDao.selectProjetById(id);
 	}
-	public int updateProjet(long idProjet, Project projet) {
-		return projectDao.updateProjet(idProjet, projet);
+
+	public int updateProjet(Project projet) {
+		return projectDao.updateProjet(projet);
 	}
 
 	public void print() {

@@ -7,8 +7,8 @@ import org.java.mql.models.Enseignant;
 
 public interface EnseignantDao extends DAOservice{
 	int addEnseignant(Enseignant Enseignant);
-	Enseignant deleteEnseignant(long idEnseignant);
+	Enseignant deleteEnseignant(Enseignant enseignant);
 	List<Enseignant> selectAllEnseignant();
-	Enseignant selectEnseignantById(long id);
-	int updateEnseignant(long idEnseignant , Enseignant Enseignant);
+	Enseignant selectEnseignantById(long enseignantId);
+	int updateEnseignant(Enseignant enseignant);
 }
