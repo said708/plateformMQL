@@ -6,8 +6,6 @@
 <hibernate-mapping>
 	<class name="org.java.mql.models.Team" table="TEAM">
 
-		
-
 		<id name="id" type="long" column="ID">
 			<generator class="native" />
 		</id>
@@ -24,6 +22,5 @@
 		</bag>
 		<many-to-one name="matiere" column="MATIERE"
 			class="org.java.mql.models.Matiere" />
-
 	</class>
 </hibernate-mapping>

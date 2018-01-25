@@ -15,17 +15,18 @@ import org.springframework.web.context.annotation.RequestScope;
 
 @Component
 @RequestScope
-public class EnseignantAction {
+public class MatiereAction {
 
 	@Autowired
 	private Module2Business business;
 
 	@Autowired
-	private Enseignant enseignant;
+	private Matiere matiere;
 
 
 
-	public EnseignantAction() {
+	public MatiereAction() {
+//		System.out.println("salam");
 	}
 
 
@@ -42,27 +43,31 @@ public class EnseignantAction {
 
 
 
-	public Enseignant getEnseignant() {
-		return enseignant;
+	
+
+	public Matiere getMatiere() {
+		return matiere;
 	}
 
-	public void setEnseignant(Enseignant enseignant) {
-		this.enseignant = enseignant;
+
+	public void setMatiere(Matiere matiere) {
+		this.matiere = matiere;
 	}
 
-	public void addEnsignant() {
+
+	public void addMatiere() {
 		FacesMessage msg; 
-		System.out.println(enseignant);
-		int status = business.addEnseignant(enseignant);
+		int status = business.addMatiere(matiere);
 		if(status == 1) {
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", enseignant.getNom() + " added with success");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", matiere.getName() + " added with success");   
 		}else  
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
+		System.out.println(matiere.getEnseignant());
 	}
 
-	public List<Matiere> listMatiers(){
-		return business.listeMatieres();
+	public List<Enseignant> listEnseignants(){
+		return business.listeEnseignats();
 	}
 
 }

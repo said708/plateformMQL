@@ -23,7 +23,7 @@
 					style="width:150px">
 					<f:selectItem itemLabel="Select Matiers" itemValue=""
 						noSelectionOption="true" />
-					<f:selectItems value="#{enseignantAction.listMatiers()}" />
+					<f:selectItems value="#{enseignantAction.listMatiers()}" var="matiere" itemLabel="#{matiere.name}" itemValue="#{matiere}"/>
 				</p:selectManyMenu>
 			</h:panelGrid>
 			<p:separator />

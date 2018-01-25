@@ -73,10 +73,9 @@ public class Enseignant  {
 	  return (int) (id * 31 + 990876);
 	}
 
-
 	@Override
 	public String toString() {
-		return "Ensignant [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", phone=" + phone + "]";
+		return nom+" "+prenom;
 	}
 
 

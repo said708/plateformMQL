@@ -177,3 +177,1475 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
 	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 15:53:42.547
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 15:53:42.550
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 16:35:16.123
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 16:35:16.125
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-24 16:58:50.068
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-functions.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.access$2(JarFileFaceletTaglibLocator.java:247)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator$2.changed(JarFileFaceletTaglibLocator.java:181)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractJarLocator.fireChangeEvent(AbstractJarLocator.java:58)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:104)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractLifecycleListener.fireLifecycleEvent(AbstractLifecycleListener.java:101)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.handlePackageFragmentRoot(ClasspathEntryLifecycleListener.java:145)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.visit(ClasspathEntryLifecycleListener.java:96)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:205)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.handlePostChangeEvent(ClasspathEntryLifecycleListener.java:79)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.elementChanged(ClasspathEntryLifecycleListener.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1720)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1554)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1530)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2246)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2136)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-functions.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 33 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 60 more
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-24 16:58:50.110
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-ui.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.access$2(JarFileFaceletTaglibLocator.java:247)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator$2.changed(JarFileFaceletTaglibLocator.java:181)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractJarLocator.fireChangeEvent(AbstractJarLocator.java:58)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:104)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractLifecycleListener.fireLifecycleEvent(AbstractLifecycleListener.java:101)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.handlePackageFragmentRoot(ClasspathEntryLifecycleListener.java:145)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.visit(ClasspathEntryLifecycleListener.java:96)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:205)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.handlePostChangeEvent(ClasspathEntryLifecycleListener.java:79)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.elementChanged(ClasspathEntryLifecycleListener.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1720)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1554)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1530)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2246)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2136)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-ui.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 33 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 60 more
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.123
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.159
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.161
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.163
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.164
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.167
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:01:19.169
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-24 17:08:21.407
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-functions.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.access$2(JarFileFaceletTaglibLocator.java:247)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator$2.changed(JarFileFaceletTaglibLocator.java:181)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractJarLocator.fireChangeEvent(AbstractJarLocator.java:58)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:104)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractLifecycleListener.fireLifecycleEvent(AbstractLifecycleListener.java:101)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.handlePackageFragmentRoot(ClasspathEntryLifecycleListener.java:162)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.visit(ClasspathEntryLifecycleListener.java:96)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:205)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.handlePostChangeEvent(ClasspathEntryLifecycleListener.java:79)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.elementChanged(ClasspathEntryLifecycleListener.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1720)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1554)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1530)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2246)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2136)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-functions.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 33 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 60 more
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-24 17:08:21.658
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-ui.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.access$2(JarFileFaceletTaglibLocator.java:247)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator$2.changed(JarFileFaceletTaglibLocator.java:181)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractJarLocator.fireChangeEvent(AbstractJarLocator.java:58)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:104)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractLifecycleListener.fireLifecycleEvent(AbstractLifecycleListener.java:101)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.handlePackageFragmentRoot(ClasspathEntryLifecycleListener.java:162)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.visit(ClasspathEntryLifecycleListener.java:96)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:205)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.handlePostChangeEvent(ClasspathEntryLifecycleListener.java:79)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.elementChanged(ClasspathEntryLifecycleListener.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1720)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1554)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1530)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2246)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2136)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/META-INF/omnifaces-ui.taglib.xml, 21, 2)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 33 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 60 more
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.393
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.425
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.432
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.438
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.439
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.442
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:11:33.445
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-3.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-24 17:21:08.505
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.590
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.621
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.622
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.623
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.624
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.625
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:23.627
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-24 17:21:34.095
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.101
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.132
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.138
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.140
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.149
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.155
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:21:40.184
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/cdi-api-1.1.jar is not on its project's build path
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-24 17:21:54.647
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.440
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.479
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.480
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.487
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.494
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.498
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:22:03.502
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-web-api-6.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-01-24 17:30:24.934
+!MESSAGE Publishing META-INF/context.xml configurations...
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2018-01-24 17:30:24.934
+!MESSAGE Could not load the context configuration for the plateform context due to a syntax error or other exception.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 39; Premature end of file.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.jst.server.tomcat.core.internal.xml.Factory.loadDocument(Factory.java:88)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatVersionHelper.loadCatalinaContextConfig(TomcatVersionHelper.java:615)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatVersionHelper.addCatalinaContextConfig(TomcatVersionHelper.java:566)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatVersionHelper.publishCatalinaContextConfig(TomcatVersionHelper.java:520)
+	at org.eclipse.jst.server.tomcat.core.internal.Tomcat90Configuration.publishContextConfig(Tomcat90Configuration.java:674)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishFinish(TomcatServerBehaviour.java:463)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:1011)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3182)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:355)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-24 17:32:03.119
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-24 17:33:00.333
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.486
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.522
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.524
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.525
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.526
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.527
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:11.528
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/hibernate-validator-5.4.1.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.430
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.458
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.458
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.460
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.461
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.462
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:16.465
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:18.989
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:19.023
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:19.039
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:19.072
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:19.074
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:19.103
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:19.106
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/weld-servlet-shaded-3.0.2.Final.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:21.992
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:22.027
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:22.028
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:22.029
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:22.029
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:22.033
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:22.040
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-websocket-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.322
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.355
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.356
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.358
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.358
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.362
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:24.365
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-webmvc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.470
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.499
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.500
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.502
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.504
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.505
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:30.506
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-messaging-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.235
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.261
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.262
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.264
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.266
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.267
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:38.269
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-jdbc-5.0.0.RELEASE-sources.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.043
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.078
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.094
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.148
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.159
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.161
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:45.166
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-instrument-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.472
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.542
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.562
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.568
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.579
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.582
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:51.590
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-orm-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.956
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.975
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.976
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.979
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.980
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.982
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:33:58.983
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-beans-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.043
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.065
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.076
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.079
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.080
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.080
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:06.082
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aspects-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.667
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.683
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.688
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.689
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.689
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.694
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:34:12.696
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/spring-aop-5.0.0.RELEASE-javadoc.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.621
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.648
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.650
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.652
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.654
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.656
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:49.659
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/omnifaces-2.6.8.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.531
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.572
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.573
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.579
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.580
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.583
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2018-01-24 17:40:52.588
+!MESSAGE /Users/said/Dropbox/Workspaces/plateform mql/plateform/WebContent/WEB-INF/lib/javaee-api-7.0.jar is not on its project's build path
+!SESSION 2018-01-24 23:00:27.332 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/said/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data /Users/said/Dropbox/Workspaces/plateform mql -product org.eclipse.epp.package.jee.product -keyring /Users/said/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-01-24 23:02:00.999
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2018-01-24 23:02:09.227
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-01-24 23:02:09.227
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.ui.newWizard,New,
+		Open the New item wizard,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3e92bded,
+		[Parameter(newWizardId,New Wizard,null,true)],,true),[org.eclipse.core.commands.Parameterization@bc84f009]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,user)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.ui.newWizard,New,
+		Open the New item wizard,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3e92bded,
+		[Parameter(newWizardId,New Wizard,null,true)],,true),[org.eclipse.core.commands.Parameterization@c37639f1]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,user)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-01-24 23:02:09.227
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3bbab2c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27b9d5b7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 23:02:43.753
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 23:02:43.756
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2018-01-24 23:02:45.187
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:211)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.overrides.rcp.RcpOverrideModelProvider.acquireModel(RcpOverrideModelProvider.java:66)
+	at org.eclipse.recommenders.internal.overrides.rcp.OverrideCompletionSessionProcessor.hasModel(OverrideCompletionSessionProcessor.java:121)
+	at org.eclipse.recommenders.internal.overrides.rcp.OverrideCompletionSessionProcessor.startSession(OverrideCompletionSessionProcessor.java:86)
+	at org.eclipse.recommenders.completion.rcp.processable.IntelligentCompletionProposalComputer.fireStartSession(IntelligentCompletionProposalComputer.java:305)
+	at org.eclipse.recommenders.completion.rcp.processable.IntelligentCompletionProposalComputer.computeCompletionProposals(IntelligentCompletionProposalComputer.java:171)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:333)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:337)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:331)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:288)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$3.run(ContentAssistant.java:2007)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2004)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:560)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$7(CompletionProposalPopup.java:555)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$2.run(CompletionProposalPopup.java:489)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:482)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1823)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor$AdaptedSourceViewer.doOperation(CompilationUnitEditor.java:184)
+	at org.eclipse.ui.texteditor.ContentAssistAction$1.run(ContentAssistAction.java:84)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:118)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:305)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:239)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:494)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:287)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:527)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:577)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:385)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$0(KeyBindingDispatcher.java:331)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:88)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1098)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4253)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1502)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1525)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1510)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1539)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1535)
+	at org.eclipse.swt.widgets.Canvas.sendKeyEvent(Canvas.java:518)
+	at org.eclipse.swt.widgets.Control.doCommandBySelector(Control.java:1090)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5891)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSResponder.interpretKeyEvents(NSResponder.java:68)
+	at org.eclipse.swt.widgets.Composite.keyDown(Composite.java:601)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5801)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:228)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2148)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2411)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5863)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5291)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5441)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:128)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3696)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 23:02:48.756
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 23:02:48.795
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-24 23:17:23.516
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml, 47, 31)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:156)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:1)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor$1.run(ProjectTaglibDescriptor.java:82)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.initialize(ProjectTaglibDescriptor.java:71)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.getTagLibraries(ProjectTaglibDescriptor.java:117)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.initialize(FaceletTagRegistry.java:183)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getAllTagLibraries(FaceletTagRegistry.java:129)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getTagLibrary(FaceletTagRegistry.java:230)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.getOrCreateCMDocument(FaceletDocumentFactory.java:160)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMDocumentForContext(FaceletDocumentFactory.java:56)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMElementDeclaration(FaceletDocumentFactory.java:78)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover$MyHTMLTagInfoHoverProcessor.getCMElementDeclaration(FaceletHover.java:132)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:131)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:111)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:86)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:257)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover.getHoverInfo(FaceletHover.java:58)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml, 47, 31)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 24 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 51 more
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-24 23:17:23.599
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/composite.taglib.xml, 47, 29)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:156)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:1)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor$1.run(ProjectTaglibDescriptor.java:82)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.initialize(ProjectTaglibDescriptor.java:71)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.getTagLibraries(ProjectTaglibDescriptor.java:117)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.initialize(FaceletTagRegistry.java:183)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getAllTagLibraries(FaceletTagRegistry.java:129)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getTagLibrary(FaceletTagRegistry.java:230)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.getOrCreateCMDocument(FaceletDocumentFactory.java:160)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMDocumentForContext(FaceletDocumentFactory.java:56)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMElementDeclaration(FaceletDocumentFactory.java:78)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover$MyHTMLTagInfoHoverProcessor.getCMElementDeclaration(FaceletHover.java:132)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:131)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:111)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:86)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:257)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover.getHoverInfo(FaceletHover.java:58)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/composite.taglib.xml, 47, 29)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 24 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 51 more
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 23:17:27.761
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-24 23:17:27.761
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-25 00:20:22.535
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml, 47, 31)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.access$2(JarFileFaceletTaglibLocator.java:247)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator$2.changed(JarFileFaceletTaglibLocator.java:181)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractJarLocator.fireChangeEvent(AbstractJarLocator.java:58)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:104)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractLifecycleListener.fireLifecycleEvent(AbstractLifecycleListener.java:101)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.handlePackageFragmentRoot(ClasspathEntryLifecycleListener.java:162)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.visit(ClasspathEntryLifecycleListener.java:96)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:205)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.handlePostChangeEvent(ClasspathEntryLifecycleListener.java:79)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.elementChanged(ClasspathEntryLifecycleListener.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1720)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1554)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1530)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2246)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2136)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2253)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5660)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:105)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter$1.run(WorkbenchRunnableAdapter.java:118)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml, 47, 31)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 37 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 64 more
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-25 00:20:22.571
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/composite.taglib.xml, 47, 29)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.access$2(JarFileFaceletTaglibLocator.java:247)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator$2.changed(JarFileFaceletTaglibLocator.java:181)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractJarLocator.fireChangeEvent(AbstractJarLocator.java:58)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:104)
+	at org.eclipse.jst.jsf.common.internal.resource.DefaultJarLocator$1.acceptEvent(DefaultJarLocator.java:1)
+	at org.eclipse.jst.jsf.common.internal.resource.AbstractLifecycleListener.fireLifecycleEvent(AbstractLifecycleListener.java:101)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.handlePackageFragmentRoot(ClasspathEntryLifecycleListener.java:162)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$1.visit(ClasspathEntryLifecycleListener.java:96)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:205)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener$DeltaAcceptor.accept(ClasspathEntryLifecycleListener.java:209)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.handlePostChangeEvent(ClasspathEntryLifecycleListener.java:79)
+	at org.eclipse.jst.jsf.common.internal.resource.ClasspathEntryLifecycleListener.elementChanged(ClasspathEntryLifecycleListener.java:72)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1720)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1554)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1530)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2246)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2136)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2253)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5660)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:105)
+	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter$1.run(WorkbenchRunnableAdapter.java:118)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/composite.taglib.xml, 47, 29)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 37 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 64 more
+
+!ENTRY org.eclipse.wst.validation 4 0 2018-01-25 00:26:11.004
+!MESSAGE Facelet HTML Validator finished validating: file:/Users/said/Dropbox/Workspaces/plateform%20mql/p03/WebContent/Exp03.xhtml
+
+!ENTRY org.eclipse.wst.validation 4 0 2018-01-25 00:26:11.014
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.DefaultFaceletValidationStrategy.validateRoot(DefaultFaceletValidationStrategy.java:108)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.DefaultFaceletValidationStrategy.validateDocument(DefaultFaceletValidationStrategy.java:90)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.DefaultFaceletValidationStrategy.validateFaceletHtml(DefaultFaceletValidationStrategy.java:63)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.DefaultFaceletValidationStrategy.doValidate(DefaultFaceletValidationStrategy.java:43)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.AbstractFaceletValidationStrategy.validateFile(AbstractFaceletValidationStrategy.java:96)
+	at org.eclipse.jst.jsf.facelet.ui.internal.validation.HTMLValidator.validate(HTMLValidator.java:57)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1178)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValManager$1.visit(ValManager.java:665)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:783)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:669)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:327)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-01-25 11:37:16.392 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/said/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/said/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-01-25 11:50:08.674
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2018-01-25 11:50:19.885
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-01-25 11:50:19.885
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.ui.newWizard,New,
+		Open the New item wizard,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@724e483f,
+		[Parameter(newWizardId,New Wizard,null,true)],,true),[org.eclipse.core.commands.Parameterization@bc84f009]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,user)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.ui.newWizard,New,
+		Open the New item wizard,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@724e483f,
+		[Parameter(newWizardId,New Wizard,null,true)],,true),[org.eclipse.core.commands.Parameterization@c37639f1]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,user)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-01-25 11:50:19.885
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27f6854b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72499396,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-25 11:57:38.437
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml, 47, 31)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:156)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:1)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor$1.run(ProjectTaglibDescriptor.java:82)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.initialize(ProjectTaglibDescriptor.java:71)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.getTagLibraries(ProjectTaglibDescriptor.java:117)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.initialize(FaceletTagRegistry.java:183)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getAllTagLibraries(FaceletTagRegistry.java:129)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getTagLibrary(FaceletTagRegistry.java:230)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.getOrCreateCMDocument(FaceletDocumentFactory.java:160)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMDocumentForContext(FaceletDocumentFactory.java:56)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMElementDeclaration(FaceletDocumentFactory.java:78)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover$MyHTMLTagInfoHoverProcessor.getCMElementDeclaration(FaceletHover.java:132)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:131)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:111)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:86)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:257)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover.getHoverInfo(FaceletHover.java:58)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/facelets_jsf_core.taglib.xml, 47, 31)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 24 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 51 more
+
+!ENTRY org.eclipse.jst.jsf.facelet.core 4 0 2018-01-25 11:57:38.555
+!MESSAGE Error initializing facelet registry entry
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/composite.taglib.xml, 47, 29)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.handleErrors(XMLLoadImpl.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:185)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.TagModelLoader.loadFromInputStream(TagModelLoader.java:103)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.processJar(JarFileFaceletTaglibLocator.java:270)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:156)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.JarFileFaceletTaglibLocator.start(JarFileFaceletTaglibLocator.java:1)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor$1.run(ProjectTaglibDescriptor.java:82)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.initialize(ProjectTaglibDescriptor.java:71)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.ProjectTaglibDescriptor.getTagLibraries(ProjectTaglibDescriptor.java:117)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.initialize(FaceletTagRegistry.java:183)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getAllTagLibraries(FaceletTagRegistry.java:129)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.FaceletTagRegistry.getTagLibrary(FaceletTagRegistry.java:230)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.getOrCreateCMDocument(FaceletDocumentFactory.java:160)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMDocumentForContext(FaceletDocumentFactory.java:56)
+	at org.eclipse.jst.jsf.facelet.core.internal.cm.FaceletDocumentFactory.createCMElementDeclaration(FaceletDocumentFactory.java:78)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover$MyHTMLTagInfoHoverProcessor.getCMElementDeclaration(FaceletHover.java:132)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:131)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:111)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:86)
+	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:257)
+	at org.eclipse.jst.jsf.facelet.ui.internal.hover.FaceletHover.getHoverInfo(FaceletHover.java:58)
+	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+Caused by: org.eclipse.emf.ecore.xmi.IllegalValueException: Value '2.3' is not legal. (file:///Users/said/Applications/eclipse/Eclipse.app/Contents/MacOS/com/sun/faces/metadata/taglib/composite.taglib.xml, 47, 29)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2697)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setAttribValue(XMLHandler.java:2751)
+	at org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler.handleObjectAttribs(SAXXMLHandler.java:77)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFactory(XMLHandler.java:2229)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectFromFeatureType(XMLHandler.java:2195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObject(XMLHandler.java:2071)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.handleFeature(XMLHandler.java:1850)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createDocumentRoot(XMLHandler.java:1493)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1355)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1290)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 24 more
+Caused by: java.lang.IllegalArgumentException: The value '2.3' is not a valid enumerator of 'FaceletTaglibVersion'
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFaceletTaglibVersionFromString(FaceletTaglibFactoryImpl.java:457)
+	at org.eclipse.jst.jsf.facelet.core.internal.registry.taglib.faceletTaglib.impl.FaceletTaglibFactoryImpl.createFromString(FaceletTaglibFactoryImpl.java:139)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.createFromString(XMLHelperImpl.java:1615)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl.setValue(XMLHelperImpl.java:1156)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.setFeatureValue(XMLHandler.java:2692)
+	... 51 more
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-25 11:58:03.411
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-25 11:58:03.416
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-25 12:02:26.463
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2018-01-25 12:02:33.815
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:211)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
+	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-25 12:24:03.588
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-25 12:24:03.591
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

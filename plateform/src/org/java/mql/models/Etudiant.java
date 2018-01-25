@@ -89,7 +89,7 @@ public class Etudiant {
 
 	@Override
 	public String toString() {
-		return "Etudiant [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", phone=" + phone;
+		return nom + " " + prenom;
 	}
 
 
