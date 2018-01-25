@@ -17,10 +17,6 @@
 				<p:column headerText="Projet">
 					<h:outputText value="#{p.name}" />
 				</p:column>
-				<h:inputHidden value="#{project.datePublication}">
-					<f:convertDateTime pattern="dd.MM.yyyy" />
-				</h:inputHidden>
-				
 				<p:column headerText="Description">
 					<h:outputText value="#{p.description}" />
 				</p:column>
@@ -32,11 +28,46 @@
 				</p:column>
 
 				<p:column headerText="Action">
-					<p:commandButton icon="ui-icon-tag" onclick="PF('dlg1').show();">
+					<p:commandButton icon="ui-icon-tag"
+						onclick="PF('dlg#{p.id}').show();">
 						<!-- <f:setPropertyActionListener value="#{p}" target="#{testAction.projet}" /> -->
+						<p:dialog header="Modification de projet" widgetVar="dlg#{p.id}"
+							minHeight="40">
+							<h:form>
+								<h:inputHidden value="#{p.datePublication}" />
+								<h:panelGrid columns="2" border="">
+									<p:outputLabel value="Cours" />
+									<p:selectOneMenu value="#{p.matiere}"
+										converter="#{matiereConverter}">
+										<f:selectItems value="#{projectAction.listMatiers()}"
+											var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}" />
+									</p:selectOneMenu>
+
+
+									<p:outputLabel for="name" value="project" />
+									<p:inputText id="name" value="#{p.name}" />
+
+
+
+									<p:outputLabel for="date" value="Date de retour" />
+									<p:calendar id="date" value="#{p.deadLine}" label="#{p.deadLine}"
+										pattern="dd-MM-yyyy" mask="true">
+									</p:calendar>
+
+									<p:outputLabel for="desc" value="Description" />
+									<p:inputTextarea id="desc" value="#{p.description}" cols="25"
+										rows="5" />
+
+								</h:panelGrid>
+								<p:commandButton actionListener="#{projectAction.modifier(p)}" value="Modifier" />
+								<p:commandButton value="Annuler" />
+
+
+							</h:form>
+						</p:dialog>
 					</p:commandButton>
 
-					<p:commandButton actionListener="#{projectAction.delete()}"
+					<p:commandButton actionListener="#{projectAction.delete(p)}"
 						icon="ui-icon-trash">
 						<p:confirm header="Confirmation"
 							message="Voulez-vous supprimer ce projet ?" icon="ui-icon-alert" />
@@ -47,16 +78,14 @@
 			</p:dataTable>
 
 
-			<p:dialog header="Modification de projet" widgetVar="dlg1"
-				minHeight="40">
-				<ui:include src="/modifierProjet.xhtml" />
-			</p:dialog>
+
 
 
 			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-				<p:commandButton value="Oui" icon="ui-icon-check" />
-				<p:commandButton value="Non" icon="ui-icon-close"
-					oncomplete="cofirmation.hide()" />
+				<p:commandButton value="Yes" type="button"
+					styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+				<p:commandButton value="No" type="button"
+					styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
 			</p:confirmDialog>
 
 		</h:form>

@@ -73,16 +73,35 @@ public class ProjectAction {
 		return project;
 	}
 	
+	public void modifier(Project p) {
+		
+	System.out.println(p);
+		/*FacesMessage msg; 
+		if(business.isAnProjectExiste(project)){
+			project.setDeadLine(HelpConvertor.dateToString(date, "dd-MM-yyyy"));
+			 int status = business.addProject(project) ;
+			 if(status == 1) {
+				 msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", project.getName() + " added with success");
+			 }else {
+				 msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
+			 }
+			   
+		}else  
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project already exist |");   
+		FacesContext.getCurrentInstance().addMessage(null, msg); */
+	}
+	
 	public List<Project> listProjects(){
 		return business.listProjects();
 	}
 	
-	public void delete() {
+	public void delete(Project p) {
 		FacesMessage msg; 
-		if(business.isAnProjectExiste(project)){
-			 Project status =  business.deleteProject(project);
+		System.out.println(p);
+		if(business.isAnProjectExiste(p)){
+			 Project status =  business.deleteProject(p);
 			 if(status !=null) {
-				 msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", project.getName() + " deleted with success");
+				 msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", p.getName() + " deleted with success");
 			 }else {
 				 msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
 			 }

@@ -6,7 +6,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-  <title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+  <title><ui:insert name="title">update Projet</ui:insert></title>
 </h:head>
 
 <h:body>
@@ -14,21 +14,18 @@
 		<h:form>
 			<h:panelGrid columns="2">
 				<p:outputLabel value="Cours" />
-				<p:selectOneMenu value="#{testAction.projet.cours}">
-					<f:selectItem itemLabel="-----Choisir"  itemValue="0" />
-					<f:selectItem itemLabel="JAVA" 			itemValue="1"  />
-					<f:selectItem itemLabel="JEE" 			itemValue="2"  />
-					<f:selectItem itemLabel="Design pattern" itemValue="3"  />
+				<p:selectOneMenu value="#{project.matiere}" converter="#{matiereConverter}">
+				<f:selectItems  value="#{projectAction.listMatiers()}" var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}"/>
 				</p:selectOneMenu>
-				
-				<p:outputLabel value="Projet" />
-				<p:inputText value="#{testAction.projet.nom}" />
+				<p:outputLabel value="project" />
+				<p:inputText value="#{project.name}" />
 				
 				<p:outputLabel value="Date de retour" />
-				<p:calendar value="#{testAction.projet.dateFin}" pattern="dd-MM-yyyy" mask="true" />
+				<p:calendar value="#{projectAction.date}" pattern="dd-MM-yyyy" mask="true" >
+				</p:calendar>
 				
 				<p:outputLabel value="Description" />
-				<p:inputTextarea value="#{testAction.projet.description}" cols="25" rows="5" />
+				<p:inputTextarea value="#{project.description}" cols="25" rows="5" />
 			</h:panelGrid>
 			
 			<p:commandButton value="Modifier" />
