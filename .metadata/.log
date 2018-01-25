@@ -1655,3 +1655,6 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 
 !ENTRY org.eclipse.jface.text 2 0 2018-01-25 13:06:56.537
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-01-25 14:03:05.388
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.

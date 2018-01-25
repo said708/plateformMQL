@@ -57,8 +57,6 @@ public class EnseignantAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
-	public List<Matiere> listMatiers(){
-		return business.listeMatieres();
-	}
+	
 
 }
