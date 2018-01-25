@@ -11,7 +11,6 @@
 
 
 	<bean id="file" class="org.java.mql.models.File" scope="request" />
-	<bean id="directory" class="org.java.mql.models.Directory" scope="request" />
 	<bean id="liverable" class="org.java.mql.models.Liverable" scope="request" />
 	<bean id="matiere" class="org.java.mql.models.Matiere" scope="request" />
 	<bean id="project" class="org.java.mql.models.Project" scope="request" />

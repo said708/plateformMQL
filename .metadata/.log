@@ -1649,3 +1649,9 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 
 !ENTRY org.eclipse.jface.text 2 0 2018-01-25 12:24:03.591
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-25 13:06:56.535
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-01-25 13:06:56.537
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

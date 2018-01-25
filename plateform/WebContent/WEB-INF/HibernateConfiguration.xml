@@ -36,7 +36,7 @@
 				<value>org/java/mql/models/Etudiant.hbm.xml</value>
 				<value>org/java/mql/models/Project.hbm.xml</value>
 				<value>org/java/mql/models/Team.hbm.xml</value>
-				<value>org/java/mql/models/AbstractFile.hbm.xml</value>
+				<value>org/java/mql/models/File.hbm.xml</value>
 				<value>org/java/mql/models/Liverable.hbm.xml</value>
 				<value>org/java/mql/models/Matiere.hbm.xml</value>
 			</list>

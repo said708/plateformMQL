@@ -6,7 +6,7 @@ import java.util.Vector;
 public class Liverable  {
 	private long id;
 	private String name;
-	private List<AbstractFile> files;
+	private List<File> files;
 	private Project project;
 
 	public Liverable() {
@@ -14,14 +14,14 @@ public class Liverable  {
 
 
 	public Liverable(long id, String name) {
-		files = new Vector<AbstractFile>();
+		files = new Vector<File>();
 		project = new Project();
 		this.id = id;
 		this.name = name;
 	}
 
 
-	public List<AbstractFile> getFiles() {
+	public List<File> getFiles() {
 		return files;
 	}
 
@@ -36,7 +36,7 @@ public class Liverable  {
 	}
 
 
-	public void setFiles(List<AbstractFile> files) {
+	public void setFiles(List<File> files) {
 		this.files = files;
 	}
 

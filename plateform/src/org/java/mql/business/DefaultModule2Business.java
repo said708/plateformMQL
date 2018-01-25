@@ -5,7 +5,7 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 import org.java.mql.dao.mediator.DaoMediator;
-import org.java.mql.models.AbstractFile;
+import org.java.mql.models.File;
 import org.java.mql.models.Enseignant;
 import org.java.mql.models.Etudiant;
 import org.java.mql.models.Liverable;
@@ -250,9 +250,9 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public List<AbstractFile> listFilesInLiverable(long liverableId) {
+	public List<File> listFilesInLiverable(long liverableId) {
 		Liverable liverable = daoMediator.selectLiverableById(liverableId);
-		List<AbstractFile> allFilesInLiverable = liverable.getFiles();
+		List<File> allFilesInLiverable = liverable.getFiles();
 		try {
 			if(allFilesInLiverable != null)
 				return allFilesInLiverable;
@@ -260,7 +260,7 @@ public class DefaultModule2Business implements Module2Business{
 				throw new Exception("Liverable has no file");
 		} catch (Exception e) {
 			log.fatal("DefaultModule2Business.listFilesInLiverable has an error : "+ e.getMessage());
-			return new Vector<AbstractFile>();
+			return new Vector<File>();
 		}
 	}
 
@@ -411,14 +411,14 @@ public class DefaultModule2Business implements Module2Business{
 	}
 
 	@Override
-	public AbstractFile deleteFileFromLiverable(long fileId, long liverableId) {
+	public File deleteFileFromLiverable(long fileId, long liverableId) {
 		try {
 			if(isAnFileExisteInLiverable(fileId , liverableId) && isAnLiverableExiste(liverableId)) {
 				Liverable liverable = daoMediator.selectLiverableById(liverableId);
-				List<AbstractFile> files = liverable.getFiles();
+				List<File> files = liverable.getFiles();
 				for (int i = 0; i < files.size(); i++) {
 					if(files.get(i).getId() == fileId) {
-						AbstractFile file = files.remove(i);
+						File file = files.remove(i);
 						liverable.setFiles(files);
 						return file;
 					}
@@ -447,7 +447,7 @@ public class DefaultModule2Business implements Module2Business{
 	public boolean isAnFileExisteInLiverable(long fileId , long liverableId) {
 		try {
 			if(isAnLiverableExiste(liverableId)) {
-				for (AbstractFile file : listFilesInLiverable(liverableId)) {
+				for (File file : listFilesInLiverable(liverableId)) {
 					if(fileId == file.getId()) {
 						return true;
 					}
@@ -464,7 +464,7 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public int addFileToLiverable(AbstractFile file, long liverableId) {
+	public int addFileToLiverable(File file, long liverableId) {
 		try {
 			if(isAnLiverableExiste(liverableId) && !isAnFileExisteInLiverable(file.getId(), liverableId) && file != null) {
 				Liverable liverable = daoMediator.selectLiverableById(liverableId);

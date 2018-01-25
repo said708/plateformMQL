@@ -6,8 +6,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
 import org.java.mql.business.Module2Business;
-import org.java.mql.models.Enseignant;
-import org.java.mql.models.Matiere;
+import org.java.mql.models.Etudiant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
@@ -15,17 +14,17 @@ import org.springframework.web.context.annotation.RequestScope;
 
 @Component
 @RequestScope
-public class EnseignantAction {
+public class EtudiantAction {
 
 	@Autowired
 	private Module2Business business;
 
 	@Autowired
-	private Enseignant enseignant;
+	private Etudiant etudiant;
 
 
 
-	public EnseignantAction() {
+	public EtudiantAction() {
 	}
 
 
@@ -36,29 +35,34 @@ public class EnseignantAction {
 	public Module2Business getBusiness() {
 		return business;
 	}
-
-
-	public Enseignant getEnseignant() {
-		return enseignant;
-	}
-
-	public void setEnseignant(Enseignant enseignant) {
-		this.enseignant = enseignant;
-	}
-
-	public void addEnsignant() {
+	
+	public void add() {
 		FacesMessage msg; 
-		System.out.println(enseignant);
-		int status = business.addEnseignant(enseignant);
+		int status = business.addEtudiant(etudiant);
 		if(status == 1) {
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", enseignant.getNom() + " added with success");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", etudiant.getNom() + " added with success");   
 		}else  
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
-
-	public List<Matiere> listMatiers(){
-		return business.listeMatieres();
+	
+	
+	public void delete() {
+		business.deleteEtudiant(etudiant.getId());
+	};
+	
+	
+	
+	public List<Etudiant> allEtudiants(){
+		return business.listEtudiants();
 	}
+	
+	
+	
+	public void addListEtudiants() {
+		
+	}
+
+	
 
 }

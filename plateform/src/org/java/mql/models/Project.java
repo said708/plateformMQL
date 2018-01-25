@@ -1,6 +1,7 @@
 package org.java.mql.models;
 
 public class Project {
+	
 	private long id;
 	private String name;
 	private String description;

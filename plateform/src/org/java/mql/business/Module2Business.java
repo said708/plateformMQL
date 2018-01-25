@@ -1,9 +1,9 @@
 package org.java.mql.business;
 import java.util.List;
 
-import org.java.mql.models.AbstractFile;
 import org.java.mql.models.Enseignant;
 import org.java.mql.models.Etudiant;
+import org.java.mql.models.File;
 import org.java.mql.models.Liverable;
 import org.java.mql.models.Matiere;
 import org.java.mql.models.Project;
@@ -48,10 +48,10 @@ public interface Module2Business {
 	//manage liverable
 	int addLiverable(Liverable liverable); // Added by YcDev
 	int updateLiverable(long liverableId, Liverable liverable); // Added by YcDev
-	AbstractFile deleteFileFromLiverable(long fileId , long liverableId);//work
-	int addFileToLiverable(AbstractFile file , long idLiverable);//work     // Modified by YcDev, previous signature : int addFileToLiverable(File file , long idLiverable);
+	File deleteFileFromLiverable(long fileId , long liverableId);//work
+	int addFileToLiverable(File file , long idLiverable);//work     // Modified by YcDev, previous signature : int addFileToLiverable(File file , long idLiverable);
 	List<Liverable> listLiverables();//work
-	List<AbstractFile> listFilesInLiverable(long liverableId);//work
+	List<File> listFilesInLiverable(long liverableId);//work
 	boolean isAnFileExisteInLiverable(long fileId , long liverableId);//work
 	boolean  isAnLiverableExiste(long liverableId);//work
 	public Liverable selectLivrableById(long id) ;
