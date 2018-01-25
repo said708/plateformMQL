@@ -98,4 +98,14 @@ public class Project {
 	public int hashCode() {
 		return (int) (id * 31 + 990876);
 	}
+
+	@Override
+	public String toString() {
+		return "Project [id=" + id + ", name=" + name + ", description=" + description + ", datePublication="
+				+ datePublication + ", deadLine=" + deadLine + ", matiere=" + matiere + ", liverable=" + liverable
+				+ ", team=" + team + "]";
+	}
+	
+	
+	
 }

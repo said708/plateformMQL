@@ -13,23 +13,25 @@
 	
 	<p:panel header="Nouveau project">
 		<h:form>
+		<p:growl id="msgs" showDetail="true" />
 			<h:panelGrid columns="2">
 				<p:outputLabel value="Cours" />
-				<p:selectOneMenu value="#{project.matiere}" converter="#{projectConverter}">
+				<p:selectOneMenu value="#{project.matiere}" converter="#{matiereConverter}">
 				<f:selectItems  value="#{projectAction.listMatiers()}" var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}"/>
 				</p:selectOneMenu>
-				
 				<p:outputLabel value="project" />
 				<p:inputText value="#{project.name}" />
 				
 				<p:outputLabel value="Date de retour" />
-				<p:calendar value="#{project.deadLine}" pattern="dd-MM-yyyy" mask="true" />
+				<p:calendar value="#{projectAction.date}" pattern="dd-MM-yyyy" mask="true" >
+				</p:calendar>
 				
 				<p:outputLabel value="Description" />
 				<p:inputTextarea value="#{project.description}" cols="25" rows="5" />
 			</h:panelGrid>
 			
-			<p:commandButton action="#{projectAction.newProject}" value="Enregistrer" />
+			<p:commandButton value="Save" update="msgs"
+				actionListener="#{projectAction.newProject()}" icon="ui-icon-check" />
 			<p:commandButton value="Annuler" />
 			
 		</h:form>
