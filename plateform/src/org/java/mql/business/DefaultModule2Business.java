@@ -588,7 +588,7 @@ public class DefaultModule2Business implements Module2Business{
 
 	@Override
 	public boolean isAnEnseignantExiste(Enseignant enseignant) {
-		for (Enseignant e : listeEnseignats()) 
+		for (Enseignant e : listeEnseignants()) 
 			if(enseignant.equals(e)) 
 				return true;
 		return false;
@@ -596,7 +596,7 @@ public class DefaultModule2Business implements Module2Business{
 
 
 	@Override
-	public List<Enseignant> listeEnseignats() {
+	public List<Enseignant> listeEnseignants() {
 		List<Enseignant> allEnseignant = daoMediator.selectAllEnseignant();
 		try {
 			if(allEnseignant != null)
@@ -703,6 +703,62 @@ public class DefaultModule2Business implements Module2Business{
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public Enseignant deleteEnseignant(Enseignant enseignant) {
+		try {
+			if(isAnEnseignantExiste(enseignant)) 
+				return daoMediator.deleteEnseignant(enseignant);
+			else 
+				throw new Exception("enseignant "+enseignant.getId()+" not existe");
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.deleteTeam has an error :"+e.getMessage());
+			return null;
+		}
+
+	}
+
+	@Override
+	public Matiere deleteMatiere(Matiere matiere) {
+		try {
+			if(isAnMatiereExiste(matiere)) 
+				return daoMediator.deleteMatiere(matiere);
+			else 
+				throw new Exception("matiere "+matiere.getId()+" not existe");
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.deleteTeam has an error :"+e.getMessage());
+			return null;
+		}
+
+	}
+
+	@Override
+	public int updateMatiere(Matiere matiere) {
+		try {
+			if(isAnMatiereExiste(matiere)) {
+				daoMediator.updateMatiere(matiere);
+				return 1;
+			}else 
+				throw new Exception("team "+matiere.getId()+" not existe");
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.updateMatiere has an error :"+e.getMessage());
+			return -1;
+		}
+	}
+
+	@Override
+	public int updateEnseignant(Enseignant enseignant) {
+		try {
+			if(isAnEnseignantExiste(enseignant)) {
+				daoMediator.updateEnseignant(enseignant);
+				return 1;
+			}else 
+				throw new Exception("team "+enseignant.getId()+" not existe");
+		}catch(Exception e) {
+			log.error("DefaultModule2Business.updateEnseignant has an error :"+e.getMessage());
+			return -1;
+		}
 	}
 
 

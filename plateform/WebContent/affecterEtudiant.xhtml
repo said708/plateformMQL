@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/index.xhtml">
+	
+	<ui:define name="content"> 
+		<p:panel header="Affecter Etudiant/Equipe" >
+			<h:form>
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel value="Etudiants :" />
+					<p:selectOneMenu  value="#{equipeAction.selected}">
+						<f:selectItem itemLabel="------------Choisir------------" />
+						<f:selectItems  value="#{equipeAction.etudiants}" 
+									var="e" itemLabel="#{e.nom} #{e.prenom}" itemValue="#{e.id}" />
+					</p:selectOneMenu>
+					
+					<p:outputLabel value="Equipes :" />
+					<p:selectOneListbox scrollHeight="200" style="width:200px;" value="#{equipeAction.selectedEquipe}"  >
+						<f:selectItem itemLabel="------------Choisir------------" />
+						<f:selectItems  value="#{equipeAction.equipes}" 
+									var="e" itemLabel="Equipe #{e.nom}" itemValue="#{e.id}" />
+					</p:selectOneListbox>
+					
+					<p:commandButton value="Affecter"  action="#{equipeAction.affecter}"  icon="ui-icon-refresh" />	
+				</h:panelGrid>
+						
+			</h:form>
+				
+		</p:panel>
+	</ui:define>
+	
+</ui:composition>
+</html>

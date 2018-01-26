@@ -7,72 +7,107 @@
 	<title>Add Enseignant</title>
 </h:head>
 <h:body>
-	<h:form>
-    <p:messages>
-    </p:messages>
+	<h:form id="form">
+   <p:growl id="msgs" showDetail="true"/>
  
-    <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
-        <p:outputLabel for="console" value="Basic:" />
-        <p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:125px">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-            <f:selectItem itemLabel="PS4" itemValue="PS4" />
-            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-        </p:selectOneMenu>
+   <p:dataTable id="cars1" var="car" value="#{dtEditView.cars1}" editable="true" style="margin-bottom:20px">
+       <f:facet name="header">
+           Row Editing
+       </f:facet>
  
-        <p:outputLabel for="car" value="Grouping: " />
-        <p:selectOneMenu id="car" value="#{selectOneMenuView.car}">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItems value="#{selectOneMenuView.cars}" />
-        </p:selectOneMenu>
+       <p:ajax event="rowEdit" listener="#{dtEditView.onRowEdit}" update=":form:msgs" />
+       <p:ajax event="rowEditCancel" listener="#{dtEditView.onRowCancel}" update=":form:msgs" />
  
-        <p:outputLabel for="city" value="Editable: " />
-        <p:selectOneMenu id="city" value="#{selectOneMenuView.city}" effect="fold" editable="true">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItems value="#{selectOneMenuView.cities}" />
-        </p:selectOneMenu>
+       <p:column headerText="Id">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.id}" /></f:facet>
+               <f:facet name="input"><p:inputText id="modelInput" value="#{car.id}" style="width:100%"/></f:facet>
+           </p:cellEditor>
+       </p:column>
  
-        <p:outputLabel for="advanced" value="Advanced:"  />
-        <p:selectOneMenu id="advanced" value="#{selectOneMenuView.theme}" converter="#{themeConverter}" panelStyle="width:180px"
-                         effect="fade" var="t" style="width:160px" filter="true" filterMatchMode="startsWith">
-            <f:selectItems value="#{selectOneMenuView.themes}" var="theme" itemLabel="#{theme.displayName}" itemValue="#{theme}" />
+       <p:column headerText="Year">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.year}" /></f:facet>
+               <f:facet name="input"><p:inputText value="#{car.year}" style="width:100%" label="Year"/></f:facet>
+           </p:cellEditor>
+       </p:column>
  
-            <p:column style="width:10%">
-                <h:outputText styleClass="ui-theme ui-theme-#{t.name}" />
-            </p:column>
+       <p:column headerText="Brand">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.brand}" /></f:facet>
+               <f:facet name="input">
+                   <h:selectOneMenu value="#{car.brand}" style="width:100%">
+                       <f:selectItems value="#{dtEditView.brands}" var="man" itemLabel="#{man}" itemValue="#{man}" />
+                   </h:selectOneMenu>
+               </f:facet>
+           </p:cellEditor>
+       </p:column>
  
-            <p:column>
-                <h:outputText value="#{t.displayName}" />
-            </p:column>
-        </p:selectOneMenu>
+       <p:column headerText="Color">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.color}" /></f:facet>
+               <f:facet name="input">
+                   <h:selectOneMenu value="#{car.color}" style="width:100%">
+                       <f:selectItems value="#{dtEditView.colors}" var="color" itemLabel="#{color}" itemValue="#{color}" />
+                   </h:selectOneMenu>
+               </f:facet>
+           </p:cellEditor>
+       </p:column>
  
-        <p:outputLabel for="lazy" value="Lazy:" />
-        <p:selectOneMenu id="lazy" value="#{selectOneMenuView.option}" lazy="true" style="width:125px">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItems value="#{selectOneMenuView.options}" />
-        </p:selectOneMenu>
-    </h:panelGrid>
+       <p:column style="width:32px">
+           <p:rowEditor />
+       </p:column>
+   </p:dataTable>
  
-    <p:commandButton value="Submit" update="display" oncomplete="PF('dlg').show()" icon="ui-icon-check" />
+   <p:dataTable id="cars2" var="car" value="#{dtEditView.cars2}" editable="true" editMode="cell" widgetVar="cellCars">
+       <f:facet name="header">
+           Cell Editing with Click and RightClick
+       </f:facet>
  
-    <p:dialog header="Values" modal="true" showEffect="bounce" widgetVar="dlg" resizable="false">
-        <p:panelGrid columns="2" id="display" columnClasses="label,value">
-            <h:outputText value="Basic:" />
-            <h:outputText value="#{selectOneMenuView.console}" />
+       <p:ajax event="cellEdit" listener="#{dtEditView.onCellEdit}" update=":form:msgs" />
  
-            <h:outputText value="Grouping:" />
-            <h:outputText value="#{selectOneMenuView.car}" />
+       <p:column headerText="Id">
+              <p:cellEditor>
+                  <f:facet name="output"><h:outputText value="#{car.id}" /></f:facet>
+                  <f:facet name="input"><p:inputText id="modelInput" value="#{car.id}" style="width:96%"/></f:facet>
+              </p:cellEditor>
+          </p:column>
  
-            <h:outputText value="Editable" />
-            <h:outputText value="#{selectOneMenuView.city}" />
+          <p:column headerText="Year">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.year}" /></f:facet>
+               <f:facet name="input"><p:inputText value="#{car.year}" style="width:96%" label="Year"/></f:facet>
+           </p:cellEditor>
+       </p:column>
  
-            <h:outputText value="Advanced:" />
-            <h:outputText value="#{selectOneMenuView.theme.displayName}" />
+       <p:column headerText="Brand">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.brand}" /></f:facet>
+               <f:facet name="input">
+                   <h:selectOneMenu value="#{car.brand}" style="width:100%">
+                       <f:selectItems value="#{dtEditView.brands}" var="man" itemLabel="#{man}" itemValue="#{man}" />
+                   </h:selectOneMenu>
+               </f:facet>
+           </p:cellEditor>
+       </p:column>
  
-            <h:outputText value="Lazy:" />
-            <h:outputText value="#{selectOneMenuView.option}" />
-        </p:panelGrid>
-    </p:dialog>
+       <p:column headerText="Color">
+           <p:cellEditor>
+               <f:facet name="output"><h:outputText value="#{car.color}" /></f:facet>
+               <f:facet name="input">
+                   <h:selectOneMenu value="#{car.color}" style="width:100%">
+                       <f:selectItems value="#{dtEditView.colors}" var="color" itemLabel="#{color}" itemValue="#{color}" />
+                   </h:selectOneMenu>
+               </f:facet>
+           </p:cellEditor>
+       </p:column>
+   </p:dataTable>
+ 
+   <p:contextMenu for="cars2" widgetVar="cMenu">   
+       <p:menuitem value="Edit Cell" icon="ui-icon-search" onclick="PF('cellCars').showCellEditor();return false;"/>  
+       <p:menuitem value="Hide Menu" icon="ui-icon-close" onclick="PF('cMenu').hide()"/>  
+   </p:contextMenu> 
+ 
 </h:form>
 </h:body>
 </html>

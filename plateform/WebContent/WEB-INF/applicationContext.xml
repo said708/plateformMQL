@@ -7,6 +7,15 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
 	<context:component-scan base-package="org.java.mql.web" />
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+		<property name="scopes">
+			<map>
+				<entry key="view">
+					<bean class="org.java.mql.web.utils.ViewScope" />
+				</entry>
+			</map>
+		</property>
+	</bean>
 	<import resource="Beans.xml" />
 	<import resource="HibernateDao.xml" />
 	<!-- <import resource="AopConfig.xml" /> -->

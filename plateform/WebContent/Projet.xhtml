@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+</h:head>
+
+<h:body>
+	<p:panel>
+		<h:form id="form">
+			<p:growl id="msgs" showDetail="true" />
+			<div class="card card-w-title">
+				<p:dataTable id="projects" var="p" value="#{projectAction.projects}"
+					editable="true" style="margin-bottom:20px" paginator="true"
+					rows="10" reflow="true">
+					<h:inputHidden value="#{p.id}" />
+					<h:inputHidden value="#{p.datePublication}" />
+					<f:facet name="header">List des Projets</f:facet>
+					<p:ajax event="rowEdit" listener="#{projectAction.onRowEdit}"
+						update=":form:msgs" />
+					<p:ajax event="rowEditCancel"
+						listener="#{projectAction.onRowCancel}" update=":form:msgs" />
+
+					<p:column headerText="Projet" sortBy="#{p.name}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{p.name}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputText id="modelInput" value="#{p.name}"
+									style="width:100%" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+					<p:column headerText="Description" sortBy="#{p.description}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{p.description}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputTextarea value="#{p.description}" style="width:100%"
+									label="Year" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+					<p:column headerText="Matiere" sortBy="#{p.matiere.name}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{p.matiere}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:selectOneMenu value="#{p.matiere}" style="width:100%"
+									converter="#{matiereConverter}">
+									<f:selectItems value="#{projectAction.listMatiers()}"
+										var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}" />
+								</p:selectOneMenu>
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+					<p:column headerText="Date de retour" sortBy="#{p.deadLine}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{p.deadLine}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:calendar id="date" value="#{projectAction.date}"
+									pattern="dd-MM-yyyy" mask="true"></p:calendar>
+
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+					<p:column style="width:50px">
+						<p:rowEditor />
+					</p:column>
+					<p:column style="width:30px">
+						<p:commandButton icon="fa fa-fw fa-trash"
+							actionListener="#{projectAction.delete(p)}" update="@form" ajax="true">
+							<p:confirm header="Confirmation" message="Are you sure?"
+								icon="ui-icon-alert" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</div>
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+				<p:commandButton value="Yes" type="button"
+					styleClass="ui-confirmdialog-yes" icon="fa fa-check-square" />
+				<p:commandButton value="No" type="button"
+					styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove " />
+			</p:confirmDialog>
+
+		</h:form>
+		<f:facet name="footer">
+			<p:commandButton value="nouveau projet" type="button"
+				onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+		</f:facet>
+	</p:panel>
+	<p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true"
+		showEffect="explode" hideEffect="bounce">
+		<p:panel id="newPanel" header="Nouveau project">
+			<h:form>
+				<p:growl id="msgs" showDetail="true" />
+				<h:panelGrid columns="2">
+					<p:outputLabel value="Cours" />
+					<p:selectOneMenu value="#{project.matiere}"
+						converter="#{matiereConverter}">
+						<f:selectItems value="#{projectAction.listMatiers()}"
+							var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}" />
+					</p:selectOneMenu>
+					<p:outputLabel value="project" />
+					<p:inputText value="#{project.name}" />
+
+					<p:outputLabel value="Date de retour" />
+					<p:calendar value="#{projectAction.date}" pattern="dd-MM-yyyy"
+						mask="true">
+					</p:calendar>
+
+					<p:outputLabel value="Description" />
+					<p:inputTextarea value="#{project.description}" cols="25" rows="5" />
+				</h:panelGrid>
+
+				<p:commandButton value="Save" update="msgs"
+					action="#{projectAction.newProject()}" icon="ui-icon-check"
+					onclick="PF('dlg2').hide();" />
+				<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+					icon="fa fa-times-circle" />
+			</h:form>
+		</p:panel>
+	</p:dialog>
+</h:body>
+
+</html>

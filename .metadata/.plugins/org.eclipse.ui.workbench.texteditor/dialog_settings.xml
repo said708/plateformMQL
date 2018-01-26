@@ -6,12 +6,17 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="autoU" key="selection"/>
+		<item value="select" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="select"/>
+			<item value="projet"/>
+			<item value=";//work"/>
+			<item value="theme"/>
+			<item value="AbstractFile"/>
 			<item value="autoU"/>
 			<item value="org.springframework.web.context.request.RequestContextListener"/>
 			<item value="//work"/>
@@ -22,15 +27,13 @@
 			<item value="p2"/>
 			<item value="p1"/>
 			<item value="org.java.mql.models"/>
-			<item value="org.java.mql.models.p1"/>
-			<item value="org.java.mql.models.p2"/>
-			<item value="removeProjectFromTeam"/>
-			<item value="salam"/>
-			<item value="@tran"/>
 		</list>
 		<list key="replacehistory">
-			<item value=""/>
+			<item value="project"/>
 			<item value="{}"/>
+			<item value=""/>
+			<item value="item"/>
+			<item value="File"/>
 			<item value="Enseignant"/>
 			<item value="imp"/>
 			<item value="org.java.mql.models"/>
@@ -41,16 +44,13 @@
 			<item value="Default"/>
 			<item value="expected"/>
 			<item value="Team"/>
-			<item value="data"/>
-			<item value="default"/>
-			<item value="@Autowired(required=true)"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="986" key="DIALOG_X_ORIGIN"/>
-		<item value="139" key="DIALOG_Y_ORIGIN"/>
+		<item value="687" key="DIALOG_X_ORIGIN"/>
+		<item value="156" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

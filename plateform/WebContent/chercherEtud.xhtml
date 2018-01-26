@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/index.xhtml">
+
+	<ui:define name="content">
+		<p:panel header="Chercher Etudiant/Equipes">
+			<h:form>
+				<h:panelGrid columns="3" cellpadding="5">
+					<p:outputLabel value="Etudiants :" />
+					<p:selectOneMenu id="listE" value="#{equipeAction.selected}">
+						<f:selectItem itemLabel="------------Choisir------------" />
+						<f:selectItems value="#{equipeAction.etudiants}" var="e"
+							itemLabel="#{e.nom} #{e.prenom}" itemValue="#{e.id}" />
+					</p:selectOneMenu>
+
+					<p:commandButton value="Rechercher"
+						action="#{equipeAction.chercher}" update="dt"
+						icon="ui-icon-search" />
+				</h:panelGrid>
+
+			</h:form>
+
+			<p:dataTable id="dt" value="#{equipeAction.equipesCherche}" var="e"
+				emptyMessage="Aucun etudiant dans les equipes">
+				<p:column headerText="Equipes" width="100">
+					<p:outputLabel value="Equipe #{e.nom}" />
+				</p:column>
+
+				<p:column headerText="Membres d'equipes">
+					<ul>
+						<ui:repeat value="#{e.etudiants}" var="m">
+							<li><p:outputLabel value="#{m.nom} #{m.prenom}" /></li>
+						</ui:repeat>
+					</ul>
+				</p:column>
+
+			</p:dataTable>
+		</p:panel>
+	</ui:define>
+
+</ui:composition>
+</html>

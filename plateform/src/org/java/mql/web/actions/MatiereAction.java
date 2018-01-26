@@ -67,7 +67,7 @@ public class MatiereAction {
 	}
 
 	public List<Enseignant> listEnseignants(){
-		return business.listeEnseignats();
+		return business.listeEnseignants();
 	}
 
 }

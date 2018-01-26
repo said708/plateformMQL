@@ -12,7 +12,7 @@ import org.java.mql.models.Team;
 
 
 public interface Module2Business {
-	
+
 	//manage etudiant
 	Etudiant deleteEtudiant(Etudiant etudiant);//work
 	List<Etudiant> listEtudiants();//work
@@ -22,7 +22,7 @@ public interface Module2Business {
 	Etudiant selectEtudiantByName(String nom);//work
 	int updateEtudiant(Etudiant etudiant );//work
 	boolean isAnEtudiantExiste(Etudiant etudiant);//work
-	
+
 	//manage team
 	int addTeam(Team team);//work
 	Team deleteTeam(Team team);//work
@@ -36,8 +36,8 @@ public interface Module2Business {
 	int removeProjectFromTeam(Project project , Team team);//work
 	List<Etudiant> listEtudiantsInTeam(Team team);//work
 	boolean isAnTeamExiste(Team team);//work
-	
-	
+
+
 	//manage project
 	int addProject(Project project);//work
 	Project selectProjectById(long idProject);//work
@@ -45,7 +45,7 @@ public interface Module2Business {
 	int updateProject(Project project);//work
 	List<Project> listProjects();//work
 	boolean isAnProjectExiste(Project project);//work
-	
+
 	//manage liverable
 	int addLiverable(Liverable liverable); // Added by YcDev
 	int updateLiverable(Liverable liverable); // Added by YcDev
@@ -55,21 +55,25 @@ public interface Module2Business {
 	List<File> listFilesInLiverable(Liverable liverable);//work
 	boolean isAnFileExisteInLiverable(File file , Liverable liverable);//work
 	boolean  isAnLiverableExiste(Liverable liverable);//work
-	public Liverable selectLivrableById(long id) ;
-	public int addLivrable(Liverable livrable);
-	public int updateLivrable(Liverable livrable);
-	
-	
-	
-	public Matiere selectMatiereById(long id);
-	public List<Matiere> listeMatieres();
-	public int addMatiere(Matiere matiere);
+	Liverable selectLivrableById(long id) ;
+	int addLivrable(Liverable livrable);
+	int updateLivrable(Liverable livrable);
+
+
+
+	Matiere selectMatiereById(long id);
+	List<Matiere> listeMatieres();
+	int addMatiere(Matiere matiere);
 	boolean  isAnMatiereExiste(Matiere matiere);
-	
-	
-	
-	public Enseignant selectEnseignantById(long idEnseigant) ;
+	Matiere deleteMatiere(Matiere matiere);//work
+	int updateMatiere(Matiere matiere);
+
+
+
+	Enseignant selectEnseignantById(long idEnseigant) ;
 	boolean  isAnEnseignantExiste(Enseignant enseignant);
-	public List<Enseignant> listeEnseignats();
-	public int addEnseignant(Enseignant Enseignant);
+	List<Enseignant> listeEnseignants();
+	int addEnseignant(Enseignant Enseignant);
+	Enseignant deleteEnseignant(Enseignant enseignant);//work
+	int updateEnseignant(Enseignant enseignant);
 }

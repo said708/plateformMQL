@@ -11,7 +11,7 @@
 
 <h:body>
 	
-	<p:panel header="Nouveau project">
+	<p:panel id="newPanel" header="Nouveau project">
 		<h:form>
 		<p:growl id="msgs" showDetail="true" />
 			<h:panelGrid columns="2">
@@ -32,7 +32,7 @@
 			
 			<p:commandButton value="Save" update="msgs"
 				actionListener="#{projectAction.newProject()}" icon="ui-icon-check" />
-			<p:commandButton value="Annuler" />
+			<p:commandButton value="Annuler" onclick="PF('newPanel').hide();"/>
 			
 		</h:form>
 	</p:panel>
