@@ -75,7 +75,7 @@ public class ProjectAction {
 			}
 
 		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project already exist |");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project not exists !");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 
 	}
@@ -100,7 +100,7 @@ public class ProjectAction {
 			}
 
 		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project not  exist |");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project not  exist !");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 

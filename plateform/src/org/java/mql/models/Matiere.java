@@ -7,7 +7,7 @@ public class Matiere  {
 	private String name;
 	private Enseignant enseignant;
 	private List<Project> projects;
-	private List<Team> teams;
+	private List<Team> teams;	
 	
 	public Matiere() {
 	}
