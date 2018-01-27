@@ -72,12 +72,15 @@
 					<p:column headerText="Equipe" sortBy="#{e.team.name}">
 						<p:cellEditor>
 							<f:facet name="output">
-								<h:outputText value="#{e.team}" rendered="#{not empty e.team}"/>
-								<h:outputText value="pas encore affecter" rendered="#{empty e.team}"/>
+								<h:outputText value="#{e.team}" rendered="#{not empty e.team}" />
+								<h:outputText value="pas encore affecter"
+									rendered="#{empty e.team}" />
 							</f:facet>
 							<f:facet name="input">
-								<p:selectOneMenu value="#{e.team}" style="width:100%"
-									converter="#{teamConverter}">
+								<p:selectOneMenu id="team" value="#{e.team}"
+									converter="#{teamConverter}" panelStyle="width:180px"
+									effect="fade" style="width:160px" filter="true"
+									filterMatchMode="startsWith">
 									<f:selectItems value="#{etudiantAction.listTeams()}" var="team"
 										itemLabel="#{team}" itemValue="#{team}" />
 								</p:selectOneMenu>
@@ -126,14 +129,16 @@
 				<p:outputLabel for="email" value="Email : " />
 				<p:inputText id="email" value="#{etudiant.email}"></p:inputText>
 				<p:outputLabel for="team" value="Equipe : " />
-				<p:selectOneMenu id="team" value="#{etudiant.team}" 
-					converter="#{teamConverter}">
+				<p:selectOneMenu id="team" value="#{etudiant.team}"
+					converter="#{teamConverter}" panelStyle="width:180px" effect="fade"
+					style="width:160px" filter="true" filterMatchMode="startsWith">
 					<f:selectItems value="#{etudiantAction.listTeams()}" var="team"
 						itemLabel="#{team}" itemValue="#{team}" />
 				</p:selectOneMenu>
 			</h:panelGrid>
-			<p:commandButton value="Save" update="msgs" onclick="PF('dlg2').hide();"
-				actionListener="#{etudiantAction.add}" icon="ui-icon-check" />
+			<p:commandButton value="Save" update="msgs"
+				onclick="PF('dlg2').hide();"
+				actionListener="#{etudiantAction.add()}" icon="ui-icon-check" />
 			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 				icon="fa fa-times-circle" />
 		</h:form>

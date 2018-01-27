@@ -67,7 +67,7 @@
 			</h:panelGrid>
 			<p:separator />
 			<p:commandButton value="Save" update="msgs"
-				action="#{teamAction.addTeam}" icon="ui-icon-check"
+				actionListener="#{teamAction.addTeam()}" icon="ui-icon-check"
 				onclick="PF('dlg2').hide();" />
 			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 				icon="fa fa-times-circle" />
@@ -80,70 +80,48 @@
 				layout="grid" rows="6" paginator="true" id="teams"
 				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 				rowsPerPageTemplate="3,6,9,12,16">
-
 				<f:facet name="header">
 					List des equipes
 				</f:facet>
+				<p:panel id="teamDetail" header="#{t.name}"
+					style="text-align:center">
+					<p:dataTable var="e" selectionMode="single" reflow="true"
+							selection="#{etudiantAction.etudiant}" rowKey="#{etudiant.id}"
+							 rows="10"
+						value="#{teamAction.listEtudiantsInTeam(t)}">
+						
+						<p:column headerText="Nom" sortBy="#{e.nom}">
+							<h:outputText value="#{e.nom}"></h:outputText>
+						</p:column>
+						<p:column headerText="Prenom" sortBy="#{e.prenom}">
+							<h:outputText value="#{e.prenom}"></h:outputText>
+						</p:column>
+						
+						<f:facet name="footer">
+							<h:form>
+								<p:panelGrid columns="2" >
+									<p:selectOneMenu id="etudiant"
+										value="#{etudiantAction.etudiant}"
+										converter="#{etudiantConverter}" style="width:100%"
+										effect="fade"  filter="true"
+										filterMatchMode="startsWith">
+										<f:selectItems value="#{teamAction.etudiantsNotAffected}"
+											var="e" itemLabel="#{e}" itemValue="#{e}" />
+									</p:selectOneMenu>
 
-				<p:panel header="#{t.name}" style="text-align:center">
-					<h:panelGrid columns="1" style="width:100%" cellpadding="6">
+									<p:commandButton value="ajouter etudiant" icon="fa fa-plus"
+										styleClass="AquaButton" 
+										actionListener="#{etudiantAction.update(t)}">
+									</p:commandButton>
 
-						<h:outputText value="#{t.teamLeader}"
-							rendered="#{not empty t.teamLeader}" />
-						<h:outputText value="Team leader not exists"
-							rendered="#{empty t.teamLeader}" />
+								</p:panelGrid>
+							</h:form>
+						</f:facet>
 
-						<p:commandButton icon="ui-icon-search" styleClass="AquaButton"
-							update=":teamDetail" oncomplete="PF('teamDialog2').show()">
-							<f:setPropertyActionListener value="#{t}"
-								target="#{teamAction.team}" />
-						</p:commandButton>
-
-					</h:panelGrid>
+					</p:dataTable>
 				</p:panel>
 
 			</p:dataGrid>
-
-
-
-			<p:dialog header="les informations sur l'equipe"
-				widgetVar="teamDialog2" responsive="true" modal="true"
-				showEffect="blind" hideEffect="explode" resizable="false" width="50%">
-				<p:outputPanel id="teamDetail" style="text-align:center;">
-					<p:dataTable columnClasses="label,value"
-						value="#{teamAction.etudiants}" var="etudiant" rows="5"
-						paginator="true" reflow="true">
-						<f:facet name="header">
-							<h2>#{teamAction.team.name}</h2>
-						</f:facet>
-						<p:column headerText="Nom">
-							<h:outputText value="#{etudiant.nom}" />
-						</p:column>
-						<p:column headerText="Prenom">
-							<h:outputText value="#{etudiant.prenom}" />
-						</p:column>
-						<p:column headerText="Phone">
-							<h:outputText value="#{etudiant.phone}" />
-						</p:column>
-						<p:column headerText="Email">
-							<h:outputText value="#{etudiant.email}" />
-						</p:column>
-					</p:dataTable>
-				</p:outputPanel>
-				<p:toolbar>
-					<f:facet name="left">
-						<p:commandButton type="button" value="ajouter etudiant" icon="fa fa-plus" />
-						<p:commandButton type="button" value="Open"
-							icon="fa fa-folder-open" />
-						<span class="ui-separator" style="padding-right: 5px;"> <span
-							class="fa fa-ellipsis-v SoftGray" />
-						</span>
-						<p:commandButton type="button" title="Save" icon="fa fa-save" />
-						<p:commandButton type="button" title="Delete" icon="fa fa-trash" />
-						<p:commandButton type="button" title="Print" icon="fa fa-print" />
-					</f:facet>
-				</p:toolbar>
-			</p:dialog>
 		</div>
 	</div>
 	<p:toolbar>

@@ -1,6 +1,5 @@
 package org.java.mql.dao.imp;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.java.mql.dao.TeamDao;
@@ -31,9 +30,7 @@ public class HDefaultTeamDao  extends DaoMediatorService  implements TeamDao {
 
 	@Override
 	public List<Team> selectAllTeam() {
-		List<Team> list=new ArrayList<Team>();  
-	    list=template.loadAll(Team.class);  
-	    return list;  
+	    return template.loadAll(Team.class);  
 	}
 
 	@Override

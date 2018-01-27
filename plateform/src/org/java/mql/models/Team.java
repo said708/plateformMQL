@@ -35,15 +35,19 @@ public class Team {
 		this.name = name;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if ((o == null) || (o.getClass() != Team.class)) {
+			return false;
+		}
+		Team other = (Team) o;
+		return (other.id == this.id) ;
+	}
 
-
-
-
-
-
-
-
-
+	@Override
+	public int hashCode() {
+		return (int) (id * 31 + 990876);
+	}
 
 
 

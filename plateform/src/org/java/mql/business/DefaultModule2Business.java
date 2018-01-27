@@ -42,8 +42,7 @@ public class DefaultModule2Business implements Module2Business{
 		try {
 			if(team != null && !isAnTeamExiste(team)) {
 				log.info("team with id="+team.getId()+" added  with success");
-				daoMediator.addTeam(team);
-				return 1;
+				return daoMediator.addTeam(team);
 			}
 			else
 				throw new Exception("team is null or duplicated");
@@ -51,7 +50,6 @@ public class DefaultModule2Business implements Module2Business{
 			log.fatal("error must be resolved in addTeam service : "+ e.getMessage());
 			return -1;
 		}
-
 	}
 
 

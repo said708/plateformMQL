@@ -38,6 +38,7 @@ public class EtudiantAction {
 	//services of Etudiant
 	public void add() {
 		FacesMessage msg; 
+		System.out.println(etudiant.getTeam());
 		if(!business.isAnEtudiantExiste(etudiant)){
 			int status =  business.addEtudiant(etudiant) ;
 			if(status == 1) {
@@ -74,7 +75,21 @@ public class EtudiantAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
 
+	public void update(Team team) {
+		FacesMessage msg; 
+		if(business.isAnEtudiantExiste(etudiant)){
+			etudiant.setTeam(team);
+			int status = business.updateEtudiant(etudiant) ;
+			if(status == 1) {
+				msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", etudiant.getNom() + " Updated with success");
+			}else {
+				msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
+			}
 
+		}else  
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project already exist |");   
+		FacesContext.getCurrentInstance().addMessage(null, msg); 
+	}
 
 
 	public void delete(Etudiant e) {
@@ -99,7 +114,7 @@ public class EtudiantAction {
 		return students;
 	}
 
-
+	
 
 	public Etudiant getEtudiant() {
 		return etudiant;

@@ -1,7 +1,6 @@
 package org.java.mql.web.actions;
 
 import java.util.List;
-import java.util.Vector;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -28,21 +27,30 @@ public class TeamAction {
 	private Team team;
 
 	private List<Team> teams;
-	private List<Etudiant> etudiants;
+	private List<Etudiant> etudiantsNotAffected;
 
 
 	@PostConstruct
 	public void init() {
 		teams = business.listTeams();
-		etudiants = new Vector<>();
+		etudiantsNotAffected = business.listEtudiantsPasEncoreAffecter();
 	}
 
 
-
+	public List<Etudiant> listEtudiantsInTeam(Team team){
+		return business.listEtudiantsInTeam(team);
+	}
+	
+	
+	
+	public Etudiant teamLeader(Team team) {
+		return business.teamLeader(team);
+	}
 
 	public void addTeam() {
 		FacesMessage msg; 
 		int status = business.addTeam(team);
+		System.out.println(team.getId() + " - "+team.getName()+" - "+team.getMatiere());
 		if(status == 1) {
 			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", team.getName() + " added with success");   
 		}else  
@@ -50,7 +58,7 @@ public class TeamAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
-	
+
 	public void onRowEdit(RowEditEvent event) {
 		Team t = (Team)event.getObject();
 		FacesMessage msg; 
@@ -86,37 +94,37 @@ public class TeamAction {
 			}else {
 				msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
 			}
-
 		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Team not  exist |");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Team not  exist !");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
-	
+
+
 
 	public void setTeam(Team team) {
+		System.out.println(team);
 		this.team = team;
 	}
 
-	
+
 	public Team getTeam() {
 		System.out.println(team);
 		return team;
 	}
 
-	
+
 	public List<Team> getTeams() {
 		return teams;
 	}
-	
-	
-	
+
+
+
 	public List<Matiere> listMatieres(){
 		return business.listeMatieres();
 	}
-	
-	
-	public List<Etudiant> getEtudiants() {
-		return etudiants;
+
+	public List<Etudiant> getEtudiantsNotAffected() {
+		return etudiantsNotAffected;
 	}
 
 
