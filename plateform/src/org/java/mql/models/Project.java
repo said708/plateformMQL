@@ -1,7 +1,7 @@
 package org.java.mql.models;
 
 public class Project {
-	
+
 	private long id;
 	private String name;
 	private String description;
@@ -9,33 +9,14 @@ public class Project {
 	private String deadLine;
 	private Matiere matiere;
 	private Liverable liverable;
-	private Team team;
 
-	
-	
+
+
 
 	public Project() {
 	}
 
-	public Project(long id, String name, String desc, String datePublication, String deadLine) {
-		matiere = new Matiere();
-		liverable = new Liverable();
-		team = new Team();
-		this.id = id;
-		this.name = name;
-		this.description = desc;
-		this.datePublication = datePublication;
-		this.deadLine = deadLine;
-	}
-
-	public Team getTeam() {
-		return team;
-	}
-
-	public void setTeam(Team team) {
-		this.team = team;
-	}
-
+	
 	public Liverable getLiverable() {
 		return liverable;
 	}
@@ -64,7 +45,7 @@ public class Project {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public String getDescription() {
 		return description;
 	}
@@ -101,11 +82,9 @@ public class Project {
 
 	@Override
 	public String toString() {
-		return "Project [id=" + id + ", name=" + name + ", description=" + description + ", datePublication="
-				+ datePublication + ", deadLine=" + deadLine + ", matiere=" + matiere + ", liverable=" + liverable
-				+ ", team=" + team + "]";
+		return name ;
 	}
-	
-	
-	
+
+
+
 }

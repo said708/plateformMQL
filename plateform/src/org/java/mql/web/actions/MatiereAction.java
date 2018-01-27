@@ -47,7 +47,6 @@ public class MatiereAction {
 		}else  
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
-		System.out.println(matiere.getEnseignant());
 	}
 
 	
@@ -88,7 +87,7 @@ public class MatiereAction {
 			}
 
 		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project not  exist |");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Team not  exist |");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 	

@@ -6,51 +6,51 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="select" key="selection"/>
+		<item value="Team" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="select"/>
-			<item value="projet"/>
-			<item value=";//work"/>
-			<item value="theme"/>
-			<item value="AbstractFile"/>
-			<item value="autoU"/>
-			<item value="org.springframework.web.context.request.RequestContextListener"/>
-			<item value="//work"/>
-			<item value=";"/>
-			<item value="Ensignant"/>
+			<item value="matiere"/>
+			<item value="{m."/>
+			<item value="add("/>
+			<item value="add"/>
 			<item value="Enseignant"/>
-			<item value=".hibernate"/>
-			<item value="p2"/>
-			<item value="p1"/>
-			<item value="org.java.mql.models"/>
+			<item value="enseignantAction"/>
+			<item value="enseignants"/>
+			<item value="{e."/>
+			<item value="e."/>
+			<item value="enseignant"/>
+			<item value="listM"/>
+			<item value="update"/>
+			<item value="dele"/>
+			<item value="delete"/>
+			<item value="public"/>
 		</list>
 		<list key="replacehistory">
-			<item value="project"/>
-			<item value="{}"/>
-			<item value=""/>
-			<item value="item"/>
-			<item value="File"/>
-			<item value="Enseignant"/>
-			<item value="imp"/>
-			<item value="org.java.mql.models"/>
-			<item value=" throws PlateformException;"/>
-			<item value="throw new PlateformException"/>
-			<item value="pointcut-ref"/>
-			<item value="${org.mql."/>
-			<item value="Default"/>
-			<item value="expected"/>
 			<item value="Team"/>
+			<item value="{t."/>
+			<item value="team"/>
+			<item value="Etudiant"/>
+			<item value="EtudiantAction"/>
+			<item value="students"/>
+			<item value="{m."/>
+			<item value="m."/>
+			<item value="matiere"/>
+			<item value="matiereAction"/>
+			<item value=""/>
+			<item value="e."/>
+			<item value="enseignantAction"/>
+			<item value="pr."/>
+			<item value="facesServlet"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="687" key="DIALOG_X_ORIGIN"/>
-		<item value="156" key="DIALOG_Y_ORIGIN"/>
+		<item value="1056" key="DIALOG_X_ORIGIN"/>
+		<item value="255" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

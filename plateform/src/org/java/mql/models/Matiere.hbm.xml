@@ -10,7 +10,7 @@
          This class contains the matiere detail. 
       </meta>
       <!-- private long id; -->
-      <id name = "id" type = "long" column = "ID">
+      <id name = "id" type = "long" column = "MATIERE_ID">
          <generator class="native"/>
       </id>
       
@@ -20,16 +20,7 @@
       
        <!-- private Ensignant ensignant; -->
       <many-to-one name="enseignant" column="ENSEIGNANT" class="org.java.mql.models.Enseignant" />
-      
-      
-      <!-- private List<Project> projects; -->
-      <list name = "projects" cascade="all">
-         <key column = "ID_PROJECT"/>
-         <list-index column="PROJECT_INDEX" />
-         <one-to-many  class="org.java.mql.models.Project" />
-      </list>
-      
-      
+
       <!-- private List<Team> teams; -->
       <list name = "teams" cascade="all">
          <key column = "ID_TEAM"/>

@@ -1,7 +1,6 @@
 package org.java.mql.models;
 
 import java.util.List;
-import java.util.Vector;
 
 
 
@@ -10,33 +9,14 @@ public class Team {
 
 	private long id;
 	private String name;
-	private List<Etudiant> etudiants;
 	private List<Project> projects;
-	private Matiere matiere;
+	private List<Etudiant> etudiants;
+	private Etudiant teamLeader;
 
 	public Team() {
 	}
 
-	public Team(String name) {
-		
-		this.name = name;
-		projects = new Vector<Project>();
-		etudiants = new Vector<Etudiant>();
-	    matiere = new Matiere();
 
-		
-	}
-	
-	public Team(long id,String name) {
-		
-		this.id=id;
-		this.name = name;
-		projects = new Vector<Project>();
-		etudiants = new Vector<Etudiant>();
-	    matiere = new Matiere();
-
-		
-	}
 
 	public long getId() {
 		return id;
@@ -54,27 +34,27 @@ public class Team {
 		this.name = name;
 	}
 
-	public Matiere getMatiere() {
-	return matiere;
-	}
-	public void setMatiere(Matiere matiere) {
-	this.matiere = matiere;
-	}
+
 
 	public List<Etudiant> getEtudiants() {
-	return etudiants;
+		return etudiants;
 	}
-
-
-
+	
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
 	}
 
 
-
 	public List<Project> getProjects() {
 		return projects;
+	}
+
+	public Etudiant getTeamLeader() {
+		return teamLeader;
+	}
+
+	public void setTeamLeader(Etudiant teamLeader) {
+		this.teamLeader = teamLeader;
 	}
 
 
@@ -85,7 +65,7 @@ public class Team {
 
 	@Override
 	public String toString() {
-		return "Team [id=" + id + ", name=" + name +  "]";
+		return name;
 	}
 
 

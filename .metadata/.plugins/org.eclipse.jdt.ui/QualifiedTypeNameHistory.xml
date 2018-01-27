@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.hibernate.annotations.Table"/>
-<fullyQualifiedTypeName name="javax.persistence.Table"/>
-<fullyQualifiedTypeName name="org.java.mql.models.p01.Etudiant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.Project"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.Liverable"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.AbstractFile"/>
@@ -38,26 +35,29 @@
 <fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedProperty"/>
 <fullyQualifiedTypeName name="javax.faces.convert.Converter"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
 <fullyQualifiedTypeName name="org.java.mql.business.Module2Business"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
-<fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="org.springframework.web.context.annotation.RequestScope"/>
 <fullyQualifiedTypeName name="org.java.mql.models.File"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
 <fullyQualifiedTypeName name="org.java.mql.dao.TeamDao"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Team"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Liverable"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.java.mql.web.utils.HelpConvertor"/>
+<fullyQualifiedTypeName name="javax.faces.view.ViewScoped"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Project"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
+<fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Team"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Contact"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
 </qualifiedTypeNameHistroy>

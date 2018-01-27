@@ -6,21 +6,25 @@
 <hibernate-mapping>
 	<class name="org.java.mql.models.Team" table="TEAM">
 
-		<id name="id" type="long" column="ID">
+		<id name="id" type="long" column="TEAM_ID">
 			<generator class="native" />
 		</id>
 
 		<property name="name" column="NAME" type="string" />
 
-		<bag name="etudiants" cascade="all">
-			<key column="ID_ETUDIANT" />
+
+		<list name="etudiants" cascade="all">
+			<key column="ETUDIANT_ID" />
+			<list-index column="ETUDIANTS_INDEX" />
 			<one-to-many class="org.java.mql.models.Etudiant" />
-		</bag>
-		<bag name="projects" cascade="all">
-			<key column="ID_PROJECT" />
+		</list>
+		
+		<list name="projects" cascade="all">
+			<key column="PROJECT_ID" />
+			<list-index column="PROJECTS_INDEX" />
 			<one-to-many class="org.java.mql.models.Project" />
-		</bag>
-		<many-to-one name="matiere" column="MATIERE"
-			class="org.java.mql.models.Matiere" />
+		</list>
+		
+		<one-to-one name="teamLeader" class="org.java.mql.models.TeamLeader" />
 	</class>
 </hibernate-mapping>

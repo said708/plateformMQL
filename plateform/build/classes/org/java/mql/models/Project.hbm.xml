@@ -10,7 +10,7 @@
 			This class contains the project detail.
 		</meta>
 		<!-- private long id; -->
-		<id name="id" type="long" column="ID">
+		<id name="id" type="long" column="PROJECT_ID">
 			<generator class="native" />
 		</id>
 
@@ -31,10 +31,8 @@
 		<many-to-one   name="matiere" column="MATIERE" class="org.java.mql.models.Matiere" />
 		
 		<!-- private Liverable liverable; -->
-		<many-to-one  name="liverable" column="LIVERABLE" class="org.java.mql.models.Liverable" />
+		<many-to-one  name="liverable"  class="org.java.mql.models.Liverable" not-found="ignore" insert="false" update="false" column="id" unique="true"/>
 		
-		<!-- private Team team; -->
-		<many-to-one   name="team" column="TEAM" class="org.java.mql.models.Team" />
 
 	</class>
 </hibernate-mapping>

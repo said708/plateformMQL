@@ -7,7 +7,7 @@ public class File{
 	private String path;
 	private String uploadDate;
 	private long size;
-	private Liverable liverable;
+	private Type type;
 
 
 	public File() {
@@ -86,19 +86,6 @@ public class File{
 
 
 
-	public Liverable getLiverable() {
-		return liverable;
-	}
-
-
-
-
-	public void setLiverable(Liverable liverable) {
-		this.liverable = liverable;
-	}
-
-	
-
 	@Override
 	public boolean equals(Object o) {
 		if ((o == null) || (o.getClass() != File.class)) {
@@ -112,5 +99,13 @@ public class File{
 	@Override
 	public int hashCode() {
 		return (int) (id * 31 + 990876);
+	}
+	
+	public Type getType() {
+		return type;
+	}
+	
+	public void setType(Type type) {
+		this.type = type;
 	}
 }

@@ -2,18 +2,19 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="org.java.mql.models.Etudiant" table="ETUDIANT">
-
-		<id name="id" type="long" column="ID">
+	<class name="org.java.mql.models.Etudiant" table="ETUDIANT"
+		discriminator-value="STUDENT">
+		<id name="id" type="long" column="ETUDIANT_ID">
 			<generator class="native" />
 		</id>
-		
-		
-		
+		<discriminator column="LEADER" type="string" />
 		<property name="nom" column="NOM" type="string" />
 		<property name="prenom" column="PRENOM" type="string" />
 		<property name="email" column="EMAIL" type="string" />
 		<property name="phone" column="PHONE" type="string" />
-		<many-to-one name="team" column="TEAM" class="org.java.mql.models.Team" />
+		<subclass name="org.java.mql.models.TeamLeader"
+			discriminator-value="LEADER">
+			<one-to-one name="team" class="org.java.mql.models.Team"></one-to-one>
+		</subclass>
 	</class>
 </hibernate-mapping>

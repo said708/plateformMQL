@@ -8,16 +8,12 @@
 		<meta attribute="class-description">
 			This class contains the Enseignant detail.
 		</meta>
-		<id name="id" type="long" column="ID">
+		<id name="id" type="long" column="ENSEIGNANT_ID">
 			<generator class="native" />
 		</id>
 		<property name="nom" column="NOM" type="string" />
 		<property name="prenom" column="PRENOM" type="string" />
+		<property name="email" column="EMAIL" type="string" />
 		<property name="phone" column="PHONE" type="string" />
-		<list name="matieres" cascade="all">
-			<key column="ID" />
-			<list-index column="MATIER_INDEX" />
-			<one-to-many class="org.java.mql.models.Matiere" />
-		</list>
 	</class>
 </hibernate-mapping>

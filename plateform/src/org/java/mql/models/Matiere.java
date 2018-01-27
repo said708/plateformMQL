@@ -6,7 +6,6 @@ public class Matiere  {
 	private long id;
 	private String name;
 	private Enseignant enseignant;
-	private List<Project> projects;
 	private List<Team> teams;	
 	
 	public Matiere() {
@@ -27,13 +26,6 @@ public class Matiere  {
 		this.teams = teams;
 	}
 
-	public List<Project> getProjects() {
-		return projects;
-	}
-
-	public void setProjects(List<Project> projects) {
-		this.projects = projects;
-	}
 
 	public long getId() {
 		return id;

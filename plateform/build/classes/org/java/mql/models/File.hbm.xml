@@ -12,7 +12,7 @@
 		</meta>
 
 		<!-- private long id; -->
-		<id name="id" type="long" column="ID">
+		<id name="id" type="long" column="FILE_ID">
 			<generator class="native" />
 		</id>
 
@@ -21,18 +21,18 @@
 
 		<!-- private String path; -->
 		<property name="path" column="PATH" type="string" />
-		
+
 		<!-- private String size; -->
 		<property name="size" column="SIZE" type="string" />
-		
+
 		<!-- private String uploadDate; -->
 		<property name="uploadDate" column="UPLOAD_DATE" type="string" />
-
-		<!-- private Liverable liverable; -->
-		<many-to-one name="liverable" class="org.java.mql.models.Liverable"
-			column="LIVERABLE" />
-
-		<!-- <subclass name="org.java.mql.models.File" discriminator-value="F" 
-			/> -->
+		
+		<property name="type" column="TYPE">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">org.java.mql.models.Type</param>
+				<param name="useNamed">true</param>
+			</type>
+		</property>
 	</class>
 </hibernate-mapping>

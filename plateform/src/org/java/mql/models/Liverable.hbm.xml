@@ -10,21 +10,18 @@
 			This class contains the liverable detail.
 		</meta>
 		<!-- private long id; -->
-		<id name="id" type="long" column="ID">
+		<id name="id" type="long" column="LIVERABLE_ID">
 			<generator class="native" />
 		</id>
 		<!-- private String name; -->
 		<property name="name" column="NAME" type="string" />
 		
-		<!-- private List<AbstractFile> files; -->
+		<!-- private List<File> files; -->
 		<list name="files" cascade="all">
-			<key column="ID" />
+			<key column="FILE_ID" />
 			<list-index column="FILES_INDEX" />
 			<one-to-many class="org.java.mql.models.File" />
 		</list>
-		
-		<!-- private Project project; -->
-		<many-to-one name="project" column="PROJECT" class="org.java.mql.models.Project" />
-
+		<one-to-one   name="project"  class="org.java.mql.models.Project" constrained="true"/>
 	</class>
 </hibernate-mapping>
