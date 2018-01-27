@@ -8,7 +8,6 @@ import javax.faces.context.FacesContext;
 
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Enseignant;
-import org.java.mql.models.Project;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

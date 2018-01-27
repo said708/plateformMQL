@@ -15,14 +15,14 @@
 			<p:growl id="msgs" showDetail="true" />
 			<div class="card card-w-title">
 				<p:dataTable id="students" var="e"
-					value="#{EtudiantAction.students}" editable="true"
+					value="#{etudiantAction.students}" editable="true"
 					style="margin-bottom:20px" paginator="true" rows="10" reflow="true">
 					<h:inputHidden value="#{e.id}" />
 					<f:facet name="header">List des etudiants</f:facet>
-					<p:ajax event="rowEdit" listener="#{EtudiantAction.onRowEdit}"
+					<p:ajax event="rowEdit" listener="#{etudiantAction.onRowEdit}"
 						update=":form:msgs" />
 					<p:ajax event="rowEditCancel"
-						listener="#{EtudiantAction.onRowCancel}" update=":form:msgs" />
+						listener="#{etudiantAction.onRowCancel}" update=":form:msgs" />
 
 					<p:column headerText="Nom" sortBy="#{e.nom}">
 						<p:cellEditor>
@@ -72,12 +72,13 @@
 					<p:column headerText="Equipe" sortBy="#{e.team.name}">
 						<p:cellEditor>
 							<f:facet name="output">
-								<h:outputText value="#{e.team}" />
+								<h:outputText value="#{e.team}" rendered="#{not empty e.team}"/>
+								<h:outputText value="pas encore affecter" rendered="#{empty e.team}"/>
 							</f:facet>
 							<f:facet name="input">
 								<p:selectOneMenu value="#{e.team}" style="width:100%"
 									converter="#{teamConverter}">
-									<f:selectItems value="#{EtudiantAction.listTeams()}" var="team"
+									<f:selectItems value="#{etudiantAction.listTeams()}" var="team"
 										itemLabel="#{team}" itemValue="#{team}" />
 								</p:selectOneMenu>
 							</f:facet>
@@ -90,7 +91,7 @@
 					</p:column>
 					<p:column style="width:30px">
 						<p:commandButton icon="fa fa-fw fa-trash"
-							actionListener="#{EtudiantAction.delete(e)}" update="@form"
+							actionListener="#{etudiantAction.delete(e)}" update="@form"
 							ajax="true">
 							<p:confirm header="Confirmation" message="Are you sure?"
 								icon="ui-icon-alert" />
@@ -131,7 +132,7 @@
 						itemLabel="#{team}" itemValue="#{team}" />
 				</p:selectOneMenu>
 			</h:panelGrid>
-			<p:commandButton value="Save" update="msgs"
+			<p:commandButton value="Save" update="msgs" onclick="PF('dlg2').hide();"
 				actionListener="#{etudiantAction.add}" icon="ui-icon-check" />
 			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 				icon="fa fa-times-circle" />

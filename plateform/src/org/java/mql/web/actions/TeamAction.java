@@ -1,12 +1,14 @@
 package org.java.mql.web.actions;
 
 import java.util.List;
+import java.util.Vector;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
 import org.java.mql.business.Module2Business;
+import org.java.mql.models.Etudiant;
 import org.java.mql.models.Matiere;
 import org.java.mql.models.Team;
 import org.primefaces.event.RowEditEvent;
@@ -26,13 +28,13 @@ public class TeamAction {
 	private Team team;
 
 	private List<Team> teams;
-
+	private List<Etudiant> etudiants;
 
 
 	@PostConstruct
 	public void init() {
 		teams = business.listTeams();
-
+		etudiants = new Vector<>();
 	}
 
 
@@ -97,6 +99,7 @@ public class TeamAction {
 
 	
 	public Team getTeam() {
+		System.out.println(team);
 		return team;
 	}
 
@@ -109,6 +112,11 @@ public class TeamAction {
 	
 	public List<Matiere> listMatieres(){
 		return business.listeMatieres();
+	}
+	
+	
+	public List<Etudiant> getEtudiants() {
+		return etudiants;
 	}
 
 

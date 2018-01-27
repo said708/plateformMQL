@@ -741,6 +741,25 @@ public class DefaultModule2Business implements Module2Business{
 			return -1;
 		}
 	}
+	
+	@Override
+	public List<Etudiant> listEtudiantsPasEncoreAffecter() {
+		List<Etudiant> etudiants = new Vector<>();
+		for (Etudiant etudiant : listEtudiants()) {
+			if(etudiant.getTeam() == null)
+				etudiants.add(etudiant);
+		}
+		return etudiants;
+	}
+	
+	@Override
+	public Etudiant teamLeader(Team team) {
+		for (Etudiant etudiant : listEtudiantsInTeam(team)) {
+			if(etudiant.isTeamLeader())
+				return etudiant;
+		}
+		return null;
+	}
 
 
 

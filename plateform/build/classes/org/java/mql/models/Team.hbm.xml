@@ -12,7 +12,6 @@
 
 		<property name="name" column="NAME" type="string" />
 		
-		<one-to-one name="teamLeader" class="org.java.mql.models.Etudiant" />
 		<many-to-one name="matiere" class="org.java.mql.models.Matiere" column="MATIERE" />
 	</class>
 </hibernate-mapping>

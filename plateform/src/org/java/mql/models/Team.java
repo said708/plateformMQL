@@ -4,7 +4,6 @@ public class Team {
 
 	private long id;
 	private String name;
-	private Etudiant teamLeader;
 	private Matiere matiere;
 
 	public Team() {
@@ -43,13 +42,6 @@ public class Team {
 
 
 
-	public Etudiant getTeamLeader() {
-		return teamLeader;
-	}
-
-	public void setTeamLeader(Etudiant teamLeader) {
-		this.teamLeader = teamLeader;
-	}
 
 
 

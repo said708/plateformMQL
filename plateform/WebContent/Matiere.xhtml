@@ -80,12 +80,10 @@
 		</f:facet>
 	</p:panel>
 	<p:dialog header="Nouveau matiere" widgetVar="dlg2" modal="true"
-		showEffect="explode" hideEffect="bounce">
+		showEffect="explode" hideEffect="bounce" width="50%">
 		<h:form>
 			<p:growl id="msgs" showDetail="true" />
-			<p:panel header="Provide Matiere Details"
-				style="margin-bottom:10px;">
-				<h:panelGrid columns="2" cellpadding="5">
+				<h:panelGrid columns="2" cellpadding="5" width="100%">
 					<p:outputLabel for="name" value="Name : " />
 					<p:inputText id="name" value="#{matiere.name}"></p:inputText>
 
@@ -105,9 +103,10 @@
 					</p:selectOneMenu>
 				</h:panelGrid>
 				<p:separator />
-				<p:commandButton value="Save" update="msgs"
+				<p:commandButton value="Save" update="msgs" onclick="PF('dlg2').hide();"
 					actionListener="#{matiereAction.addMatiere}" icon="ui-icon-check" />
-			</p:panel>
+				<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+					icon="fa fa-times-circle" />
 		</h:form>
 	</p:dialog>
 </h:body>

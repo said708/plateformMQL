@@ -22,6 +22,7 @@ public interface Module2Business {
 	Etudiant searchEtudiant(String keyword);//work
 	int updateEtudiant(Etudiant etudiant );//work
 	boolean isAnEtudiantExiste(Etudiant etudiant);//work
+	List<Etudiant> listEtudiantsPasEncoreAffecter();
 
 	//manage team
 	int addTeam(Team team);//work
@@ -36,6 +37,7 @@ public interface Module2Business {
 	int removeProjectFromTeam(Project project , Team team);//work
 	List<Etudiant> listEtudiantsInTeam(Team team);//work
 	boolean isAnTeamExiste(Team team);//work
+	Etudiant teamLeader(Team team);
 
 
 	//manage project

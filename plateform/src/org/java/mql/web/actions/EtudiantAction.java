@@ -8,7 +8,6 @@ import javax.faces.context.FacesContext;
 
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Etudiant;
-import org.java.mql.models.Project;
 import org.java.mql.models.Team;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,33 +25,32 @@ public class EtudiantAction {
 	@Autowired
 	private Etudiant etudiant;
 
-	
-	
-private List<Etudiant> students;
 
-	
+
+	private List<Etudiant> students;
+
+
 	@PostConstruct
 	public void init() {
 		students = business.listEtudiants();
 	}
-	
+
 	//services of Etudiant
 	public void add() {
-		System.out.println(etudiant);
 		FacesMessage msg; 
 		if(!business.isAnEtudiantExiste(etudiant)){
-			 int status =  business.addEtudiant(etudiant) ;
-			 if(status == 1) {
-				 msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", etudiant.getNom() + " added with success");
-			 }else {
-				 msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
-			 }
-			   
+			int status =  business.addEtudiant(etudiant) ;
+			if(status == 1) {
+				msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", etudiant.getNom() + " added with success");
+			}else {
+				msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
+			}
+
 		}else  
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Etudiant already exist |");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
-	
+
 	public void onRowEdit(RowEditEvent event) {
 		Etudiant e = (Etudiant)event.getObject();
 		FacesMessage msg; 
@@ -72,7 +70,7 @@ private List<Etudiant> students;
 	}
 
 	public void onRowCancel(RowEditEvent event) {
-		FacesMessage msg = new FacesMessage("Edit Cancelled", ((Project) event.getObject()).getName());
+		FacesMessage msg = new FacesMessage("Edit Cancelled", ((Etudiant) event.getObject()).toString());
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
 
@@ -93,14 +91,14 @@ private List<Etudiant> students;
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project not  exist |");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
-	
-	
-	
-	
+
+
+
+
 	public List<Etudiant> getStudents() {
 		return students;
 	}
-	
+
 
 
 	public Etudiant getEtudiant() {
@@ -110,12 +108,12 @@ private List<Etudiant> students;
 	public void setEtudiant(Etudiant etudiant) {
 		this.etudiant = etudiant;
 	}
-	
+
 
 	public List<Team> listTeams(){
 		return business.listTeams();
 	}
 
-	
+
 
 }
