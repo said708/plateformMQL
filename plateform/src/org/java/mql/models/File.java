@@ -1,21 +1,28 @@
 package org.java.mql.models;
 
 public class File{
-	
+
 	private long id;
 	private String name;
 	private String path;
 	private String uploadDate;
 	private long size;
 	private Type type;
+	private Liverable liverable;
 
 
 	public File() {
 	}
 
-	
-	
-	
+
+	public Liverable getLiverable() {
+		return liverable;
+	}
+
+	public void setLiverable(Liverable liverable) {
+		this.liverable = liverable;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -100,11 +107,11 @@ public class File{
 	public int hashCode() {
 		return (int) (id * 31 + 990876);
 	}
-	
+
 	public Type getType() {
 		return type;
 	}
-	
+
 	public void setType(Type type) {
 		this.type = type;
 	}

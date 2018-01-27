@@ -17,22 +17,28 @@
 		<!--private String name; -->
 		<property name="name" column="NAME" type="string" />
 
-		<!-- private String desc;-->
+		<!-- private String description; -->
 		<property name="description" column="DESCRIPTION" type="string" />
 
-		<!-- private String datePublication;-->
+		<!-- private String datePublication; -->
 		<property name="datePublication" column="DATE_PUBLICATION"
 			type="string" />
 
-		<!-- private String deadLine;-->
+		<!-- private String deadLine; -->
 		<property name="deadLine" column="DEAD_LINE" type="string" />
-		
+
 		<!-- private Matiere matiere; -->
-		<many-to-one   name="matiere" column="MATIERE" class="org.java.mql.models.Matiere" />
-		
+		<many-to-one name="matiere" column="MATIERE"
+			class="org.java.mql.models.Matiere" />
+
 		<!-- private Liverable liverable; -->
-		<many-to-one  name="liverable"  class="org.java.mql.models.Liverable" not-found="ignore" insert="false" update="false" column="id" unique="true"/>
-		
+		<many-to-one name="liverable" class="org.java.mql.models.Liverable"
+			not-found="ignore" insert="false" update="false" column="id" unique="true" />
+
+
+		<!-- private Liverable team; -->
+		<many-to-one name="team" class="org.java.mql.models.Team"
+			column="TEAM"></many-to-one>
 
 	</class>
 </hibernate-mapping>

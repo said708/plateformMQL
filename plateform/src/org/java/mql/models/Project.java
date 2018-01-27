@@ -9,6 +9,7 @@ public class Project {
 	private String deadLine;
 	private Matiere matiere;
 	private Liverable liverable;
+	private Team team;
 
 
 
@@ -16,6 +17,14 @@ public class Project {
 	public Project() {
 	}
 
+	
+	public Team getTeam() {
+		return team;
+	}
+	
+	public void setTeam(Team team) {
+		this.team = team;
+	}
 	
 	public Liverable getLiverable() {
 		return liverable;

@@ -1,11 +1,8 @@
 package org.java.mql.models;
 
-import java.util.List;
-
 public class Liverable  {
 	private long id;
 	private String name;
-	private List<File> files;
 	private Project project;
 
 	
@@ -14,17 +11,6 @@ public class Liverable  {
 
 
 
-
-	public List<File> getFiles() {
-		return files;
-	}
-
-
-
-
-	public void setFiles(List<File> files) {
-		this.files = files;
-	}
 
 	public long getId() {
 		return id;

@@ -1,12 +1,9 @@
 package org.java.mql.models;
 
-import java.util.List;
-
 public class Matiere  {
 	private long id;
 	private String name;
 	private Enseignant enseignant;
-	private List<Team> teams;	
 	
 	public Matiere() {
 	}
@@ -18,14 +15,7 @@ public class Matiere  {
 	}
 
 
-	public List<Team> getTeams() {
-		return teams;
-	}
-
-	public void setTeams(List<Team> teams) {
-		this.teams = teams;
-	}
-
+	
 
 	public long getId() {
 		return id;

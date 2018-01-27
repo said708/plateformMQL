@@ -4,8 +4,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="org.java.mql.models.File" table="FILE"
-		discriminator-value="A">
+	<class name="org.java.mql.models.File" table="FILE">
 
 		<meta attribute="class-description">
 			This class contains the file detail.
@@ -28,11 +27,16 @@
 		<!-- private String uploadDate; -->
 		<property name="uploadDate" column="UPLOAD_DATE" type="string" />
 		
+		
+		<!-- private String type; -->
 		<property name="type" column="TYPE">
 			<type name="org.hibernate.type.EnumType">
 				<param name="enumClass">org.java.mql.models.Type</param>
 				<param name="useNamed">true</param>
 			</type>
 		</property>
+		
+		<!-- private String liverable; -->
+		<many-to-one name="liverable" class="org.java.mql.models.Liverable" column="LIVERABLE" />
 	</class>
 </hibernate-mapping>

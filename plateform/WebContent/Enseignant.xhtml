@@ -56,6 +56,18 @@
 							</f:facet>
 						</p:cellEditor>
 					</p:column>
+					
+					<p:column headerText="Email" sortBy="#{e.email}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{e.email}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputTextarea value="#{e.email}" style="width:100%"
+									label="email" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
 
 
 					<p:column style="width:50px">
@@ -95,6 +107,8 @@
 				<p:inputText id="prenom" value="#{enseignant.prenom}"></p:inputText>
 				<p:outputLabel for="phone" value="phone : " />
 				<p:inputText id="phone" value="#{enseignant.phone}"></p:inputText>
+				<p:outputLabel for="email" value="email : " />
+				<p:inputText id="email" value="#{enseignant.email}"></p:inputText>
 			</h:panelGrid>
 			<p:commandButton value="Save" update="msgs"
 				actionListener="#{enseignantAction.addEnsignant}"

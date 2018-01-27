@@ -19,7 +19,7 @@ public interface Module2Business {
 	int addEtudiant(Etudiant etudiant);//work
 	void addListEtudiants(List<Etudiant> etudiants);//work
 	Etudiant selectEtudiantById(long id);//work
-	Etudiant selectEtudiantByName(String nom);//work
+	Etudiant searchEtudiant(String keyword);//work
 	int updateEtudiant(Etudiant etudiant );//work
 	boolean isAnEtudiantExiste(Etudiant etudiant);//work
 
@@ -49,7 +49,7 @@ public interface Module2Business {
 	//manage liverable
 	int addLiverable(Liverable liverable); // Added by YcDev
 	int updateLiverable(Liverable liverable); // Added by YcDev
-	File deleteFileFromLiverable(File file , Liverable liverable);//work
+	int deleteFileFromLiverable(File file , Liverable liverable);//work
 	int addFileToLiverable(File file , Liverable liverable);//work     // Modified by YcDev, previous signature : int addFileToLiverable(File file , long idLiverable);
 	List<Liverable> listLiverables();//work
 	List<File> listFilesInLiverable(Liverable liverable);//work
@@ -57,7 +57,6 @@ public interface Module2Business {
 	boolean  isAnLiverableExiste(Liverable liverable);//work
 	Liverable selectLivrableById(long id) ;
 	int addLivrable(Liverable livrable);
-	int updateLivrable(Liverable livrable);
 
 
 

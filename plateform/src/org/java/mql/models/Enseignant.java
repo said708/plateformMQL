@@ -9,8 +9,7 @@ public class Enseignant  {
 	private String phone;
 	private String email;
 
-	
-	
+
 	public Enseignant() {
 	}
 	

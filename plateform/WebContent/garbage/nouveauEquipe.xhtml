@@ -49,3 +49,108 @@
 	
 </ui:composition>
 </html>
+
+
+
+
+
+
+<p:panel>
+		<h:form id="form">
+			<p:growl id="msgs" showDetail="true" />
+			<div class="card card-w-title">
+				<p:dataTable id="teams" var="t" value="#{teamAction.teams}"
+					editable="true" style="margin-bottom:20px" paginator="true"
+					rows="10" reflow="true">
+					<h:inputHidden value="#{t.id}" />
+					<f:facet name="header">List des teams</f:facet>
+					<p:ajax event="rowEdit" listener="#{teamAction.onRowEdit}"
+						update=":form:msgs" />
+					<p:ajax event="rowEditCancel" listener="#{teamAction.onRowCancel}"
+						update=":form:msgs" />
+
+					<p:column headerText="team" sortBy="#{t.name}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{t.name}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputText id="name" value="#{t.name}" style="width:100%" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+					<p:column headerText="Team" sortBy="#{t.prenom}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{t.enseignant}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:selectOneMenu id="enseignant" value="#{t.enseignant}"
+									converter="#{enseignantConverter}" panelStyle="width:180px"
+									effect="fade" style="width:160px" filter="true"
+									filterMatchMode="startsWith">
+									<f:selectItems value="#{teamAction.enseignants()}"
+										var="enseignant" itemLabel="#{enseignant}"
+										itemValue="#{enseignant}" />
+								</p:selectOneMenu>
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+
+					<p:column style="width:50px">
+						<p:rowEditor />
+					</p:column>
+					<p:column style="width:30px">
+						<p:commandButton icon="fa fa-fw fa-trash"
+							actionListener="#{teamAction.delete(e)}" update="@form"
+							ajax="true">
+							<p:confirm header="Confirmation" message="Are you sure?"
+								icon="ui-icon-alert" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</div>
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+				<p:commandButton value="Yes" type="button"
+					styleClass="ui-confirmdialog-yes" icon="fa fa-check-square" />
+				<p:commandButton value="No" type="button"
+					styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove " />
+			</p:confirmDialog>
+
+		</h:form>
+		<f:facet name="footer">
+			<p:commandButton value="nouveau team" type="button"
+				onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+		</f:facet>
+	</p:panel>
+	<p:dialog header="Nouveau team" widgetVar="dlg2" modal="true"
+		showEffect="explode" hideEffect="bounce">
+		<h:form>
+			<p:growl id="msgs" showDetail="true" />
+			<p:panel header="Provide team Details" style="margin-bottom:10px;">
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel for="name" value="Name : " />
+					<p:inputText id="name" value="#{team.name}"></p:inputText>
+
+					<p:outputLabel for="enseignant" value="Enseignant : " />
+
+
+					<p:selectOneMenu id="enseignant" value="#{team.enseignant}"
+						converter="#{enseignantConverter}" panelStyle="width:180px"
+						effect="fade" style="width:160px" filter="true"
+						filterMatchMode="startsWith">
+
+						<!-- <f:selectItem itemLabel="Select Enseignant" itemValue=""
+						noSelectionOption="true" />  -->
+						<f:selectItems value="#{teamAction.enseignants()}"
+							var="enseignant" itemLabel="#{enseignant}"
+							itemValue="#{enseignant}" />
+					</p:selectOneMenu>
+				</h:panelGrid>
+				<p:separator />
+				<p:commandButton value="Save" update="msgs"
+					actionListener="#{teamAction.add}" icon="ui-icon-check" />
+			</p:panel>
+		</h:form>
+	</p:dialog>

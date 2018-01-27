@@ -7,109 +7,151 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title><ui:insert name="title">Nouveau Projet</ui:insert></title>
+	<ui:define name="head">
+		<style type="text/css">
+.teams-datalist .text-column p:last-child {
+	color: #757575;
+}
+
+.teams-datalist .team-item {
+	padding: 8px 14px;
+	border-bottom: 1px solid #dce2e7;
+}
+
+.teams-datalist li:last-child .team-item {
+	border: 0 none;
+}
+
+.teams-datalist .team-item img, .teams-datalist .team-item .team-details
+	{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+}
+
+.teams-datalist .team-item button {
+	float: right;
+}
+
+.teams-datalist ul {
+	margin: 0;
+	padding: 0;
+}
+
+.ui-team-display td:last-child {
+	font-weight: 700;
+}
+
+@media ( max-width :640px) {
+	.teams-datalist .text-column {
+		text-align: center;
+	}
+	.ui-tree {
+		width: 100%;
+	}
+}
+</style>
+	</ui:define>
 </h:head>
 
 <h:body>
-	<p:panel>
-		<h:form id="form">
-			<p:growl id="msgs" showDetail="true" />
-			<div class="card card-w-title">
-				<p:dataTable id="teams" var="t" value="#{teamAction.teams}"
-					editable="true" style="margin-bottom:20px" paginator="true"
-					rows="10" reflow="true">
-					<h:inputHidden value="#{t.id}" />
-					<f:facet name="header">List des teams</f:facet>
-					<p:ajax event="rowEdit" listener="#{teamAction.onRowEdit}"
-						update=":form:msgs" />
-					<p:ajax event="rowEditCancel"
-						listener="#{teamAction.onRowCancel}" update=":form:msgs" />
-
-					<p:column headerText="team" sortBy="#{t.name}">
-						<p:cellEditor>
-							<f:facet name="output">
-								<h:outputText value="#{t.name}" />
-							</f:facet>
-							<f:facet name="input">
-								<p:inputText id="name" value="#{t.name}" style="width:100%" />
-							</f:facet>
-						</p:cellEditor>
-					</p:column>
-					<p:column headerText="Team" sortBy="#{t.prenom}">
-						<p:cellEditor>
-							<f:facet name="output">
-								<h:outputText value="#{t.enseignant}" />
-							</f:facet>
-							<f:facet name="input">
-								<p:selectOneMenu id="enseignant" value="#{t.enseignant}"
-									converter="#{enseignantConverter}" panelStyle="width:180px"
-									effect="fade" style="width:160px" filter="true"
-									filterMatchMode="startsWith">
-									<f:selectItems value="#{teamAction.enseignants()}"
-										var="enseignant" itemLabel="#{enseignant}"
-										itemValue="#{enseignant}" />
-								</p:selectOneMenu>
-							</f:facet>
-						</p:cellEditor>
-					</p:column>
-
-
-					<p:column style="width:50px">
-						<p:rowEditor />
-					</p:column>
-					<p:column style="width:30px">
-						<p:commandButton icon="fa fa-fw fa-trash"
-							actionListener="#{teamAction.delete(e)}" update="@form"
-							ajax="true">
-							<p:confirm header="Confirmation" message="Are you sure?"
-								icon="ui-icon-alert" />
-						</p:commandButton>
-					</p:column>
-				</p:dataTable>
-			</div>
-			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-				<p:commandButton value="Yes" type="button"
-					styleClass="ui-confirmdialog-yes" icon="fa fa-check-square" />
-				<p:commandButton value="No" type="button"
-					styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove " />
-			</p:confirmDialog>
-
-		</h:form>
-		<f:facet name="footer">
-			<p:commandButton value="nouveau team" type="button"
-				onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
-		</f:facet>
-	</p:panel>
-	<p:dialog header="Nouveau team" widgetVar="dlg2" modal="true"
+	<p:dialog header="Nouvelle equipe" widgetVar="dlg2" modal="true"
 		showEffect="explode" hideEffect="bounce">
 		<h:form>
 			<p:growl id="msgs" showDetail="true" />
-			<p:panel header="Provide team Details"
-				style="margin-bottom:10px;">
-				<h:panelGrid columns="2" cellpadding="5">
-					<p:outputLabel for="name" value="Name : " />
-					<p:inputText id="name" value="#{team.name}"></p:inputText>
+			<h:panelGrid columns="2">
 
-					<p:outputLabel for="enseignant" value="Enseignant : " />
+				<p:outputLabel value="Equipe : " />
+				<p:inputText value="#{team.name}" />
 
-
-					<p:selectOneMenu id="enseignant" value="#{team.enseignant}"
-						converter="#{enseignantConverter}" panelStyle="width:180px"
-						effect="fade" style="width:160px" filter="true"
-						filterMatchMode="startsWith">
-
-						<!-- <f:selectItem itemLabel="Select Enseignant" itemValue=""
-						noSelectionOption="true" />  -->
-						<f:selectItems value="#{teamAction.enseignants()}"
-							var="enseignant" itemLabel="#{enseignant}"
-							itemValue="#{enseignant}" />
-					</p:selectOneMenu>
-				</h:panelGrid>
-				<p:separator />
-				<p:commandButton value="Save" update="msgs"
-					actionListener="#{teamAction.add}" icon="ui-icon-check" />
-			</p:panel>
+			</h:panelGrid>
+			<p:separator />
+			<p:commandButton value="Save" update="msgs"
+				action="#{teamAction.addTeam}" icon="ui-icon-check"
+				onclick="PF('dlg2').hide();" />
+			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+				icon="fa fa-times-circle" />
 		</h:form>
 	</p:dialog>
+	<p:growl id="msgs" showDetail="true" />
+	<div class="ui-g-12">
+		<div class="card card-w-title">
+			<p:dataGrid value="#{teamAction.teams}" var="t" columns="3"
+				layout="grid" rows="6" paginator="true" id="teams"
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="3,6,9,12,16">
+
+				<f:facet name="header">
+					List des equipes
+				</f:facet>
+
+				<p:panel header="#{t.name}" style="text-align:center">
+					<h:panelGrid columns="1" style="width:100%" cellpadding="6">
+
+						<h:outputText value="#{t.teamLeader}"
+							rendered="#{not empty t.teamLeader}" />
+						<h:outputText value="Team leader not exists"
+							rendered="#{empty t.teamLeader}" />
+
+						<p:commandButton icon="ui-icon-search" styleClass="AquaButton"
+							update=":teamDetail" oncomplete="PF('teamDialog2').show()">
+							<f:setPropertyActionListener value="#{t}"
+								target="#{teamAction.team}" />
+						</p:commandButton>
+
+					</h:panelGrid>
+				</p:panel>
+
+			</p:dataGrid>
+
+
+
+			<p:dialog header="les informations sur l'equipe"
+				widgetVar="teamDialog2" responsive="true" modal="true"
+				showEffect="blind" hideEffect="explode" resizable="false" width="50%">
+				<p:outputPanel id="teamDetail" style="text-align:center;">
+					<p:dataTable columnClasses="label,value"
+						value="#{teamAction.team.etudiants}" var="etudiant" rows="5"
+						paginator="true" reflow="true">
+						<f:facet name="header">
+							<h2>#{teamAction.team.name}</h2>
+						</f:facet>
+						<p:column headerText="Nom">
+							<h:outputText value="#{etudiant.nom}" />
+						</p:column>
+						<p:column headerText="Prenom">
+							<h:outputText value="#{etudiant.prenom}" />
+						</p:column>
+						<p:column headerText="Phone">
+							<h:outputText value="#{etudiant.phone}" />
+						</p:column>
+						<p:column headerText="Email">
+							<h:outputText value="#{etudiant.email}" />
+						</p:column>
+					</p:dataTable>
+				</p:outputPanel>
+				<p:toolbar>
+					<f:facet name="left">
+						<p:commandButton type="button" value="ajouter etudiant" icon="fa fa-plus" />
+						<p:commandButton type="button" value="Open"
+							icon="fa fa-folder-open" />
+						<span class="ui-separator" style="padding-right: 5px;"> <span
+							class="fa fa-ellipsis-v SoftGray" />
+						</span>
+						<p:commandButton type="button" title="Save" icon="fa fa-save" />
+						<p:commandButton type="button" title="Delete" icon="fa fa-trash" />
+						<p:commandButton type="button" title="Print" icon="fa fa-print" />
+					</f:facet>
+				</p:toolbar>
+			</p:dialog>
+		</div>
+	</div>
+	<p:toolbar>
+		<f:facet name="left">
+			<p:commandButton value="Nouvelle equipe" type="button"
+				onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+		</f:facet>
+	</p:toolbar>
 </h:body>
 
 </html>

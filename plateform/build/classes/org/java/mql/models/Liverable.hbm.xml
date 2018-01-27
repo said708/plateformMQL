@@ -16,12 +16,7 @@
 		<!-- private String name; -->
 		<property name="name" column="NAME" type="string" />
 		
-		<!-- private List<File> files; -->
-		<list name="files" cascade="all">
-			<key column="FILE_ID" />
-			<list-index column="FILES_INDEX" />
-			<one-to-many class="org.java.mql.models.File" />
-		</list>
+		<!-- private String project; -->
 		<one-to-one   name="project"  class="org.java.mql.models.Project" constrained="true"/>
 	</class>
 </hibernate-mapping>

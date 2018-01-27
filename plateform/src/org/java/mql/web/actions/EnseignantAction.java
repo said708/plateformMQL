@@ -70,7 +70,7 @@ public class EnseignantAction {
 	}
 
 	public void onRowCancel(RowEditEvent event) {
-		FacesMessage msg = new FacesMessage("Edit Cancelled", ((Project) event.getObject()).getName());
+		FacesMessage msg = new FacesMessage("Edit Cancelled", ((Enseignant) event.getObject()).getNom());
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
 

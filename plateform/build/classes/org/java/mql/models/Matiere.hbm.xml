@@ -1,32 +1,25 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC 
 "-//Hibernate/Hibernate Mapping DTD//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-   <class name = "org.java.mql.models.Matiere" table = "MATIERE">
-      
-      <meta attribute = "class-description">
-         This class contains the matiere detail. 
-      </meta>
-      <!-- private long id; -->
-      <id name = "id" type = "long" column = "MATIERE_ID">
-         <generator class="native"/>
-      </id>
-      
-       <!-- private String name; -->
-      <property name = "name" column = "NAME" type = "string"/>
-      
-      
-       <!-- private Ensignant ensignant; -->
-      <many-to-one name="enseignant" column="ENSEIGNANT" class="org.java.mql.models.Enseignant" />
+	<class name="org.java.mql.models.Matiere" table="MATIERE">
 
-      <!-- private List<Team> teams; -->
-      <list name = "teams" cascade="all">
-         <key column = "ID_TEAM"/>
-         <list-index column="TEAM_INDEX" />
-         <one-to-many  class="org.java.mql.models.Team" />
-      </list>
-      
-   </class>
+		<meta attribute="class-description">
+			This class contains the matiere detail.
+		</meta>
+		<!-- private long id; -->
+		<id name="id" type="long" column="MATIERE_ID">
+			<generator class="native" />
+		</id>
+
+		<!-- private String name; -->
+		<property name="name" column="NAME" type="string" />
+
+
+		<!-- private Ensignant ensignant; -->
+		<many-to-one name="enseignant" column="ENSEIGNANT"
+			class="org.java.mql.models.Enseignant" />
+	</class>
 </hibernate-mapping>
