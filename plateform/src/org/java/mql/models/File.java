@@ -95,7 +95,7 @@ public class File{
 
 	@Override
 	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != File.class)) {
+		if ((o == null) || !(o instanceof File) || o == this) {
 			return false;
 		}
 		File other = (File) o;

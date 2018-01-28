@@ -47,7 +47,7 @@ public class Matiere  {
 
 	@Override
 	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != Matiere.class)) {
+		if ((o == null) || !(o instanceof Matiere) || o == this) {
 			return false;
 		}
 		Matiere other = (Matiere) o;

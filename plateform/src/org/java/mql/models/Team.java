@@ -36,12 +36,13 @@ public class Team {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != Team.class)) {
+	public boolean equals(final Object o) {
+		
+		if ((o == null) || !(o instanceof Team) || o == this) {
 			return false;
 		}
 		Team other = (Team) o;
-		return (other.id == this.id) ;
+		return  (other.id == this.id);
 	}
 
 	@Override

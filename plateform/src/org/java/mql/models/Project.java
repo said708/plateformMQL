@@ -77,7 +77,7 @@ public class Project {
 	}
 	@Override
 	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != Project.class)) {
+		if ((o == null) || !(o instanceof Project) || o == this) {
 			return false;
 		}
 		Project other = (Project) o;

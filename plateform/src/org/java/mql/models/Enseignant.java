@@ -56,7 +56,7 @@ public class Enseignant  {
 
 	@Override
 	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != Enseignant.class)) {
+		if ((o == null) || !(o instanceof Enseignant) || o == this) {
 			return false;
 		}
 		Enseignant other = (Enseignant) o;

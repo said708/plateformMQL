@@ -494,16 +494,7 @@ public class DefaultModule2Business implements Module2Business{
 
 
 
-	@Override
-	public List<Etudiant> listEtudiantsInTeam(Team team) {
-		List<Etudiant> etudiants = new Vector<>();
-		for (Etudiant etudiant : daoMediator.selectAllEtudiant()) {
-			if(etudiant.getTeam().equals(team)) {
-				etudiants.add(etudiant);
-			}
-		}
-		return etudiants;
-	}
+
 
 
 
@@ -660,13 +651,6 @@ public class DefaultModule2Business implements Module2Business{
 	}
 
 
-
-
-	@Override
-	public String toString() {
-		return "bonjour said is work now !";
-	}
-
 	@Override
 	public Etudiant searchEtudiant(String keyword) {
 		List<Etudiant> list = daoMediator.selectAllEtudiant();
@@ -744,11 +728,22 @@ public class DefaultModule2Business implements Module2Business{
 		return etudiants;
 	}
 
+
+
+	@Override
+	public List<Etudiant> listEtudiantsInTeam(Team team) {
+		List<Etudiant> etudiants = new Vector<>();
+		for (Etudiant etudiant : this.listEtudiants()) {
+			if(etudiant.getTeam().equals(team)) {
+				etudiants.add(etudiant);
+			}
+		}
+		return etudiants;
+	}
+
 	@Override
 	public Etudiant selectTeamLeaderOfTeam(Team team) {
-		System.out.println(team.getId());
-		System.out.println(listEtudiantsInTeam(team));
-		for (Etudiant etudiant : listEtudiantsInTeam(team)) {
+		for (Etudiant etudiant : this.listEtudiants()) {
 			if(etudiant.isTeamLeader())
 				return etudiant;
 		}
@@ -756,6 +751,9 @@ public class DefaultModule2Business implements Module2Business{
 	}
 
 
+
+
+	@Override
 	public int changeTeamLeaderStatus(Etudiant e) {
 		Etudiant et = this.selectTeamLeaderOfTeam(e.getTeam());
 		if(!e.isTeamLeader()) {
@@ -770,6 +768,12 @@ public class DefaultModule2Business implements Module2Business{
 		return daoMediator.updateEtudiant(e);
 	}
 
+
+
+	@Override
+	public String toString() {
+		return "bonjour said is work now !";
+	}
 
 
 }

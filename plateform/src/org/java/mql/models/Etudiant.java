@@ -41,7 +41,7 @@ public class Etudiant {
 
 	@Override
 	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != Etudiant.class)) {
+		if ((o == null) || !(o instanceof Etudiant) || o == this) {
 			return false;
 		}
 		Etudiant other = (Etudiant) o;

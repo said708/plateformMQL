@@ -34,7 +34,7 @@ public class Liverable  {
 	}
 	@Override
 	public boolean equals(Object o) {
-		if ((o == null) || (o.getClass() != Liverable.class)) {
+		if ((o == null) || !(o instanceof Liverable) || o == this) {
 			return false;
 		}
 		Liverable other = (Liverable) o;
