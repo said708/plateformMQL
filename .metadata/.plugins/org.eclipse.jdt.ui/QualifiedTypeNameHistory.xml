@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.java.mql.models.p02.Project"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.Liverable"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p02.AbstractFile"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
@@ -21,7 +20,6 @@
 <fullyQualifiedTypeName name="org.java.mql.models.p2.Liverable"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Team"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.mql.jsf.models.Student"/>
 <fullyQualifiedTypeName name="org.java.mql.models.p1.Enseignant"/>
 <fullyQualifiedTypeName name="java.io.File"/>
@@ -43,8 +41,6 @@
 <fullyQualifiedTypeName name="org.java.mql.models.File"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
 <fullyQualifiedTypeName name="org.java.mql.dao.TeamDao"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Liverable"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.java.mql.web.utils.HelpConvertor"/>
 <fullyQualifiedTypeName name="javax.faces.view.ViewScoped"/>
@@ -53,11 +49,15 @@
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Project"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
 <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Team"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Contact"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Liverable"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="org.primefaces.model.DualListModel"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
 </qualifiedTypeNameHistroy>

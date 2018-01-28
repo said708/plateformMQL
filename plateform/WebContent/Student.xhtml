@@ -16,9 +16,10 @@
 			<div class="card card-w-title">
 				<p:dataTable id="students" var="e"
 					value="#{etudiantAction.students}" editable="true"
-					style="margin-bottom:20px" paginator="true" rows="10" reflow="true">
+					style="margin-bottom:20px" paginator="true" rows="5" reflow="true">
 					<h:inputHidden value="#{e.id}" />
 					<f:facet name="header">List des etudiants</f:facet>
+					
 					<p:ajax event="rowEdit" listener="#{etudiantAction.onRowEdit}"
 						update=":form:msgs" />
 					<p:ajax event="rowEditCancel"
@@ -51,8 +52,7 @@
 								<h:outputText value="#{e.phone}" />
 							</f:facet>
 							<f:facet name="input">
-								<p:inputTextarea value="#{e.phone}" style="width:100%"
-									label="phone" />
+								<p:inputText value="#{e.phone}" style="width:100%" label="phone" />
 							</f:facet>
 						</p:cellEditor>
 					</p:column>
@@ -63,8 +63,7 @@
 								<h:outputText value="#{e.email}" />
 							</f:facet>
 							<f:facet name="input">
-								<p:inputTextarea value="#{e.email}" style="width:100%"
-									label="email" />
+								<p:inputText value="#{e.email}" style="width:100%" label="email" />
 							</f:facet>
 						</p:cellEditor>
 					</p:column>
@@ -136,9 +135,9 @@
 						itemLabel="#{team}" itemValue="#{team}" />
 				</p:selectOneMenu>
 			</h:panelGrid>
-			<p:commandButton value="Save" update="msgs"
+			<p:commandButton value="Save" update="msgs form"
 				onclick="PF('dlg2').hide();"
-				actionListener="#{etudiantAction.add()}" icon="ui-icon-check" />
+				actionListener="#{etudiantAction.add()}" icon="ui-icon-check" ajax="false"/>
 			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 				icon="fa fa-times-circle" />
 		</h:form>

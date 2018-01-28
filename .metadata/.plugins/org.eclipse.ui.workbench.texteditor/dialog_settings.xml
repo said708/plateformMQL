@@ -6,44 +6,44 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Team" key="selection"/>
+		<item value="listEtudiantsInTeam" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="matiere"/>
-			<item value="{m."/>
-			<item value="add("/>
-			<item value="add"/>
-			<item value="Enseignant"/>
-			<item value="enseignantAction"/>
-			<item value="enseignants"/>
-			<item value="{e."/>
-			<item value="e."/>
-			<item value="enseignant"/>
-			<item value="listM"/>
-			<item value="update"/>
-			<item value="dele"/>
-			<item value="delete"/>
-			<item value="public"/>
+			<item value="listEtudiantsInTeam"/>
+			<item value="system."/>
+			<item value="icon"/>
+			<item value="Single with Row Click"/>
+			<item value="teamDetail"/>
+			<item value="affect"/>
+			<item value="etudiantAff"/>
+			<item value="car.brand"/>
+			<item value="team.name"/>
+			<item value=".selectedCar"/>
+			<item value="#{dataGridView."/>
+			<item value="{car."/>
+			<item value="setPro"/>
+			<item value="addTeam"/>
+			<item value="addT"/>
 		</list>
 		<list key="replacehistory">
+			<item value="team.name"/>
+			<item value=""/>
+			<item value=".team"/>
+			<item value="#{teamAction."/>
+			<item value="{e."/>
+			<item value="teamAction"/>
+			<item value="etudiantAction"/>
+			<item value="team-"/>
+			<item value="{etudiant."/>
+			<item value="team"/>
+			<item value="teams"/>
 			<item value="Team"/>
 			<item value="{t."/>
-			<item value="team"/>
 			<item value="Etudiant"/>
 			<item value="EtudiantAction"/>
-			<item value="students"/>
-			<item value="{m."/>
-			<item value="m."/>
-			<item value="matiere"/>
-			<item value="matiereAction"/>
-			<item value=""/>
-			<item value="e."/>
-			<item value="enseignantAction"/>
-			<item value="pr."/>
-			<item value="facesServlet"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

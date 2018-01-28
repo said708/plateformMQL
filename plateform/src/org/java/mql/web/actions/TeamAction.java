@@ -40,17 +40,24 @@ public class TeamAction {
 	public List<Etudiant> listEtudiantsInTeam(Team team){
 		return business.listEtudiantsInTeam(team);
 	}
-	
-	
-	
-	public Etudiant teamLeader(Team team) {
-		return business.teamLeader(team);
+
+
+
+
+
+	public void updateTeamLeaderStatus(Etudiant e){
+		int status = business.changeTeamLeaderStatus(e);
+		FacesMessage msg; 
+		if(status == 1) {
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", e + " statut de team leader changer!");   
+		}else  
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
+		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
 	public void addTeam() {
 		FacesMessage msg; 
 		int status = business.addTeam(team);
-		System.out.println(team.getId() + " - "+team.getName()+" - "+team.getMatiere());
 		if(status == 1) {
 			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", team.getName() + " added with success");   
 		}else  
@@ -102,13 +109,11 @@ public class TeamAction {
 
 
 	public void setTeam(Team team) {
-		System.out.println(team);
 		this.team = team;
 	}
 
 
 	public Team getTeam() {
-		System.out.println(team);
 		return team;
 	}
 

@@ -37,7 +37,8 @@ public interface Module2Business {
 	int removeProjectFromTeam(Project project , Team team);//work
 	List<Etudiant> listEtudiantsInTeam(Team team);//work
 	boolean isAnTeamExiste(Team team);//work
-	Etudiant teamLeader(Team team);
+	Etudiant selectTeamLeaderOfTeam(Team team);
+	int changeTeamLeaderStatus(Etudiant e);
 
 
 	//manage project

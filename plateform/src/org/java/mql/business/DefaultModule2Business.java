@@ -497,16 +497,10 @@ public class DefaultModule2Business implements Module2Business{
 	@Override
 	public List<Etudiant> listEtudiantsInTeam(Team team) {
 		List<Etudiant> etudiants = new Vector<>();
-		try {
-			if(isAnTeamExiste(team)) {
-				for (Etudiant etudiant : daoMediator.selectAllEtudiant()) {
-					if(etudiant.getTeam().equals(team))
-						etudiants.add(etudiant);
-				}
-			}else
-				throw new Exception("team "+team.getId()+" not existed");
-		} catch (Exception e) {
-			log.fatal("DefaultModule2Business.listEtudiantsInTeam has an error : "+ e.getMessage());
+		for (Etudiant etudiant : daoMediator.selectAllEtudiant()) {
+			if(etudiant.getTeam().equals(team)) {
+				etudiants.add(etudiant);
+			}
 		}
 		return etudiants;
 	}
@@ -666,7 +660,7 @@ public class DefaultModule2Business implements Module2Business{
 	}
 
 
-	
+
 
 	@Override
 	public String toString() {
@@ -739,7 +733,7 @@ public class DefaultModule2Business implements Module2Business{
 			return -1;
 		}
 	}
-	
+
 	@Override
 	public List<Etudiant> listEtudiantsPasEncoreAffecter() {
 		List<Etudiant> etudiants = new Vector<>();
@@ -749,14 +743,31 @@ public class DefaultModule2Business implements Module2Business{
 		}
 		return etudiants;
 	}
-	
+
 	@Override
-	public Etudiant teamLeader(Team team) {
+	public Etudiant selectTeamLeaderOfTeam(Team team) {
+		System.out.println(team.getId());
+		System.out.println(listEtudiantsInTeam(team));
 		for (Etudiant etudiant : listEtudiantsInTeam(team)) {
 			if(etudiant.isTeamLeader())
 				return etudiant;
 		}
 		return null;
+	}
+
+
+	public int changeTeamLeaderStatus(Etudiant e) {
+		Etudiant et = this.selectTeamLeaderOfTeam(e.getTeam());
+		if(!e.isTeamLeader()) {
+			if(et != null) {
+				et.setTeamLeader(false);
+				daoMediator.updateEtudiant(et);
+			}
+			e.setTeamLeader(true);
+		}else {
+			e.setTeamLeader(false);
+		}
+		return daoMediator.updateEtudiant(e);
 	}
 
 

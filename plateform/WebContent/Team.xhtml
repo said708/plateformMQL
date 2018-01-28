@@ -86,8 +86,7 @@
 				<p:panel id="teamDetail" header="#{t.name}"
 					style="text-align:center">
 					<p:dataTable var="e" selectionMode="single" reflow="true"
-							selection="#{etudiantAction.etudiant}" rowKey="#{etudiant.id}"
-							 rows="10"
+						selection="#{etudiantAction.etudiant}" rowKey="#{e.id}" rows="10"
 						value="#{teamAction.listEtudiantsInTeam(t)}">
 						
 						<p:column headerText="Nom" sortBy="#{e.nom}">
@@ -96,21 +95,29 @@
 						<p:column headerText="Prenom" sortBy="#{e.prenom}">
 							<h:outputText value="#{e.prenom}"></h:outputText>
 						</p:column>
-						
+						<p:column headerText="Team Leader" sortBy="#{e.teamLeader}">
+							<h:form>
+								<p:commandButton rendered="#{e.teamLeader}" icon="fa fa-star"
+									actionListener="#{teamAction.updateTeamLeaderStatus(e)}" ajax="false"/>
+								<p:commandButton rendered="#{not e.teamLeader}"
+									icon="fa fa-star-o"  actionListener="#{teamAction.updateTeamLeaderStatus(e)}" ajax="false"/>
+							</h:form>
+
+						</p:column>
+
 						<f:facet name="footer">
 							<h:form>
-								<p:panelGrid columns="2" >
+								<p:panelGrid columns="2">
 									<p:selectOneMenu id="etudiant"
 										value="#{etudiantAction.etudiant}"
 										converter="#{etudiantConverter}" style="width:100%"
-										effect="fade"  filter="true"
-										filterMatchMode="startsWith">
+										effect="fade" filter="true" filterMatchMode="startsWith">
 										<f:selectItems value="#{teamAction.etudiantsNotAffected}"
 											var="e" itemLabel="#{e}" itemValue="#{e}" />
 									</p:selectOneMenu>
 
 									<p:commandButton value="ajouter etudiant" icon="fa fa-plus"
-										styleClass="AquaButton" 
+										styleClass="AquaButton"
 										actionListener="#{etudiantAction.update(t)}">
 									</p:commandButton>
 
