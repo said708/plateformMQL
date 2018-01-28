@@ -45,7 +45,7 @@ public class Etudiant {
 			return false;
 		}
 		Etudiant other = (Etudiant) o;
-		return (other.id == this.id) ;
+		return (other.getId() == this.id) ;
 	}
 
 	@Override

@@ -51,7 +51,7 @@ public class Matiere  {
 			return false;
 		}
 		Matiere other = (Matiere) o;
-		return (other.id == this.id) ;
+		return (other.getId() == this.id) ;
 	}
 
 	@Override

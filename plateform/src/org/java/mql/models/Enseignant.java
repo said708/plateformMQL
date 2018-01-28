@@ -60,7 +60,7 @@ public class Enseignant  {
 			return false;
 		}
 		Enseignant other = (Enseignant) o;
-		return (other.id == this.id) ;
+		return (other.getId() == this.id) ;
 	}
 
 	@Override

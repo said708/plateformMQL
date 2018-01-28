@@ -38,7 +38,7 @@ public class Liverable  {
 			return false;
 		}
 		Liverable other = (Liverable) o;
-		return (other.id == this.id) ;
+		return (other.getId() == this.id) ;
 	}
 
 	@Override

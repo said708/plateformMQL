@@ -81,7 +81,7 @@ public class Project {
 			return false;
 		}
 		Project other = (Project) o;
-		return (other.id == this.id) ;
+		return (other.getId() == this.id) ;
 	}
 
 	@Override

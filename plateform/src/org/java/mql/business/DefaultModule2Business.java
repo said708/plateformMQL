@@ -743,7 +743,7 @@ public class DefaultModule2Business implements Module2Business{
 
 	@Override
 	public Etudiant selectTeamLeaderOfTeam(Team team) {
-		for (Etudiant etudiant : this.listEtudiants()) {
+		for (Etudiant etudiant : this.listEtudiantsInTeam(team)) {
 			if(etudiant.isTeamLeader())
 				return etudiant;
 		}

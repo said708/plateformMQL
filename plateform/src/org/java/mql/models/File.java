@@ -99,7 +99,7 @@ public class File{
 			return false;
 		}
 		File other = (File) o;
-		return (other.id == this.id) ;
+		return (other.getId() == this.id) ;
 	}
 
 

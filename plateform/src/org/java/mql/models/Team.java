@@ -42,7 +42,7 @@ public class Team {
 			return false;
 		}
 		Team other = (Team) o;
-		return  (other.id == this.id);
+		return  (other.getId() == this.id);
 	}
 
 	@Override
