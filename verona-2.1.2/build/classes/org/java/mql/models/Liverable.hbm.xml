@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.java.mql.models.Liverable" table="LIVERABLE">
+
+		<meta attribute="class-description">
+			This class contains the liverable detail.
+		</meta>
+		<!-- private long id; -->
+		<id name="id" type="long" column="LIVERABLE_ID">
+			<generator class="native" />
+		</id>
+		<!-- private String name; -->
+		<property name="name" column="NAME" type="string" />
+		
+		<!-- private String project; -->
+		<one-to-one   name="project"  class="org.java.mql.models.Project" constrained="true"/>
+	</class>
+</hibernate-mapping>

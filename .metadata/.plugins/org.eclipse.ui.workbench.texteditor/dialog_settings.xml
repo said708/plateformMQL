@@ -6,12 +6,16 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="listEtudiantsInTeam" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="other.id"/>
+			<item value="// Added by YcDev"/>
+			<item value="//work"/>
+			<item value="inteam"/>
 			<item value="listEtudiantsInTeam"/>
 			<item value="system."/>
 			<item value="icon"/>
@@ -23,14 +27,11 @@
 			<item value="team.name"/>
 			<item value=".selectedCar"/>
 			<item value="#{dataGridView."/>
-			<item value="{car."/>
-			<item value="setPro"/>
-			<item value="addTeam"/>
-			<item value="addT"/>
 		</list>
 		<list key="replacehistory">
-			<item value="team.name"/>
+			<item value="other.getId()"/>
 			<item value=""/>
+			<item value="team.name"/>
 			<item value=".team"/>
 			<item value="#{teamAction."/>
 			<item value="{e."/>
@@ -43,7 +44,6 @@
 			<item value="Team"/>
 			<item value="{t."/>
 			<item value="Etudiant"/>
-			<item value="EtudiantAction"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

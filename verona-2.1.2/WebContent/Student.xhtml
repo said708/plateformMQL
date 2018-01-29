@@ -1,0 +1,152 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+                
+    <ui:define name="title">Students management</ui:define>
+
+    <ui:define name="content">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card">
+                    <p:panel>
+		<h:form id="form">
+			<p:growl id="msgs" showDetail="true" />
+			<div class="card card-w-title">
+				<p:dataTable id="students" var="e"
+					value="#{etudiantAction.students}" editable="true"
+					style="margin-bottom:20px" paginator="true" rows="5" reflow="true">
+					<h:inputHidden value="#{e.id}" />
+					<f:facet name="header">List des etudiants</f:facet>
+					
+					<p:ajax event="rowEdit" listener="#{etudiantAction.onRowEdit}"
+						update=":form:msgs" />
+					<p:ajax event="rowEditCancel"
+						listener="#{etudiantAction.onRowCancel}" update=":form:msgs" />
+
+					<p:column headerText="Nom" sortBy="#{e.nom}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{e.nom}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputText id="nom" value="#{e.nom}" style="width:100%" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+					<p:column headerText="Prenom" sortBy="#{e.prenom}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{e.prenom}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputText id="prenom" value="#{e.prenom}" style="width:100%" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+					<p:column headerText="Telephone" sortBy="#{e.phone}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{e.phone}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputText value="#{e.phone}" style="width:100%" label="phone" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+					<p:column headerText="Email" sortBy="#{e.email}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{e.email}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:inputText value="#{e.email}" style="width:100%" label="email" />
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+					<p:column headerText="Equipe" sortBy="#{e.team.name}">
+						<p:cellEditor>
+							<f:facet name="output">
+								<h:outputText value="#{e.team}" rendered="#{not empty e.team}" />
+								<h:outputText value="pas encore affecter"
+									rendered="#{empty e.team}" />
+							</f:facet>
+							<f:facet name="input">
+								<p:selectOneMenu id="team" value="#{e.team}"
+									converter="#{teamConverter}" panelStyle="width:180px"
+									effect="fade" style="width:160px" filter="true"
+									filterMatchMode="startsWith">
+									<f:selectItems value="#{etudiantAction.listTeams()}" var="team"
+										itemLabel="#{team}" itemValue="#{team}" />
+								</p:selectOneMenu>
+							</f:facet>
+						</p:cellEditor>
+					</p:column>
+
+
+					<p:column style="width:50px">
+						<p:rowEditor />
+					</p:column>
+					<p:column style="width:30px">
+						<p:commandButton icon="fa fa-fw fa-trash"
+							actionListener="#{etudiantAction.delete(e)}" update="@form"
+							ajax="true">
+							<p:confirm header="Confirmation" message="Are you sure?"
+								icon="ui-icon-alert" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</div>
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+				<p:commandButton value="Yes" type="button"
+					styleClass="ui-confirmdialog-yes" icon="fa fa-check-square" />
+				<p:commandButton value="No" type="button"
+					styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove " />
+			</p:confirmDialog>
+
+		</h:form>
+		<f:facet name="footer">
+			<p:commandButton value="nouveau Etudiant" type="button"
+				onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+		</f:facet>
+	</p:panel>
+	<p:dialog header="Nouveau Etudiant" widgetVar="dlg2" modal="true"
+		showEffect="explode" hideEffect="bounce" width="50%">
+		<h:form>
+			<p:growl id="msgs" showDetail="true" />
+			<h:panelGrid columns="2" cellpadding="5" width="100%">
+				<p:outputLabel for="nom" value="Nom : " />
+				<p:inputText id="nom" value="#{etudiant.nom}"></p:inputText>
+				<p:outputLabel for="prenom" value="Prenom : " />
+				<p:inputText id="prenom" value="#{etudiant.prenom}"></p:inputText>
+				<p:outputLabel for="phone" value="phone : " />
+				<p:inputText id="phone" value="#{etudiant.phone}"></p:inputText>
+				<p:outputLabel for="email" value="Email : " />
+				<p:inputText id="email" value="#{etudiant.email}"></p:inputText>
+				<p:outputLabel for="team" value="Equipe : " />
+				<p:selectOneMenu id="team" value="#{etudiant.team}"
+					converter="#{teamConverter}" panelStyle="width:180px" effect="fade"
+					style="width:160px" filter="true" filterMatchMode="startsWith">
+					<f:selectItems value="#{etudiantAction.listTeams()}" var="team"
+						itemLabel="#{team}" itemValue="#{team}" />
+				</p:selectOneMenu>
+			</h:panelGrid>
+			<p:commandButton value="Save" update="msgs form"
+				onclick="PF('dlg2').hide();"
+				actionListener="#{etudiantAction.add()}" icon="ui-icon-check" ajax="false"/>
+			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+				icon="fa fa-times-circle" />
+		</h:form>
+	</p:dialog>
+                </div>
+            </div>
+        </div>
+        
+    </ui:define>
+
+</ui:composition>

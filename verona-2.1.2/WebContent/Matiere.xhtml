@@ -1,0 +1,123 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+
+	<ui:define name="title">Matiere management</ui:define>
+
+	<ui:define name="content">
+		<div class="ui-g">
+			<div class="ui-g-12">
+				<div class="card">
+					<p:panel>
+						<h:form id="form">
+							<p:growl id="msgs" showDetail="true" />
+							<div class="card card-w-title">
+								<p:dataTable id="matieres" var="m"
+									value="#{matiereAction.matieres}" editable="true"
+									style="margin-bottom:20px" paginator="true" rows="10"
+									reflow="true">
+									<h:inputHidden value="#{m.id}" />
+									<f:facet name="header">List des matieres</f:facet>
+									<p:ajax event="rowEdit" listener="#{matiereAction.onRowEdit}"
+										update=":form:msgs" />
+									<p:ajax event="rowEditCancel"
+										listener="#{matiereAction.onRowCancel}" update=":form:msgs" />
+
+									<p:column headerText="Matiere" sortBy="#{m.name}">
+										<p:cellEditor>
+											<f:facet name="output">
+												<h:outputText value="#{m.name}" />
+											</f:facet>
+											<f:facet name="input">
+												<p:inputText id="name" value="#{m.name}" style="width:100%" />
+											</f:facet>
+										</p:cellEditor>
+									</p:column>
+									<p:column headerText="Enseignant" sortBy="#{m.prenom}">
+										<p:cellEditor>
+											<f:facet name="output">
+												<h:outputText value="#{m.enseignant}" />
+											</f:facet>
+											<f:facet name="input">
+												<p:selectOneMenu id="enseignant" value="#{m.enseignant}"
+													converter="#{enseignantConverter}" panelStyle="width:180px"
+													effect="fade" style="width:160px" filter="true"
+													filterMatchMode="startsWith">
+													<f:selectItems value="#{matiereAction.enseignants()}"
+														var="enseignant" itemLabel="#{enseignant}"
+														itemValue="#{enseignant}" />
+												</p:selectOneMenu>
+											</f:facet>
+										</p:cellEditor>
+									</p:column>
+
+
+									<p:column style="width:50px">
+										<p:rowEditor />
+									</p:column>
+									<p:column style="width:30px">
+										<p:commandButton icon="fa fa-fw fa-trash"
+											actionListener="#{matiereAction.delete(e)}" update="@form"
+											ajax="true">
+											<p:confirm header="Confirmation" message="Are you sure?"
+												icon="ui-icon-alert" />
+										</p:commandButton>
+									</p:column>
+								</p:dataTable>
+							</div>
+							<p:confirmDialog global="true" showEffect="fade"
+								hideEffect="fade">
+								<p:commandButton value="Yes" type="button"
+									styleClass="ui-confirmdialog-yes" icon="fa fa-check-square" />
+								<p:commandButton value="No" type="button"
+									styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove " />
+							</p:confirmDialog>
+
+						</h:form>
+						<f:facet name="footer">
+							<p:commandButton value="nouveau matiere" type="button"
+								onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+						</f:facet>
+					</p:panel>
+					<p:dialog header="Nouveau matiere" widgetVar="dlg2" modal="true"
+						showEffect="explode" hideEffect="bounce" width="50%">
+						<h:form>
+							<p:growl id="msgs" showDetail="true" />
+							<h:panelGrid columns="2" cellpadding="5" width="100%">
+								<p:outputLabel for="name" value="Name : " />
+								<p:inputText id="name" value="#{matiere.name}"></p:inputText>
+
+								<p:outputLabel for="enseignant" value="Enseignant : " />
+
+
+								<p:selectOneMenu id="enseignant" value="#{matiere.enseignant}"
+									converter="#{enseignantConverter}" panelStyle="width:180px"
+									effect="fade" style="width:160px" filter="true"
+									filterMatchMode="startsWith">
+
+									<!-- <f:selectItem itemLabel="Select Enseignant" itemValue=""
+						noSelectionOption="true" />  -->
+									<f:selectItems value="#{matiereAction.enseignants()}"
+										var="enseignant" itemLabel="#{enseignant}"
+										itemValue="#{enseignant}" />
+								</p:selectOneMenu>
+							</h:panelGrid>
+							<p:separator />
+							<p:commandButton value="Save" update="msgs"
+								onclick="PF('dlg2').hide();"
+								actionListener="#{matiereAction.addMatiere}"
+								icon="ui-icon-check" />
+							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+								icon="fa fa-times-circle" />
+						</h:form>
+					</p:dialog>
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+
+</ui:composition>
+

@@ -68,7 +68,7 @@
 			<p:separator />
 			<p:commandButton value="Save" update="msgs"
 				actionListener="#{teamAction.addTeam()}" icon="ui-icon-check"
-				onclick="PF('dlg2').hide();" />
+				onclick="PF('dlg2').hide();" ajax="false"/>
 			<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 				icon="fa fa-times-circle" />
 		</h:form>
@@ -76,8 +76,8 @@
 	<p:growl id="msgs" showDetail="true" />
 	<div class="ui-g-12">
 		<div class="card card-w-title">
-			<p:dataGrid value="#{teamAction.teams}" var="t" columns="3"
-				layout="grid" rows="6" paginator="true" id="teams"
+			<p:dataGrid value="#{teamAction.teams}" var="t" columns="2"
+				layout="grid" rows="2" paginator="true" id="teams"
 				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 				rowsPerPageTemplate="3,6,9,12,16">
 				<f:facet name="header">

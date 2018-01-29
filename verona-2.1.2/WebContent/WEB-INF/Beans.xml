@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean id="enseignant" class="org.java.mql.models.Enseignant" scope="request" />
+	<bean id="etudiant" class="org.java.mql.models.Etudiant" scope="request" />
+	<bean id="team" class="org.java.mql.models.Team" scope="request" />
+
+
+
+	<bean id="file" class="org.java.mql.models.File" scope="request" />
+	<bean id="liverable" class="org.java.mql.models.Liverable" scope="request" />
+	<bean id="matiere" class="org.java.mql.models.Matiere" scope="request" />
+	<bean id="project" class="org.java.mql.models.Project" scope="request" />
+
+</beans>
