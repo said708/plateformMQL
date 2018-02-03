@@ -19,7 +19,6 @@
 					style="margin-bottom:20px" paginator="true" rows="5" reflow="true">
 					<h:inputHidden value="#{e.id}" />
 					<f:facet name="header">List des etudiants</f:facet>
-					
 					<p:ajax event="rowEdit" listener="#{etudiantAction.onRowEdit}"
 						update=":form:msgs" />
 					<p:ajax event="rowEditCancel"

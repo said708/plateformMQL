@@ -80,13 +80,19 @@
 						<div class="card card-w-title">
 							<p:dataGrid value="#{teamAction.teams}" var="t" columns="2"
 								layout="grid" rows="2" paginator="true" id="teams"
-								paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								paginatorTemplate="{PreviousPageLink} {PageLinks} {NextPageLink} {RowsPerPageDropdown}"
 								rowsPerPageTemplate="3,6,9,12,16">
 								<f:facet name="header">
 					List des equipes
 				</f:facet>
 								<p:panel id="teamDetail" header="#{t.name}"
 									style="text-align:center">
+									<f:facet name="header">Etudiants</f:facet>
+									<p:dataTable var="p" selectionMode="single" reflow="true"
+										selection="#{projectAction.project}" rowKey="#{e.id}"
+										rows="10" value="#{teamAction.listEtudiantsInTeam(t)}">
+										
+										</p:dataTable>
 									<p:dataTable var="e" selectionMode="single" reflow="true"
 										selection="#{etudiantAction.etudiant}" rowKey="#{e.id}"
 										rows="10" value="#{teamAction.listEtudiantsInTeam(t)}">
