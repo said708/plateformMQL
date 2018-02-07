@@ -9,6 +9,7 @@ import javax.faces.context.FacesContext;
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Enseignant;
 import org.java.mql.models.Matiere;
+import org.java.mql.models.Project;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,7 +22,8 @@ public class MatiereAction {
 
 	@Autowired
 	private Module2Business business;
-
+	
+	
 	@Autowired
 	private Matiere matiere;
 
@@ -87,7 +89,7 @@ public class MatiereAction {
 			}
 
 		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Team not  exist |");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Matiere not  exist !");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 	
@@ -108,5 +110,11 @@ public class MatiereAction {
 	public List<Enseignant> enseignants() {
 		return business.listeEnseignants();
 	}
+	
+	public List<Project> projectsInMatiere(Matiere m){
+		return business.listProjectsInMatiere(m);
+	}
+	
+	
 
 }

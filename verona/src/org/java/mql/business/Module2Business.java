@@ -30,7 +30,6 @@ public interface Module2Business {
 	List<Team> listTeams();
 	Team selectTeamById(long id);
 	int updateTeam(Team team);
-	int addEtudiantToTeam(Etudiant etudiant , Team team);
 	void addListEtudiantsToTeam(Team team , Etudiant ...etds);
 	int removeEtudiantFromTeam(Etudiant student , Team team);
 	int addProjectToTeam(Project project , Team team);
@@ -48,6 +47,7 @@ public interface Module2Business {
 	int updateProject(Project project);
 	List<Project> listProjects();
 	boolean isAnProjectExiste(Project project);
+	List<Project> listProjectsOfTeam(Team team);
 
 	//manage liverable
 	int addLiverable(Liverable liverable); 
@@ -68,6 +68,8 @@ public interface Module2Business {
 	boolean  isAnMatiereExiste(Matiere matiere);
 	Matiere deleteMatiere(Matiere matiere);
 	int updateMatiere(Matiere matiere);
+	List<Team> listTeamsInMatiere(Matiere matiere);
+	List<Project> listProjectsInMatiere(Matiere matiere);
 
 
 	//manage enseignant

@@ -128,13 +128,6 @@
 				<p:inputText id="phone" value="#{etudiant.phone}"></p:inputText>
 				<p:outputLabel for="email" value="Email : " />
 				<p:inputText id="email" value="#{etudiant.email}"></p:inputText>
-				<p:outputLabel for="team" value="Equipe : " />
-				<p:selectOneMenu id="team" value="#{etudiant.team}"
-					converter="#{teamConverter}" panelStyle="width:180px" effect="fade"
-					style="width:160px" filter="true" filterMatchMode="startsWith">
-					<f:selectItems value="#{etudiantAction.listTeams()}" var="team"
-						itemLabel="#{team}" itemValue="#{team}" />
-				</p:selectOneMenu>
 			</h:panelGrid>
 			<p:commandButton value="Save" update="msgs form"
 				onclick="PF('dlg2').hide();"

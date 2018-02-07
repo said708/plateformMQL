@@ -34,9 +34,13 @@ public class ProjectAction {
 	public void init() {
 		projects = service.listProjects();
 	}
+	
+	
 	public List<Matiere> listMatiers(){
 		return service.listeMatieres();
 	}
+	
+
 
 	public void newProject() {
 		FacesMessage msg; 

@@ -6,12 +6,17 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="DataTa" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="datata"/>
+			<item value="form"/>
+			<item value="carDetail"/>
+			<item value="DataList"/>
+			<item value="Carousel"/>
 			<item value="other.id"/>
 			<item value="// Added by YcDev"/>
 			<item value="//work"/>
@@ -22,11 +27,6 @@
 			<item value="Single with Row Click"/>
 			<item value="teamDetail"/>
 			<item value="affect"/>
-			<item value="etudiantAff"/>
-			<item value="car.brand"/>
-			<item value="team.name"/>
-			<item value=".selectedCar"/>
-			<item value="#{dataGridView."/>
 		</list>
 		<list key="replacehistory">
 			<item value="other.getId()"/>

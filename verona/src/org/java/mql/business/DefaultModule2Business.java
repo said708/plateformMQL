@@ -19,6 +19,9 @@ import org.java.mql.models.Team;
 public class DefaultModule2Business implements Module2Business{
 
 
+
+
+
 	private DaoMediator daoMediator;
 
 
@@ -68,21 +71,6 @@ public class DefaultModule2Business implements Module2Business{
 
 	}
 
-	@Override
-	public int addEtudiantToTeam(Etudiant etudiant, Team team) {
-		try {
-			if(isAnEtudiantExiste(etudiant) && isAnTeamExiste(team)) {
-				etudiant.setTeam(team);
-				return daoMediator.updateEtudiant(etudiant);
-			}else {
-				throw new Exception("team "+team.getId()+"  or  etudiant "+etudiant.getId()+" not existe");
-			}
-		}catch(Exception e) {
-			log.error("DefaultModule2Business.addEtudiantToTeam has an error :"+e.getMessage());
-			return -1;
-		}
-
-	}
 
 
 	@Override
@@ -166,7 +154,8 @@ public class DefaultModule2Business implements Module2Business{
 			if(isAnTeamExiste(team)) {
 				for (Etudiant etudiant : etds) {
 					if(isAnEtudiantExiste(etudiant)) {
-						this.addEtudiantToTeam(etudiant, team);
+						etudiant.setTeam(team);
+						daoMediator.updateEtudiant(etudiant);
 					}
 					else {
 						throw new Exception("etudiant "+etudiant+" not existe");
@@ -732,22 +721,40 @@ public class DefaultModule2Business implements Module2Business{
 
 	@Override
 	public List<Etudiant> listEtudiantsInTeam(Team team) {
-		List<Etudiant> etudiants = new Vector<>();
-		for (Etudiant etudiant : this.listEtudiants()) {
-			if(etudiant.getTeam().equals(team)) {
-				etudiants.add(etudiant);
+		try {
+			if(isAnTeamExiste(team)) {
+				List<Etudiant> etudiants = new Vector<>();
+				for (Etudiant etudiant : this.listEtudiants()) {
+					if(etudiant.getTeam().equals(team)) {
+						etudiants.add(etudiant);
+					}
+				}
+				return etudiants;
 			}
+			else 
+				throw new Exception("team null or  not existe");
+		} catch (Exception t) {
+			log.error("DefaultModule2Business.listEtudiantsInTeam has an error :"+t.getMessage());
+			return null;
 		}
-		return etudiants;
 	}
 
 	@Override
 	public Etudiant selectTeamLeaderOfTeam(Team team) {
-		for (Etudiant etudiant : this.listEtudiantsInTeam(team)) {
-			if(etudiant.isTeamLeader())
-				return etudiant;
+		try {
+			if(isAnTeamExiste(team)) {
+				for (Etudiant etudiant : this.listEtudiantsInTeam(team)) {
+					if(etudiant.isTeamLeader())
+						return etudiant;
+				}
+				return null;
+			}
+			else 
+				throw new Exception("team null or  not existe");
+		} catch (Exception t) {
+			log.error("DefaultModule2Business.selectTeamLeaderOfTeam has an error :"+t.getMessage());
+			return null;
 		}
-		return null;
 	}
 
 
@@ -755,19 +762,90 @@ public class DefaultModule2Business implements Module2Business{
 
 	@Override
 	public int changeTeamLeaderStatus(Etudiant e) {
-		Etudiant et = this.selectTeamLeaderOfTeam(e.getTeam());
-		if(!e.isTeamLeader()) {
-			if(et != null) {
-				et.setTeamLeader(false);
-				daoMediator.updateEtudiant(et);
+		try {
+			if(isAnEtudiantExiste(e)) {
+				Etudiant et = this.selectTeamLeaderOfTeam(e.getTeam());
+				if(!e.isTeamLeader()) {
+					if(et != null) {
+						et.setTeamLeader(false);
+						daoMediator.updateEtudiant(et);
+					}
+					e.setTeamLeader(true);
+				}else {
+					e.setTeamLeader(false);
+				}
+				return daoMediator.updateEtudiant(e);
 			}
-			e.setTeamLeader(true);
-		}else {
-			e.setTeamLeader(false);
+			else 
+				throw new Exception("Etudiant null or  not existe");
+		} catch (Exception t) {
+			log.error("DefaultModule2Business.changeTeamLeaderStatus has an error :"+t.getMessage());
+			return -1;
 		}
-		return daoMediator.updateEtudiant(e);
 	}
 
+
+
+	@Override
+	public List<Project> listProjectsOfTeam(Team team) {
+		try {
+			if(isAnTeamExiste(team)) {
+				List<Project> projects = new Vector<>();
+				for (Project project : daoMediator.selectAllProjet()) {
+					if(project.getTeam().equals(team)) {
+						projects.add(project);
+					}
+				}
+				return projects;
+			}
+			else 
+				throw new Exception("team null or  not existe");
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.listProjectsOfTeam has an error :"+e.getMessage());
+			return null;
+		}
+	}
+
+
+	@Override
+	public List<Team> listTeamsInMatiere(Matiere matiere){
+		try {
+			if(isAnMatiereExiste(matiere)) {
+				List<Team> teams = new Vector<>();
+				for (Team team: this.listTeams()) {
+					if(matiere.equals(team.getMatiere())) 
+						teams.add(team);
+				}
+				return teams;
+			}
+			else 
+				throw new Exception("matiere null or  not existe");
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.listTeamsInMatiere has an error :"+e.getMessage());
+			return null;
+		}
+		
+	}
+
+
+	@Override
+	public List<Project> listProjectsInMatiere(Matiere matiere){
+		try {
+			if(isAnMatiereExiste(matiere)) {
+				List<Project> projects = new Vector<>();
+				for (Project project: this.listProjects()) {
+					if(project.getMatiere().equals(matiere))
+						projects.add(project);
+				}
+				return projects;
+			}
+			else 
+				throw new Exception("matiere null or  not existe");
+		} catch (Exception e) {
+			log.error("DefaultModule2Business.listProjectsInMatiere has an error :"+e.getMessage());
+			return null;
+		}
+	}
 
 
 	@Override

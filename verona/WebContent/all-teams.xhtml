@@ -1,0 +1,146 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+
+	<ui:define name="title">Team management</ui:define>
+
+	<ui:define name="head">
+		<style type="text/css">
+.teams-datalist .text-column p:last-child {
+	color: #757575;
+}
+
+.teams-datalist .team-item {
+	padding: 8px 14px;
+	border-bottom: 1px solid #dce2e7;
+}
+
+.teams-datalist li:last-child .team-item {
+	border: 0 none;
+}
+
+.teams-datalist .team-item img, .teams-datalist .team-item .team-details
+	{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+}
+
+.teams-datalist .team-item button {
+	float: right;
+}
+
+.teams-datalist ul {
+	margin: 0;
+	padding: 0;
+}
+
+.ui-team-display td:last-child {
+	font-weight: 700;
+}
+
+@media ( max-width :640px) {
+	.teams-datalist .text-column {
+		text-align: center;
+	}
+	.ui-tree {
+		width: 100%;
+	}
+}
+</style>
+	</ui:define>
+
+
+	<ui:define name="content">
+		<div class="ui-g">
+			<div class="ui-g-12">
+				<div class="card">
+					<p:dialog header="Nouvelle equipe" widgetVar="dlg2" modal="true"
+						showEffect="explode" hideEffect="bounce">
+						<h:form>
+							<p:growl id="msgs" showDetail="true" />
+							<h:panelGrid columns="2">
+								<p:outputLabel value="Equipe : " />
+								<p:inputText value="#{team.name}" />
+							</h:panelGrid>
+							<p:separator />
+							<p:commandButton value="Save" update="msgs"
+								actionListener="#{teamAction.addTeam()}" icon="ui-icon-check"
+								onclick="PF('dlg2').hide();" ajax="false" />
+							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+								icon="fa fa-times-circle" />
+						</h:form>
+					</p:dialog>
+					<p:growl id="msgs" showDetail="true" />
+					<div class="ui-g-12">
+						<div class="card card-w-title">
+							<p:dataGrid value="#{teamAction.teams}" var="t" columns="2"
+								layout="grid" rows="2" paginator="true" id="teams"
+								paginatorTemplate="{PreviousPageLink} {PageLinks} {NextPageLink} {RowsPerPageDropdown}"
+								rowsPerPageTemplate="3,6,9,12,16">
+								<f:facet name="header">List des equipes</f:facet>
+								<p:panel id="teamDetail" header="#{t.name}"
+									style="text-align:center">
+									<p:dataTable var="e" selectionMode="single" reflow="true"
+										selection="#{etudiantAction.etudiant}" rowKey="#{e.id}"
+										rows="10" value="#{teamAction.listEtudiantsInTeam(t)}">
+
+										<p:column headerText="Nom" sortBy="#{e.nom}">
+											<h:outputText value="#{e.nom}"></h:outputText>
+										</p:column>
+										<p:column headerText="Prenom" sortBy="#{e.prenom}">
+											<h:outputText value="#{e.prenom}"></h:outputText>
+										</p:column>
+										<p:column headerText="Team Leader" sortBy="#{e.teamLeader}">
+											<h:form>
+												<p:commandButton rendered="#{e.teamLeader}"
+													icon="fa fa-star"
+													actionListener="#{teamAction.updateTeamLeaderStatus(e)}"
+													ajax="false" />
+												<p:commandButton rendered="#{not e.teamLeader}"
+													icon="fa fa-star-o"
+													actionListener="#{teamAction.updateTeamLeaderStatus(e)}"
+													ajax="false" />
+											</h:form>
+										</p:column>
+
+										<f:facet name="footer">
+											<h:form>
+												<p:panelGrid columns="2">
+													<p:selectOneMenu id="etudiant"
+														value="#{etudiantAction.etudiant}"
+														converter="#{etudiantConverter}" style="width:100%"
+														effect="fade" filter="true" filterMatchMode="startsWith">
+														<f:selectItems value="#{teamAction.etudiantsNotAffected}"
+															var="e" itemLabel="#{e}" itemValue="#{e}" />
+													</p:selectOneMenu>
+													<p:commandButton value="ajouter etudiant" icon="fa fa-plus"
+														styleClass="AquaButton"
+														actionListener="#{etudiantAction.update(t)}">
+													</p:commandButton>
+
+												</p:panelGrid>
+											</h:form>
+										</f:facet>
+									</p:dataTable>
+								</p:panel>
+							</p:dataGrid>
+						</div>
+					</div>
+					<p:toolbar>
+						<f:facet name="left">
+							<p:commandButton value="Nouvelle equipe" type="button"
+								onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+						</f:facet>
+					</p:toolbar>
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+
+</ui:composition>
+
+

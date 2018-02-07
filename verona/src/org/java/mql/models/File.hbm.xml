@@ -22,7 +22,7 @@
 		<property name="path" column="PATH" type="string" />
 
 		<!-- private String size; -->
-		<property name="size" column="SIZE" type="string" />
+		<property name="size" column="SIZE" type="long" />
 
 		<!-- private String uploadDate; -->
 		<property name="uploadDate" column="UPLOAD_DATE" type="string" />

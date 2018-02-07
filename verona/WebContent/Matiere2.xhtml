@@ -1,0 +1,224 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+	<ui:define name="title">Team management</ui:define>
+	<ui:define name="head">
+		<style type="text/css">
+.cars-datalist .text-column p:last-child {
+	color: #757575;
+}
+
+.cars-datalist .car-item {
+	padding: 8px 14px;
+	border-bottom: 1px solid #dce2e7;
+}
+
+.cars-datalist li:last-child .car-item {
+	border: 0 none;
+}
+
+.cars-datalist .car-item img, .cars-datalist .car-item .car-details {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+}
+
+.cars-datalist .car-item button {
+	float: right;
+}
+
+.cars-datalist ul {
+	margin: 0;
+	padding: 0;
+}
+
+.ui-car-display td:last-child {
+	font-weight: 700;
+}
+
+@media ( max-width :640px) {
+	.cars-datalist .text-column {
+		text-align: center;
+	}
+	.ui-tree {
+		width: 100%;
+	}
+}
+</style>
+	</ui:define>
+	<ui:define name="content">
+		<div class="ui-g">
+			<div class="ui-g-12">
+				<div class="card card-w-title">
+					<h1 style="text-align: center;">List Des Matières</h1>
+					<p:accordionPanel id="panel" multiple="false"
+						value="#{matiereAction.matieres}" var="m">
+						<p:tab title="Matière - #{m}">
+							<div class="ui-g-12">
+								<p:dataGrid var="t" value="#{teamAction.listTeamsInMatiere(m)}"
+									columns="3" layout="grid" rows="6" paginator="true" id="cars"
+									paginatorTemplate="{PreviousPageLink} {PageLinks} {NextPageLink} "
+									rowsPerPageTemplate="3,6,9,12,16">
+									<f:facet name="header">Enseignant : #{m.enseignant}</f:facet>
+									<p:panel header="#{t.name}" style="text-align:center">
+										<h:panelGrid columns="1" style="width:100%" cellpadding="6">
+											<h:outputText value="#{car.color}"
+												styleClass="Fs14 FontDosisMedium" />
+											<h:outputText value="#{teamAction.teamLeader(t)}"
+												rendered="#{not empty teamAction.teamLeader(t)}"
+												styleClass="Fs14 FontDosisMedium" />
+											<h:outputText value="Team leader not exist"
+												rendered="#{empty teamAction.teamLeader(t)}"
+												styleClass="Fs14 FontDosisMedium" />
+											<h:panelGrid columns="3" style="margin:0 auto;">
+												<p:commandButton update=":tDetails"
+													oncomplete="PF('teamDetails').show()" title="View Detail"
+													icon="ui-icon-search" style="margin:24px 5px 0 0">
+													<f:setPropertyActionListener value="#{t}"
+														target="#{teamAction.team}" />
+												</p:commandButton>
+												<p:commandButton title="Update team details"
+													icon="fa fa-pencil" style="margin:24px 5px 0 0">
+													<f:setPropertyActionListener value="#{t}"
+														target="#{teamAction.team}" />
+												</p:commandButton>
+												<p:commandButton title="Delete team" icon="fa fa-times"
+													style="margin:24px 5px 0 0"
+													actionListener="#{teamAction.delete(t)}" update=":panel">
+													<p:confirm header="Confirmation" message="Are you sure?"
+														icon="ui-icon-alert" />
+												</p:commandButton>
+												<p:confirmDialog global="true" showEffect="fade"
+													hideEffect="fade">
+													<p:commandButton value="Yes" type="button"
+														styleClass="ui-confirmdialog-yes"
+														icon="fa fa-check-square" />
+													<p:commandButton value="No" type="button"
+														styleClass="ui-confirmdialog-no"
+														icon="fa fa-fw fa-remove " />
+												</p:confirmDialog>
+											</h:panelGrid>
+										</h:panelGrid>
+									</p:panel>
+								</p:dataGrid>
+							</div>
+						</p:tab>
+					</p:accordionPanel>
+					<p:toolbar>
+						<f:facet name="left">
+							<p:commandButton value="nouvelle matiere" type="button"
+								onclick="PF('dlgMatiere').show();" icon="fa fa-plus">
+							</p:commandButton>
+							<p:commandButton value="nouvelle  equipe" type="button"
+								styleClass="purple-btn" onclick="PF('dlgTeam').show();"
+								icon="fa fa-plus">
+							</p:commandButton>
+						</f:facet>
+					</p:toolbar>
+					<p:dialog header="Nouveau matiere" widgetVar="dlg2" modal="true"
+						showEffect="explode" hideEffect="blind" width="50%">
+						<h:form>
+							<p:growl id="msgs" showDetail="true" />
+							<h:panelGrid columns="2" cellpadding="5" width="100%">
+								<p:outputLabel for="name" value="Name : " />
+								<p:inputText id="name" value="#{matiere.name}"></p:inputText>
+
+								<p:outputLabel for="enseignant" value="Enseignant : " />
+
+
+								<p:selectOneMenu id="enseignant" value="#{matiere.enseignant}"
+									converter="#{enseignantConverter}" panelStyle="width:180px"
+									effect="fade" style="width:160px" filter="true"
+									filterMatchMode="startsWith">
+									<f:selectItems value="#{matiereAction.enseignants()}"
+										var="enseignant" itemLabel="#{enseignant}"
+										itemValue="#{enseignant}" />
+								</p:selectOneMenu>
+							</h:panelGrid>
+							<p:separator />
+							<p:commandButton value="Save" update="msgs"
+								onclick="PF('dlg2').hide();"
+								actionListener="#{matiereAction.addMatiere}"
+								icon="ui-icon-check" />
+							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+								icon="fa fa-times-circle" />
+						</h:form>
+					</p:dialog>
+					<p:dialog widgetVar="teamDetails" responsive="true" modal="true"
+						showEffect="blind" hideEffect="drop" resizable="false" width="50%">
+						<p:outputPanel id="tDetails" style="text-align: center;">
+							<p:dataTable var="e"
+								value="#{teamAction.listEtudiantsInTeam(teamAction.team)}">
+								<f:facet name="header">
+									<p:panelGrid columns="1">
+										<h:outputText value="Equipe : #{teamAction.team.name}"></h:outputText>
+										<h:outputText
+											value="Chef d'equipe : #{teamAction.teamLeader(teamAction.team)}"
+											rendered="#{not empty teamAction.teamLeader(teamAction.team)}" />
+										<h:outputText value="Team leader not exist"
+											rendered="#{empty teamAction.teamLeader(teamAction.team)}" />
+									</p:panelGrid>
+								</f:facet>
+								<p:column headerText="Nom">
+									<h:outputText value="#{e.nom}"></h:outputText>
+								</p:column>
+								<p:column headerText="Prenom">
+									<h:outputText value="#{e.prenom}" />
+								</p:column>
+								<f:facet name="footer">
+									<h:form>
+										<p:panelGrid columns="2">
+											<p:selectOneMenu id="etudiant"
+												value="#{etudiantAction.etudiant}"
+												converter="#{etudiantConverter}" effect="fade" filter="true"
+												filterMatchMode="startsWith">
+												<f:selectItems
+													value="#{etudiantAction.etudiantsNotAffected}" var="e"
+													itemLabel="#{e}" itemValue="#{e}" />
+											</p:selectOneMenu>
+											<p:commandButton value="ajouter etudiant" icon="fa fa-plus"
+												styleClass="AquaButton"
+												actionListener="#{etudiantAction.addEtudiantToTeam}">
+												<f:attribute name="team" value="#{teamAction.team}" />
+											</p:commandButton>
+										</p:panelGrid>
+									</h:form>
+								</f:facet>
+							</p:dataTable>
+						</p:outputPanel>
+					</p:dialog>
+					<p:dialog header="Nouvelle equipe" widgetVar="dlgTeam" modal="true"
+						showEffect="explode" hideEffect="bounce">
+						<h:form>
+							<p:growl id="msgs" showDetail="true" />
+							<h:panelGrid columns="2">
+								<p:outputLabel value="Equipe : " />
+								<p:inputText value="#{teamAction.team.name}" />
+								<p:outputLabel value="Matiere : " />
+								<p:selectOneMenu value="#{teamAction.team.matiere}"
+									converter="#{matiereConverter}">
+									<f:selectItem>
+										<p:commandButton value="nouvelle matiere" type="button"
+											onclick="PF('dlgTeam').hide();PF('dlgMatiere').show();"
+											icon="fa fa-plus">
+										</p:commandButton>
+									</f:selectItem>
+									<f:selectItems value="#{teamAction.listMatieres()}"
+										var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}" />
+								</p:selectOneMenu>
+							</h:panelGrid>
+							<p:separator />
+							<p:commandButton value="Save" update="msgs"
+								actionListener="#{teamAction.addTeam()}" icon="ui-icon-check"
+								onclick="PF('dlg2').hide();" ajax="false" />
+							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+								icon="fa fa-times-circle" />
+						</h:form>
+					</p:dialog>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

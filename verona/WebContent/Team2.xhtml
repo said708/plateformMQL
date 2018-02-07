@@ -86,31 +86,6 @@
 					</p:commandButton>
 				</div>
 			</p:dataList>
-
-
-
-			<p:tabView value="#{teamAction.teams}" var="t">
-				<p:tab title="Equipe - #{t.name}">
-					<h:panelGrid columns="2" cellpadding="5">
-						<f:facet name="header">
-							<p:graphicImage name="demo/images/brand/team.png" />
-						</f:facet>
-						<h:outputText value="Matiere:" style="font-weight: bold" />
-						<h:outputText value="#{t.matiere}" />
-						
-						<h:outputText value="Chef d'equipe" style="font-weight: bold" />
-						<h:outputText
-							value="Chef d'equipe : #{teamAction.teamLeader(t)}"
-							rendered="#{not empty teamAction.teamLeader(t)}" />
-						<h:outputText value="Team leader not exist"
-							rendered="#{empty teamAction.teamLeader(t)}" />
-					</h:panelGrid>
-				</p:tab>
-			</p:tabView>
-
-
-
-
 			<p:dialog widgetVar="carDialog2" responsive="true" modal="true"
 				showEffect="blind" hideEffect="drop" resizable="false" width="50%">
 				<p:outputPanel id="teamDetail" style="text-align: center;">

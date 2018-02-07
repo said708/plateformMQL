@@ -9,6 +9,7 @@ import javax.faces.context.FacesContext;
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Etudiant;
 import org.java.mql.models.Matiere;
+import org.java.mql.models.Project;
 import org.java.mql.models.Team;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,19 +27,25 @@ public class TeamAction {
 	@Autowired
 	private Team team;
 
+	@Autowired
+	private Matiere matiere;
+
 	private List<Team> teams;
-	private List<Etudiant> etudiantsNotAffected;
 
 
 	@PostConstruct
 	public void init() {
 		teams = business.listTeams();
-		etudiantsNotAffected = business.listEtudiantsPasEncoreAffecter();
 	}
 
 
 	public List<Etudiant> listEtudiantsInTeam(Team team){
 		return business.listEtudiantsInTeam(team);
+	}
+
+
+	public List<Project> projectsOfTeam(Team team){
+		return business.listProjectsOfTeam(team);
 	}
 
 
@@ -88,7 +95,7 @@ public class TeamAction {
 		FacesMessage msg = new FacesMessage("Edit Cancelled", ((Team) event.getObject()).getName());
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
-
+	
 
 
 
@@ -107,7 +114,6 @@ public class TeamAction {
 	}
 
 
-
 	public void setTeam(Team team) {
 		this.team = team;
 	}
@@ -124,13 +130,25 @@ public class TeamAction {
 
 
 
+	public Matiere getMatiere() {
+		return matiere;
+	}
+
+
+	public void setMatiere(Matiere matiere) {
+		this.matiere = matiere;
+	}
+
 	public List<Matiere> listMatieres(){
 		return business.listeMatieres();
 	}
 
-	public List<Etudiant> getEtudiantsNotAffected() {
-		return etudiantsNotAffected;
+	public Etudiant teamLeader(Team team) {
+		return business.selectTeamLeaderOfTeam(team);
 	}
 
+	public List<Team> listTeamsInMatiere(Matiere m){
+		return business.listTeamsInMatiere(m);
+	}
 
 }

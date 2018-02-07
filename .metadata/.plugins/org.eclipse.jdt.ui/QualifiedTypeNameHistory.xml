@@ -48,16 +48,16 @@
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Team"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Contact"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.primefaces.model.DualListModel"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.File"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Liverable"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Project"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Team"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
 </qualifiedTypeNameHistroy>
