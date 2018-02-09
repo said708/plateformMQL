@@ -43,6 +43,7 @@ public interface Module2Business {
 	//manage project
 	int addProject(Project project);
 	Project selectProjectById(long idProject);
+	List<Project> selectAllProjectByMatiere(String matiereName); // YcDev
 	Project deleteProject(Project project);
 	int updateProject(Project project);
 	List<Project> listProjects();
