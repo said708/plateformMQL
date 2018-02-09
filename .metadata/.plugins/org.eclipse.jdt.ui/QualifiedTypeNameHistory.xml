@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.java.mql.models.p02.Liverable"/>
-<fullyQualifiedTypeName name="org.java.mql.models.p02.AbstractFile"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="org.mql.test.hibernate.App1"/>
@@ -27,7 +25,6 @@
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.web.context.ContextLoaderListener"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.FileSystemXmlApplicationContext"/>
-<fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ApplicationScoped"/>
 <fullyQualifiedTypeName name="javax.faces.annotation.ManagedProperty"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
@@ -36,16 +33,12 @@
 <fullyQualifiedTypeName name="org.java.mql.business.Module2Business"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
-<fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
-<fullyQualifiedTypeName name="org.springframework.web.context.annotation.RequestScope"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
 <fullyQualifiedTypeName name="org.java.mql.dao.TeamDao"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.java.mql.web.utils.HelpConvertor"/>
 <fullyQualifiedTypeName name="javax.faces.view.ViewScoped"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
 <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Contact"/>
@@ -55,9 +48,16 @@
 <fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.File"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Liverable"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Project"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Team"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.ApplicationScope"/>
+<fullyQualifiedTypeName name="javax.faces.event.ActionEvent"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.RequestScope"/>
+<fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
 </qualifiedTypeNameHistroy>

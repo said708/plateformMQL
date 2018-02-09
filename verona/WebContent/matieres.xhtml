@@ -14,99 +14,118 @@
 		<div class="ui-g">
 			<div class="ui-g-12">
 				<div class="card">
-					<p:panel>
-						<h:form id="form">
-							<p:growl id="msgs" showDetail="true" />
-							<div class="card card-w-title">
-								<p:dataTable id="matieres" var="m"
-									value="#{matiereAction.matieres}" editable="true"
-									style="margin-bottom:20px" paginator="true" rows="10"
-									reflow="true">
-									<h:inputHidden value="#{m.id}" />
-									<f:facet name="header">List des matieres</f:facet>
-									<p:ajax event="rowEdit" listener="#{matiereAction.onRowEdit}"
-										update=":form:msgs" />
-									<p:ajax event="rowEditCancel"
-										listener="#{matiereAction.onRowCancel}" update=":form:msgs" />
+					<h:form id="form">
+						<p:growl id="msgs" showDetail="true" />
+						<div class="card card-w-title">
+							<p:dataTable id="matieres" var="m"
+								value="#{matiereAction.matieres}" editable="true"
+								style="margin-bottom:20px" paginator="true" rows="10"
+								reflow="true">
+								<h:inputHidden value="#{m.id}" />
+								<f:facet name="header">
+									<p:toolbar>
+										<f:facet name="left">
+											<p:commandButton type="button" value="New"
+												icon="ui-icon-document" />
 
-									<p:column headerText="Matiere" sortBy="#{m.name}">
-										<p:cellEditor>
-											<f:facet name="output">
-												<h:outputText value="#{m.name}" />
-											</f:facet>
-											<f:facet name="input">
-												<p:inputText id="name" value="#{m.name}" style="width:100%" />
-											</f:facet>
-										</p:cellEditor>
-									</p:column>
-									<p:column headerText="Enseignant" sortBy="#{m.prenom}">
-										<p:cellEditor>
-											<f:facet name="output">
-												<h:outputText value="#{m.enseignant}" />
-											</f:facet>
-											<f:facet name="input">
-												<p:selectOneMenu id="enseignant" value="#{m.enseignant}"
-													converter="#{enseignantConverter}" panelStyle="width:180px"
-													effect="fade" style="width:160px" filter="true"
-													filterMatchMode="startsWith">
-													<f:selectItems value="#{matiereAction.enseignants()}"
-														var="enseignant" itemLabel="#{enseignant}"
-														itemValue="#{enseignant}" />
-												</p:selectOneMenu>
-											</f:facet>
-										</p:cellEditor>
-									</p:column>
+											<p:commandButton type="button" value="Open"
+												icon="ui-icon-folder-open" />
 
-									<p:column style="width:50px;">
-										<p:rowEditor />
-									</p:column>
-									<p:column style="width:80px;">
-										<p:commandButton icon="fa fa-fw fa-trash"
-											actionListener="#{matiereAction.delete(e)}" update="@form"
-											ajax="true">
-											<p:confirm header="Confirmation" message="Are you sure?"
-												icon="ui-icon-alert" />
-										</p:commandButton>
-										<p:commandButton title="View Detail" icon="fa fa-search"
-											style="margin:0" action="/Matiere">
-											<f:setPropertyActionListener value="#{m}"
-												target="#{teamAction.matiere}" />
-										</p:commandButton>
-									</p:column>
-								</p:dataTable>
-							</div>
-							<p:confirmDialog global="true" showEffect="fade"
-								hideEffect="fade">
-								<p:commandButton value="Yes" type="button"
-									styleClass="ui-confirmdialog-yes" icon="fa fa-check-square" />
-								<p:commandButton value="No" type="button"
-									styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove " />
-							</p:confirmDialog>
+											<span class="ui-separator"> <span
+												class="ui-icon ui-icon-grip-dotted-vertical" />
+											</span>
 
-						</h:form>
-						<f:facet name="footer">
-							<p:commandButton value="nouveau matiere" type="button"
-								onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
-						</f:facet>
-					</p:panel>
-					<p:dialog header="Nouveau matiere" widgetVar="dlg2" modal="true"
-						showEffect="explode" hideEffect="bounce" width="50%">
-						<h:form>
-							<p:growl id="msgs" showDetail="true" />
+											<p:commandButton type="button" title="Save"
+												icon="ui-icon-disk" />
+											<p:commandButton type="button" title="Delete"
+												icon="ui-icon-trash" />
+											<p:commandButton type="button" title="Print"
+												icon="ui-icon-print" />
+										</f:facet>
+
+										<f:facet name="right">
+											<p:menuButton value="Options">
+												<p:menuitem value="Save"
+													actionListener="#{toolbarView.save}" update=":form:msgs"
+													icon="ui-icon-disk" />
+												<p:menuitem value="Update"
+													actionListener="#{toolbarView.update}" update=":form:msgs"
+													icon="ui-icon-arrowrefresh-1-w" />
+												<p:menuitem value="Delete"
+													actionListener="#{toolbarView.delete}" ajax="false"
+													icon="ui-icon-close" />
+												<p:menuitem value="Homepage" url="http://www.primefaces.org"
+													icon="ui-icon-extlink" />
+											</p:menuButton>
+										</f:facet>
+
+									</p:toolbar>
+								</f:facet>
+								<p:ajax event="rowEdit" listener="#{matiereAction.onRowEdit}"
+									update=":form:msgs" />
+								<p:ajax event="rowEditCancel"
+									listener="#{matiereAction.onRowCancel}" update=":form:msgs" />
+
+								<p:column headerText="Matiere" sortBy="#{m.name}">
+									<p:cellEditor>
+										<f:facet name="output">
+											<h:outputText value="#{m.name}" />
+										</f:facet>
+										<f:facet name="input">
+											<p:inputText id="name" value="#{m.name}" style="width:100%" />
+										</f:facet>
+									</p:cellEditor>
+								</p:column>
+								<p:column headerText="Enseignant" sortBy="#{m.prenom}">
+									<p:cellEditor>
+										<f:facet name="output">
+											<h:outputText value="#{m.enseignant}" />
+										</f:facet>
+										<f:facet name="input">
+											<p:selectOneMenu id="enseignant" value="#{m.enseignant}"
+												converter="#{enseignantConverter}" panelStyle="width:180px"
+												effect="fade" style="width:160px" filter="true"
+												filterMatchMode="startsWith">
+												<f:selectItems value="#{matiereAction.enseignants()}"
+													var="enseignant" itemLabel="#{enseignant}"
+													itemValue="#{enseignant}" />
+											</p:selectOneMenu>
+										</f:facet>
+									</p:cellEditor>
+								</p:column>
+
+								<p:column style="width:50px;">
+									<p:rowEditor />
+								</p:column>
+								<p:column style="width:80px;">
+									<p:commandButton icon="fa fa-fw fa-trash" update="@form:msgs"
+										onclick="PF('confirmation').show()">
+										<f:setPropertyActionListener value="#{m}"
+											target="#{matiereAction.matiere}" />
+									</p:commandButton>
+									<p:commandButton title="View Detail" icon="fa fa-search"
+										style="margin:0" action="/Matiere">
+										<f:setPropertyActionListener value="#{m}"
+											target="#{matiereAction.matiere}" />
+									</p:commandButton>
+								</p:column>
+							</p:dataTable>
+						</div>
+						<p:commandButton value="nouveau matiere" type="button"
+							onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+						<p:dialog header="Nouveau matiere" widgetVar="dlg2" modal="true"
+							showEffect="explode" hideEffect="bounce" width="50%">
+							<p:ajax event="close" listener="#{matiereAction.init()}"
+								update=":form:matieres" immediate="true" global="false" />
 							<h:panelGrid columns="2" cellpadding="5" width="100%">
 								<p:outputLabel for="name" value="Name : " />
-								<p:inputText id="name" value="#{matiere.name}"></p:inputText>
-
+								<p:inputText id="name" value="#{matiereAction.matiere.name}"></p:inputText>
 								<p:outputLabel for="enseignant" value="Enseignant : " />
-
-
-								<p:selectOneMenu id="enseignant" value="#{matiere.enseignant}"
+								<p:selectOneMenu id="enseignant"
+									value="#{matiereAction.matiere.enseignant}"
 									converter="#{enseignantConverter}" panelStyle="width:180px"
 									effect="fade" style="width:160px" filter="true"
 									filterMatchMode="startsWith">
-
-									<!-- <f:selectItem itemLabel="Select Enseignant" itemValue=""
-						noSelectionOption="true" />  -->
 									<f:selectItems value="#{matiereAction.enseignants()}"
 										var="enseignant" itemLabel="#{enseignant}"
 										itemValue="#{enseignant}" />
@@ -119,8 +138,16 @@
 								icon="ui-icon-check" />
 							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 								icon="fa fa-times-circle" />
-						</h:form>
-					</p:dialog>
+						</p:dialog>
+						<p:confirmDialog message="Are you sure?" header="Confirmation"
+							severity="alert" widgetVar="confirmation">
+							<p:commandButton value="Yes" update="matieres"
+								onclick="PF('confirmation').hide()"
+								actionListener="#{matiereAction.delete}" />
+							<p:commandButton value="Not" onclick="PF('confirmation').hide()"
+								type="button" />
+						</p:confirmDialog>
+					</h:form>
 				</div>
 			</div>
 		</div>

@@ -13,36 +13,31 @@ import org.java.mql.models.Project;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.ApplicationScope;
 
 
 @Component
-@RequestScope
+@ApplicationScope
 public class MatiereAction {
 
 	@Autowired
 	private Module2Business business;
-	
-	
+
 	@Autowired
 	private Matiere matiere;
 
-
 	private List<Matiere> matieres;
-
-
 
 	@PostConstruct
 	public void init() {
 		matieres = business.listeMatieres();
-
+		matiere = new Matiere();
 	}
 
 
-
-
 	public void addMatiere() {
-		FacesMessage msg; 
+		FacesMessage msg;
+		System.err.println(matiere);
 		int status = business.addMatiere(matiere);
 		if(status == 1) {
 			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", matiere.getName() + " added with success");   
@@ -51,7 +46,7 @@ public class MatiereAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
-	
+
 	public void onRowEdit(RowEditEvent event) {
 		Matiere m = (Matiere)event.getObject();
 		FacesMessage msg; 
@@ -78,21 +73,18 @@ public class MatiereAction {
 
 
 
-	public void delete(Matiere m) {
+	public void delete() {
 		FacesMessage msg; 
-		if(business.isAnMatiereExiste(m)){
-			Matiere status =  business.deleteMatiere(m);
-			if(status !=null) {
-				msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", m.getName() + " deleted with success");
-			}else {
-				msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
-			}
-
-		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Matiere not  exist !");   
+		Matiere status =  business.deleteMatiere(matiere);
+		if(status !=null) {
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", matiere.getName() + " deleted with success");
+			init();
+		}else {
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
+		}
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
-	
+
 
 	public Matiere getMatiere() {
 		return matiere;
@@ -106,15 +98,15 @@ public class MatiereAction {
 	public List<Matiere> getMatieres() {
 		return matieres;
 	}
-	
+
 	public List<Enseignant> enseignants() {
 		return business.listeEnseignants();
 	}
-	
+
 	public List<Project> projectsInMatiere(Matiere m){
 		return business.listProjectsInMatiere(m);
 	}
-	
-	
+
+
 
 }
