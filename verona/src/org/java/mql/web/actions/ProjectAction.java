@@ -1,5 +1,6 @@
 package org.java.mql.web.actions;
 
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import javax.faces.context.FacesContext;
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Matiere;
 import org.java.mql.models.Project;
+import org.java.mql.models.Team;
+import org.java.mql.models.Type;
 import org.java.mql.web.utils.HelpConvertor;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,18 +32,19 @@ public class ProjectAction {
 	private List<Project> projects;
 
 	private Date date;
+	
+	private String prefixPath;
 
 	@PostConstruct
 	public void init() {
 		projects = service.listProjects();
+		prefixPath = LiverableAction.getLiverablepath();
+		
 	}
-	
 	
 	public List<Matiere> listMatiers(){
 		return service.listeMatieres();
 	}
-	
-
 
 	public void newProject() {
 		FacesMessage msg; 
@@ -59,8 +63,6 @@ public class ProjectAction {
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Project already exist !");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
-
-
 
 	public void onRowEdit(RowEditEvent event) {
 		Project p = (Project)event.getObject();
@@ -89,9 +91,6 @@ public class ProjectAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
 
-
-
-
 	public void delete(Project p) {
 		FacesMessage msg; 
 		System.out.println(p);
@@ -108,7 +107,6 @@ public class ProjectAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
-
 	public String getCurrentDate() {
 		Date date = new Date();
 		return HelpConvertor.dateToString(date, "dd-MM-yyyy");
@@ -122,11 +120,9 @@ public class ProjectAction {
 		return project;
 	}
 
-
 	public Date getDate() {
 		return date;
 	}
-
 
 	public void setDate(Date date) {
 		this.date = date;
@@ -136,6 +132,47 @@ public class ProjectAction {
 		return projects;
 	}
 
+	public void methodTwo(Project p,Matiere m) {
+		System.out.println("********* Test ************");
+		System.out.println("********************* project name : " + p.getName());
+		System.out.println("********************* matiere name : " + p.getMatiere().getName());
+		
+	}
+	
+	public void createProjectDirectory(Project project) {
+		String matiereName = project.getMatiere().getName();
+		String projectName = project.getName();
+		String teamName = "equipe_A";
+		String projectPath;// = prefixPath + matiereName + "/" + projectName + "/" + teamName; 
+		
+		projectPath = prefixPath + matiereName;
+		createDir(projectPath);// matiere directory
+		
+		projectPath += "/" + projectName;
+		createDir(projectPath);// project directory
+		
+		projectPath += "/" + teamName;
+		createDir(projectPath);// team directory
+		
+		
+		Type[] types = Type.values();
+		for (int i=0;i<types.length;i++) {// types of directory
+			String tmpPath =  projectPath + "/" + types[i];
+			createDir(tmpPath);
+		}
+	}
+	
+	public void createDir(String path) {
+		File directory = new File(path);
+		try {
+			directory.mkdir();
+			System.out.println("Directory was created successfully !");
+			
+		} catch (Exception e) {
+			System.out.println("Error : Directory has not been created ");
+			e.printStackTrace();
+		}
+	}
 
 
 }
