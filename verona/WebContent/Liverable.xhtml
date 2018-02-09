@@ -16,59 +16,92 @@
 
 							<p:panel header="Liste des liverables"
 								style="margin-bottom:10px;">
-								<h:panelGrid columns="5" cellpadding="5">
+								<h:panelGrid columns="2" cellpadding="5">
 									<p:outputLabel for="matiere" value="Matiere: " />
-									<p:selectOneMenu id="matiere" value="#{dropdownView.country}"
+									<p:selectOneMenu id="matiere" value="#{liverableAction.matiere}"
 										style="width:150px">
-										<p:ajax listener="#{dropdownView.onCountryChange}"
-											update="city" />
+										<p:ajax listener="#{liverableAction.onMatiereChange(liverableAction.matiere)}"
+											update="liverables" />
 										<f:selectItem itemLabel="Choisis une matiere" itemValue=""
 											noSelectionOption="true" />
-										<f:selectItems value="#{matiereAction.matieres}" />
-									</p:selectOneMenu>
-
-									<p:outputLabel for="city" value="Projet: " />
-									<p:selectOneMenu id="city" value="#{dropdownView.city}"
-										style="width:150px">
-										<f:selectItem itemLabel="Choisis un projet" itemValue=""
-											noSelectionOption="true" />
-										<f:selectItems value="#{projectAction.projects}" />
-									</p:selectOneMenu>
-
-									<p:commandButton value="Afficher" update="msgs"
-										actionListener="#{dropdownView.displayLocation}" />
+										<f:selectItems value="#{liverableAction.matieres}" />
+									</p:selectOneMenu> 
+										
+									
 								</h:panelGrid>
 
 								<!--  <p:separator /> -->
 
+							<p:dataTable id="liverables" value="#{liverableAction.projects}" var="project">
+					
+								<p:column headerText="Projet" sortBy="">
+									<h:outputText value="#{project.name}"/>
+								</p:column>
+								
+								<p:column headerText="Liverable" sortBy="">
+								<h:outputText value="#{project.liverable.name}"/>
+								</p:column>
+								
+								<p:column style="width:50px">
+										<p:rowEditor />
+									</p:column>
+									<p:column style="width:30px">
+										<p:commandButton icon="fa fa-fw fa-trash"
+											>
+											<p:confirm header="Confirmation" message="Are you sure?"
+												icon="ui-icon-alert" />
+										</p:commandButton>
+									</p:column>
 
+							</p:dataTable>
 							</p:panel>
+
+							
 						</h:form>
 						<f:facet name="footer">
 							<p:commandButton value="nouveau Liverable" type="button"
 								onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
 						</f:facet>
 					</p:panel>
-					<p:dialog header="Nouveau Enseignant" widgetVar="dlg2" modal="true"
+					<p:dialog header="Nouveau Liverable" widgetVar="dlg2" modal="true"
 						showEffect="explode" hideEffect="bounce">
 						<h:form>
 							<p:growl id="msgs" showDetail="true" />
 							<h:panelGrid columns="2" cellpadding="5">
-								<p:outputLabel for="nom" value="Nom : " />
-								<p:inputText id="nom" value="#{enseignant.nom}"></p:inputText>
-								<p:outputLabel for="prenom" value="Prenom : " />
-								<p:inputText id="prenom" value="#{enseignant.prenom}"></p:inputText>
-								<p:outputLabel for="phone" value="phone : " />
-								<p:inputText id="phone" value="#{enseignant.phone}"></p:inputText>
-								<p:outputLabel for="email" value="email : " />
-								<p:inputText id="email" value="#{enseignant.email}"></p:inputText>
+								<p:outputLabel for="name" value="Nom : " />
+								<p:inputText id="name" value="#{liverable.name}"></p:inputText>
+								
+								
+<!--								
+								<p:outputLabel for="matiere" value="Matiere: " />
+									<p:selectOneMenu id="matiere" value="#{liverableAction.matiere}"
+										style="width:150px" converter="#{MatiereConverter}">
+										<p:ajax listener="#{liverableAction.onMatiereChange(liverableAction.matiere)}"
+											update="project" />
+										<f:selectItem itemLabel="Choisis une matiere" itemValue=""
+											noSelectionOption="true" />
+										<f:selectItems value="#{liverableAction.matieres}" />
+									</p:selectOneMenu>
+								
+								
+								<p:outputLabel for="project" value="Project: " />
+									<p:selectOneMenu id="project" value="#{liverableAction.projects}"
+										style="width:150px" converter="#{ProjectConverter}">
+										
+										<f:selectItem itemLabel="Choisis un projet" itemValue=""
+											noSelectionOption="true" />
+										<f:selectItems value="#{liverableAction.projects}" />
+									</p:selectOneMenu> 
+-->								
+
 							</h:panelGrid>
 							<p:commandButton value="Save" update="msgs"
-								actionListener="#{enseignantAction.addEnsignant}"
+								actionListener="#{liverableAction.addLiverable}"
 								icon="ui-icon-check" />
 							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 								icon="fa fa-times-circle" />
 						</h:form>
+						
 					</p:dialog>
 				</div>
 			</div>
