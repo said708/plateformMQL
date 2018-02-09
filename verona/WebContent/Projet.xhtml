@@ -128,7 +128,10 @@
 
 				<p:commandButton value="Save" update="msgs"
 					action="#{projectAction.newProject()}" icon="ui-icon-check"
-					onclick="PF('dlg2').hide();" />
+					onclick="PF('dlg2').hide();" >
+					<!-- create system directories -->					
+					<f:actionListener binding="#{projectAction.createProjectDirectory(project)}" />
+					</p:commandButton>
 				<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
 					icon="fa fa-times-circle" />
 			</h:form>
