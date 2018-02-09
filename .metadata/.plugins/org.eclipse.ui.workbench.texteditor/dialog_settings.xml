@@ -6,29 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="DataTa" key="selection"/>
+		<item value="newTeamPanel" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="datata"/>
-			<item value="form"/>
-			<item value="carDetail"/>
-			<item value="DataList"/>
-			<item value="Carousel"/>
-			<item value="other.id"/>
-			<item value="// Added by YcDev"/>
-			<item value="//work"/>
-			<item value="inteam"/>
-			<item value="listEtudiantsInTeam"/>
-			<item value="system."/>
-			<item value="icon"/>
-			<item value="Single with Row Click"/>
-			<item value="teamDetail"/>
-			<item value="affect"/>
+			<item value="newTeamPanel"/>
+			<item value="dial"/>
+			<item value="dia"/>
+			<item value="teamOP"/>
+			<item value="nouveau"/>
+			<item value="h:form"/>
+			<item value="p:form"/>
+			<item value="&lt;p:form"/>
+			<item value="teamAction.matiere"/>
+			<item value="messages"/>
+			<item value="Overlay Panel"/>
+			<item value=":panel"/>
+			<item value="cars"/>
+			<item value="panel"/>
+			<item value="purp"/>
 		</list>
 		<list key="replacehistory">
+			<item value="matiereAction.matiere"/>
 			<item value="other.getId()"/>
 			<item value=""/>
 			<item value="team.name"/>
@@ -43,14 +44,13 @@
 			<item value="teams"/>
 			<item value="Team"/>
 			<item value="{t."/>
-			<item value="Etudiant"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="1056" key="DIALOG_X_ORIGIN"/>
-		<item value="255" key="DIALOG_Y_ORIGIN"/>
+		<item value="1020" key="DIALOG_X_ORIGIN"/>
+		<item value="296" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -49,80 +49,32 @@
 </style>
 	</ui:define>
 	<ui:define name="content">
-		<p:dialog widgetVar="teamDetails" responsive="true" modal="true"
-			showEffect="blind" hideEffect="drop" resizable="false" width="50%">
-			<p:outputPanel id="tDetails" style="text-align: center;">
-				<p:dataTable var="e"
-					value="#{teamAction.listEtudiantsInTeam(teamAction.team)}">
-					<f:facet name="header">
-						<p:panelGrid columns="1">
-							<h:outputText value="Equipe : #{teamAction.team.name}"></h:outputText>
-							<h:outputText
-								value="Chef d'equipe : #{teamAction.teamLeader(teamAction.team)}"
-								rendered="#{not empty teamAction.teamLeader(teamAction.team)}" />
-							<h:outputText value="Team leader not exist"
-								rendered="#{empty teamAction.teamLeader(teamAction.team)}" />
-						</p:panelGrid>
-					</f:facet>
-					<p:column headerText="Nom">
-						<h:outputText value="#{e.nom}"></h:outputText>
-					</p:column>
-					<p:column headerText="Prenom">
-						<h:outputText value="#{e.prenom}" />
-					</p:column>
-					<f:facet name="footer">
-						<h:form>
-							<p:panelGrid columns="2">
-								<p:selectOneMenu id="etudiant"
-									value="#{etudiantAction.etudiant}"
-									converter="#{etudiantConverter}" effect="fade" filter="true"
-									filterMatchMode="startsWith">
-									<f:selectItems value="#{etudiantAction.etudiantsNotAffected}"
-										var="e" itemLabel="#{e}" itemValue="#{e}" />
-								</p:selectOneMenu>
-								<p:commandButton value="ajouter etudiant" icon="fa fa-plus"
-									styleClass="AquaButton"
-									actionListener="#{etudiantAction.addEtudiantToTeam}">
-									<f:attribute name="team" value="#{teamAction.team}" />
-								</p:commandButton>
-							</p:panelGrid>
-						</h:form>
-					</f:facet>
-				</p:dataTable>
-			</p:outputPanel>
-		</p:dialog>
-		<p:dialog header="Nouvelle equipe" widgetVar="dlgTeam" modal="true"
-			showEffect="explode" hideEffect="bounce" width="50%">
-			<h:form>
-				<p:growl id="msgs" showDetail="true" />
-				<h:panelGrid columns="2">
-					<p:outputLabel value="Equipe : " />
-					<p:inputText value="#{teamAction.team.name}" />
-					<p:outputLabel value="Matiere : " />
-					<p:inputText disabled="true" value="#{teamAction.matiere}" />
-				</h:panelGrid>
-				<p:separator />
-				<p:commandButton value="Save" update="msgs"
-					actionListener="#{teamAction.addTeam()}" icon="ui-icon-check"
-					onclick="PF('dlg2').hide();" ajax="false" />
-				<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
-					icon="fa fa-times-circle" />
-			</h:form>
-		</p:dialog>
+		<p:growl id="messages" showDetail="true" />
 		<div class="ui-g">
 			<div class="ui-g-12">
 				<div class="card card-w-title">
-					<div class="ui-g-12">
-						<p:dataGrid var="t"
-							value="#{teamAction.listTeamsInMatiere(teamAction.matiere)}"
+					<h:form id="formTeam" styleClass="ui-g-12">
+						<p:toolbar>
+							<f:facet name="right">
+								<p:commandButton value="ajouter equipe" id="newTeamPanel"
+									icon="fa fa-plus" styleClass="purple-btn" />
+								<p:commandButton value="Supprimer" title="Delete matiere"
+									icon="fa fa-times" onclick="PF('confirmation').show()">
+								</p:commandButton>
+
+							</f:facet>
+							<f:facet name="left">
+								<p:outputLabel value="Matiere -  #{matiereAction.matiere}"></p:outputLabel>
+							</f:facet>
+						</p:toolbar>
+						<p:dataGrid id="matiereTab" var="t"
+							value="#{teamAction.listTeamsInMatiere(matiereAction.matiere)}"
 							columns="3" layout="grid" rows="6" paginator="true"
 							paginatorTemplate="{PreviousPageLink} {PageLinks} {NextPageLink} "
 							rowsPerPageTemplate="3,6,9,12,16">
-							<f:facet name="header">Enseignant : #{teamAction.matiere.enseignant}</f:facet>
-							<p:panel header="#{t.name}" style="text-align:center">
+							<p:panel header="Equipe - #{t.name}" style="text-align:center">
 								<h:panelGrid columns="1" style="width:100%" cellpadding="6">
-									<h:outputText value="#{car.color}"
-										styleClass="Fs14 FontDosisMedium" />
+
 									<h:outputText value="#{teamAction.teamLeader(t)}"
 										rendered="#{not empty teamAction.teamLeader(t)}"
 										styleClass="Fs14 FontDosisMedium" />
@@ -130,12 +82,14 @@
 										rendered="#{empty teamAction.teamLeader(t)}"
 										styleClass="Fs14 FontDosisMedium" />
 									<h:panelGrid columns="3" style="margin:0 auto;">
-										<p:commandButton oncomplete="PF('teamDetails').show()"
-											title="View Detail" icon="ui-icon-search"
+										<p:commandButton update=":formTeam:tDetails"
+											oncomplete="PF('teamOP').show('#{component.clientId}')"
+											icon="ui-icon-search" title="View"
 											style="margin:24px 5px 0 0">
 											<f:setPropertyActionListener value="#{t}"
 												target="#{teamAction.team}" />
 										</p:commandButton>
+
 										<p:commandButton title="Update team details"
 											icon="fa fa-pencil" style="margin:24px 5px 0 0">
 											<f:setPropertyActionListener value="#{t}"
@@ -143,9 +97,9 @@
 										</p:commandButton>
 										<p:commandButton title="Delete team" icon="fa fa-times"
 											style="margin:24px 5px 0 0"
-											actionListener="#{teamAction.delete(t)}">
-											<p:confirm header="Confirmation" message="Are you sure?"
-												icon="ui-icon-alert" />
+											onclick="PF('deleteTeam').show()">
+											<f:setPropertyActionListener value="#{t}"
+												target="#{teamAction.team}" />
 										</p:commandButton>
 										<p:confirmDialog global="true" showEffect="fade"
 											hideEffect="fade">
@@ -158,15 +112,57 @@
 								</h:panelGrid>
 							</p:panel>
 						</p:dataGrid>
-					</div>
-					<p:toolbar>
-						<f:facet name="left">
-							<p:commandButton value="nouvelle  equipe" type="button"
-								styleClass="purple-btn" onclick="PF('dlgTeam').show();"
-								icon="fa fa-plus">
+						<p:overlayPanel id="teamPanel" dynamic="true" style="width:400px"
+							modal="true" widgetVar="teamOP" showEffect="fade"
+							hideEffect="fade" dismissable="false" showCloseIcon="true">
+							<p:outputPanel id="tDetails" style="text-align: center;">
+								<p:dataTable var="e"
+									value="#{teamAction.listEtudiantsInTeam(teamAction.team)}">
+									<p:column headerText="Nom">
+										<h:outputText value="#{e.nom}"></h:outputText>
+									</p:column>
+									<p:column headerText="Prenom">
+										<h:outputText value="#{e.prenom}" />
+									</p:column>
+								</p:dataTable>
+							</p:outputPanel>
+						</p:overlayPanel>
+						<p:overlayPanel for="newTeamPanel" dynamic="true"
+							style="width:400px" modal="true" widgetVar="newPanel"
+							showEffect="fade" hideEffect="fade" dismissable="false"
+							showCloseIcon="true">
+							<h:panelGrid columns="2">
+								<p:outputLabel value="Equipe : " />
+								<p:inputText value="#{teamAction.team.name}" />
+								<p:outputLabel value="Matiere : " />
+								<p:inputText disabled="true" value="#{matiereAction.matiere}" />
+							</h:panelGrid>
+							<p:separator />
+							<p:commandButton value="Save"
+								actionListener="#{teamAction.addTeam}" icon="ui-icon-check"
+								onclick="PF('newPanel').hide();">
+								<f:attribute name="matiere" value="#{matiereAction.matiere}" />
 							</p:commandButton>
-						</f:facet>
-					</p:toolbar>
+							<p:commandButton value="Annuler" onclick="PF('newPanel').hide();"
+								icon="fa fa-times-circle" />
+						</p:overlayPanel>
+						<p:confirmDialog message="Are you sure?" header="Confirmation"
+							severity="alert" widgetVar="confirmation">
+							<p:commandButton value="Yes" update="matiereTab"
+								onclick="PF('confirmation').hide()"
+								actionListener="#{matiereAction.delete}" />
+							<p:commandButton value="Not" onclick="PF('confirmation').hide()"
+								type="button" />
+						</p:confirmDialog>
+						<p:confirmDialog message="Are you sure?" header="Confirmation"
+							severity="alert" widgetVar="deleteTeam">
+							<p:commandButton value="Yes" update="matiereTab"
+								onclick="PF('deleteTeam').hide()"
+								actionListener="#{teamAction.delete()}" />
+							<p:commandButton value="Not" onclick="PF('deleteTeam').hide()"
+								type="button" />
+						</p:confirmDialog>
+					</h:form>
 				</div>
 			</div>
 		</div>

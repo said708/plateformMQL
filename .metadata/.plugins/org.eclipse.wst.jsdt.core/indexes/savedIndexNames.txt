@@ -1,9 +1,6 @@
 INDEX VERSION 1.4+/Users/said/Dropbox/Workspaces/plateform mql/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-772790828.index
 1197910922.index
-2402859725.index
 1778823330.index
-842605603.index
 424218578.index
 424218578.index
 3042415842.index
@@ -11,4 +8,4 @@ INDEX VERSION 1.4+/Users/said/Dropbox/Workspaces/plateform mql/.metadata/.plugin
 1351980424.index
 3157700109.index
 402428340.index
-4112580609.index
+772790828.index
