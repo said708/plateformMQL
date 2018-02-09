@@ -132,13 +132,6 @@ public class ProjectAction {
 		return projects;
 	}
 
-	public void methodTwo(Project p,Matiere m) {
-		System.out.println("********* Test ************");
-		System.out.println("********************* project name : " + p.getName());
-		System.out.println("********************* matiere name : " + p.getMatiere().getName());
-		
-	}
-	
 	public void createProjectDirectory(Project project) {
 		String matiereName = project.getMatiere().getName();
 		String projectName = project.getName();

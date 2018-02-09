@@ -31,11 +31,15 @@ public class LiverableAction {
 	private List<Matiere> matieres;
 	private List<Project> projects;
 	List<Liverable> liverables;
-	private String matiere = "";
-	private String project = "";
-	private final String liverablePath = "/home/yassine/Documents/MQL_liverables/";
+	private String matiere;
+	private String project;
+	private static final String liverablePath = "/home/yassine/Documents/MQL_liverables/";
 
-
+	
+	
+	public static String getLiverablepath() {
+		return liverablePath;
+	}
 
 	public String getMatiere() {
 		return matiere;
@@ -125,28 +129,6 @@ public class LiverableAction {
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "Enseignant already exist |");   
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 
-		createLiverableDirectory(liverablePath + liverable.getName());
-	}
-
-	public void createLiverableDirectory(String name) {
-		File directory = new File(name);
-
-		boolean result = false;
-		try{
-			directory.mkdir();
-			Type[] types = Type.values();
-			for (int i=0;i<types.length;i++) {
-				File innerDir = new File(name + "/" + types[i]);
-				innerDir.mkdir();
-			}
-			result = true;
-		} 
-		catch(Exception e){
-			e.printStackTrace();
-		}        
-		if(result) {    
-			System.out.println("DIR created");  
-		}
 	}
 
 }
