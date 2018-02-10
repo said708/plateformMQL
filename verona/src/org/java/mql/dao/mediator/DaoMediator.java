@@ -34,6 +34,8 @@ public class DaoMediator {
 		this.EnseignantDao.setMediator(this);
 	}
 	
+	
+	
 	public void setEtudiantDao(EtudiantDao etudiantDao) {
 //		System.out.println("setEtudiantDao");
 		this.etudiantDao = etudiantDao;
@@ -180,6 +182,11 @@ public class DaoMediator {
 		return matiereDao.addMatiere(matiere);
 	}
 
+	public List<Etudiant> selectEtudiantNotAffectedToAnyTeam() {
+		return etudiantDao.selectEtudiantNotAffectedToAnyTeam();
+	}
+	
+	
 	public Matiere deleteMatiere(Matiere matiere) {
 		return matiereDao.deleteMatiere(matiere);
 	}

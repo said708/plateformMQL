@@ -43,21 +43,21 @@
 <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Contact"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.primefaces.model.DualListModel"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Enseignant"/>
 <fullyQualifiedTypeName name="org.java.mql.models.File"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Liverable"/>
-<fullyQualifiedTypeName name="org.java.mql.models.Project"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Team"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Etudiant"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
-<fullyQualifiedTypeName name="org.springframework.web.context.annotation.ApplicationScope"/>
 <fullyQualifiedTypeName name="javax.faces.event.ActionEvent"/>
 <fullyQualifiedTypeName name="org.java.mql.models.Matiere"/>
-<fullyQualifiedTypeName name="org.springframework.web.context.annotation.RequestScope"/>
 <fullyQualifiedTypeName name="javax.enterprise.context.SessionScoped"/>
 <fullyQualifiedTypeName name="org.springframework.web.context.annotation.SessionScope"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.RequestScope"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.java.mql.models.Project"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.annotation.ApplicationScope"/>
 </qualifiedTypeNameHistroy>

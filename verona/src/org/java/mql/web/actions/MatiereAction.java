@@ -22,7 +22,7 @@ public class MatiereAction {
 
 	@Autowired
 	private Module2Business business;
-
+	
 	@Autowired
 	private Matiere matiere;
 
@@ -34,12 +34,12 @@ public class MatiereAction {
 		matiere = new Matiere();
 	}
 
-
+	
 	public void addMatiere() {
 		FacesMessage msg;
-		System.err.println(matiere);
 		int status = business.addMatiere(matiere);
 		if(status == 1) {
+			init();
 			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", matiere.getName() + " added with success");   
 		}else  
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
@@ -52,7 +52,6 @@ public class MatiereAction {
 		FacesMessage msg; 
 		if(business.isAnMatiereExiste(m)){
 			int status = business.updateMatiere(m) ;
-
 			if(status == 1) {
 				msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", m.getName() + " Updated with success");
 			}else {

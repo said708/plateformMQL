@@ -225,23 +225,3 @@
 
 
 
-<p:dialog widgetVar="deletM"
-							modal="true" showEffect="explode" hideEffect="drop" width="200px"
-							dynamic="true">
-							<p:ajax event="close" listener="#{matiereAction.init()}"
-								update=":form:matieres" immediate="true" global="false" />
-							<h:panelGrid columns="2" cellpadding="5" width="100%">
-								<f:facet name="header">
-									<i class="fa fa-exclamation-circle"></i> 
-									<p:outputLabel  value="Voulez vous vraiment supprimer #{matiereAction.matiere} !" />
-								</f:facet>
-								<p:commandButton process="@this" value="Yes" type="button"
-									styleClass="ui-confirmdialog-yes" icon="fa fa-check-square"
-									actionListener="#{matiereAction.delete}"
-									onclick="PF('deletM').hide();">
-								</p:commandButton>
-								<p:commandButton value="No" type="button"
-									styleClass="ui-confirmdialog-no" icon="fa fa-fw fa-remove "
-									onclick="PF('deletM').hide();" />
-							</h:panelGrid>
-						</p:dialog>

@@ -2,22 +2,25 @@ package org.java.mql.web.actions;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Vector;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 
 import org.java.mql.business.Module2Business;
 import org.java.mql.models.Matiere;
 import org.java.mql.models.Project;
+import org.java.mql.models.Team;
 import org.java.mql.web.utils.HelpConvertor;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Component
-@Scope("request")
+@RequestScope
 public class ProjectAction {
 
 	@Autowired
@@ -26,28 +29,35 @@ public class ProjectAction {
 	@Autowired
 	private Project project;
 
+
 	private List<Project> projects;
 
 	private Date date;
 
 	@PostConstruct
 	public void init() {
-		projects = service.listProjects();
+		projects = new Vector<>();
 	}
-	
-	
+
+
+	public List<Project> listProjects() {
+		return service.listProjects();
+	}
+
+
 	public List<Matiere> listMatiers(){
 		return service.listeMatieres();
 	}
-	
 
 
-	public void newProject() {
+
+	public void newProject(ActionEvent event) {
 		FacesMessage msg; 
 		if(!service.isAnProjectExiste(project)){
 			project.setDatePublication(this.getCurrentDate());
 			project.setDeadLine(HelpConvertor.dateToString(date, "dd-MM-yyyy"));
-			System.out.println(project);
+			Matiere matiere = (Matiere)event.getComponent().getAttributes().get("matiere");
+			project.setMatiere(matiere);
 			int status = service.addProject(project) ;
 			if(status == 1) {
 				msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", project.getName() + " added with success");
@@ -90,11 +100,14 @@ public class ProjectAction {
 	}
 
 
+	public List<Project> projectsInTeam(Team team){
+		return service.listProjectsOfTeam(team);
+	}
+
 
 
 	public void delete(Project p) {
 		FacesMessage msg; 
-		System.out.println(p);
 		if(service.isAnProjectExiste(p)){
 			Project status =  service.deleteProject(p);
 			if(status !=null) {
@@ -108,6 +121,23 @@ public class ProjectAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
+
+	public List<Project> listProjectsInMatiere(Matiere matiere){
+		return service.listProjectsInMatiere(matiere);
+	}
+
+	public void addProjectToMatiere(ActionEvent event) {
+		Matiere matiere = (Matiere)event.getComponent().getAttributes().get("matiere");
+		for (Project project : projects) {
+			project.setMatiere(matiere);
+			service.updateProject(project);
+		}
+
+	}
+	
+	
+	
+	
 
 	public String getCurrentDate() {
 		Date date = new Date();
@@ -135,7 +165,8 @@ public class ProjectAction {
 	public List<Project> getProjects() {
 		return projects;
 	}
-
-
+	public void setProjects(List<Project> projects) {
+		this.projects = projects;
+	}	
 
 }

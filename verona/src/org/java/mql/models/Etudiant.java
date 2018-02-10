@@ -2,14 +2,11 @@ package org.java.mql.models;
 
 public class Etudiant {
 
-
 	private long id;
 	private String nom;
 	private String prenom;
 	private String phone;
 	private String email;
-	private Team team;
-	private boolean teamLeader;
 
 	public Etudiant() {
 	}
@@ -20,24 +17,6 @@ public class Etudiant {
 	public void setId(long id) {
 		this.id = id;
 	}
-
-	public Team getTeam() {
-		return team;
-	}
-
-	public void setTeam(Team team) {
-		this.team = team;
-	}
-
-	public boolean isTeamLeader() {
-		return teamLeader;
-	}
-
-
-	public void setTeamLeader(boolean teamLeader) {
-		this.teamLeader = teamLeader;
-	}
-
 
 	@Override
 	public boolean equals(Object o) {

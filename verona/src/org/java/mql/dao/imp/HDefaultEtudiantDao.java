@@ -35,6 +35,14 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 		list=template.loadAll(Etudiant.class);  
 		return list;  
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Etudiant> selectEtudiantNotAffectedToAnyTeam() {
+		List<Etudiant> list=new ArrayList<Etudiant>();  
+		list = (List<Etudiant>) template.find("from Etudiant  where TEAM=NULL");  
+		return list;  
+	}
 
 	@Override
 	public Etudiant selectEtudiantById(long id) {
@@ -47,6 +55,7 @@ public class HDefaultEtudiantDao   extends DaoMediatorService  implements Etudia
 		template.update(etudiant);
 		return 1;
 	}
+	
 
 
 

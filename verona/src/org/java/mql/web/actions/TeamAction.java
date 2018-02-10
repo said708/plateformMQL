@@ -1,6 +1,7 @@
 package org.java.mql.web.actions;
 
 import java.util.List;
+import java.util.Vector;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -15,11 +16,11 @@ import org.java.mql.models.Team;
 import org.primefaces.event.RowEditEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.ApplicationScope;
+import org.springframework.web.context.annotation.RequestScope;
 
 
 @Component
-@ApplicationScope
+@RequestScope
 public class TeamAction {
 
 	@Autowired
@@ -32,11 +33,16 @@ public class TeamAction {
 
 	@PostConstruct
 	public void init() {
-		teams = business.listTeams();
+		teams = new Vector<>();
+		System.out.println(business.listEtudiantNotAffectedToAnyTeam());
 	}
 
 	public List<Etudiant> listEtudiantsInTeam(Team team){
 		return business.listEtudiantsInTeam(team);
+	}
+
+	public List<Team> listTeams(){
+		return business.listTeams();
 	}
 
 
@@ -45,13 +51,20 @@ public class TeamAction {
 	}
 
 
-
-
-
+	public void addProjectToTeam(ActionEvent event) {
+		Project project = (Project)event.getComponent().getAttributes().get("project");
+		Team team = (Team)event.getComponent().getAttributes().get("team");
+		System.out.println(project);
+		System.out.println(team);
+		business.addProjectToTeam(project, team);
+	}
+	
+	
 	public void updateTeamLeaderStatus(Etudiant e){
-		int status = business.changeTeamLeaderStatus(e);
+		team.setTeamLeader(e);
+		int updateTeam = business.updateTeam(team);
 		FacesMessage msg; 
-		if(status == 1) {
+		if(updateTeam == 1) {
 			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", e + " statut de team leader changer!");   
 		}else  
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
@@ -60,15 +73,22 @@ public class TeamAction {
 
 
 
+	public void addTeams(ActionEvent event) {
+		Matiere matiere = (Matiere)event.getComponent().getAttributes().get("matiere");
+		for (Team team : teams) {
+			business.addTeamToMatiere(team, matiere);
+		}
+	}
+
+
 	public void addTeam(ActionEvent event) {
+		Matiere matiere = (Matiere)event.getComponent().getAttributes().get("matiere");
+		int status = business.addTeamToMatiere(team, matiere);
 		FacesMessage msg; 
-		team.setMatiere((Matiere)event.getComponent().getAttributes().get("matiere"));
-		int status = business.addTeam(team);
 		if(status == 1) {
-			init();
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", team.getName() + " added with success");   
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", team + " added with success!");   
 		}else  
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");  
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");   
 		FacesContext.getCurrentInstance().addMessage(null, msg); 
 	}
 
@@ -91,14 +111,29 @@ public class TeamAction {
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 	}
 
-
-
-
-	public void delete() {
+	
+	
+	
+	public void deleteTeamFromMatiere(ActionEvent event) {
 		FacesMessage msg; 
+		Matiere matiere = (Matiere)event.getComponent().getAttributes().get("matiere");
+		Team team = (Team)event.getComponent().getAttributes().get("team");
+		int status = business.removeTeamFromMatiere(team, matiere);
+		if(status !=-1) {
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", team.getName() + " deleted with success");
+		}else {
+			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
+		}
+		FacesContext.getCurrentInstance().addMessage(null, msg); 
+	}
+
+
+
+	public void delete(ActionEvent event) {
+		FacesMessage msg; 
+		Team team = (Team)event.getComponent().getAttributes().get("team");
 		Team status =  business.deleteTeam(team);
 		if(status !=null) {
-			init();
 			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", team.getName() + " deleted with success");
 		}else {
 			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
@@ -121,6 +156,10 @@ public class TeamAction {
 		return teams;
 	}
 
+
+	public void setTeams(List<Team> teams) {
+		this.teams = teams;
+	}
 
 	public List<Matiere> listMatieres(){
 		return business.listeMatieres();

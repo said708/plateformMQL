@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title><ui:insert name="title">Livrables</ui:insert></title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:treeTable value="#{liverableAction.root}" var="file"   >
+	        <f:facet name="header">
+	           Liste des livrables / matiere
+	        </f:facet>
+	        <p:column headerText="Matière" >
+	            <h:outputText value="#{file.name}" />
+	        </p:column>
+	         <p:column headerText="Date" style="width:100px" >
+	            <h:outputText value="#{file.uploadDate}" />
+	        </p:column>
+	        <p:column headerText="Size" style="width:100px;text-align:center;">
+	            <h:outputText value="#{file.size}" rendered="#{file.size!=0}" />
+	            <h:outputText value="-" rendered="#{file.size==0}"  />
+	        </p:column>
+	        <p:column headerText="Type" style="width:100px" >
+	            <h:outputText value="#{file.type}" />
+	        </p:column>
+	         <p:column headerText="" style="width:100px">
+	            
+    			<p:button value="Télécharger" rendered="#{not empty file.path}"  href="resources/#{file.path}" icon="ui-icon-arrowthick-1-s"/>
+					
+	        </p:column>
+	      
+	    </p:treeTable>
+	</h:form>
+	
+</h:body>
+
+</html>

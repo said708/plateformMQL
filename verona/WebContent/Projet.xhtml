@@ -109,13 +109,13 @@
 				<p:growl id="msgs" showDetail="true" />
 				<h:panelGrid columns="2">
 					<p:outputLabel value="Cours" />
-					<p:selectOneMenu value="#{project.matiere}"
+					<p:selectOneMenu value="#{projectAction.project.matiere}"
 						converter="#{matiereConverter}">
 						<f:selectItems value="#{projectAction.listMatiers()}"
 							var="matiere" itemLabel="#{matiere}" itemValue="#{matiere}" />
 					</p:selectOneMenu>
 					<p:outputLabel value="project" />
-					<p:inputText value="#{project.name}" />
+					<p:inputText value="#{projectAction.project.name}" />
 
 					<p:outputLabel value="Date de retour" />
 					<p:calendar value="#{projectAction.date}" pattern="dd-MM-yyyy"
@@ -123,7 +123,7 @@
 					</p:calendar>
 
 					<p:outputLabel value="Description" />
-					<p:inputTextarea value="#{project.description}" cols="25" rows="5" />
+					<p:inputTextarea value="#{projectAction.project.description}" cols="25" rows="5" />
 				</h:panelGrid>
 
 				<p:commandButton value="Save" update="msgs"

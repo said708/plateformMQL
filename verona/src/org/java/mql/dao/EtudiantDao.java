@@ -11,4 +11,5 @@ public interface EtudiantDao extends DAOservice{
 	List<Etudiant> selectAllEtudiant();
 	Etudiant selectEtudiantById(long id);
 	int updateEtudiant(Etudiant etudiant);
+	List<Etudiant> selectEtudiantNotAffectedToAnyTeam();
 }

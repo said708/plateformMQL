@@ -2,7 +2,6 @@ INDEX VERSION 1.4+/Users/said/Dropbox/Workspaces/plateform mql/.metadata/.plugin
 1197910922.index
 1778823330.index
 424218578.index
-424218578.index
 3042415842.index
 1799779079.index
 1351980424.index

@@ -29,13 +29,11 @@ public class EtudiantAction {
 
 
 	private List<Etudiant> students;
-	private List<Etudiant> etudiantsNotAffected;
 
 
 	@PostConstruct
 	public void init() {
 		students = business.listEtudiants();
-		etudiantsNotAffected = business.listEtudiantsPasEncoreAffecter();
 	}
 
 	//services of Etudiant
@@ -86,15 +84,7 @@ public class EtudiantAction {
 
 	public void addEtudiantToTeam(ActionEvent event) {
 		Team team = (Team)event.getComponent().getAttributes().get("team");
-		FacesMessage msg;
-		etudiant.setTeam(team);
-		int status = business.updateEtudiant(etudiant) ;
-		if(status == 1) {
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Success", etudiant+ " Updated with success");
-		}else {
-			msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "try to fill all the fields correctly");
-		}
-		FacesContext.getCurrentInstance().addMessage(null, msg); 
+		business.addListEtudiantsToTeam(team , etudiant); 
 	}
 
 
@@ -118,11 +108,5 @@ public class EtudiantAction {
 	public List<Team> listTeams(){
 		return business.listTeams();
 	}
-
-	public List<Etudiant> getEtudiantsNotAffected() {
-		return etudiantsNotAffected;
-	}
-
-
 
 }

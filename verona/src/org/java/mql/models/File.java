@@ -13,6 +13,20 @@ public class File{
 
 	public File() {
 	}
+	
+	public File(String name) {
+		super();
+		this.name = name;
+		
+}
+	public File(String name, String path, String uploadDate, long size, Type type) {
+		super();
+		this.name = name;
+		this.path = path;
+		this.uploadDate = uploadDate;
+		this.size = size;
+		this.type = type;
+	}
 
 
 	public Liverable getLiverable() {

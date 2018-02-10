@@ -50,132 +50,14 @@
 	</ui:define>
 	<ui:define name="content">
 		<div class="ui-g-12">
-			<p:toolbar>
-				<f:facet name="left">
-					<p:commandButton value="Nouvelle equipe" type="button"
-						onclick="PF('dlg2').show();" icon="fa fa-plus">
-					</p:commandButton>
-				</f:facet>
-			</p:toolbar>
-			<p:dataList value="#{teamAction.teams}" var="t" type="unordered"
-				itemType="none" paginator="true" rows="7" styleClass="cars-datalist">
-				<f:facet name="header">list des equipes</f:facet>
-				<div class="clearfix car-item">
-					<div class="car-details">
-						<h2>#{t.name}</h2>
-						<p style="color: #757575">#{t.matiere}</p>
-						<h:outputText value="#{teamAction.teamLeader(t)}"
-							rendered="#{not empty teamAction.teamLeader(t)}" />
-						<h:outputText value="Team leader not exist"
-							rendered="#{empty teamAction.teamLeader(t)}" />
-					</div>
-					<p:commandButton update="teamDetail"
-						oncomplete="PF('carDialog2').show()" title="View Detail"
-						icon="ui-icon-search" style="margin:24px 24px 0 0">
-						<f:setPropertyActionListener value="#{t}"
-							target="#{teamAction.team}" />
-					</p:commandButton>
-					<p:commandButton title="Update team details" icon="fa fa-pencil"
-						style="margin:24px 5px 0 0">
-						<f:setPropertyActionListener value="#{t}"
-							target="#{teamAction.team}" />
-					</p:commandButton>
-					<p:commandButton title="Delete team" icon="fa fa-times"
-						style="margin:24px 5px 0 0"
-						actionListener="#{teamAction.delete(t)}">
-					</p:commandButton>
-				</div>
-			</p:dataList>
-
-
-
-			<p:tabView value="#{teamAction.teams}" var="t">
-				<p:tab title="Equipe - #{t.name}">
-					<h:panelGrid columns="2" cellpadding="5">
-						<f:facet name="header">
-							<p:graphicImage name="demo/images/brand/team.png" />
-						</f:facet>
-						<h:outputText value="Matiere:" style="font-weight: bold" />
-						<h:outputText value="#{t.matiere}" />
-						
-						<h:outputText value="Chef d'equipe" style="font-weight: bold" />
-						<h:outputText
-							value="Chef d'equipe : #{teamAction.teamLeader(t)}"
-							rendered="#{not empty teamAction.teamLeader(t)}" />
-						<h:outputText value="Team leader not exist"
-							rendered="#{empty teamAction.teamLeader(t)}" />
-					</h:panelGrid>
-				</p:tab>
-			</p:tabView>
-
-
-
-
-			<p:dialog widgetVar="carDialog2" responsive="true" modal="true"
-				showEffect="blind" hideEffect="drop" resizable="false" width="50%">
-				<p:outputPanel id="teamDetail" style="text-align: center;">
-					<p:dataTable var="e"
-						value="#{teamAction.listEtudiantsInTeam(teamAction.team)}">
-						<f:facet name="header">
-							<p:panelGrid columns="1">
-								<h:outputText value="Equipe : #{teamAction.team.name}"></h:outputText>
-								<h:outputText
-									value="Chef d'equipe : #{teamAction.teamLeader(teamAction.team)}"
-									rendered="#{not empty teamAction.teamLeader(teamAction.team)}" />
-								<h:outputText value="Team leader not exist"
-									rendered="#{empty teamAction.teamLeader(teamAction.team)}" />
-							</p:panelGrid>
-						</f:facet>
-						<p:column headerText="Nom">
-							<h:outputText value="#{e.nom}"></h:outputText>
-						</p:column>
-						<p:column headerText="Prenom">
-							<h:outputText value="#{e.prenom}" />
-						</p:column>
-						<f:facet name="footer">
-							<h:form>
-								<p:panelGrid columns="2">
-									<p:selectOneMenu id="etudiant"
-										value="#{etudiantAction.etudiant}"
-										converter="#{etudiantConverter}" effect="fade" filter="true"
-										filterMatchMode="startsWith">
-										<f:selectItems value="#{teamAction.etudiantsNotAffected}"
-											var="e" itemLabel="#{e}" itemValue="#{e}" />
-									</p:selectOneMenu>
-									<p:commandButton value="ajouter etudiant" icon="fa fa-plus"
-										styleClass="AquaButton"
-										actionListener="#{etudiantAction.update(t)}">
-									</p:commandButton>
-								</p:panelGrid>
-							</h:form>
-						</f:facet>
-					</p:dataTable>
-				</p:outputPanel>
-			</p:dialog>
-			<p:dialog header="Nouvelle equipe" widgetVar="dlg2" modal="true"
-				showEffect="explode" hideEffect="bounce">
+			<p:panel>
 				<h:form>
-					<p:growl id="msgs" showDetail="true" />
-					<h:panelGrid columns="2">
+					
 
-						<p:outputLabel value="Equipe : " />
-						<p:inputText value="#{team.name}" />
-						<p:outputLabel value="Matiere : " />
-						<p:selectOneMenu value="#{team.matiere}"
-							converter="#{matiereConverter}">
-							<f:selectItems value="#{teamAction.listMatieres()}" var="matiere"
-								itemLabel="#{matiere}" itemValue="#{matiere}" />
-						</p:selectOneMenu>
 
-					</h:panelGrid>
-					<p:separator />
-					<p:commandButton value="Save" update="msgs"
-						actionListener="#{teamAction.addTeam()}" icon="ui-icon-check"
-						onclick="PF('dlg2').hide();" ajax="false" />
-					<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
-						icon="fa fa-times-circle" />
 				</h:form>
-			</p:dialog>
+			</p:panel>
+
 		</div>
 	</ui:define>
 </ui:composition>

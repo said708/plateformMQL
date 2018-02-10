@@ -10,7 +10,5 @@
 		<property name="prenom" column="PRENOM" type="string" />
 		<property name="email" column="EMAIL" type="string" />
 		<property name="phone" column="PHONE" type="string" />
-		<property name="teamLeader" column="TEAM_LEADER" type="boolean" />
-		<many-to-one name="team" class="org.java.mql.models.Team" column="TEAM" />
 	</class>
 </hibernate-mapping>

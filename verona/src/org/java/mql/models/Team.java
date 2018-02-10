@@ -1,23 +1,28 @@
 package org.java.mql.models;
 
+import java.util.List;
+
 public class Team {
 
 	private long id;
 	private String name;
-	private Matiere matiere;
+	private List<Etudiant> etudiants;
+	private Etudiant teamLeader;
 
 	public Team() {
 	}
 
 
 
-	public Matiere getMatiere() {
-		return matiere;
+	public Etudiant getTeamLeader() {
+		return teamLeader;
 	}
 
-	public void setMatiere(Matiere matiere) {
-		this.matiere = matiere;
+
+	public void setTeamLeader(Etudiant teamLeader) {
+		this.teamLeader = teamLeader;
 	}
+
 
 	public long getId() {
 		return id;
@@ -36,8 +41,8 @@ public class Team {
 	}
 
 	@Override
-	public boolean equals(final Object o) {
-		
+	public boolean equals(Object o) {
+
 		if ((o == null) || !(o instanceof Team) || o == this) {
 			return false;
 		}
@@ -55,6 +60,16 @@ public class Team {
 	@Override
 	public String toString() {
 		return name;
+	}
+
+	public List<Etudiant> getEtudiants() {
+		return etudiants;
+	}
+
+
+
+	public void setEtudiants(List<Etudiant> etudiants) {
+		this.etudiants = etudiants;
 	}
 
 

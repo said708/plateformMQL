@@ -22,7 +22,8 @@ public interface Module2Business {
 	Etudiant searchEtudiant(String keyword);
 	int updateEtudiant(Etudiant etudiant );
 	boolean isAnEtudiantExiste(Etudiant etudiant);
-	List<Etudiant> listEtudiantsPasEncoreAffecter();
+	int addTeamToMatiere(Team team  , Matiere matiere);
+	List<Etudiant> listEtudiantNotAffectedToAnyTeam();
 
 	//manage team
 	int addTeam(Team team);
@@ -37,9 +38,9 @@ public interface Module2Business {
 	List<Etudiant> listEtudiantsInTeam(Team team);
 	boolean isAnTeamExiste(Team team);
 	Etudiant selectTeamLeaderOfTeam(Team team);
-	int changeTeamLeaderStatus(Etudiant e);
+	int removeTeamFromMatiere(Team team , Matiere matiere);
 
-
+	
 	//manage project
 	int addProject(Project project);
 	Project selectProjectById(long idProject);
@@ -48,6 +49,8 @@ public interface Module2Business {
 	List<Project> listProjects();
 	boolean isAnProjectExiste(Project project);
 	List<Project> listProjectsOfTeam(Team team);
+	List<Project> listProjectsByKeyword(Matiere matiere , String keyword);
+	
 
 	//manage liverable
 	int addLiverable(Liverable liverable); 
