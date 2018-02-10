@@ -879,4 +879,11 @@ public class DefaultModule2Business implements Module2Business{
 		return "bonjour said is work now !";
 	}
 
+
+	@Override
+	public List<Project> selectAllProjectByMatiere(String matiereName) {
+		return daoMediator.selectAllProjectByMatiere(matiereName);
+	}
+
+
 }

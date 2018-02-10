@@ -45,5 +45,9 @@ public class Liverable  {
 	public int hashCode() {
 		return (int) (id * 31 + 990876);
 	}
+	
+	public String toString() {
+		return name;
+	}
 
 }

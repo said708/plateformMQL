@@ -2,6 +2,7 @@ package org.java.mql.dao.imp;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import org.java.mql.dao.ProjectDao;
 import org.java.mql.dao.mediator.DaoMediatorService;
@@ -46,6 +47,17 @@ public class HDefaultProjectDao extends DaoMediatorService implements ProjectDao
 	public int updateProjet(Project projet) {
 		template.update(projet);
 		return 1;
+	}
+
+	@Override
+	public List<Project> selectAllProjectByMatiere(String matiereName) {// YcDev
+		List<Project> projects = new Vector<>();
+		for (Project project : selectAllProjet()) {
+			if (project.getMatiere().getName().equalsIgnoreCase(matiereName)) {
+				projects.add(project);
+			}
+		}
+		return projects;
 	}
 
 	

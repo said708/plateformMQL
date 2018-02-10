@@ -11,5 +11,6 @@ public interface ProjectDao extends DAOservice{
 	Project deleteProjet(Project project);
 	List<Project> selectAllProjet();
 	Project selectProjetById(long id);
+	List<Project> selectAllProjectByMatiere(String matiereName);// YcDev
 	int updateProjet(Project projet);
 }

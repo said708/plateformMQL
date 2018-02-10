@@ -218,6 +218,10 @@ public class DaoMediator {
 	public Project selectProjetById(long id) {
 		return projectDao.selectProjetById(id);
 	}
+	
+	public List<Project> selectAllProjectByMatiere(String matiereName) { // YcDev
+		return projectDao.selectAllProjectByMatiere(matiereName);
+	}
 
 	public int updateProjet(Project projet) {
 		return projectDao.updateProjet(projet);

@@ -1,0 +1,109 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+
+	<ui:define name="title">Liverable management</ui:define>
+
+	<ui:define name="content">
+		<div class="ui-g">
+			<div class="ui-g-12">
+				<div class="card">
+					<p:panel>
+						<h:form>
+							<p:growl id="msgs" showDetail="true" />
+
+							<p:panel header="Liste des liverables"
+								style="margin-bottom:10px;">
+								<h:panelGrid columns="2" cellpadding="5">
+									<p:outputLabel for="matiere" value="Matiere: " />
+									<p:selectOneMenu id="matiere" value="#{liverableAction.matiere}"
+										style="width:150px">
+										<p:ajax listener="#{liverableAction.onMatiereChange(liverableAction.matiere)}"
+											update="liverables" />
+										<f:selectItem itemLabel="Choisis une matiere" itemValue=""
+											noSelectionOption="true" />
+										<f:selectItems value="#{liverableAction.matieres}" />
+									</p:selectOneMenu> 
+										
+									
+								</h:panelGrid>
+
+								<!--  <p:separator /> -->
+
+							<p:dataTable id="liverables" value="#{liverableAction.projects}" var="project">
+					
+								<p:column headerText="Projet" sortBy="">
+									<h:outputText value="#{project.name}"/>
+								</p:column>
+								
+								<p:column headerText="Liverable" sortBy="">
+								<h:outputText value="#{project.liverable.name}"/>
+								</p:column>
+								
+								<p:column style="width:50px">
+										<p:rowEditor />
+									</p:column>
+									<p:column style="width:30px">
+										<p:commandButton icon="fa fa-fw fa-trash"
+											>
+											<p:confirm header="Confirmation" message="Are you sure?"
+												icon="ui-icon-alert" />
+										</p:commandButton>
+									</p:column>
+
+							</p:dataTable>
+							</p:panel>
+
+						</h:form>
+						<f:facet name="footer">
+							<p:commandButton value="nouveau Liverable" type="button"
+								onclick="PF('dlg2').show();" icon="fa fa-plus"></p:commandButton>
+						</f:facet>
+					</p:panel>
+					<p:dialog header="Nouveau Liverable" widgetVar="dlg2" modal="true"
+						showEffect="explode" hideEffect="bounce">
+						<h:form>
+							<p:growl id="msgs" showDetail="true" />
+							<h:panelGrid columns="2" cellpadding="5">
+								<p:outputLabel for="name" value="Nom : " />
+								<p:inputText id="name" value="#{liverable.name}"></p:inputText>
+								
+								
+<!--								
+								<p:outputLabel for="matiere" value="Matiere: " />
+									<p:selectOneMenu id="matiere" value="#{liverableAction.matiere}"
+										style="width:150px" converter="#{MatiereConverter}">
+										<p:ajax listener="#{liverableAction.onMatiereChange(liverableAction.matiere)}"
+											update="project" />
+										<f:selectItem itemLabel="Choisis une matiere" itemValue=""
+											noSelectionOption="true" />
+										<f:selectItems value="#{liverableAction.matieres}" />
+									</p:selectOneMenu>
+								
+								
+								<p:outputLabel for="project" value="Project: " />
+									<p:selectOneMenu id="project" value="#{liverableAction.projects}"
+										style="width:150px" converter="#{ProjectConverter}">
+										
+										<f:selectItem itemLabel="Choisis un projet" itemValue=""
+											noSelectionOption="true" />
+										<f:selectItems value="#{liverableAction.projects}" />
+									</p:selectOneMenu> 
+-->								
+							</h:panelGrid>
+							<p:commandButton value="Save" update="msgs"
+								actionListener="#{liverableAction.addLiverable}"
+								icon="ui-icon-check" />
+							<p:commandButton value="Annuler" onclick="PF('dlg2').hide();"
+								icon="fa fa-times-circle" />
+						</h:form>
+						
+					</p:dialog>
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>

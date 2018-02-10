@@ -48,6 +48,8 @@ public class FileAction {
 		this.file = file;
 	}
 
-
+	public void addFileToLiverable() {
+		
+	}
 
 }
